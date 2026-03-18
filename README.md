@@ -121,7 +121,7 @@ The FedRAMP skill turns Claude into a knowledgeable FedRAMP advisor covering the
 
 ### 🇪🇺 GDPR
 
-**File:** `GDPR - Claude Skill /gdpr-compliance.skill`
+**File:** `GDPR - Claude Skill/gdpr-compliance.skill`
 
 The GDPR skill turns Claude into an expert GDPR compliance assistant that bridges technical and legal perspectives. It covers the full **EU GDPR** regulation with notes on **UK GDPR (DPA 2018)** where the rules differ, and adapts its tone automatically — technical for developers, legally precise for compliance and privacy professionals.
 
@@ -180,13 +180,13 @@ The HIPAA skill turns Claude into a knowledgeable HIPAA compliance advisor cover
 
 1. Download the `.skill` file for the framework you need:
 
-   | Framework | File |
-   |-----------|------|
-   | 🔐 ISO 27001 | [`ISO 27001 - Claude Skill/iso27001.skill`](ISO%2027001%20-%20Claude%20Skill/iso27001.skill) |
-   | ✅ SOC 2 | [`SOC 2 - Claude Skill/soc2.skill`](SOC%202%20-%20Claude%20Skill/soc2.skill) |
-   | 🏛️ FedRAMP | [`FedRamp - Claude Skill/fedramp.skill`](FedRamp%20-%20Claude%20Skill/fedramp.skill) |
-   | 🇪🇺 GDPR | [`GDPR - Claude Skill/gdpr-compliance.skill`](GDPR%20-%20Claude%20Skill%20/gdpr-compliance.skill) |
-   | 🏥 HIPAA | [`HIPAA - Claude Skill/hipaa-compliance.skill`](HIPAA%20-%20Claude%20Skill/hipaa-compliance.skill) |
+   | Framework | Download |
+   |-----------|----------|
+   | 🔐 ISO 27001 | [iso27001.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISO%2027001%20-%20Claude%20Skill/iso27001.skill) |
+   | ✅ SOC 2 | [soc2.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/SOC%202%20-%20Claude%20Skill/soc2.skill) |
+   | 🏛️ FedRAMP | [fedramp.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/FedRamp%20-%20Claude%20Skill/fedramp.skill) |
+   | 🇪🇺 GDPR | [gdpr-compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/GDPR%20-%20Claude%20Skill/gdpr-compliance.skill) |
+   | 🏥 HIPAA | [hipaa-compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/HIPAA%20-%20Claude%20Skill/hipaa-compliance.skill) |
 
 2. Open Claude and navigate to **Customize → Skills**.
 3. Click **Upload Skill** and select the `.skill` file.
