@@ -1,6 +1,6 @@
 # Installation Guide — GRC Skills for Claude Code
 
-This guide covers how to install the GRC Skills marketplace in [Claude Code](https://claude.ai/claude-code), the AI-powered CLI for developers. The marketplace provides six compliance skills as Claude Code plugins — each one extends Claude Code with deep, framework-specific expertise for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, and NIST CSF.
+This guide covers how to install the GRC Skills marketplace in [Claude Code](https://claude.ai/claude-code), the AI-powered CLI for developers. The marketplace provides seven compliance skills as Claude Code plugins — each one extends Claude Code with deep, framework-specific expertise for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, and PCI DSS.
 
 ---
 
@@ -64,16 +64,20 @@ Once the marketplace is registered, install only the frameworks you need.
 /plugin install nist-csf@grc-skills
 ```
 
+```shell
+/plugin install pci-compliance@grc-skills
+```
+
 Each plugin is installed to a local cache (`~/.claude/plugins/cache`) and activates immediately in new Claude Code sessions.
 
 ---
 
-## 3. Install All Six at Once
+## 3. Install All Seven at Once
 
 To install the full GRC suite in a single command:
 
 ```shell
-/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills
+/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills
 ```
 
 ---
@@ -100,12 +104,13 @@ Add the following to your project's `.claude/settings.json`:
     "fedramp@grc-skills": true,
     "gdpr-compliance@grc-skills": true,
     "hipaa-compliance@grc-skills": true,
-    "nist-csf@grc-skills": true
+    "nist-csf@grc-skills": true,
+    "pci-compliance@grc-skills": true
   }
 }
 ```
 
-Commit this file to your repository. The next time a team member trusts the project folder in Claude Code, the marketplace and plugins will be registered automatically. Only enable the skills your team actually needs — you don't have to include all five.
+Commit this file to your repository. The next time a team member trusts the project folder in Claude Code, the marketplace and plugins will be registered automatically. Only enable the skills your team actually needs — you don't have to include all seven.
 
 ---
 
@@ -151,6 +156,7 @@ To remove the marketplace entirely:
 | `gdpr-compliance` | GDPR / UK GDPR | Code audits, privacy notices, DPAs, DPIAs, data flow reviews, article-cited Q&A |
 | `hipaa-compliance` | HIPAA | Document generation, technical safeguards for cloud, breach response guidance |
 | `nist-csf` | NIST CSF 2.0 / 1.1 | Gap assessments, organisational profiles, implementation tiers, roadmaps, cross-framework mapping |
+| `pci-compliance` | PCI DSS v4.0.1 | CDE scoping, SAQ selection, gap assessments, control guidance, QSA audit prep, remediation planning |
 
 ---
 

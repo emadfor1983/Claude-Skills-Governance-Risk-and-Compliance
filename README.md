@@ -1,11 +1,11 @@
 # Claude Skills for Governance, Risk & Compliance (GRC)
-Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, and NIST CSF — powered by Claude Skills.
+Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, and PCI DSS — powered by Claude Skills.
 
 Benchmarked across 10 test cases (2 per framework) using eval framework — each graded against 7 verifiable assertions by independent agents. Skills scored **99% ± 4%** vs a baseline of 93% ± 7%.
 
 [![Release: v0.1.0](https://img.shields.io/badge/Release-v0.1.0-brightgreen.svg)](../../releases/tag/v0.1.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skills: 6](https://img.shields.io/badge/Skills-6-green.svg)](#the-skills)
+[![Skills: 7](https://img.shields.io/badge/Skills-7-green.svg)](#the-skills)
 [![Built with Claude](https://img.shields.io/badge/Built%20with-Claude-orange.svg)](https://claude.ai)
 
 ---
@@ -21,6 +21,7 @@ Benchmarked across 10 test cases (2 per framework) using eval framework — each
   - [GDPR](#-gdpr)
   - [HIPAA](#-hipaa)
   - [NIST CSF](#-nist-csf)
+  - [PCI DSS](#-pci-dss)
 - [Potential Use Cases](#potential-use-cases)
 - [How to Install a Skill](#how-to-install-a-skill)
 - [Install via Claude Code Marketplace](#install-via-claude-code-marketplace)
@@ -173,6 +174,25 @@ The NIST CSF skill turns Claude into an expert NIST Cybersecurity Framework advi
 
 ---
 
+### 💳 PCI DSS
+
+**File:** `PCI Compliance - Claude Skill/PCI-Compliance.skill`
+
+The PCI DSS skill turns Claude into an expert PCI DSS compliance advisor covering **PCI DSS v4.0.1** (June 2024 — current version), including all requirements that became mandatory on March 31, 2025. It covers all 12 requirements, all 8 SAQ types, merchant and service provider levels, and key v4.0 changes from v3.2.1.
+
+**What it does:**
+- **Scopes the Cardholder Data Environment (CDE)** — identifies what's in scope, assesses network segmentation, and recommends scope reduction via tokenisation or P2PE
+- **Selects the correct SAQ type** — walks through the decision tree for SAQ A, A-EP, B, B-IP, C, C-VT, P2PE, and D with rationale
+- Conducts structured **gap assessments** across all 12 requirements with QSA evidence requirements and common gaps
+- Provides **control implementation guidance** for any PCI DSS sub-requirement — what to implement, evidence needed, and common pitfalls
+- Generates **PCI DSS-aligned policies** — incident response, access control, cryptography, patch management, data retention, and more
+- Guides **v3.2.1 → v4.0.1 migration** including new requirements for MFA expansion, payment page script integrity (Req 6.4.3), phishing protection (Req 5.4.1), and automated log review (Req 10.4.1.1)
+- Explains **Defined vs Customised Approach** and when to use Targeted Risk Analysis (TRA)
+
+**Trigger phrases:** `PCI DSS`, `PCI compliance`, `cardholder data`, `CDE`, `SAQ`, `ROC`, `QSA`, `ASV scan`, `PAN`, `tokenisation`, `P2PE`, `merchant level`, `payment page`, `Req 8.4.2`, `Req 6.4.3`
+
+---
+
 ## Potential Use Cases
 
 | Scenario | Relevant Skill(s) |
@@ -199,6 +219,12 @@ The NIST CSF skill turns Claude into an expert NIST Cybersecurity Framework advi
 | Migrating a cybersecurity programme from CSF 1.1 to CSF 2.0 | NIST CSF |
 | Mapping ISO 27001 or SOC 2 controls to NIST CSF subcategories | NIST CSF + ISO 27001 / SOC 2 |
 | Writing a Cybersecurity Governance Policy aligned to the CSF GV function | NIST CSF |
+| Scoping a PCI DSS CDE for a cloud-hosted e-commerce platform | PCI DSS |
+| Selecting the right SAQ type for a merchant using a hosted payment page | PCI DSS |
+| Preparing for a Level 1 ROC with a QSA | PCI DSS |
+| Implementing the new PCI DSS v4.0 payment page script integrity requirements | PCI DSS |
+| Extending MFA to all CDE access per Req 8.4.2 | PCI DSS |
+| Managing third-party service providers under PCI DSS Req 12.8 | PCI DSS |
 
 ---
 
@@ -214,6 +240,7 @@ The NIST CSF skill turns Claude into an expert NIST Cybersecurity Framework advi
    | 🇪🇺 GDPR | [gdpr-compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/GDPR%20-%20Claude%20Skill/gdpr-compliance.skill) |
    | 🏥 HIPAA | [hipaa-compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/HIPAA%20-%20Claude%20Skill/hipaa-compliance.skill) |
    | 🛡️ NIST CSF | [NIST Cybersecurity.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIST%20Cybersecurity%20framework%20-%20Claude%20Skill/NIST%20Cybersecurity.skill) |
+   | 💳 PCI DSS | [PCI-Compliance.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/PCI%20Compliance%20-%20Claude%20Skill/PCI-Compliance.skill) |
 
 2. Open Claude and navigate to **Customize → Skills**.
 3. Click **Upload Skill** and select the `.skill` file.
@@ -233,7 +260,7 @@ Add the marketplace and install the skills you need directly from the terminal:
 
 ```shell
 /plugin marketplace add Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
-/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills
+/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills
 ```
 
 Teams can pre-wire the marketplace in `.claude/settings.json` so every developer gets the skills automatically when they open the project — no manual install required.
