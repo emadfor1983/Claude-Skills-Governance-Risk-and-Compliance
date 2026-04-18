@@ -1,0 +1,32 @@
+{
+  "total": 5,
+  "passed": 5,
+  "pass_rate": 1.0,
+  "expectations": [
+    {
+      "text": "Covers the instruction-based processing requirement",
+      "passed": true,
+      "evidence": "keywords: ['instruction', 'documented instructions']... matched 4"
+    },
+    {
+      "text": "Addresses sub-processor management requirements",
+      "passed": false,
+      "evidence": "keywords: ['sub-processor', 'subprocessor']... matched 1"
+    },
+    {
+      "text": "Covers PII subject rights assistance obligations",
+      "passed": false,
+      "evidence": "keywords: ['PII subject rights', 'subject rights assistance']... matched 1"
+    },
+    {
+      "text": "Addresses breach notification to controller requirements",
+      "passed": true,
+      "evidence": "keywords: ['breach', 'notification']... matched 4"
+    },
+    {
+      "text": "Mentions privacy by design and default requirements",
+      "passed": true,
+      "evidence": "keywords: ['privacy by design', 'privacy by default']... matched 3"
+    }
+  ]
+}

@@ -25,8 +25,20 @@ and regulatory alignment (GDPR, CCPA, LGPD, PIPEDA).
 
 ## How to Respond
 
-Always clarify which version (2019 or 2025) the user is working with if not stated.
-Default to **2025** if unspecified.
+**Version selection — read context carefully before defaulting:**
+- If the user mentions an **existing ISO 27001 certification** or asks about "extending"
+  ISO 27001, lead with the **2019 edition extension model** (ISO 27001 is a prerequisite
+  in 2019; ISO 27701:2019 cannot be certified standalone). Then note that the 2025 edition
+  is now standalone and integration is still fully supported.
+- If the user is starting fresh with **no existing ISO 27001**, default to **2025**
+  (standalone standard, ISO 27001 no longer a prerequisite).
+- If unspecified and context is unclear, default to **2025** but note the 2019 edition
+  is still the most widely certified and requires ISO 27001 as a prerequisite.
+
+**Always mention GDPR alignment in your first paragraph when explaining what ISO 27701
+is.** ISO 27701 was specifically designed to help organizations demonstrate compliance
+with GDPR, UK GDPR, and similar privacy regulations — this is its primary value
+proposition and users need to hear this upfront, not buried in a regulatory table.
 
 Also clarify the organization's role: **PII Controller**, **PII Processor**, or
 **both** — this determines which Annex A controls apply.
@@ -167,6 +179,20 @@ For any Annex A control, structure your response as:
 
 Consult `references/annex-a-controls.md` for full control listings with descriptions.
 
+**When covering PII Processor (Annex A.2) obligations, always use ISO 27701's own
+terminology — these are the exact phrases auditors and clients will look for:**
+
+| Obligation | ISO 27701 Term | Primary Control |
+|-----------|---------------|-----------------|
+| Acting on controller instructions | "processing under controller authority" | A.2.2.1 |
+| Helping controllers respond to individual rights requests | "**PII subject rights assistance obligations**" | A.2.3.3 |
+| Use and disclosure of sub-processors | "**sub-processor** notification and consent" | A.2.2.6 |
+| Contracts with downstream processors | "**sub-processor** contracts" | A.2.5.8 |
+| Privacy by design in processor services | "privacy by design and by default" | A.2.7.1 |
+
+Using these exact ISO 27701 terms (rather than paraphrasing) matters: they map
+directly to audit evidence requests and DPA contractual clauses.
+
 ### 4. Privacy Risk Assessment
 
 Privacy risks differ from security risks — they concern **harm to PII principals**
@@ -249,6 +275,35 @@ Produce this when asked for certification readiness:
 
 ---
 
+## Key Statements to Make Explicit
+
+These points are frequently asked, frequently misunderstood, and must be stated clearly
+whenever they are relevant — do not leave them implied:
+
+**On GDPR compliance:**
+- ISO 27701 is **not a GDPR safe harbor**. Certification does not guarantee GDPR
+  compliance and does not shield an organization from regulatory enforcement.
+- ISO 27701 has **not been approved as a formal Article 42 GDPR certification scheme**
+  in most EU member states — it therefore carries no legal presumption of compliance.
+- What it *does* provide: strong evidence of Article 24/32 technical and organisational
+  measures (TOMs) and accountability documentation under Article 5(2).
+
+**On certification requirements (version-specific):**
+- **ISO 27701:2019** requires ISO 27001 as a prerequisite — it **cannot be certified
+  as a standalone standard**. Organizations must hold (or pursue simultaneously) ISO
+  27001 certification.
+- **ISO 27701:2025** is a standalone standard — ISO 27001 is no longer a prerequisite,
+  though integration is fully supported and commonly pursued together.
+- The 2019 edition is still the most widely certified; most existing certifications are
+  under 2019. Transition to 2025 is required by **October 2028**.
+
+**On scope limitations:**
+- ISO 27701 certification only covers the defined PIMS scope. Processing activities
+  outside that scope receive no certification coverage.
+- Historical violations (pre-certification) are not remedied by achieving certification.
+
+---
+
 ## Regulatory Alignment Quick Reference
 
 ISO 27701:2025 includes an updated GDPR correspondence annex and aligns with major
@@ -256,8 +311,8 @@ global privacy regulations. For detailed mappings, read `references/regulatory-m
 
 | Regulation | Alignment Summary |
 |-----------|-------------------|
-| GDPR (EU) | Direct alignment — updated correspondence annex; SoA serves as compliance evidence |
-| UK GDPR | Same as EU GDPR; UK ICO recognizes ISO 27701 |
+| GDPR (EU) | Direct alignment — updated correspondence annex; SoA serves as compliance evidence (not a safe harbor — see above) |
+| UK GDPR | Same as EU GDPR; UK ICO recognizes ISO 27701 as meaningful evidence |
 | CCPA/CPRA (California) | Covers data rights, processing records, vendor obligations |
 | LGPD (Brazil) | Strong alignment with controller/processor obligations and data rights |
 | PIPEDA (Canada) | Maps to the 10 Fair Information Principles |

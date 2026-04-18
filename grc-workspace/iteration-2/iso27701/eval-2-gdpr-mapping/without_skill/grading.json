@@ -1,0 +1,32 @@
+{
+  "total": 5,
+  "passed": 5,
+  "pass_rate": 1.0,
+  "expectations": [
+    {
+      "text": "References the ISO 27701 Annex D GDPR mapping",
+      "passed": true,
+      "evidence": "keywords: ['Annex D', 'GDPR mapping']... matched 3"
+    },
+    {
+      "text": "Maps PII controller requirements to GDPR Articles 5-22",
+      "passed": true,
+      "evidence": "keywords: ['Article 5', 'Article 6']... matched 2"
+    },
+    {
+      "text": "Maps PII processor requirements to GDPR Article 28",
+      "passed": true,
+      "evidence": "keywords: ['Article 28', 'processor']... matched 3"
+    },
+    {
+      "text": "Identifies gaps where GDPR goes beyond ISO 27701",
+      "passed": false,
+      "evidence": "keywords: ['gap', 'does not cover']... matched 1"
+    },
+    {
+      "text": "Addresses how ISO 27701 certification can serve as a GDPR compliance tool",
+      "passed": true,
+      "evidence": "keywords: ['compliance tool', 'evidence']... matched 3"
+    }
+  ]
+}
