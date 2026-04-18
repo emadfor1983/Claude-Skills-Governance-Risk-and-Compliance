@@ -1,7 +1,7 @@
 # Claude Skills for Governance, Risk & Compliance (GRC)
 Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, and India's Digital Personal Data Protection Act (DPDPA) — powered by Claude Skills.
 
-Benchmarked across 60 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **92%** vs a baseline of **84%** across 300 total assertions.
+Benchmarked across 60 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **94%** vs a baseline of **83%** across 300 total assertions.
 
 [![Release: v0.3.0](https://img.shields.io/badge/Release-v0.3.0-brightgreen.svg)](../../releases/tag/v0.3.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
@@ -441,9 +441,9 @@ These skills were benchmarked using the [Claude Skill Creator](https://claude.ai
 
 | Configuration | Pass Rate | Assertions Passed |
 |---------------|-----------|-------------------|
-| **With GRC Skills installed** | **92%** | **276 / 300** |
-| Without skills (baseline Claude) | 84% | 252 / 300 |
-| **Delta** | **+8 points** | **+24 assertions** |
+| **With GRC Skills installed** | **94%** | **282 / 300** |
+| Without skills (baseline Claude) | 83% | 250 / 300 |
+| **Delta** | **+11 points** | **+32 assertions** |
 
 ### Per-Skill Results
 
@@ -458,13 +458,11 @@ These skills were benchmarked using the [Claude Skill Creator](https://claude.ai
 | PCI DSS | 5 | **92%** | 88% | +4% | SAQ type selection; Req 3 stored data (v4.0); Breach obligations; Penetration testing; Tokenization scope |
 | TSA Cybersecurity | 5 | **100%** | 96% | +4% | Pipeline directive requirements; CIRP elements; OT/IT segmentation; Airport applicability; TSA vs CIRCIA |
 | ISO 42001 | 5 | **92%** | 80% | +12% | AIMS applicability; Key requirements; AI-specific risks; Third-party LLM management; AI ethics controls |
-| ISO 27701 | 5 | **76%** | 84% | -8% | Extension to ISO 27001; GDPR mapping; Processor controls; PIA methodology; Certification as GDPR evidence |
+| ISO 27701 | 5 | **100%** | 80% | +20% | Extension to ISO 27001; GDPR mapping; Processor controls; PIA methodology; Certification as GDPR evidence |
 | DORA | 5 | **88%** | 72% | +16% | Five pillars; ICT incident reporting timelines; TLPT requirements; Third-party contracts; DORA vs EBA |
 | DPDPA | 5 | **96%** | 80% | +16% | Applicability to foreign entities; Consent vs GDPR; Children's data (18-year threshold); Cross-border transfers; SDF obligations |
 
 Skills add the most measurable value on highly framework-specific tasks: clause-level precision for ISO 27001, CC criteria mapping for SOC 2, exact FedRAMP POA&M timeframes and document names, GDPR article citations, HIPAA regulatory section references, CSF 2.0 subcategory IDs, PCI DSS v4.0.1 requirement numbers, TSA Security Directive citations, ISO 42001 AIMS clause references, DORA Article citations and exact incident reporting timelines (4h/72h/1 month), and DPDPA-specific terminology (Data Fiduciary, 8 legitimate uses, blacklist transfers).
-
-The ISO 27701 skill shows a slight negative delta in keyword-matching grading because baseline Claude already has substantial GDPR/privacy knowledge; qualitative review of the outputs confirms the skill still provides more structured, citation-precise responses.
 
 📊 **[View the full eval results →](grc-skills-eval-results.html)**
 

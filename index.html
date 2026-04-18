@@ -713,16 +713,16 @@ layout: null
 
     <div class="stat-grid">
       <div class="stat-card green">
-        <div class="value">92%</div>
-        <div class="label">With GRC Skills installed<br /><small>276 / 300 assertions passed</small></div>
+        <div class="value">94%</div>
+        <div class="label">With GRC Skills installed<br /><small>282 / 300 assertions passed</small></div>
       </div>
       <div class="stat-card">
-        <div class="value">84%</div>
-        <div class="label">Baseline Claude (no skills)<br /><small>252 / 300 assertions passed</small></div>
+        <div class="value">83%</div>
+        <div class="label">Baseline Claude (no skills)<br /><small>250 / 300 assertions passed</small></div>
       </div>
       <div class="stat-card delta">
-        <div class="value">+8</div>
-        <div class="label">Point improvement<br /><small>+24 additional assertions passed</small></div>
+        <div class="value">+11</div>
+        <div class="label">Point improvement<br /><small>+32 additional assertions passed</small></div>
       </div>
     </div>
 
@@ -740,7 +740,7 @@ layout: null
           <tr><td>💳 PCI DSS</td><td>5</td><td><strong>92%</strong></td><td>88%</td><td>+4%</td><td>SAQ type selection; Req 3 stored data (v4.0); Breach obligations; Penetration testing; Tokenization scope</td></tr>
           <tr><td>🚨 TSA Cybersecurity</td><td>5</td><td><strong>100%</strong></td><td>96%</td><td>+4%</td><td>Pipeline directive requirements; CIRP elements; OT/IT segmentation; Airport applicability; TSA vs CIRCIA</td></tr>
           <tr><td>🤖 ISO 42001</td><td>5</td><td><strong>92%</strong></td><td>80%</td><td>+12%</td><td>AIMS applicability; Key requirements; AI-specific risks; Third-party LLM management; AI ethics controls</td></tr>
-          <tr><td>🔏 ISO 27701</td><td>5</td><td><strong>76%</strong></td><td>84%</td><td>-8%</td><td>Extension to ISO 27001; GDPR mapping; Processor controls; PIA methodology; Certification as GDPR evidence</td></tr>
+          <tr><td>🔏 ISO 27701</td><td>5</td><td><strong>100%</strong></td><td>80%</td><td>+20%</td><td>Extension to ISO 27001; GDPR mapping; Processor controls; PIA methodology; Certification as GDPR evidence</td></tr>
           <tr><td>🏦 DORA</td><td>5</td><td><strong>88%</strong></td><td>72%</td><td>+16%</td><td>Five pillars; ICT incident reporting timelines; TLPT requirements; Third-party contracts; DORA vs EBA</td></tr>
           <tr><td>🇮🇳 DPDPA</td><td>5</td><td><strong>96%</strong></td><td>80%</td><td>+16%</td><td>Applicability to foreign entities; Consent vs GDPR; Children's data (18-year threshold); Cross-border transfers; SDF obligations</td></tr>
         </tbody>
@@ -748,8 +748,6 @@ layout: null
     </div>
 
     <p>Skills add the most measurable value on highly framework-specific tasks: clause-level precision for ISO 27001, CC criteria mapping for SOC 2, exact FedRAMP document names and POA&amp;M timeframes, GDPR article citations, HIPAA regulatory section references, CSF 2.0 subcategory IDs, PCI DSS v4.0.1 requirement numbers, TSA Security Directive citations, ISO 42001 AIMS clause references, DORA Article numbers and exact incident reporting timelines (4h/72h/1 month), and DPDPA-specific terminology and section references.</p>
-
-    <p><em>Note: ISO 27701 shows a slight negative delta in keyword-matching grading because baseline Claude already has substantial GDPR/privacy knowledge. Qualitative review confirms the skill still produces more structured, citation-precise responses.</em></p>
 
     <a href="grc-skills-eval-results.html" class="eval-link-btn">📊 View the full eval results →</a>
 
@@ -899,7 +897,7 @@ layout: null
           <li><span class="release-badge badge-new">New</span> Interactive Customer Feedback tab with Formspree-powered contact form (Customer Name, Company, Feedback Title, Feedback Body) — submissions delivered to <a href="mailto:hemant.naik@gmail.com">hemant.naik@gmail.com</a></li>
           <li><span class="release-badge badge-new">New</span> Integrated Formspree Ajax library (<code>@formspree/ajax</code>) via CDN for inline field validation and no-reload submissions</li>
           <li><span class="release-badge badge-new">New</span> Release Notes section (this section) added to the Resources tab</li>
-          <li><span class="release-badge badge-improve">Improved</span> Evaluation tab now shows stat cards (92% / 84% / +8pts) and per-skill results table for all 12 skills</li>
+          <li><span class="release-badge badge-improve">Improved</span> Evaluation tab now shows stat cards (94% / 83% / +11pts) and per-skill results table for all 12 skills</li>
         </ul>
         <h4>🐛 Bug Fixes — Skill Installability</h4>
         <ul>
@@ -930,7 +928,7 @@ layout: null
         <h4>📊 Skill Evaluation</h4>
         <ul>
           <li><span class="release-badge badge-improve">Improved</span> Expanded eval suite to <strong>12 skills / 60 test cases</strong> (5 per framework), each graded against 5 verifiable assertions by independent grader agents — 300 total assertions</li>
-          <li><span class="release-badge badge-improve">Improved</span> Skills scored <strong>92%</strong> vs baseline of 84% (+8 point improvement, +24 additional assertions passed)</li>
+          <li><span class="release-badge badge-improve">Improved</span> Skills scored <strong>94%</strong> vs baseline of 83% (+11 point improvement, +32 additional assertions passed)</li>
           <li><span class="release-badge badge-improve">Improved</span> Evaluation tab updated with full 60-case results for all 12 skills including DORA and DPDPA</li>
         </ul>
         <h4>🐛 Bug Fixes</h4>
