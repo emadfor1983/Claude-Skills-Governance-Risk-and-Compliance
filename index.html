@@ -887,6 +887,32 @@ layout: null
       <div class="release-header">
         <span class="tag">v0.4.0</span>
         <span class="latest">Latest</span>
+        <span class="date">April 18, 2026</span>
+      </div>
+      <div class="release-body">
+        <h4>🔒 ISO 27701 Skill — Major Improvement</h4>
+        <ul>
+          <li><span class="release-badge badge-improve">Improved</span> Rewrote version-selection logic: skill now leads with the 2019 extension model when the user has an existing ISO 27001 certification, and defaults to the 2025 standalone edition for greenfield implementations — previously defaulted to 2025 in all cases</li>
+          <li><span class="release-badge badge-improve">Improved</span> GDPR alignment is now mentioned in the opening paragraph of every ISO 27701 explanation — the standard's primary value proposition was previously buried in a reference table</li>
+          <li><span class="release-badge badge-new">New</span> Added PII Processor terminology table with exact ISO 27701 control language ("PII subject rights assistance obligations", "sub-processor notification and consent", "processing under controller authority") — these are the precise phrases used in audits and DPA contracts</li>
+          <li><span class="release-badge badge-new">New</span> Added explicit "Key Statements" section covering: ISO 27701 is not a GDPR safe harbor; it has not been approved as a formal Article 42 GDPR certification scheme; ISO 27701:2019 requires ISO 27001 as a prerequisite and cannot be certified standalone</li>
+        </ul>
+        <h4>🐛 Fix — ISO 27701 Standalone Skill File</h4>
+        <ul>
+          <li><span class="release-badge badge-fix">Fix</span> The <code>ISO 27701 - Claude Skill/iso27701.skill</code> ZIP was missing entirely — the directory existed but contained no installable file. The standalone skill archive has been built and published.</li>
+        </ul>
+        <h4>📊 Skill Evaluation — Updated Benchmark</h4>
+        <ul>
+          <li><span class="release-badge badge-improve">Improved</span> Re-ran the 60-case eval suite following ISO 27701 skill improvements. ISO 27701 delta flipped from <strong>−8%</strong> to <strong>+20%</strong> (76% → 100% with skill)</li>
+          <li><span class="release-badge badge-improve">Improved</span> Overall suite: skills now score <strong>94%</strong> vs baseline of 83% (<strong>+11 point delta</strong>, 282/300 assertions passed), up from 92% / +8pts in v0.3.0</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- v0.3.0 -->
+    <div class="release">
+      <div class="release-header">
+        <span class="tag">v0.3.0</span>
         <span class="date">April 10, 2026</span>
       </div>
       <div class="release-body">
@@ -897,7 +923,7 @@ layout: null
           <li><span class="release-badge badge-new">New</span> Interactive Customer Feedback tab with Formspree-powered contact form (Customer Name, Company, Feedback Title, Feedback Body) — submissions delivered to <a href="mailto:hemant.naik@gmail.com">hemant.naik@gmail.com</a></li>
           <li><span class="release-badge badge-new">New</span> Integrated Formspree Ajax library (<code>@formspree/ajax</code>) via CDN for inline field validation and no-reload submissions</li>
           <li><span class="release-badge badge-new">New</span> Release Notes section (this section) added to the Resources tab</li>
-          <li><span class="release-badge badge-improve">Improved</span> Evaluation tab now shows stat cards (94% / 83% / +11pts) and per-skill results table for all 12 skills</li>
+          <li><span class="release-badge badge-improve">Improved</span> Evaluation tab now shows stat cards (92% / 84% / +8pts) and per-skill results table for all 12 skills</li>
         </ul>
         <h4>🐛 Bug Fixes — Skill Installability</h4>
         <ul>
@@ -928,7 +954,7 @@ layout: null
         <h4>📊 Skill Evaluation</h4>
         <ul>
           <li><span class="release-badge badge-improve">Improved</span> Expanded eval suite to <strong>12 skills / 60 test cases</strong> (5 per framework), each graded against 5 verifiable assertions by independent grader agents — 300 total assertions</li>
-          <li><span class="release-badge badge-improve">Improved</span> Skills scored <strong>94%</strong> vs baseline of 83% (+11 point improvement, +32 additional assertions passed)</li>
+          <li><span class="release-badge badge-improve">Improved</span> Skills scored <strong>92%</strong> vs baseline of 84% (+8 point improvement, +24 additional assertions passed)</li>
           <li><span class="release-badge badge-improve">Improved</span> Evaluation tab updated with full 60-case results for all 12 skills including DORA and DPDPA</li>
         </ul>
         <h4>🐛 Bug Fixes</h4>
