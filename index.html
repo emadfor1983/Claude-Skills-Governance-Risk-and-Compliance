@@ -357,6 +357,68 @@ layout: null
     .badge-fix { background: #fef3c7; color: #92400e; }
     .badge-improve { background: #dbeafe; color: #1e40af; }
 
+    /* ── SECTION NAV (within Skills tab) ── */
+    .section-nav-wrapper {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      border-top: 1px solid var(--border);
+      position: sticky;
+      top: 54px;
+      z-index: 90;
+      margin: -2rem -1.5rem 2rem;
+      padding: 0 1.5rem;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    }
+    .section-nav {
+      display: flex;
+      max-width: 1080px;
+      margin: 0 auto;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .section-nav::-webkit-scrollbar { display: none; }
+    .section-nav-btn {
+      flex-shrink: 0;
+      padding: 0.65rem 1.2rem;
+      border: none;
+      background: none;
+      font-size: 0.88rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -1px;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .section-nav-btn:hover { color: var(--primary); }
+    .section-nav-btn.active { color: var(--primary); border-bottom-color: var(--primary); font-weight: 700; }
+
+    /* Offset anchors so sticky navs don't cover headings */
+    [id^="section-"] { scroll-margin-top: 108px; }
+
+    /* ── USE CASE FILTER BAR ── */
+    .filter-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin: 0.8rem 0 1rem;
+    }
+    .filter-btn {
+      padding: 0.3rem 0.85rem;
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      background: var(--white);
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: all 0.15s;
+      white-space: nowrap;
+    }
+    .filter-btn:hover { border-color: var(--primary); color: var(--primary); }
+    .filter-btn.active { background: var(--primary); color: #fff; border-color: var(--primary); }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 600px) {
       .tab-btn { padding: 0.75rem 0.9rem; font-size: 0.82rem; }
@@ -397,7 +459,15 @@ layout: null
   <!-- ═══ TAB 1: GRC Claude AI Skills ═══ -->
   <section class="tab-panel active" id="tab-skills" role="tabpanel">
 
-    <h2>What Are Claude Skills?</h2>
+    <nav class="section-nav-wrapper" id="skills-section-nav" aria-label="Skills tab sections">
+      <div class="section-nav">
+        <button class="section-nav-btn active" data-section="section-overview">Overview</button>
+        <button class="section-nav-btn" data-section="section-skills">The Skills</button>
+        <button class="section-nav-btn" data-section="section-usecases">Use Cases</button>
+      </div>
+    </nav>
+
+    <h2 id="section-overview">What Are Claude Skills?</h2>
     <p>Claude Skills are installable knowledge packages that extend Claude's capabilities for specific domains. A skill is a <code>.skill</code> file — a bundled archive containing a <code>SKILL.md</code> instruction file and optional reference materials — that you upload to Claude once and use across all your conversations.</p>
     <p>Once installed, a skill activates <strong>automatically</strong> when your conversation touches its topic area. You don't need to invoke it by name or use special commands. Claude simply becomes a deeper expert in that domain for the duration of your session.</p>
 
@@ -427,7 +497,7 @@ layout: null
 
     <hr />
 
-    <h2>The Skills</h2>
+    <h2 id="section-skills">The Skills</h2>
 
     <div class="skill-card">
       <h3>1. 🔐 ISO 27001</h3>
@@ -598,55 +668,72 @@ layout: null
 
     <hr />
 
-    <h2>Potential Use Cases</h2>
+    <h2 id="section-usecases">Potential Use Cases</h2>
+
+    <div class="filter-bar" id="usecase-filters" role="group" aria-label="Filter use cases by skill">
+      <button class="filter-btn active" data-filter="all">Show All</button>
+      <button class="filter-btn" data-filter="ISO 27001">ISO 27001</button>
+      <button class="filter-btn" data-filter="SOC 2">SOC 2</button>
+      <button class="filter-btn" data-filter="FedRAMP">FedRAMP</button>
+      <button class="filter-btn" data-filter="GDPR">GDPR</button>
+      <button class="filter-btn" data-filter="HIPAA">HIPAA</button>
+      <button class="filter-btn" data-filter="NIST CSF">NIST CSF</button>
+      <button class="filter-btn" data-filter="PCI DSS">PCI DSS</button>
+      <button class="filter-btn" data-filter="TSA Cybersecurity">TSA Cybersecurity</button>
+      <button class="filter-btn" data-filter="ISO 42001">ISO 42001</button>
+      <button class="filter-btn" data-filter="ISO 27701">ISO 27701</button>
+      <button class="filter-btn" data-filter="DORA">DORA</button>
+      <button class="filter-btn" data-filter="DPDPA">DPDPA</button>
+    </div>
+
     <div class="table-wrap">
-      <table>
+      <table id="usecase-table">
         <thead><tr><th>Scenario</th><th>Relevant Skill(s)</th></tr></thead>
         <tbody>
-          <tr><td>Preparing for an ISO 27001:2022 Stage 2 certification audit</td><td>ISO 27001</td></tr>
-          <tr><td>Writing an Information Security Policy mapped to Annex A</td><td>ISO 27001</td></tr>
-          <tr><td>Running a SOC 2 readiness assessment before engaging an auditor</td><td>SOC 2</td></tr>
-          <tr><td>Documenting controls for a SOC 2 Type 2 report</td><td>SOC 2</td></tr>
-          <tr><td>Scoping a FedRAMP Moderate authorization on AWS GovCloud</td><td>FedRAMP</td></tr>
-          <tr><td>Writing SSP control narratives for all 20 NIST 800-53 control families</td><td>FedRAMP</td></tr>
-          <tr><td>Auditing an API for GDPR compliance before product launch</td><td>GDPR</td></tr>
-          <tr><td>Drafting a DPIA for a new AI feature that processes personal data</td><td>GDPR</td></tr>
-          <tr><td>Generating a BAA for a healthcare SaaS vendor relationship</td><td>HIPAA</td></tr>
-          <tr><td>Assessing whether a data incident constitutes a reportable HIPAA breach</td><td>HIPAA</td></tr>
-          <tr><td>Building a compliance program that satisfies both ISO 27001 and SOC 2</td><td>ISO 27001 + SOC 2</td></tr>
-          <tr><td>Responding to a customer security questionnaire covering multiple frameworks</td><td>All skills</td></tr>
-          <tr><td>Assessing current cybersecurity posture using NIST CSF 2.0</td><td>NIST CSF</td></tr>
-          <tr><td>Building a CSF organisational profile with Current and Target states</td><td>NIST CSF</td></tr>
-          <tr><td>Scoping a PCI DSS CDE for a cloud-hosted e-commerce platform</td><td>PCI DSS</td></tr>
-          <tr><td>Selecting the right SAQ type for a merchant using a hosted payment page</td><td>PCI DSS</td></tr>
-          <tr><td>Determining whether your pipeline or rail operation is a TSA covered entity</td><td>TSA Cybersecurity</td></tr>
-          <tr><td>Drafting a Cybersecurity Implementation Plan (CIP) for pipeline OT/SCADA environments</td><td>TSA Cybersecurity</td></tr>
-          <tr><td>Running an ISO 42001 gap assessment for an AI provider with multiple ML models</td><td>ISO 42001</td></tr>
-          <tr><td>Completing an AI System Impact Assessment (AISIA) for an automated hiring tool</td><td>ISO 42001</td></tr>
-          <tr><td>Integrating an ISO 42001 AIMS with an existing ISO 27001 ISMS</td><td>ISO 42001 + ISO 27001</td></tr>
-          <tr><td>Aligning a TSA CRMP to NIST CSF 2.0 and CISA Cross-Sector CPGs</td><td>TSA Cybersecurity + NIST CSF</td></tr>
-          <tr><td>Running an ISO 27701:2025 gap assessment for a SaaS company acting as both PII controller and processor</td><td>ISO 27701</td></tr>
-          <tr><td>Transitioning from ISO 27701:2019 certification to the 2025 standalone edition</td><td>ISO 27701</td></tr>
-          <tr><td>Drafting a GDPR-aligned Data Processing Agreement (DPA) with all required Article 28 clauses</td><td>ISO 27701</td></tr>
-          <tr><td>Completing a DPIA for a new AI feature that profiles users for targeted advertising</td><td>ISO 27701</td></tr>
-          <tr><td>Mapping ISO 27701:2025 controls to GDPR articles for a compliance audit</td><td>ISO 27701</td></tr>
-          <tr><td>Integrating a PIMS with an existing ISO 27001:2022 ISMS to avoid duplicating controls</td><td>ISO 27701 + ISO 27001</td></tr>
-          <tr><td>Running a DORA gap analysis for an EU credit institution ahead of a supervisory review</td><td>DORA</td></tr>
-          <tr><td>Classifying an ICT incident against Art. 18 criteria and CDR (EU) 2024/1772 thresholds</td><td>DORA</td></tr>
-          <tr><td>Building a three-stage incident reporting procedure (4h / 72h / 1 month) per Art. 19</td><td>DORA</td></tr>
-          <tr><td>Reviewing ICT vendor contracts against Art. 30(2) mandatory provisions</td><td>DORA</td></tr>
-          <tr><td>Building or validating the Register of Information per CIR (EU) 2024/2956</td><td>DORA</td></tr>
-          <tr><td>Assessing ICT concentration risk for a bank reliant on a single hyperscaler</td><td>DORA</td></tr>
-          <tr><td>Scoping a TLPT programme and evaluating whether Art. 26 applies</td><td>DORA</td></tr>
-          <tr><td>Advising on the interaction between DORA and NIS2 for a financial entity</td><td>DORA</td></tr>
-          <tr><td>Running a DPDPA gap analysis for an Indian SaaS company ahead of the May 2027 deadline</td><td>DPDPA</td></tr>
-          <tr><td>Identifying which GDPR-compliant processing activities need fresh consent under DPDPA</td><td>DPDPA + GDPR</td></tr>
-          <tr><td>Designing a Rule 3-compliant notice with multi-language obligations</td><td>DPDPA</td></tr>
-          <tr><td>Implementing a 72-hour breach notification pipeline per Section 8(6) and Rule 6</td><td>DPDPA</td></tr>
-          <tr><td>Designing a children's data compliance programme with Rule 12 parental verification</td><td>DPDPA</td></tr>
-          <tr><td>Preparing for potential Significant Data Fiduciary designation — DPO, DPIA, audit</td><td>DPDPA</td></tr>
-          <tr><td>Updating Data Processing Agreements with vendors to satisfy Rule 16</td><td>DPDPA</td></tr>
-          <tr><td>Assessing India cross-border transfer obligations — blacklist approach and contractual safeguards</td><td>DPDPA</td></tr>
+          <tr data-skills="ISO 27001"><td>Preparing for an ISO 27001:2022 Stage 2 certification audit</td><td>ISO 27001</td></tr>
+          <tr data-skills="ISO 27001"><td>Writing an Information Security Policy mapped to Annex A</td><td>ISO 27001</td></tr>
+          <tr data-skills="SOC 2"><td>Running a SOC 2 readiness assessment before engaging an auditor</td><td>SOC 2</td></tr>
+          <tr data-skills="SOC 2"><td>Documenting controls for a SOC 2 Type 2 report</td><td>SOC 2</td></tr>
+          <tr data-skills="FedRAMP"><td>Scoping a FedRAMP Moderate authorization on AWS GovCloud</td><td>FedRAMP</td></tr>
+          <tr data-skills="FedRAMP"><td>Writing SSP control narratives for all 20 NIST 800-53 control families</td><td>FedRAMP</td></tr>
+          <tr data-skills="GDPR"><td>Auditing an API for GDPR compliance before product launch</td><td>GDPR</td></tr>
+          <tr data-skills="GDPR"><td>Drafting a DPIA for a new AI feature that processes personal data</td><td>GDPR</td></tr>
+          <tr data-skills="HIPAA"><td>Generating a BAA for a healthcare SaaS vendor relationship</td><td>HIPAA</td></tr>
+          <tr data-skills="HIPAA"><td>Assessing whether a data incident constitutes a reportable HIPAA breach</td><td>HIPAA</td></tr>
+          <tr data-skills="ISO 27001,SOC 2"><td>Building a compliance program that satisfies both ISO 27001 and SOC 2</td><td>ISO 27001 + SOC 2</td></tr>
+          <tr data-skills="all"><td>Responding to a customer security questionnaire covering multiple frameworks</td><td>All skills</td></tr>
+          <tr data-skills="NIST CSF"><td>Assessing current cybersecurity posture using NIST CSF 2.0</td><td>NIST CSF</td></tr>
+          <tr data-skills="NIST CSF"><td>Building a CSF organisational profile with Current and Target states</td><td>NIST CSF</td></tr>
+          <tr data-skills="PCI DSS"><td>Scoping a PCI DSS CDE for a cloud-hosted e-commerce platform</td><td>PCI DSS</td></tr>
+          <tr data-skills="PCI DSS"><td>Selecting the right SAQ type for a merchant using a hosted payment page</td><td>PCI DSS</td></tr>
+          <tr data-skills="TSA Cybersecurity"><td>Determining whether your pipeline or rail operation is a TSA covered entity</td><td>TSA Cybersecurity</td></tr>
+          <tr data-skills="TSA Cybersecurity"><td>Drafting a Cybersecurity Implementation Plan (CIP) for pipeline OT/SCADA environments</td><td>TSA Cybersecurity</td></tr>
+          <tr data-skills="ISO 42001"><td>Running an ISO 42001 gap assessment for an AI provider with multiple ML models</td><td>ISO 42001</td></tr>
+          <tr data-skills="ISO 42001"><td>Completing an AI System Impact Assessment (AISIA) for an automated hiring tool</td><td>ISO 42001</td></tr>
+          <tr data-skills="ISO 42001,ISO 27001"><td>Integrating an ISO 42001 AIMS with an existing ISO 27001 ISMS</td><td>ISO 42001 + ISO 27001</td></tr>
+          <tr data-skills="TSA Cybersecurity,NIST CSF"><td>Aligning a TSA CRMP to NIST CSF 2.0 and CISA Cross-Sector CPGs</td><td>TSA Cybersecurity + NIST CSF</td></tr>
+          <tr data-skills="ISO 27701"><td>Running an ISO 27701:2025 gap assessment for a SaaS company acting as both PII controller and processor</td><td>ISO 27701</td></tr>
+          <tr data-skills="ISO 27701"><td>Transitioning from ISO 27701:2019 certification to the 2025 standalone edition</td><td>ISO 27701</td></tr>
+          <tr data-skills="ISO 27701"><td>Drafting a GDPR-aligned Data Processing Agreement (DPA) with all required Article 28 clauses</td><td>ISO 27701</td></tr>
+          <tr data-skills="ISO 27701"><td>Completing a DPIA for a new AI feature that profiles users for targeted advertising</td><td>ISO 27701</td></tr>
+          <tr data-skills="ISO 27701"><td>Mapping ISO 27701:2025 controls to GDPR articles for a compliance audit</td><td>ISO 27701</td></tr>
+          <tr data-skills="ISO 27701,ISO 27001"><td>Integrating a PIMS with an existing ISO 27001:2022 ISMS to avoid duplicating controls</td><td>ISO 27701 + ISO 27001</td></tr>
+          <tr data-skills="DORA"><td>Running a DORA gap analysis for an EU credit institution ahead of a supervisory review</td><td>DORA</td></tr>
+          <tr data-skills="DORA"><td>Classifying an ICT incident against Art. 18 criteria and CDR (EU) 2024/1772 thresholds</td><td>DORA</td></tr>
+          <tr data-skills="DORA"><td>Building a three-stage incident reporting procedure (4h / 72h / 1 month) per Art. 19</td><td>DORA</td></tr>
+          <tr data-skills="DORA"><td>Reviewing ICT vendor contracts against Art. 30(2) mandatory provisions</td><td>DORA</td></tr>
+          <tr data-skills="DORA"><td>Building or validating the Register of Information per CIR (EU) 2024/2956</td><td>DORA</td></tr>
+          <tr data-skills="DORA"><td>Assessing ICT concentration risk for a bank reliant on a single hyperscaler</td><td>DORA</td></tr>
+          <tr data-skills="DORA"><td>Scoping a TLPT programme and evaluating whether Art. 26 applies</td><td>DORA</td></tr>
+          <tr data-skills="DORA"><td>Advising on the interaction between DORA and NIS2 for a financial entity</td><td>DORA</td></tr>
+          <tr data-skills="DPDPA"><td>Running a DPDPA gap analysis for an Indian SaaS company ahead of the May 2027 deadline</td><td>DPDPA</td></tr>
+          <tr data-skills="DPDPA,GDPR"><td>Identifying which GDPR-compliant processing activities need fresh consent under DPDPA</td><td>DPDPA + GDPR</td></tr>
+          <tr data-skills="DPDPA"><td>Designing a Rule 3-compliant notice with multi-language obligations</td><td>DPDPA</td></tr>
+          <tr data-skills="DPDPA"><td>Implementing a 72-hour breach notification pipeline per Section 8(6) and Rule 6</td><td>DPDPA</td></tr>
+          <tr data-skills="DPDPA"><td>Designing a children's data compliance programme with Rule 12 parental verification</td><td>DPDPA</td></tr>
+          <tr data-skills="DPDPA"><td>Preparing for potential Significant Data Fiduciary designation — DPO, DPIA, audit</td><td>DPDPA</td></tr>
+          <tr data-skills="DPDPA"><td>Updating Data Processing Agreements with vendors to satisfy Rule 16</td><td>DPDPA</td></tr>
+          <tr data-skills="DPDPA"><td>Assessing India cross-border transfer obligations — blacklist approach and contractual safeguards</td><td>DPDPA</td></tr>
         </tbody>
       </table>
     </div>
@@ -1059,6 +1146,70 @@ layout: null
   if (hash && validTabs.includes(hash)) activateTab(hash);
 
   // Form submission is handled by @formspree/ajax (see the feedback tab)
+
+  // ── SECTION NAV: align sticky top with main tab nav height ──
+  (function () {
+    const tabNavWrapper = document.querySelector('.tab-nav-wrapper');
+    const sectionNav = document.getElementById('skills-section-nav');
+    if (tabNavWrapper && sectionNav) {
+      sectionNav.style.top = tabNavWrapper.offsetHeight + 'px';
+    }
+  })();
+
+  // ── SECTION NAV: highlight active section on scroll ──
+  (function () {
+    const sectionIds = ['section-overview', 'section-skills', 'section-usecases'];
+    const navBtns = document.querySelectorAll('.section-nav-btn');
+
+    // Click → smooth scroll
+    navBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById(btn.dataset.section);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+
+    // Scroll → update active button via IntersectionObserver
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.section === entry.target.id);
+          });
+        }
+      });
+    }, { rootMargin: '-110px 0px -60% 0px', threshold: 0 });
+
+    sectionIds.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+  })();
+
+  // ── USE CASE FILTER ──
+  (function () {
+    const filterBtns = document.querySelectorAll('#usecase-filters .filter-btn');
+    const rows = document.querySelectorAll('#usecase-table tbody tr');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.dataset.filter;
+
+        // Update active button
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        // Show / hide rows
+        rows.forEach(row => {
+          const skills = row.dataset.skills || '';
+          const show = filter === 'all'
+            || skills === 'all'
+            || skills.split(',').some(s => s.trim() === filter);
+          row.style.display = show ? '' : 'none';
+        });
+      });
+    });
+  })();
 </script>
 
 </body>
