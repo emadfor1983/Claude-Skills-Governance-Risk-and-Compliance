@@ -1,11 +1,11 @@
 # Claude Skills for Governance, Risk & Compliance (GRC)
-Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, and NIST AI Risk Management Framework — powered by Claude Skills.
+Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, and SWIFT Customer Security Programme (CSP) — powered by Claude Skills.
 
-Benchmarked across 70 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **94%** vs a baseline of **84%** across 350 total assertions.
+Benchmarked across 75 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **95%** vs a baseline of **81%** across 375 total assertions.
 
 [![Release: v0.5.0](https://img.shields.io/badge/Release-v0.5.0-brightgreen.svg)](../../releases/tag/v0.5.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skills: 14](https://img.shields.io/badge/Skills-14-green.svg)](#the-skills)
+[![Skills: 15](https://img.shields.io/badge/Skills-15-green.svg)](#the-skills)
 [![Built with Claude](https://img.shields.io/badge/Built%20with-Claude-orange.svg)](https://claude.ai)
 [![GitHub Stars](https://img.shields.io/github/stars/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance?style=flat&label=Stars&color=gold)](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance)
 
@@ -30,6 +30,7 @@ Benchmarked across 70 test cases (5 per framework) using the eval framework — 
   - [DPDPA India Digital Personal Data Protection](#-dpdpa-india-digital-personal-data-protection)
   - [CMMC 2.0 Cybersecurity Maturity Model Certification](#-cmmc-20-cybersecurity-maturity-model-certification)
   - [NIST AI Risk Management Framework](#-nist-ai-risk-management-framework)
+  - [SWIFT Customer Security Programme (CSP)](#-swift-customer-security-programme-csp)
 - [Potential Use Cases](#potential-use-cases)
 - [How to Install a Skill](#how-to-install-a-skill)
 - [Install via Claude Code Marketplace](#install-via-claude-code-marketplace)
@@ -349,6 +350,26 @@ The NIST AI RMF skill turns Claude into an expert advisor on the **NIST AI Risk 
 
 ---
 
+### 15. 🏦 SWIFT Customer Security Programme (CSP)
+
+**File:** `SWIFT CSP - Claude Skill/swift-csp.skill`
+
+The SWIFT CSP skill turns Claude into an expert advisor on the **SWIFT Customer Security Controls Framework (CSCF) v2025** — the mandatory cybersecurity programme for all SWIFT network participants. It covers all 31 controls (23 mandatory + 8 advisory), all five architecture types (A1/A2/A3/A4/B), the KYC-SA annual attestation process, and complete cross-framework mappings to ISO 27001:2022, PCI DSS v4.0.1, and NIST CSF 2.0.
+
+**What it does:**
+- Determines the correct **SWIFT architecture type** (A1/A2/A3/A4/B) from a description of the organisation's SWIFT connectivity and produces the full mandatory/advisory control applicability matrix
+- Conducts structured **CSCF v2025 gap assessments** with 🔴/🟡/🟢 status per control, evidence requirements, and prioritised remediation roadmaps
+- Provides **deep-dive implementation guidance** for all 23 mandatory controls — purpose, requirements, step-by-step implementation, and audit evidence artifacts
+- Guides the complete **KYC-SA attestation process** — evidence preparation per control, independent assessor qualification criteria, portal submission steps, and post-submission counterparty visibility
+- Advises on the **CSCF v2024 → v2025 changes**: critical patch SLA tightened from 7 to 3 days, hardware MFA token requirement explicitly mandated, log retention clarified (1 year online, 3 years total)
+- Provides **SWIFT-specific incident response** guidance — 24-hour initial notification to security@swift.com, 30-day full report, evidence preservation, and IRP content requirements for Control 7.1
+- Explains **Type B (service bureau) responsibilities** — the split between bureau and customer obligations, and how to verify your bureau's KYC-SA attestation
+- **Maps CSCF controls to ISO 27001:2022, PCI DSS v4.0.1, and NIST CSF 2.0** — identifying both synergies and SWIFT-specific additions not covered by existing certifications
+
+**Trigger phrases:** `SWIFT CSP`, `CSCF`, `KYC-SA`, `SWIFT security attestation`, `Alliance Access`, `SWIFT operator MFA`, `SWIFT secure zone`, `SWIFT secure flow zone`, `CSCF v2025`, `Control 4.2 SWIFT`, `Control 6.4 SWIFT`, `Control 7.1 SWIFT`, `SWIFT architecture type A1`, `SWIFT service bureau`, `Type B SWIFT`, `SWIFT incident response`, `SWIFT gap assessment`, `SWIFT mandatory controls`, `SWIFT hardware token`, `SWIFT log retention`
+
+---
+
 ## Potential Use Cases
 
 | Scenario | Relevant Skill(s) |
@@ -444,6 +465,14 @@ The NIST AI RMF skill turns Claude into an expert advisor on the **NIST AI Risk 
 | Assessing bias and fairness of a hiring AI tool (demographic parity, equalized odds, EEOC 4/5ths rule) | NIST AI RMF |
 | Designing a post-deployment AI monitoring programme using MEASURE 3.x and MANAGE 3.x | NIST AI RMF |
 | Integrating NIST AI RMF with an existing NIST CSF programme | NIST AI RMF + NIST CSF |
+| Determining your SWIFT architecture type (A1/A2/A3/A4/B) and getting the full CSCF v2025 control applicability matrix | SWIFT CSP |
+| Running a CSCF v2025 gap assessment for an Alliance Access on-premises deployment | SWIFT CSP |
+| Understanding why software OTP (Google Authenticator) fails Control 4.2 and remediating with hardware tokens before July attestation | SWIFT CSP |
+| Preparing all evidence and completing the annual KYC-SA attestation via swift.com/myswift | SWIFT CSP |
+| Developing a SWIFT-specific incident response plan covering 24-hour SWIFT notification and 30-day report obligations | SWIFT CSP |
+| Verifying your service bureau's (Type B) KYC-SA attestation and understanding split control responsibilities | SWIFT CSP |
+| Mapping existing ISO 27001 or PCI DSS controls to CSCF requirements to identify SWIFT-specific gaps | SWIFT CSP + ISO 27001 / PCI DSS |
+| Remediating common CSCF non-compliance patterns: shared VLAN, stale patches, missing SIEM coverage, token inventory gaps | SWIFT CSP |
 
 ---
 
@@ -467,6 +496,7 @@ The NIST AI RMF skill turns Claude into an expert advisor on the **NIST AI Risk 
    | 🇮🇳 DPDPA India Digital Personal Data Protection | [dpdpa.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/DPDPA%20-%20Claude%20Skill/dpdpa.skill) |
    | 🛡️ CMMC 2.0 Cybersecurity Maturity Model Certification | [cmmc.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CMMC%20-%20Claude%20Skill/cmmc.skill) |
    | 🤖 NIST AI Risk Management Framework | [nist-ai-rmf.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIST%20AI%20RMF%20-%20Claude%20Skill/nist-ai-rmf.skill) |
+   | 🏦 SWIFT Customer Security Programme (CSP) | [swift-csp.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/SWIFT%20CSP%20-%20Claude%20Skill/swift-csp.skill) |
 
 2. Open Claude and navigate to **Customize → Skills**.
 3. Click **Upload Skill** and select the `.skill` file.
@@ -486,7 +516,7 @@ Add the marketplace and install the skills you need directly from the terminal:
 
 ```shell
 /plugin marketplace add Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
-/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills cmmc@grc-skills nist-ai-rmf@grc-skills
+/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills cmmc@grc-skills nist-ai-rmf@grc-skills swift-csp@grc-skills
 ```
 
 Teams can pre-wire the marketplace in `.claude/settings.json` so every developer gets the skills automatically when they open the project — no manual install required.
@@ -497,13 +527,13 @@ Teams can pre-wire the marketplace in `.claude/settings.json` so every developer
 
 ## Skill Evaluation
 
-These skills were benchmarked using the [Claude Skill Creator](https://claude.ai) eval framework. **70 realistic test cases** were run across all 14 skills — 5 per framework — covering gap analysis, policy drafting, control deep-dives, edge cases, and compliance advice scenarios. Each test case was evaluated against 5 objectively verifiable assertions by independent grader agents comparing skill-assisted vs. baseline Claude responses.
+These skills were benchmarked using the [Claude Skill Creator](https://claude.ai) eval framework. **75 realistic test cases** were run across all 15 skills — 5 per framework — covering gap analysis, policy drafting, control deep-dives, edge cases, and compliance advice scenarios. Each test case was evaluated against 5 objectively verifiable assertions by independent grader agents comparing skill-assisted vs. baseline Claude responses.
 
 | Configuration | Pass Rate | Assertions Passed |
 |---------------|-----------|-------------------|
-| **With GRC Skills installed** | **94%** | **330 / 350** |
-| Without skills (baseline Claude) | 84% | 294 / 350 |
-| **Delta** | **+10 points** | **+36 assertions** |
+| **With GRC Skills installed** | **95%** | **355 / 375** |
+| Without skills (baseline Claude) | 81% | 305 / 375 |
+| **Delta** | **+14 points** | **+50 assertions** |
 
 ### Per-Skill Results
 
@@ -523,8 +553,9 @@ These skills were benchmarked using the [Claude Skill Creator](https://claude.ai
 | DPDPA | 5 | **96%** | 80% | +16% | Applicability to foreign entities; Consent vs GDPR; Children's data (18-year threshold); Cross-border transfers; SDF obligations |
 | CMMC 2.0 | 5 | **100%** | 100% | +0% | Level determination; SPRS scoring; CUI scoping; SSP structure; C3PAO assessment readiness |
 | NIST AI RMF | 5 | **92%** | 76% | +16% | Four functions overview; Hiring AI risk assessment; Credit scoring risk register; EU AI Act mapping; GOVERN gap assessment |
+| SWIFT CSP | 5 | **100%** | 48% | +52% | Architecture scoping (A1/A2/A3/A4/B); MFA hardware token requirement; CSCF v2025 gap assessment; KYC-SA attestation process; Incident response obligations |
 
-Skills add the most measurable value on highly framework-specific tasks: clause-level precision for ISO 27001, CC criteria mapping for SOC 2, exact FedRAMP POA&M timeframes and document names, GDPR article citations, HIPAA regulatory section references, CSF 2.0 subcategory IDs, PCI DSS v4.0.1 requirement numbers, TSA Security Directive citations, ISO 42001 AIMS clause references, DORA Article citations and exact incident reporting timelines (4h/72h/1 month), DPDPA-specific terminology, CMMC practice IDs and SPRS scoring, and NIST AI RMF category notation (GV-1 through MG-4.x) and trustworthiness metrics.
+Skills add the most measurable value on highly framework-specific tasks: clause-level precision for ISO 27001, CC criteria mapping for SOC 2, exact FedRAMP POA&M timeframes and document names, GDPR article citations, HIPAA regulatory section references, CSF 2.0 subcategory IDs, PCI DSS v4.0.1 requirement numbers, TSA Security Directive citations, ISO 42001 AIMS clause references, DORA Article citations and exact incident reporting timelines (4h/72h/1 month), DPDPA-specific terminology, CMMC practice IDs and SPRS scoring, NIST AI RMF category notation (GV-1 through MG-4.x) and trustworthiness metrics, and SWIFT CSP architecture classification and CSCF v2025 control-specific guidance (patching SLAs, hardware MFA requirements, KYC-SA attestation deadlines).
 
 📊 **[View the full eval results →](grc-skills-eval-results.html)**
 

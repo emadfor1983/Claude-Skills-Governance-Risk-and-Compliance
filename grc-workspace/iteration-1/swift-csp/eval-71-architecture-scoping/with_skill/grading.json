@@ -1,0 +1,31 @@
+{
+  "eval_id": 71,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Correctly identifies the bank's architecture as A1 (customer connector, customer-managed, software-based)",
+      "passed": true,
+      "evidence": "Section 1 explicitly states: 'your institution is classified as Architecture Type A1' with a rationale table confirming 'Customer connector / Customer-managed / Software-based (Alliance Access)' and 'Conclusion: Alliance Access running on your own on-premises servers... is the defining profile of an A1 (Customer Connector, Customer-Managed, Software-Based) architecture.'"
+    },
+    {
+      "text": "Lists all 23 mandatory controls applicable to A1 including 1.1, 1.2, 1.4, 2.1, 2.2, 2.3, 2.6, 2.7, 2.8, 2.10, 3.1, 4.1, 4.2, 5.1, 5.2, 5.4, 6.1, 6.2, 6.3, 6.4, 7.1, 7.2",
+      "passed": true,
+      "evidence": "Section 3 Summary Count table lists all 22 control IDs from the assertion (1.1, 1.2, 1.4, 2.1, 2.2, 2.3, 2.6, 2.7, 2.8, 2.10, 3.1, 4.1, 4.2, 5.1, 5.2, 5.4, 6.1, 6.2, 6.3, 6.4, 7.1, 7.2) and states a total of 23 mandatory controls. The full applicability matrix in Section 7 marks each of these as MANDATORY for A1, and each control is described in detail in Sections 2-3."
+    },
+    {
+      "text": "Identifies the 8 advisory controls (1.3A, 1.5A, 2.4A, 2.5A, 2.9A, 2.11A, 5.3A, 6.5A, 7.3A, 7.4A) and notes they are recommended but not required for attestation",
+      "passed": true,
+      "evidence": "Section 3 Summary Count lists Advisory controls as: '1.3A, 1.5A, 2.4A, 2.5A, 2.9A, 2.11A, 5.3A, 6.5A, 7.3A, 7.4A' — all 10 controls from the assertion list are present. Each is described in the control matrix with 'ADVISORY' status and the legend states advisory means 'Strongly recommended best practice; not subject to mandatory attestation but assessed for maturity.' Note: the summary count field says '8' but the actual list contains all 10 from the assertion."
+    },
+    {
+      "text": "Explains that A1 is the most common architecture for large banks running Alliance Access on-premises",
+      "passed": true,
+      "evidence": "Section 1 states: 'This is the most common architecture for large and mid-tier banks with direct SWIFT connectivity.' Section 4 also references 'the most common assessment findings for software-based on-premises deployments.'"
+    },
+    {
+      "text": "Notes that KYC-SA attestation requires attestation against mandatory controls only, but advisory controls may be reviewed by counterparties",
+      "passed": true,
+      "evidence": "Section 6 Annual Attestation Requirements table states: 'Scope: All 23 mandatory controls applicable to A1' and 'Advisory controls: Optionally included; assessed for maturity but not attested as pass/fail.' The independent assessment note and attestation options confirm mandatory-only attestation scope."
+    }
+  ]
+}

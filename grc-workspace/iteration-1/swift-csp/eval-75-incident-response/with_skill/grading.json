@@ -1,0 +1,31 @@
+{
+  "eval_id": 75,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "States the 24-hour initial notification obligation to SWIFT (via security@swift.com or KYC-SA portal) upon confirmed cyber incident",
+      "passed": true,
+      "evidence": "Step 3 heading: 'SWIFT Notification (Within 24 Hours of Confirmed Incident)' with table explicitly listing 'SWIFT CISO Office | security@swift.com | Within 24 hours of confirmed incident' and 'KYC-SA Portal (if incident affects attestation) | SWIFT KYC-SA portal at swift.com/myswift | As applicable'."
+    },
+    {
+      "text": "States the 30-day full incident report obligation to SWIFT",
+      "passed": true,
+      "evidence": "Step 6 is titled 'Full Incident Report to SWIFT (Within 30 Days)' and opens: 'Following the initial 24-hour notification, a full incident report must be submitted to SWIFT within 30 days.'"
+    },
+    {
+      "text": "Lists evidence to preserve: system memory dumps, log files from SWIFT zone, transaction records, network captures, endpoint forensic images",
+      "passed": true,
+      "evidence": "Part 2 covers all five categories: (1) 'Capture volatile memory (RAM image)' — memory dumps; (2) 'Preserve all log files' including Alliance Access/Gateway logs, OS logs, network device logs from SWIFT Secure Zone — log files; (3) 'Export SWIFT message archives' and 'Preserve transaction reconciliation records' — transaction records; (4) 'Capture network traffic — preserve packet captures for the SWIFT Secure Zone' — network captures; (5) 'Create forensic disk images of the compromised server' — endpoint forensic images."
+    },
+    {
+      "text": "Identifies immediate containment steps: isolate affected systems from SWIFT zone, revoke compromised operator credentials/tokens, notify SWIFT relationship manager",
+      "passed": true,
+      "evidence": "Step 2 lists: (1) 'Isolate the affected server — Remove the compromised SWIFT-connected server from the SWIFT Secure Zone network immediately'; (2) 'Revoke or suspend any SWIFT operator tokens associated with the affected server'; (3) Step 3 table lists 'SWIFT Relationship Manager | Your named SWIFT relationship manager | Within 24 hours' as a mandatory notification."
+    },
+    {
+      "text": "Outlines what a SWIFT-specific IRP must contain: detection triggers specific to SWIFT, escalation to SWIFT within 24 hours, fraud scenario playbooks, communication with correspondent banks, evidence preservation procedures",
+      "passed": true,
+      "evidence": "Part 3 Section 5 covers 'Detection Triggers and Initial Triage' with SWIFT-specific monitoring sources; Section 4 includes '24-hour SWIFT notification procedure'; Section 2 provides a table of SWIFT incident types including 'Suspected fraudulent SWIFT transaction' and 'Ransomware or destructive malware' as named playbook scenarios; Section 4 (Step 5) covers correspondent bank notification via 'Contact receiving banks directly'; Section 7 documents 'Evidence Preservation Requirements' as a required IRP element."
+    }
+  ]
+}

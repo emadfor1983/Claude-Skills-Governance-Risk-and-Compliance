@@ -1,0 +1,31 @@
+{
+  "eval_id": 74,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Describes the KYC-SA portal on swift.com/myswift as the submission mechanism",
+      "passed": true,
+      "evidence": "Step 1 states: 'Log in to swift.com/myswift / Navigate to the KYC Security Attestation (KYC-SA) section'. The Summary also repeats: 'Completing the KYC-SA form at swift.com/myswift'."
+    },
+    {
+      "text": "Explains that an independent assessor is required and lists who qualifies: internal audit (if independent from SWIFT ops), external auditor with SWIFT CSP competency, or SWIFT-certified assessors",
+      "passed": true,
+      "evidence": "Section 3 lists three eligible assessors: (1) Internal Audit Team — 'provided the internal audit team is sufficiently independent from the SWIFT operations team'; (2) External Audit Firm — 'with demonstrated SWIFT CSP assessment competency'; (3) SWIFT-Certified Assessors — 'Assessors listed on SWIFT's KYC Registry who are specifically certified for SWIFT CSP assessments'."
+    },
+    {
+      "text": "States the annual deadline of July 31 and the consequences of late submission including counterparty notifications",
+      "passed": true,
+      "evidence": "Section 4 states: 'Submit by July 31 to meet the annual deadline'. Section 6 states: 'If you fail to submit by July 31, SWIFT will flag your institution to counterparties as non-attesting. This can trigger counterparty due diligence escalations, suspension of correspondent relationships, or regulatory escalation'."
+    },
+    {
+      "text": "Explains the three attestation statuses for each control: Implemented, Partially Implemented, Not Implemented",
+      "passed": true,
+      "evidence": "Step 3 presents a table with exactly three statuses: 'Implemented', 'Partially Implemented', 'Not Implemented', with definitions for each."
+    },
+    {
+      "text": "Notes that submitted attestations are visible to counterparties who can view compliance status and may request clarification",
+      "passed": true,
+      "evidence": "Section 6 states: 'your attestation is immediately visible to your counterparties via the KYC-SA portal. Counterparties can view your compliance status for each control'. It also states: 'Counterparties may contact you directly to request clarification or additional details about specific controls'."
+    }
+  ]
+}

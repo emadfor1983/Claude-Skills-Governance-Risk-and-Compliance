@@ -1,0 +1,31 @@
+{
+  "eval_id": 75,
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "States the 24-hour initial notification obligation to SWIFT (via security@swift.com or KYC-SA portal) upon confirmed cyber incident",
+      "passed": false,
+      "evidence": "Section 2A states notification should occur 'within 24 hours of discovery' but directs to the 'SWIFT Customer Security Intelligence (CSI) portal' or 'SWIFT ISAC' — neither security@swift.com nor the KYC-SA portal is mentioned anywhere in the response. The 24-hour timeframe is present but the required channels are absent."
+    },
+    {
+      "text": "States the 30-day full incident report obligation to SWIFT",
+      "passed": false,
+      "evidence": "No 30-day full incident report obligation to SWIFT is mentioned. Section 5 timelines table covers actions up to 'Complete full forensic evidence collection — Within 24-48 hours' but contains no 30-day SWIFT report deadline. Section 4.8 references 'Reporting outcomes to SWIFT if required' but does not specify a 30-day deadline."
+    },
+    {
+      "text": "Lists evidence to preserve: system memory dumps, log files from SWIFT zone, transaction records, network captures, endpoint forensic images",
+      "passed": true,
+      "evidence": "Section 3 covers all five categories: (1) 'Volatile memory (RAM) dumps captured before isolation or shutdown' — memory dumps; (2) 'SWIFT Alliance logs' and 'Event logs (Windows Event Logs, Syslog) from the affected server' — log files from SWIFT zone; (3) 'SWIFT message archives' and 'Database audit logs for the SWIFT back-office database' — transaction records; (4) 'Network traffic captures (PCAP) from IDS/IPS, firewalls, and network taps' — network captures; (5) 'Full disk images of the compromised server(s) using forensically sound tools' — endpoint forensic images."
+    },
+    {
+      "text": "Identifies immediate containment steps: isolate affected systems from SWIFT zone, revoke compromised operator credentials/tokens, notify SWIFT relationship manager",
+      "passed": false,
+      "evidence": "Section 1 step 1 covers isolation: 'Immediately isolate the affected SWIFT-connected server from the SWIFT network.' However, revoking compromised operator credentials/tokens is not mentioned — step 2 only says 'Halt outbound SWIFT message transmission' with no mention of credential/token revocation. Notifying the SWIFT relationship manager is also absent; only the SWIFT ISAC/CSI portal and security team are referenced."
+    },
+    {
+      "text": "Outlines what a SWIFT-specific IRP must contain: detection triggers specific to SWIFT, escalation to SWIFT within 24 hours, fraud scenario playbooks, communication with correspondent banks, evidence preservation procedures",
+      "passed": false,
+      "evidence": "Section 4.3 covers detection/initial assessment procedures. Section 4.5 references '24 hours' for SWIFT reporting. Section 4.5 includes a 'Correspondent bank alert procedure'. Section 4.6 covers evidence preservation. However, fraud scenario playbooks are not present — Section 4.3 only mentions 'criteria for escalating to a SWIFT fraud incident' without defining structured playbooks for specific fraud scenarios. Three of five elements are present but fraud scenario playbooks are clearly missing."
+    }
+  ]
+}

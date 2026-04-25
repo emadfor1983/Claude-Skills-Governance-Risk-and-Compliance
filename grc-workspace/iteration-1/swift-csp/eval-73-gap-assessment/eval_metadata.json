@@ -1,0 +1,12 @@
+{
+  "eval_id": 73,
+  "eval_name": "gap-assessment",
+  "prompt": "Run a SWIFT CSCF v2025 gap assessment for our organisation. Here is our current state: SWIFT zone exists but is on a shared VLAN with other internal systems. We patch critical vulnerabilities within 30 days. We use software OTP for operator MFA. SWIFT logs are collected but not reviewed and retention is only 6 months. We have a general IT incident response plan but nothing SWIFT-specific. Operators use named individual accounts. Rate each relevant control and give us a prioritised remediation plan.",
+  "assertions": [
+    "Rates Control 1.1 as red or amber because SWIFT zone shares a VLAN with other internal systems — network segregation is a hard requirement",
+    "Rates Control 2.2 as red because 30-day patching exceeds the CSCF v2025 critical patch SLA of 3 days",
+    "Rates Control 4.2 as red because software OTP does not meet the hardware token requirement",
+    "Rates Control 6.4 as red or amber due to 6-month log retention (minimum is 1 year) and logs not being actively reviewed",
+    "Rates Control 7.1 as red or amber due to absence of a SWIFT-specific incident response plan, and includes SWIFT notification obligations (24-hour initial, 30-day full report)"
+  ]
+}

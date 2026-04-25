@@ -1,0 +1,31 @@
+{
+  "eval_id": 72,
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Explains that CSCF v2025 explicitly requires hardware authentication tokens for Control 4.2, and that software-based OTP (TOTP apps) is insufficient",
+      "passed": true,
+      "evidence": "Executive Summary states: 'The control explicitly requires multi-factor authentication using hardware-based tokens or equivalent strong authentication mechanisms.' Section 2.2 lists under 'What is explicitly NOT acceptable under CSCF v2025': 'Software TOTP applications (Google Authenticator, Microsoft Authenticator, Authy) — seed is in software.' The Summary Table also marks Google Authenticator as 'No' for CSCF v2025 Compliant."
+    },
+    {
+      "text": "Identifies the risk: software OTP can be compromised if the device/phone is malware-infected, bypassing the security intent of MFA",
+      "passed": true,
+      "evidence": "Section 1.1 states: 'A smartphone or PC running Google Authenticator can be infected with banking trojans, spyware, or RATs that silently read the OTP at the time of entry or extract the seed from app storage. This is a well-documented attack vector (e.g., Cerberus, Anubis malware families specifically target TOTP seeds).'"
+    },
+    {
+      "text": "Provides at least 2 concrete hardware token options (e.g., RSA SecurID, Thales SafeNet, YubiKey) or categories of compliant hardware",
+      "passed": true,
+      "evidence": "Option 1 lists Thales SafeNet OTP tokens (SafeNet eToken PASS, SafeNet OTP 110), RSA SecurID hardware tokens, and VASCO/OneSpan Digipass. Option 3 lists YubiKey 5 series and Feitian ePass FIDO. Option 2 lists Thales IDPrime, HID Global, and Gemalto/Thales IDGo smart cards."
+    },
+    {
+      "text": "Outlines implementation steps: procure hardware tokens, integrate with RADIUS or LDAP, distribute to operators, update IRP/procedures",
+      "passed": true,
+      "evidence": "Section 4 provides a week-by-week sequence: Week 1 covers token procurement; Weeks 1-2 cover STA cloud and RADIUS agent configuration; Week 2-3 covers Alliance Access RADIUS MFA configuration and pilot testing; Week 3-4 covers operator enrollment and training; Week 5-6 covers disabling Google Authenticator; Weeks 6-7 cover evidence collection. Section 5 covers required policy and documentation updates including MFA Policy, Token management procedure, and Joiner/Mover/Leaver procedures."
+    },
+    {
+      "text": "Notes the July 31 KYC-SA deadline and estimates a realistic remediation timeline, advising whether the gap can be closed in time",
+      "passed": true,
+      "evidence": "Section 4 states: 'Given the July attestation deadline (approximately 10 weeks from today, April 25, 2026)' and recommends Thales SafeNet OTP tokens as fastest. Option 1 timeline is 5-10 weeks total, which fits within the 10-week window. The response concludes: 'With focused effort, a July attestation is achievable.'"
+    }
+  ]
+}

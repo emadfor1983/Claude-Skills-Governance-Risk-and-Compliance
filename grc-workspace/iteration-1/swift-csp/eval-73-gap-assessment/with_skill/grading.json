@@ -1,0 +1,31 @@
+{
+  "eval_id": 73,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Rates Control 1.1 as red or amber because SWIFT zone shares a VLAN with other internal systems — network segregation is a hard requirement",
+      "passed": true,
+      "evidence": "Control 1.1 is rated '🔴 RED' with the gap description: 'Critical gap: SWIFT zone not isolated on a dedicated VLAN/segment. Shared VLAN means other systems can communicate with SWIFT infrastructure without firewall enforcement.' The executive summary also highlights this as the top critical risk."
+    },
+    {
+      "text": "Rates Control 2.2 as red because 30-day patching exceeds the CSCF v2025 critical patch SLA of 3 days",
+      "passed": true,
+      "evidence": "Control 2.2 is rated '🔴 RED' with explicit reasoning: 'CSCF v2025 requires critical patches within 3 calendar days and SWIFT emergency advisories within 3 days. A 30-day SLA for criticals significantly exceeds this... The 30-day window is a direct non-compliance against the v2025 tightened SLA.' The executive summary also calls out '30-day critical patching window exceeds the 3-day SLA required under CSCF v2025'."
+    },
+    {
+      "text": "Rates Control 4.2 as red because software OTP does not meet the hardware token requirement",
+      "passed": true,
+      "evidence": "Control 4.2 is rated '🔴 RED' with the gap: 'CSCF v2025 explicitly states software-based OTP (authenticator apps) does not satisfy the MFA requirement for most architecture types. Hardware OTP tokens, smart cards with PIN, or FIDO2 hardware keys are required.' Described as 'one of the most commonly cited non-compliance findings industry-wide'."
+    },
+    {
+      "text": "Rates Control 6.4 as red or amber due to 6-month log retention (minimum is 1 year) and logs not being actively reviewed",
+      "passed": true,
+      "evidence": "Control 6.4 is rated '🔴 RED' with two explicit gaps: '(1) Logs are not being reviewed — CSCF v2025 requires daily review of transaction anomalies and authentication failures, and weekly review of other events. (2) Retention is 6 months — CSCF v2025 requires minimum 1 year online and 3 years total. This is a direct, demonstrable non-compliance on both dimensions.'"
+    },
+    {
+      "text": "Rates Control 7.1 as red or amber due to absence of a SWIFT-specific incident response plan, and includes SWIFT notification obligations (24-hour initial, 30-day full report)",
+      "passed": true,
+      "evidence": "Control 7.1 is rated '🔴 RED'. The gap analysis states a SWIFT-specific IRP is required covering '24-hour SWIFT notification obligation'. The remediation plan (P1-2) explicitly states: 'Escalation path to SWIFT within 24 hours of confirmed incident' and 'Full incident report to SWIFT within 30 days', directly satisfying both notification timeline requirements."
+    }
+  ]
+}

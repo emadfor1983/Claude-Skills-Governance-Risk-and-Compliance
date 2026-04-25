@@ -1,0 +1,12 @@
+{
+  "eval_id": 74,
+  "eval_name": "kyc-sa-attestation",
+  "prompt": "We need to submit our annual KYC-SA attestation by July 31. Walk us through the complete attestation process — what we need to prepare, who can act as our independent assessor, how to complete the KYC-SA form, and what happens to our attestation once submitted. We are an A1 architecture bank.",
+  "assertions": [
+    "Describes the KYC-SA portal on swift.com/myswift as the submission mechanism",
+    "Explains that an independent assessor is required and lists who qualifies: internal audit (if independent from SWIFT ops), external auditor with SWIFT CSP competency, or SWIFT-certified assessors",
+    "States the annual deadline of July 31 and the consequences of late submission including counterparty notifications",
+    "Explains the three attestation statuses for each control: Implemented, Partially Implemented, Not Implemented",
+    "Notes that submitted attestations are visible to counterparties who can view compliance status and may request clarification"
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "name": "swift-csp",
+  "description": "Expert SWIFT Customer Security Programme (CSP) advisor — CSCF v2025 gap assessments, mandatory vs advisory controls, architecture type scoping (A1/A2/A3/A4/B), KYC-SA attestation, MFA and access control implementation, log monitoring, and incident response for the global banking network.",
+  "version": "0.5.0",
+  "author": {
+    "name": "Hemant Naik",
+    "email": "hemant.naik@gmail.com"
+  },
+  "homepage": "https://sushegaad.github.io/Claude-Skills-Governance-Risk-and-Compliance/",
+  "repository": "https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance",
+  "license": "MIT",
+  "keywords": [
+    "swift-csp",
+    "cscf",
+    "swift-security",
+    "banking-security",
+    "kyc-sa",
+    "payment-security",
+    "financial-messaging",
+    "grc"
+  ]
+}

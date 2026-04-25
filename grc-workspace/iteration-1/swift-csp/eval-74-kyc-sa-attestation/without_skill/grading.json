@@ -1,0 +1,31 @@
+{
+  "eval_id": 74,
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Describes the KYC-SA portal on swift.com/myswift as the submission mechanism",
+      "passed": false,
+      "evidence": "The response says 'Log in to SWIFT's KYC Registry via swift.com' but never mentions swift.com/myswift specifically. It refers to 'the KYC-SA section within the KYC Registry portal' — not the KYC-SA portal by name or the specific URL."
+    },
+    {
+      "text": "Explains that an independent assessor is required and lists who qualifies: internal audit (if independent from SWIFT ops), external auditor with SWIFT CSP competency, or SWIFT-certified assessors",
+      "passed": false,
+      "evidence": "The response lists SWIFT-listed external assessors and internal audit, but casts significant doubt on internal audit for A1: 'SWIFT's current guidance strongly recommends or requires an external independent assessor — verify the exact requirement'. It does not clearly affirm all three eligible paths as valid options, and frames internal audit as potentially disqualified for A1."
+    },
+    {
+      "text": "States the annual deadline of July 31 and the consequences of late submission including counterparty notifications",
+      "passed": false,
+      "evidence": "The response incorrectly states: 'SWIFT's annual attestation deadline is typically December 31 of each year, but your organization has set an internal target of July 31 — this is a best practice approach'. This misrepresents July 31 as an internal target rather than the SWIFT deadline, and does not describe the counterparty notification consequences in the context of missing the actual deadline."
+    },
+    {
+      "text": "Explains the three attestation statuses for each control: Implemented, Partially Implemented, Not Implemented",
+      "passed": false,
+      "evidence": "The response uses different statuses: 'Compliant', 'Not Compliant', and 'Not Applicable'. It does not use the correct SWIFT KYC-SA terminology of Implemented, Partially Implemented, and Not Implemented. 'Partially Implemented' is entirely absent as a distinct status."
+    },
+    {
+      "text": "Notes that submitted attestations are visible to counterparties who can view compliance status and may request clarification",
+      "passed": true,
+      "evidence": "Section 4 states: 'Counterparties (other SWIFT members you correspond with) can view your attestation status... Compliance status for each mandatory control (compliant or non-compliant). Counterparties use this information in their own correspondent banking due diligence'. It also notes counterparties 'may raise concerns or restrict your relationship' upon seeing non-compliant controls."
+    }
+  ]
+}

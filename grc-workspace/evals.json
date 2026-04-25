@@ -1,6 +1,6 @@
 {
   "skill_name": "grc-skills",
-  "description": "Evaluations for all 14 GRC skills: ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001, ISO 27701, DORA, DPDPA, CMMC 2.0, NIST AI RMF",
+  "description": "Evaluations for all 15 GRC skills: ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001, ISO 27701, DORA, DPDPA, CMMC 2.0, NIST AI RMF, SWIFT CSP",
   "evals": [
     {
       "id": 1,
@@ -939,6 +939,81 @@
         "Provides specific remediation actions for each gap including drafting an AI Risk Management Policy",
         "Includes a prioritised roadmap distinguishing quick wins from medium/long-term actions",
         "Recommends establishing cross-functional AI risk working group including legal as a specific action for GV-4"
+      ],
+      "files": []
+    },
+    {
+      "id": 71,
+      "skill": "swift-csp",
+      "skill_path": "plugins/swift-csp/skills/swift-csp/SKILL.md",
+      "prompt": "We are a mid-tier regional bank connecting to SWIFT via Alliance Access software running on our own servers on-premises. We have no HSMs and do not use a service bureau or cloud-hosted SWIFT. What is our SWIFT architecture type and which CSCF v2025 controls are mandatory for us versus advisory? Give us the full applicability matrix.",
+      "expected_output": "Identification of A1 architecture type, a complete applicability table showing all 31 CSCF controls with mandatory/advisory/not-applicable status for A1, and explanation of what A1 means.",
+      "assertions": [
+        "Correctly identifies the bank's architecture as A1 (customer connector, customer-managed, software-based)",
+        "Lists all 23 mandatory controls applicable to A1 including 1.1, 1.2, 1.4, 2.1, 2.2, 2.3, 2.6, 2.7, 2.8, 2.10, 3.1, 4.1, 4.2, 5.1, 5.2, 5.4, 6.1, 6.2, 6.3, 6.4, 7.1, 7.2",
+        "Identifies the 8 advisory controls (1.3A, 1.5A, 2.4A, 2.5A, 2.9A, 2.11A, 5.3A, 6.5A, 7.3A, 7.4A) and notes they are recommended but not required for attestation",
+        "Explains that A1 is the most common architecture for large banks running Alliance Access on-premises",
+        "Notes that KYC-SA attestation requires attestation against mandatory controls only, but advisory controls may be reviewed by counterparties"
+      ],
+      "files": []
+    },
+    {
+      "id": 72,
+      "skill": "swift-csp",
+      "skill_path": "plugins/swift-csp/skills/swift-csp/SKILL.md",
+      "prompt": "We currently use Google Authenticator (software-based TOTP) for our SWIFT operators to authenticate to Alliance Access. Our SWIFT assessor has flagged this as a finding against Control 4.2. Why is software OTP not sufficient, what exactly does CSCF v2025 require, and what are our options to remediate this finding before our July attestation deadline?",
+      "expected_output": "Clear explanation of why software OTP fails Control 4.2, the exact CSCF v2025 requirement for hardware tokens, and concrete remediation options with implementation timeline guidance.",
+      "assertions": [
+        "Explains that CSCF v2025 explicitly requires hardware authentication tokens for Control 4.2, and that software-based OTP (TOTP apps) is insufficient",
+        "Identifies the risk: software OTP can be compromised if the device/phone is malware-infected, bypassing the security intent of MFA",
+        "Provides at least 2 concrete hardware token options (e.g., RSA SecurID, Thales SafeNet, YubiKey) or categories of compliant hardware",
+        "Outlines implementation steps: procure hardware tokens, integrate with RADIUS or LDAP, distribute to operators, update IRP/procedures",
+        "Notes the July 31 KYC-SA deadline and estimates a realistic remediation timeline, advising whether the gap can be closed in time"
+      ],
+      "files": []
+    },
+    {
+      "id": 73,
+      "skill": "swift-csp",
+      "skill_path": "plugins/swift-csp/skills/swift-csp/SKILL.md",
+      "prompt": "Run a SWIFT CSCF v2025 gap assessment for our organisation. Here is our current state: SWIFT zone exists but is on a shared VLAN with other internal systems. We patch critical vulnerabilities within 30 days. We use software OTP for operator MFA. SWIFT logs are collected but not reviewed and retention is only 6 months. We have a general IT incident response plan but nothing SWIFT-specific. Operators use named individual accounts. Rate each relevant control and give us a prioritised remediation plan.",
+      "expected_output": "A structured gap assessment table with RAG status for each control based on the described state, plus a prioritised remediation roadmap identifying the highest-risk gaps first.",
+      "assertions": [
+        "Rates Control 1.1 as red or amber because SWIFT zone shares a VLAN with other internal systems — network segregation is a hard requirement",
+        "Rates Control 2.2 as red because 30-day patching exceeds the CSCF v2025 critical patch SLA of 3 days",
+        "Rates Control 4.2 as red because software OTP does not meet the hardware token requirement",
+        "Rates Control 6.4 as red or amber due to 6-month log retention (minimum is 1 year) and logs not being actively reviewed",
+        "Rates Control 7.1 as red or amber due to absence of a SWIFT-specific incident response plan, and includes SWIFT notification obligations (24-hour initial, 30-day full report)"
+      ],
+      "files": []
+    },
+    {
+      "id": 74,
+      "skill": "swift-csp",
+      "skill_path": "plugins/swift-csp/skills/swift-csp/SKILL.md",
+      "prompt": "We need to submit our annual KYC-SA attestation by July 31. Walk us through the complete attestation process — what we need to prepare, who can act as our independent assessor, how to complete the KYC-SA form, and what happens to our attestation once submitted. We are an A1 architecture bank.",
+      "expected_output": "A complete step-by-step KYC-SA attestation guide covering evidence preparation, assessor qualification criteria, submission process, and post-submission counterparty visibility.",
+      "assertions": [
+        "Describes the KYC-SA portal on swift.com/myswift as the submission mechanism",
+        "Explains that an independent assessor is required and lists who qualifies: internal audit (if independent from SWIFT ops), external auditor with SWIFT CSP competency, or SWIFT-certified assessors",
+        "States the annual deadline of July 31 and the consequences of late submission including counterparty notifications",
+        "Explains the three attestation statuses for each control: Implemented, Partially Implemented, Not Implemented",
+        "Notes that submitted attestations are visible to counterparties who can view compliance status and may request clarification"
+      ],
+      "files": []
+    },
+    {
+      "id": 75,
+      "skill": "swift-csp",
+      "skill_path": "plugins/swift-csp/skills/swift-csp/SKILL.md",
+      "prompt": "We discovered that malware was found on one of our SWIFT-connected servers and we suspect fraudulent transactions may have been sent. What are our immediate incident response obligations under SWIFT CSP Control 7.1? Who do we notify, by when, and what evidence should we preserve? Also, what should our SWIFT-specific incident response plan contain to be compliant with CSCF v2025?",
+      "expected_output": "Immediate step-by-step incident response actions with specific notification timelines, evidence preservation guidance, and a comprehensive outline of what a SWIFT-specific IRP must contain for Control 7.1 compliance.",
+      "assertions": [
+        "States the 24-hour initial notification obligation to SWIFT (via security@swift.com or KYC-SA portal) upon confirmed cyber incident",
+        "States the 30-day full incident report obligation to SWIFT",
+        "Lists evidence to preserve: system memory dumps, log files from SWIFT zone, transaction records, network captures, endpoint forensic images",
+        "Identifies immediate containment steps: isolate affected systems from SWIFT zone, revoke compromised operator credentials/tokens, notify SWIFT relationship manager",
+        "Outlines what a SWIFT-specific IRP must contain: detection triggers specific to SWIFT, escalation to SWIFT within 24 hours, fraud scenario playbooks, communication with correspondent banks, evidence preservation procedures"
       ],
       "files": []
     }

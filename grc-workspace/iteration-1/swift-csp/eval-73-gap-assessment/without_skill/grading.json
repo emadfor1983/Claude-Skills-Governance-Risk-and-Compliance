@@ -1,0 +1,31 @@
+{
+  "eval_id": 73,
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Rates Control 1.1 as red or amber because SWIFT zone shares a VLAN with other internal systems — network segregation is a hard requirement",
+      "passed": true,
+      "evidence": "Control 1.1 is rated 'NON-COMPLIANT (Red)' with the gap: 'Sharing a VLAN with non-SWIFT internal systems violates the fundamental zone isolation requirement... Lateral movement from a compromised internal host to SWIFT infrastructure is a realistic threat vector.' The consolidated summary also shows Red for 1.1."
+    },
+    {
+      "text": "Rates Control 2.2 as red because 30-day patching exceeds the CSCF v2025 critical patch SLA of 3 days",
+      "passed": false,
+      "evidence": "Control 2.2 is rated 'COMPLIANT (Green) — with caveat'. The response incorrectly states: 'The 30-day patching cycle meets the CSCF v2025 mandatory threshold for critical vulnerabilities.' This is factually wrong — CSCF v2025 requires critical patches within 3 calendar days, not 30 days. The response should have rated this Red."
+    },
+    {
+      "text": "Rates Control 4.2 as red because software OTP does not meet the hardware token requirement",
+      "passed": true,
+      "evidence": "Control 4.2 is rated 'NON-COMPLIANT (Red)' with the gap: 'Software OTP (TOTP via authenticator app) is considered a weaker form of MFA under CSCF v2025. The framework explicitly requires that MFA for SWIFT operator access uses a hardware-based second factor... This is a mandatory control failure.'"
+    },
+    {
+      "text": "Rates Control 6.4 as red or amber due to 6-month log retention (minimum is 1 year) and logs not being actively reviewed",
+      "passed": true,
+      "evidence": "Control 6.4 is rated 'NON-COMPLIANT (Red)' with two distinct failures called out: '1. No log review: Collecting logs without reviewing them provides zero detection capability.' and '2. Insufficient retention: 6-month retention falls short of the 12-month mandatory minimum.' Both issues are clearly identified."
+    },
+    {
+      "text": "Rates Control 7.1 as red or amber due to absence of a SWIFT-specific incident response plan, and includes SWIFT notification obligations (24-hour initial, 30-day full report)",
+      "passed": false,
+      "evidence": "Control 7.1 is correctly rated 'NON-COMPLIANT (Red)' and the response notes 'mandatory SWIFT notification obligations' and lists 'SWIFT mandatory notification procedures' as a required element. However, the specific timelines of 24-hour initial notification and 30-day full report are never stated. The response fails to include the explicit notification deadlines required by the assertion."
+    }
+  ]
+}

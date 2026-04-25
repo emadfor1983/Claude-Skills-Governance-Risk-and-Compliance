@@ -1,0 +1,12 @@
+{
+  "eval_id": 71,
+  "eval_name": "architecture-scoping",
+  "prompt": "We are a mid-tier regional bank connecting to SWIFT via Alliance Access software running on our own servers on-premises. We have no HSMs and do not use a service bureau or cloud-hosted SWIFT. What is our SWIFT architecture type and which CSCF v2025 controls are mandatory for us versus advisory? Give us the full applicability matrix.",
+  "assertions": [
+    "Correctly identifies the bank's architecture as A1 (customer connector, customer-managed, software-based)",
+    "Lists all 23 mandatory controls applicable to A1 including 1.1, 1.2, 1.4, 2.1, 2.2, 2.3, 2.6, 2.7, 2.8, 2.10, 3.1, 4.1, 4.2, 5.1, 5.2, 5.4, 6.1, 6.2, 6.3, 6.4, 7.1, 7.2",
+    "Identifies the 8 advisory controls (1.3A, 1.5A, 2.4A, 2.5A, 2.9A, 2.11A, 5.3A, 6.5A, 7.3A, 7.4A) and notes they are recommended but not required for attestation",
+    "Explains that A1 is the most common architecture for large banks running Alliance Access on-premises",
+    "Notes that KYC-SA attestation requires attestation against mandatory controls only, but advisory controls may be reviewed by counterparties"
+  ]
+}

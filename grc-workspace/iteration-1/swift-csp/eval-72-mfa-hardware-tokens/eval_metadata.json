@@ -1,0 +1,12 @@
+{
+  "eval_id": 72,
+  "eval_name": "mfa-hardware-tokens",
+  "prompt": "We currently use Google Authenticator (software-based TOTP) for our SWIFT operators to authenticate to Alliance Access. Our SWIFT assessor has flagged this as a finding against Control 4.2. Why is software OTP not sufficient, what exactly does CSCF v2025 require, and what are our options to remediate this finding before our July attestation deadline?",
+  "assertions": [
+    "Explains that CSCF v2025 explicitly requires hardware authentication tokens for Control 4.2, and that software-based OTP (TOTP apps) is insufficient",
+    "Identifies the risk: software OTP can be compromised if the device/phone is malware-infected, bypassing the security intent of MFA",
+    "Provides at least 2 concrete hardware token options (e.g., RSA SecurID, Thales SafeNet, YubiKey) or categories of compliant hardware",
+    "Outlines implementation steps: procure hardware tokens, integrate with RADIUS or LDAP, distribute to operators, update IRP/procedures",
+    "Notes the July 31 KYC-SA deadline and estimates a realistic remediation timeline, advising whether the gap can be closed in time"
+  ]
+}

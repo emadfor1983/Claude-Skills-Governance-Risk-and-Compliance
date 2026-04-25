@@ -1,0 +1,12 @@
+{
+  "eval_id": 75,
+  "eval_name": "incident-response",
+  "prompt": "We discovered that malware was found on one of our SWIFT-connected servers and we suspect fraudulent transactions may have been sent. What are our immediate incident response obligations under SWIFT CSP Control 7.1? Who do we notify, by when, and what evidence should we preserve? Also, what should our SWIFT-specific incident response plan contain to be compliant with CSCF v2025?",
+  "assertions": [
+    "States the 24-hour initial notification obligation to SWIFT (via security@swift.com or KYC-SA portal) upon confirmed cyber incident",
+    "States the 30-day full incident report obligation to SWIFT",
+    "Lists evidence to preserve: system memory dumps, log files from SWIFT zone, transaction records, network captures, endpoint forensic images",
+    "Identifies immediate containment steps: isolate affected systems from SWIFT zone, revoke compromised operator credentials/tokens, notify SWIFT relationship manager",
+    "Outlines what a SWIFT-specific IRP must contain: detection triggers specific to SWIFT, escalation to SWIFT within 24 hours, fraud scenario playbooks, communication with correspondent banks, evidence preservation procedures"
+  ]
+}

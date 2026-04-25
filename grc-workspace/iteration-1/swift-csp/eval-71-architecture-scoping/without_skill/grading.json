@@ -1,0 +1,31 @@
+{
+  "eval_id": 71,
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Correctly identifies the bank's architecture as A1 (customer connector, customer-managed, software-based)",
+      "passed": false,
+      "evidence": "The response incorrectly classifies the institution as Architecture Type A2, stating: 'Your classification is Architecture Type A2' with the rationale that 'The absence of an HSM is the defining characteristic that distinguishes A2 from A1.' This is a fundamental misclassification — the SWIFT CSCF does not use HSM presence as the A1/A2 distinguishing criterion in the way described."
+    },
+    {
+      "text": "Lists all 23 mandatory controls applicable to A1 including 1.1, 1.2, 1.4, 2.1, 2.2, 2.3, 2.6, 2.7, 2.8, 2.10, 3.1, 4.1, 4.2, 5.1, 5.2, 5.4, 6.1, 6.2, 6.3, 6.4, 7.1, 7.2",
+      "passed": false,
+      "evidence": "The response provides a control matrix for A2 (not A1) listing only 16 mandatory controls. It omits 2.8 (listed as Advisory for A2), 2.10, 5.4 (listed as Advisory), and 7.2 (listed as Advisory). Several controls from the required A1 list are missing or misclassified."
+    },
+    {
+      "text": "Identifies the 8 advisory controls (1.3A, 1.5A, 2.4A, 2.5A, 2.9A, 2.11A, 5.3A, 6.5A, 7.3A, 7.4A) and notes they are recommended but not required for attestation",
+      "passed": false,
+      "evidence": "The response identifies advisory controls for A2, not A1. The list does not match the assertion: it includes controls not in the assertion list (2.4B, 2.5B, 5.3B, 6.5B, 7.3B, 7.4) and misclassifies controls that should be mandatory (2.8, 5.4, 7.2) as advisory. Controls 1.5A and 2.9A appear as 2.9 without the 'A' suffix, and 1.5A is absent entirely."
+    },
+    {
+      "text": "Explains that A1 is the most common architecture for large banks running Alliance Access on-premises",
+      "passed": false,
+      "evidence": "The response does not mention A1 as the most common architecture for large banks. It classifies the institution as A2 throughout and contains no statement about A1 prevalence among large banks running Alliance Access on-premises."
+    },
+    {
+      "text": "Notes that KYC-SA attestation requires attestation against mandatory controls only, but advisory controls may be reviewed by counterparties",
+      "passed": true,
+      "evidence": "Section 6 states: 'Attestation covers all mandatory controls only. Advisory controls are not attested but may be reviewed by correspondent banks.' This correctly captures the attestation scope distinction, even though the architecture type is wrong."
+    }
+  ]
+}

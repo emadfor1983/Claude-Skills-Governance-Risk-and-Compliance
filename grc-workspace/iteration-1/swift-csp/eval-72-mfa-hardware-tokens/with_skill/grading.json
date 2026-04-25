@@ -1,0 +1,31 @@
+{
+  "eval_id": 72,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Explains that CSCF v2025 explicitly requires hardware authentication tokens for Control 4.2, and that software-based OTP (TOTP apps) is insufficient",
+      "passed": true,
+      "evidence": "Section 1 quotes CSCF v2025 directly: 'Acceptable MFA methods: hardware OTP tokens, smart cards with PIN, FIDO2 hardware keys. Software-based OTP (authenticator apps on shared devices) does not satisfy this requirement for most architecture types.' Section 1.4 also presents the v2024-to-v2025 change log showing the explicit tightening: 'Hardware token explicitly required; clarified app-based OTP insufficient for most types.'"
+    },
+    {
+      "text": "Identifies the risk: software OTP can be compromised if the device/phone is malware-infected, bypassing the security intent of MFA",
+      "passed": true,
+      "evidence": "Section 1.1 states: 'Malware on the device (keyloggers, screen-capture malware, RATs) can extract the TOTP seed or intercept the generated code before entry. If the operator's device is compromised, an attacker can silently clone the authenticator app and generate valid TOTP codes without the operator's knowledge.'"
+    },
+    {
+      "text": "Provides at least 2 concrete hardware token options (e.g., RSA SecurID, Thales SafeNet, YubiKey) or categories of compliant hardware",
+      "passed": true,
+      "evidence": "Section 3.1 lists RSA SecurID (SD700, SID700), Thales SafeNet OTP 110/300, Feitian OTP c200/c300, VASCO/OneSpan Digipass GO. Section 3.2 lists YubiKey 5 Series, Google Titan Security Key, Feitian ePass FIDO2. Section 3.3 lists Thales/Gemalto IDPrime, SafeNet eToken 5110, HID Crescendo."
+    },
+    {
+      "text": "Outlines implementation steps: procure hardware tokens, integrate with RADIUS or LDAP, distribute to operators, update IRP/procedures",
+      "passed": true,
+      "evidence": "Section 4.1 provides a detailed week-by-week timeline: Week 1-2 covers vendor selection and procurement; Week 2-3 covers RADIUS server deployment in SWIFT Secure Zone; Week 3-5 covers token receipt, enrolment, and Alliance Access RADIUS configuration; Week 5-7 covers distribution to all operators and training; Section 4.2 covers token management procedures (inventory, issuance, lost-token process, leaver process) linked to Control 5.2."
+    },
+    {
+      "text": "Notes the July 31 KYC-SA deadline and estimates a realistic remediation timeline, advising whether the gap can be closed in time",
+      "passed": true,
+      "evidence": "Section 4 states: 'Given you have approximately 13 weeks from today (April 25) to the July 31 KYC-SA submission deadline... Option A (Hardware OTP Tokens via RADIUS) is the most realistic path.' The response explicitly advises the gap is closeable: 'Given the 13-week window, this is achievable with Option A if procurement is initiated this week.'"
+    }
+  ]
+}
