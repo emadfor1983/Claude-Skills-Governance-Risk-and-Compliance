@@ -272,7 +272,7 @@
       "id": 20,
       "skill": "gdpr-compliance",
       "skill_path": "plugins/gdpr-compliance/skills/gdpr-compliance/SKILL.md",
-      "prompt": "We discovered a data breach — an employee accidentally emailed a spreadsheet containing names, emails, and account numbers of 500 customers to the wrong recipient. Walk us through the GDPR breach notification requirements and what we need to do in the next 72 hours.",
+      "prompt": "We discovered a data breach \u2014 an employee accidentally emailed a spreadsheet containing names, emails, and account numbers of 500 customers to the wrong recipient. Walk us through the GDPR breach notification requirements and what we need to do in the next 72 hours.",
       "expected_output": "Step-by-step 72-hour breach response plan covering: initial assessment and containment, determining if notification is required (to supervisory authority and/or data subjects), what to include in the supervisory authority notification, when data subject notification is required, and documentation requirements.",
       "assertions": [
         "References the 72-hour notification deadline to supervisory authority (Article 33)",
@@ -331,7 +331,7 @@
       "prompt": "Our HIPAA Security Officer needs to conduct a risk analysis. What are the required elements of a HIPAA risk analysis? What documentation do we need to produce?",
       "expected_output": "Comprehensive HIPAA risk analysis requirements covering: scope (all ePHI), threat and vulnerability identification, likelihood and impact assessment, current controls evaluation, risk level determination, risk management plan, and required documentation/records.",
       "assertions": [
-        "References the HIPAA Security Rule § 164.308(a)(1) for risk analysis",
+        "References the HIPAA Security Rule \u00a7 164.308(a)(1) for risk analysis",
         "Lists required elements: scope, threat identification, vulnerability identification, likelihood and impact assessment",
         "Addresses the need to cover all ePHI across all systems",
         "Explains documentation requirements and record retention",
@@ -496,7 +496,7 @@
       "id": 36,
       "skill": "tsa-compliance",
       "skill_path": "plugins/tsa-compliance/skills/tsa-compliance/SKILL.md",
-      "prompt": "We operate a natural gas pipeline that falls under TSA jurisdiction. What are our current TSA cybersecurity requirements? We have heard about the security directives — summarize what they require.",
+      "prompt": "We operate a natural gas pipeline that falls under TSA jurisdiction. What are our current TSA cybersecurity requirements? We have heard about the security directives \u2014 summarize what they require.",
       "expected_output": "Summary of TSA Pipeline Security Directives (SD-02C or current version): cyber incident reporting (24 hours), designation of cybersecurity coordinator, vulnerability assessments, implementation of TSA-recommended mitigations (network segmentation, access control, patching), annual cybersecurity incident response exercise.",
       "assertions": [
         "References TSA Pipeline Security Directives and the current requirement framework",
@@ -552,7 +552,7 @@
       "id": 40,
       "skill": "tsa-compliance",
       "skill_path": "plugins/tsa-compliance/skills/tsa-compliance/SKILL.md",
-      "prompt": "What is the difference between TSA cybersecurity requirements and CISA CIRCIA requirements? We have heard about CIRCIA — do pipeline operators need to comply with both?",
+      "prompt": "What is the difference between TSA cybersecurity requirements and CISA CIRCIA requirements? We have heard about CIRCIA \u2014 do pipeline operators need to comply with both?",
       "expected_output": "Clear comparison of TSA Security Directives (sector-specific for transportation) vs CIRCIA (cross-sector cyber incident reporting law): different reporting timelines, different triggering events, relationship between the two, and whether pipeline operators must comply with both.",
       "assertions": [
         "Explains that TSA SDs are sector-specific to transportation/pipeline operators",
@@ -805,13 +805,13 @@
       "skill": "dpdpa",
       "skill_path": "plugins/dpdpa/skills/dpdpa/SKILL.md",
       "prompt": "Our platform is used by users of all ages in India, including minors. What does DPDPA require for processing children's data? How does this compare to GDPR's requirements?",
-      "expected_output": "Complete DPDPA children's data requirements: age threshold is 18 (not 13/16 as in GDPR), verifiable parental consent required for all under 18, prohibited processing (behavioral monitoring, targeted advertising, harmful processing), verification mechanisms (DigiLocker, government tokens), penalties (₹200 crore).",
+      "expected_output": "Complete DPDPA children's data requirements: age threshold is 18 (not 13/16 as in GDPR), verifiable parental consent required for all under 18, prohibited processing (behavioral monitoring, targeted advertising, harmful processing), verification mechanisms (DigiLocker, government tokens), penalties (\u20b9200 crore).",
       "assertions": [
         "States DPDPA age threshold of 18 years (vs GDPR's 16/13)",
         "Covers the requirement for verifiable parental/guardian consent",
         "Lists prohibited processing categories (behavioral monitoring, targeted advertising)",
         "Addresses verification mechanisms prescribed by rules (DigiLocker, government tokens)",
-        "States the penalty for children's data violations (₹200 crore)"
+        "States the penalty for children's data violations (\u20b9200 crore)"
       ]
     },
     {
@@ -841,6 +841,36 @@
         "Covers annual independent data audit requirement for SDFs",
         "Explains that SDF designation is by Central Government notification, not self-declaration"
       ]
+    },
+    {
+      "id": 61,
+      "prompt": "We are a 45-person aerospace engineering firm that recently won our first DoD contract. The contract contains DFARS 252.204-7021 requiring CMMC Level 2. We have never heard of CMMC before. Give us a plain-English explanation of what CMMC Level 2 means for us, what we need to do, and roughly how long it will take to get certified.",
+      "expected_output": "Explanation of CMMC Level 2, 110 NIST SP 800-171 practices, C3PAO assessment, SSP/POA&M requirements, and realistic timeline (12-18 months typical)",
+      "files": []
+    },
+    {
+      "id": 62,
+      "prompt": "Perform a CMMC Level 2 gap assessment for our IT environment. We have: Active Directory with 80 users, no MFA deployed, Windows 10/11 endpoints managed via Intune, a Palo Alto firewall, Microsoft 365 E3 (not GCC), no SIEM, vulnerability scanning done quarterly with Nessus (unauthenticated), and CUI stored on SharePoint Online. Identify the critical gaps and their SPRS score impact.",
+      "expected_output": "Gap table with practice IDs, status, gap notes for key failures (MFA=IA.L2-3.5.3, non-FedRAMP cloud=DFARS 7012, unauthenticated scans=RA.L2-3.11.2, no SIEM=AU.L2-3.3.1), SPRS score impact calculation",
+      "files": []
+    },
+    {
+      "id": 63,
+      "prompt": "Draft a System Security Plan (SSP) section for CMMC practice IA.L2-3.5.3 (Multifactor Authentication). We use Azure Active Directory with Microsoft Authenticator MFA enforced via Conditional Access for all users. Include the implementation description, responsible roles, evidence artifacts, and any system interconnections relevant to MFA.",
+      "expected_output": "Structured SSP section covering practice statement, implementation description (AAD + Conditional Access + Authenticator), roles (IT Admin, ISSO), evidence (CA policy screenshots, MFA enrollment report), system boundary notes",
+      "files": []
+    },
+    {
+      "id": 64,
+      "prompt": "Our C3PAO assessment found 8 practices NOT MET: AU.L2-3.3.1, AU.L2-3.3.2, CM.L2-3.4.1, CM.L2-3.4.2, RA.L2-3.11.2, CA.L2-3.12.4, AC.L2-3.1.5, and SC.L2-3.13.8. Create a POA&M for these findings. We have 180 days to remediate. Assign realistic milestones and identify which findings are highest priority.",
+      "expected_output": "POA&M table with all 8 practices, weakness descriptions, remediation steps, milestones, priority ordering (SC.L2-3.13.8 and AU.L2-3.3.1 highest), 180-day timeline",
+      "files": []
+    },
+    {
+      "id": 65,
+      "prompt": "We are a prime contractor and discovered that two of our subcontractors handle CUI under our DoD contract. One subcontractor stores CUI on a personal Google Drive. The other has a CMMC Level 2 self-assessment score of 42 in SPRS. What are our obligations under DFARS 252.204-7021 for each subcontractor, and what steps should we take immediately?",
+      "expected_output": "Explains DFARS 7021 flow-down obligations, Google Drive violates DFARS 7012 (non-FedRAMP cloud for CUI), SPRS score of 42 is concerning but not disqualifying alone, prime must verify subcontractor certification, steps: issue cure notice, require remediation plan, consider contract action",
+      "files": []
     }
   ]
 }

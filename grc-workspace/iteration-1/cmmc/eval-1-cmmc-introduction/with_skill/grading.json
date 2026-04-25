@@ -1,0 +1,32 @@
+{
+  "total": 5,
+  "passed": 5,
+  "pass_rate": 1.0,
+  "expectations": [
+    {
+      "text": "Explains CMMC Level 2 requires 110 practices from NIST SP 800-171",
+      "passed": true,
+      "evidence": "Keywords checked: ['110', '800-171', 'NIST']... (found, 3/2 needed)"
+    },
+    {
+      "text": "Mentions C3PAO third-party assessment requirement",
+      "passed": true,
+      "evidence": "Keywords checked: ['C3PAO', 'third-party', 'assessment']... (found, 3/1 needed)"
+    },
+    {
+      "text": "Covers SSP and/or POA&M as required documents",
+      "passed": true,
+      "evidence": "Keywords checked: ['SSP', 'POA&M', 'System Security Plan', 'Plan of Action']... (found, 4/1 needed)"
+    },
+    {
+      "text": "Provides realistic timeline (12+ months)",
+      "passed": true,
+      "evidence": "Keywords checked: ['12', 'month', 'year', 'timeline']... (found, 4/2 needed)"
+    },
+    {
+      "text": "Explains CUI (Controlled Unclassified Information) concept",
+      "passed": true,
+      "evidence": "Keywords checked: ['CUI', 'Controlled Unclassified', 'unclassified']... (found, 3/1 needed)"
+    }
+  ]
+}

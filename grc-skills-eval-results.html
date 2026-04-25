@@ -264,15 +264,15 @@
     <div class="stat-label">With Skill</div>
   </div>
   <div class="stat-card">
-    <div class="stat-value neutral">83%</div>
+    <div class="stat-value neutral">85%</div>
     <div class="stat-label">Baseline (No Skill)</div>
   </div>
   <div class="stat-card">
-    <div class="stat-value positive">+11%</div>
+    <div class="stat-value positive">+10%</div>
     <div class="stat-label">Improvement</div>
   </div>
   <div class="stat-card">
-    <div class="stat-value">300</div>
+    <div class="stat-value">325</div>
     <div class="stat-label">Total Assertions</div>
   </div>
   <div class="stat-card">
@@ -381,6 +381,13 @@
           <td class="stat-cell delta-positive">+16%</td>
           <td class="stat-cell">24/25</td>
         </tr>
+        <tr>
+          <td><a href="#skill-cmmc" onclick="openSkill('cmmc'); return false;" class="skill-link">CMMC 2.0</a></td>
+          <td class="stat-cell">100%</td>
+          <td class="stat-cell">100%</td>
+          <td class="stat-cell delta-neutral">0%</td>
+          <td class="stat-cell">25/25</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -391,7 +398,7 @@
     <ul>
       <li><strong>12 skills</strong> × <strong>5 prompts</strong> = 60 test cases</li>
       <li>Each case run twice (with skill + baseline) = 120 total runs</li>
-      <li>5 assertions per test = <strong>300 total assertion checks</strong></li>
+      <li>5 assertions per test = <strong>325 total assertion checks</strong></li>
       <li>ISO 27701 results reflect the updated skill (iteration 2 after user feedback improvements)</li>
     </ul>
   </div>
@@ -18976,6 +18983,2085 @@ If your company might qualify as an SDF:
 6. **Budget for enhanced compliance costs** — SDF obligations are significantly more resource-intensive
 
 The DPDPA is still being fully implemented, and many SDF-specific requirements will be further specified in implementing rules and government notifications. Early preparation is advisable.
+</pre></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skill-accordion" id="skill-cmmc">
+        <button class="skill-toggle" onclick="toggleSkill('cmmc')">
+          <div class="skill-toggle-left">
+            <span class="skill-toggle-name">CMMC 2.0</span>
+            <span class="skill-toggle-stats">100% with skill · 100% baseline · <span class="delta-neutral">0%</span></span>
+          </div>
+          <span class="skill-chevron">▼</span>
+        </button>
+        <div class="skill-content" style="display:none">
+          
+          <div class="eval-item" id="eval-cmmc-0">
+            <button class="eval-toggle" onclick="toggleEval('cmmc-0')">
+              <span class="eval-label">Test 1: Cmmc Introduction</span>
+              <span class="eval-chevron">▼</span>
+            </button>
+            <div class="eval-content" style="display:none">
+              <div class="eval-prompt">
+                <strong>Prompt:</strong> We are a 45-person aerospace engineering firm that recently won our first DoD contract. The contract contains DFARS 252.204-7021 requiring CMMC Level 2. We have never heard of CMMC before. Give us a plain-English explanation of what CMMC Level 2 means for us, what we need to do, and roughly how long it will take to get certified.
+              </div>
+              <div class="eval-outputs">
+                <div class="output-panel">
+                  <div class="output-header with-header">With Skill</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains CMMC Level 2 requires 110 practices from NIST SP 800-171</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Mentions C3PAO third-party assessment requirement</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Covers SSP and/or POA&amp;M as required documents</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Provides realistic timeline (12+ months)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains CUI (Controlled Unclassified Information) concept</span></div></div></div>
+                  <div class="output-text"><pre># CMMC Level 2 — A Plain-English Guide for Your Aerospace Firm
+
+## What Just Happened?
+
+Your contract includes **DFARS 252.204-7021**, which is the DoD clause that formally requires CMMC certification. Since you are an aerospace engineering firm working on a DoD contract, you almost certainly handle **Controlled Unclassified Information (CUI)** — technical drawings, engineering specs, design data, and similar material that the government considers sensitive but not classified. Because your contract specifies CMMC Level 2, you must demonstrate that you adequately protect that CUI before you can fully perform on the contract (and before you can win future DoD contracts).
+
+---
+
+## What Is CMMC 2.0?
+
+CMMC stands for **Cybersecurity Maturity Model Certification**. The DoD created it to ensure that defense contractors — even small firms like yours — protect sensitive government information from theft or compromise. It became legally effective in December 2024 under 32 CFR Part 170.
+
+There are three levels:
+
+| Level | Who It&#x27;s For | How Many Requirements |
+|-------|-------------|----------------------|
+| Level 1 — Foundational | Any DoD contractor with basic Federal Contract Information (FCI) | 17 practices |
+| **Level 2 — Advanced** | **Contractors handling CUI (this is you)** | **110 practices** |
+| Level 3 — Expert | Contractors on the most sensitive national security programs | 110+ practices |
+
+You need **Level 2**, which means meeting all **110 cybersecurity practices** drawn from the federal standard **NIST SP 800-171 Rev 2**.
+
+---
+
+## What Does &quot;110 Practices&quot; Actually Mean?
+
+Think of the 110 practices as a comprehensive checklist covering every major area of IT security. They are organized into 17 domains (categories). Here is a plain-English summary of each area and what it means for a 45-person engineering firm:
+
+| Domain | Plain-English Summary | Example Requirement |
+|--------|----------------------|---------------------|
+| **Access Control (AC)** | Only the right people get into systems and CUI files. | Employees only access the data they need for their job. |
+| **Awareness &amp; Training (AT)** | Everyone who touches CUI gets security training. | Annual cybersecurity awareness training for all staff. |
+| **Audit &amp; Accountability (AU)** | Log who does what, and keep those logs. | All logins, file access, and admin actions are recorded and retained. |
+| **Configuration Management (CM)** | Know exactly what software and hardware you have, and lock it down. | Maintain an inventory of all computers and what software is on them. |
+| **Identification &amp; Authentication (IA)** | Verify who people are before letting them in — including with MFA. | Every employee uses multi-factor authentication (MFA) to access CUI systems. |
+| **Incident Response (IR)** | Have a plan for when something goes wrong. | A written incident response plan, tested at least annually. |
+| **Maintenance (MA)** | Control who works on your systems and how. | Vendors doing remote maintenance must use MFA and supervised sessions. |
+| **Media Protection (MP)** | Protect and track physical and digital media containing CUI. | Laptops with CUI must be encrypted; USB drives must be controlled. |
+| **Physical Protection (PE)** | Control who can walk into your facility. | Badge access to server rooms; visitor escort policies. |
+| **Personnel Security (PS)** | Screen employees before giving them CUI access; manage departures. | Background checks before granting CUI access; account termination checklists. |
+| **Risk Assessment (RA)** | Regularly look for vulnerabilities and fix them. | Monthly vulnerability scans of all CUI-connected systems. |
+| **Security Assessment (CA)** | Regularly test your own security controls. | Annual internal security review; a written System Security Plan (SSP). |
+| **System &amp; Communications Protection (SC)** | Encrypt data in transit and at rest; protect your network boundaries. | Use only FIPS 140-2/3 validated encryption (not just any &quot;AES-256&quot; product). |
+| **System &amp; Information Integrity (SI)** | Keep systems patched and monitored for attacks. | Antivirus on all endpoints; SIEM or equivalent monitoring for intrusions. |
+
+---
+
+## What Is CUI, and Why Does It Matter?
+
+**Controlled Unclassified Information (CUI)** is government-sensitive data that is not classified but still requires protection by law or regulation. For an aerospace engineering firm, CUI typically includes:
+
+- **Controlled Technical Information (CTI)**: Technical drawings, CAD files, specifications, test data, and software related to defense systems
+- **Export-Controlled Data (ITAR/EAR)**: Design data or software that is controlled under International Traffic in Arms Regulations
+- **Procurement/Acquisition data**: Pre-award contract information
+
+Your first task is to identify exactly which data in your environment is CUI — this is called **CUI scoping**. This determines which of your systems, laptops, servers, and cloud services fall inside the CMMC assessment boundary.
+
+**Important**: Only systems that store, process, or transmit CUI are in scope. If you can isolate CUI to a small number of systems, your assessment burden shrinks considerably.
+
+---
+
+## What Is a C3PAO and Why Do You Need One?
+
+Because DFARS 252.204-7021 requires Level 2 certification, you cannot simply self-assess — you need an independent audit by a **CMMC Third-Party Assessment Organization (C3PAO)**. These are private companies accredited by the Cyber AB (the CMMC Accreditation Body) to conduct formal assessments.
+
+Think of a C3PAO like a financial auditor: they review your evidence, interview your staff, test your technical controls, and issue a formal certification. The certification is valid for **three years**, with an annual affirmation required each year.
+
+To find an authorized C3PAO: **cyberAB.us**
+
+---
+
+## The Three Key Documents You Must Build
+
+Before a C3PAO will assess you, you need these three artifacts:
+
+### 1. System Security Plan (SSP)
+A written document that describes:
+- What systems are in scope (your CUI boundary)
+- How you implement each of the 110 practices
+- Who is responsible for each control
+- Network diagrams and data flow maps showing where CUI moves
+
+This is the central document of your CMMC program. Plan 2–4 months to draft it properly.
+
+### 2. Plan of Action &amp; Milestones (POA&amp;M)
+A tracked list of security gaps — practices you have not yet fully implemented — along with your plan and timeline to fix them. A POA&amp;M is not a sign of failure; it is required and expected. However, certain critical practices (see below) must be fully implemented before certification can be granted — they cannot sit in a POA&amp;M.
+
+### 3. SPRS Score
+The **Supplier Performance Risk System** score is your self-calculated cybersecurity score, starting at 110 and deducting points for every unmet practice. You must submit this score to the DoD&#x27;s SPRS portal even before your C3PAO assessment begins. Contracting Officers can see this score when evaluating you.
+
+---
+
+## The Seven &quot;Must Fix Before Assessment&quot; Practices
+
+Seven practices are considered critical by the DoD — they must be fully implemented at the time of your assessment. You cannot receive conditional certification with these in a POA&amp;M:
+
+| Practice ID | What It Means in Plain English |
+|-------------|-------------------------------|
+| **AC.L2-3.1.3** | Control which people and systems can access CUI (need-to-know enforcement) |
+| **IA.L2-3.5.3** | Multi-factor authentication (MFA) for all accounts that access CUI |
+| **SC.L2-3.13.8** | Encrypt all CUI data in transit using FIPS-validated encryption |
+| **SC.L2-3.13.11** | Use only FIPS 140-2/3 validated cryptography throughout your environment |
+| **SI.L2-3.14.6** | Monitor your systems to detect attacks and anomalous activity |
+| **AU.L2-3.3.1** | Create and retain audit logs of all activity on CUI systems |
+| **IR.L2-3.6.1** | Have an operational incident response capability |
+
+For a 45-person firm, MFA deployment and FIPS-compliant encryption are often the fastest wins and should be prioritized immediately.
+
+---
+
+## Important Compliance Obligations Beyond the 110 Practices
+
+Even while you prepare for Level 2 assessment, certain obligations are already active under DFARS 252.204-7012:
+
+- **72-Hour Incident Reporting**: If you discover a cyber incident involving CUI (unauthorized access, malware, suspected data theft), you must report it to the DoD via the **DIBNET portal** (dibnet.dod.mil) within **72 hours** of discovery. This is not optional.
+
+- **Cloud Services**: If you use cloud services (Microsoft 365, Google Workspace, AWS, etc.) to store or process CUI, those services must be **FedRAMP Authorized at Moderate** baseline or equivalent. Standard commercial cloud tiers generally do not meet this requirement. Microsoft 365 GCC (Government Community Cloud) or GCC High are commonly used compliant options.
+
+- **Subcontractors**: If you use any subcontractors who will have access to CUI from this contract, you are required to flow down CMMC requirements to them. They must hold the appropriate CMMC certification before you award them subcontract work involving CUI.
+
+---
+
+## Rough Timeline: How Long Will This Take?
+
+For a 45-person firm starting from scratch, the realistic timeline to achieve CMMC Level 2 certification is **12 to 18 months**. Here is a phased breakdown:
+
+### Phase 1: Scoping and Gap Assessment (Months 1–2)
+- Identify all CUI data in your environment
+- Define your CUI asset boundary (which systems are in scope)
+- Conduct a gap assessment against all 110 practices
+- Calculate your initial SPRS score
+- Submit your SPRS score to the portal (required even before remediation is complete)
+
+**What you need**: An experienced CMMC consultant or Registered Practitioner (RP) to lead the gap assessment.
+
+### Phase 2: Remediation (Months 2–10)
+- Fix critical gaps, starting with the seven must-fix practices above
+- Deploy MFA across all CUI-touching accounts
+- Implement FIPS-compliant encryption
+- Deploy logging/SIEM capability
+- Draft and finalize your SSP
+- Manage open items in your POA&amp;M
+- Address cloud CUI storage if currently on non-FedRAMP services
+
+**What you need**: IT resources (internal or managed service provider) to implement technical controls; a policy writer to draft the required security policies.
+
+### Phase 3: Pre-Assessment Preparation (Months 10–12)
+- Finalize SSP and ensure it covers all 110 practices
+- Close as many POA&amp;M items as possible (especially critical practices)
+- Conduct internal mock assessment
+- Train staff on what to expect during the C3PAO interviews
+- Select and contract with a C3PAO (negotiate scope, sign NDA)
+
+### Phase 4: C3PAO Assessment (Months 12–14)
+- **Documentation Review** (2–4 weeks): C3PAO reviews your SSP, policies, and evidence remotely
+- **Active Assessment** (1–3 weeks): Interviews, technical testing, configuration reviews
+- **Findings and Reporting**: C3PAO issues findings; you have a limited window to provide additional evidence
+
+### Phase 5: Certification and Annual Maintenance (Month 14–18 and ongoing)
+- Receive certification (valid 3 years) or conditional certification with remaining POA&amp;M items (must remediate within 180 days)
+- Submit annual affirmation to the CMMC-AB each year
+- Update SSP and POA&amp;M as your environment changes
+- Plan for re-assessment in year 3
+
+---
+
+## Estimated Costs (Rough Ranges for a 45-Person Firm)
+
+These are rough industry estimates and vary significantly based on current posture:
+
+| Activity | Estimated Cost Range |
+|----------|---------------------|
+| Gap assessment (external consultant) | $15,000 – $40,000 |
+| Remediation (technical implementation) | $50,000 – $200,000+ depending on gaps |
+| SSP/policy documentation (consultant) | $20,000 – $50,000 |
+| C3PAO assessment fee | $50,000 – $150,000 |
+| Ongoing compliance tools (SIEM, MFA, vulnerability scanning) | $20,000 – $60,000/year |
+
+---
+
+## Your Immediate Next Steps (This Week)
+
+1. **Identify your CUI**: Ask your contract Program Manager what CUI categories are covered under this contract. Look at the contract&#x27;s DD Form 254 (Contract Security Classification Specification) if one is attached.
+
+2. **Do not use personal or standard commercial cloud tools for CUI**: If your engineers are currently using standard Gmail, Dropbox, or consumer Microsoft 365 for contract work, stop immediately. This is a compliance violation.
+
+3. **Engage a CMMC consultant**: A Registered Practitioner (RP) or Registered Practitioner Organization (RPO) — find them at cyberAB.us — can conduct your gap assessment and guide the remediation process. Given your timeline, start this process now.
+
+4. **Submit an SPRS score**: Even a low or negative score is better than no score. Your Contracting Officer may require it before contract performance begins.
+
+5. **Check your subcontractors**: If any vendors will touch CUI, notify them that they will need CMMC certification. Start that conversation early — they need time too.
+
+---
+
+## Summary
+
+CMMC Level 2 means your 45-person firm must demonstrate that it meets 110 cybersecurity practices to protect the sensitive defense information you handle under this contract. You will need to hire a C3PAO to formally assess and certify you. The process typically takes 12–18 months and requires significant investment in documentation, technical controls, and staff readiness. The good news: this process — once completed — is your competitive advantage, as CMMC will be required across most DoD contracts and many of your competitors have not yet started.
+
+**Applicable regulatory references**: 32 CFR Part 170 (CMMC 2.0 Final Rule), NIST SP 800-171 Rev 2, DFARS 252.204-7012, DFARS 252.204-7019, DFARS 252.204-7020, DFARS 252.204-7021.
+</pre></div>
+                </div>
+                <div class="output-panel">
+                  <div class="output-header without-header">Without Skill (Baseline)</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains CMMC Level 2 requires 110 practices from NIST SP 800-171</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Mentions C3PAO third-party assessment requirement</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Covers SSP and/or POA&amp;M as required documents</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Provides realistic timeline (12+ months)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains CUI (Controlled Unclassified Information) concept</span></div></div></div>
+                  <div class="output-text"><pre># CMMC Level 2: A Plain-English Guide for Your Aerospace Firm
+
+## What Is CMMC?
+
+CMMC stands for **Cybersecurity Maturity Model Certification**. It is a Department of Defense (DoD) program that requires companies in the defense supply chain to demonstrate they are properly protecting sensitive government information on their systems. Think of it as a cybersecurity audit and certification that proves your company takes information security seriously enough to be trusted with DoD work.
+
+The clause in your contract — DFARS 252.204-7021 — is the legal hook that requires you to achieve and maintain CMMC certification as a condition of doing business with the DoD.
+
+---
+
+## Why Does the DoD Require This?
+
+The DoD shares two categories of sensitive information with contractors:
+
+- **FCI (Federal Contract Information)**: Basic information about the contract itself — what you&#x27;re building, for whom, at what price.
+- **CUI (Controlled Unclassified Information)**: More sensitive technical or operational data — engineering specs, design documents, test data, export-controlled technical information (ITAR/EAR), and similar materials.
+
+As an aerospace engineering firm, you almost certainly handle CUI. Foreign adversaries (primarily China and Russia) have spent years stealing defense-related intellectual property from contractors exactly like you. CMMC is the DoD&#x27;s response to that threat.
+
+---
+
+## What Are the CMMC Levels?
+
+There are three levels:
+
+| Level | Who It Applies To | How It&#x27;s Verified |
+|-------|-------------------|-------------------|
+| Level 1 | Companies that only handle FCI | Annual self-assessment |
+| **Level 2** | **Companies that handle CUI** | **Third-party assessment (C3PAO) every 3 years** |
+| Level 3 | Companies handling the most sensitive CUI (critical programs) | Government-led assessment |
+
+Your contract requires **Level 2**, which applies to any company that receives, creates, stores, processes, or transmits CUI. This is the most common requirement across the defense industrial base.
+
+---
+
+## What Does Level 2 Actually Require?
+
+CMMC Level 2 is based almost entirely on **NIST SP 800-171**, a well-established federal standard for protecting CUI. It contains **110 security practices** organized into 14 domains (categories):
+
+1. Access Control
+2. Awareness and Training
+3. Audit and Accountability
+4. Configuration Management
+5. Identification and Authentication
+6. Incident Response
+7. Maintenance
+8. Media Protection
+9. Personnel Security
+10. Physical Protection
+11. Risk Assessment
+12. Security Assessment
+13. System and Communications Protection
+14. System and Information Integrity
+
+### What These Mean in Practice
+
+Here are examples of what you&#x27;ll need to have in place:
+
+- **Access Control**: Only authorized employees can access systems that store or process CUI. Multi-factor authentication (MFA) is required. Privileged access (admin rights) must be tightly controlled.
+- **Audit Logs**: Your systems must log who accessed what, when, and from where. Logs must be retained and reviewed.
+- **Encryption**: CUI must be encrypted both when stored (at rest) and when transmitted over networks (in transit).
+- **Incident Response**: You need a written plan for what to do if you suffer a cyberattack or data breach, and you must be able to report incidents to the DoD within 72 hours.
+- **Configuration Management**: Systems holding CUI must be hardened (unnecessary software/services disabled) and regularly patched.
+- **Risk Assessments**: You must periodically assess your cybersecurity risks and document what you find.
+- **Policies and Procedures**: Written policies covering all 14 domains must exist and be followed.
+- **Physical Security**: Physical access to systems containing CUI must be controlled (locked server rooms, clean-desk policies, etc.).
+- **Media Protection**: Portable media (USB drives, laptops) containing CUI must be controlled, encrypted, and properly sanitized before disposal.
+
+---
+
+## How Is Level 2 Certification Obtained?
+
+Unlike Level 1 (which is self-assessed), **Level 2 requires an independent third-party assessment** conducted by a **C3PAO** (Certified Third-Party Assessment Organization). The C3PAO is an accredited firm that will assess your environment against all 110 practices and issue a certification if you pass.
+
+### The Assessment Process
+
+1. **Scoping**: Define which systems, networks, people, and locations handle CUI. This is called your &quot;CUI environment&quot; or assessment scope. Keeping the scope small (isolating CUI to as few systems as possible) reduces cost and complexity.
+2. **Gap Assessment**: Identify where you currently fall short of the 110 requirements. Most companies starting from scratch fail 40–70 practices initially.
+3. **Remediation**: Fix the gaps — implement the missing controls, write the missing policies, configure systems correctly.
+4. **Formal Assessment**: The C3PAO reviews your documentation, interviews staff, and tests your technical controls. This typically takes 1–3 weeks on-site or remote.
+5. **Certification**: If you meet all 110 practices (or have an accepted Plan of Action &amp; Milestones for minor gaps), the C3PAO submits results to the DoD&#x27;s CMMC database (called SPRS). You receive your certification, valid for 3 years.
+
+---
+
+## How Long Will This Take?
+
+For a 45-person firm starting from scratch, here is a realistic timeline:
+
+| Phase | Duration |
+|-------|----------|
+| Scoping and gap assessment | 4–8 weeks |
+| Remediation (fixing gaps) | 6–18 months (highly variable) |
+| Pre-assessment readiness check | 4–8 weeks |
+| Formal C3PAO assessment | 2–6 weeks |
+| **Total realistic timeline** | **12–24 months** |
+
+The wide range depends on:
+- **How mature your current IT security is.** If you already have MFA, encryption, and documented policies, you&#x27;re ahead. Most small engineering firms are starting close to zero.
+- **Whether you engage a consultant.** A CMMC Registered Practitioner (RP) or Registered Provider Organization (RPO) can dramatically accelerate the process by guiding remediation.
+- **Your scope.** If CUI lives on 3 workstations and a file server, remediation is much faster than if it touches 40 machines and a complex network.
+- **Resource availability.** If you dedicate a full-time person internally to this effort, it moves faster.
+
+### Important: Your Contract Clock Is Running
+
+Your DFARS clause requires you to be certified before performing work involving CUI (or within a timeframe specified in the contract). Check your contract for any stated deadline. If one exists, notify your Contracting Officer (KO) immediately and begin work now — 12–24 months is not unusual, and waivers or timelines can sometimes be negotiated for good-faith effort.
+
+---
+
+## What Will It Cost?
+
+Rough estimates for a 45-person firm:
+
+| Item | Estimated Cost |
+|------|----------------|
+| CMMC consultant / RPO engagement | $50,000–$150,000 |
+| IT infrastructure upgrades (MFA, encryption, logging tools, endpoint protection) | $30,000–$100,000 |
+| Policy and documentation development | Included with consultant or $10,000–$30,000 if separate |
+| C3PAO formal assessment fee | $50,000–$100,000 |
+| **Total range** | **$140,000–$380,000** |
+
+These are rough estimates. Actual costs depend on your current state, scope, and the vendors you select. Annual ongoing costs for maintaining compliance (monitoring tools, training, reassessment) will run $30,000–$80,000/year.
+
+---
+
+## Your Immediate Next Steps
+
+1. **Do not ignore this.** DFARS 252.204-7021 is a contract requirement. Non-compliance can result in contract termination, suspension, or debarment from future DoD work.
+
+2. **Identify your CUI.** Understand what sensitive government information you are receiving and where it lives (email, file servers, laptops, cloud storage). This defines your scope.
+
+3. **Conduct a gap assessment.** Hire a CMMC Registered Practitioner or RPO to assess your current state against NIST SP 800-171. This will produce a prioritized list of what needs to be fixed.
+
+4. **Create a System Security Plan (SSP).** This is a required document that describes your CUI environment, your systems, and how each of the 110 practices is implemented. Start drafting it early.
+
+5. **Create a Plan of Action &amp; Milestones (POA&amp;M).** For every practice you haven&#x27;t yet implemented, document your plan and timeline to fix it. The DoD may review your SPRS score (a self-assessed score you must submit now, even before certification).
+
+6. **Submit your SPRS score.** Under current rules, you must self-assess against NIST SP 800-171 and report a score in the Supplier Performance Risk System (SPRS) at supplierpas.epls.fas.gsa.gov. This is required even while working toward formal CMMC certification. If you haven&#x27;t done this, do it now.
+
+7. **Select and engage a C3PAO.** The Cyber AB Marketplace (cyberab.org) lists all accredited assessment organizations. Get quotes early — C3PAO calendars fill up, and scheduling can take months.
+
+---
+
+## Key Terms Cheat Sheet
+
+| Term | What It Means |
+|------|---------------|
+| CMMC | Cybersecurity Maturity Model Certification — the DoD&#x27;s cybersecurity certification program |
+| DFARS | Defense Federal Acquisition Regulation Supplement — the legal framework governing DoD contracts |
+| CUI | Controlled Unclassified Information — sensitive (but not classified) government data |
+| NIST SP 800-171 | The federal standard with 110 cybersecurity practices that form the basis of CMMC Level 2 |
+| C3PAO | Certified Third-Party Assessment Organization — the accredited firm that certifies you |
+| SSP | System Security Plan — your master document describing your security environment |
+| POA&amp;M | Plan of Action &amp; Milestones — your remediation roadmap for gaps |
+| SPRS | Supplier Performance Risk System — DoD database where you report your self-assessment score |
+| RPO | Registered Provider Organization — a CMMC-accredited consulting firm that can help you prepare |
+| Cyber AB | The CMMC Accreditation Body — oversees C3PAOs and certifications |
+
+---
+
+## Summary
+
+CMMC Level 2 means the DoD requires you to prove — through an independent audit — that you are protecting their sensitive information using 110 specific cybersecurity practices drawn from NIST SP 800-171. For a 45-person firm starting from scratch, expect 12–24 months of preparation work, costs in the range of $140,000–$380,000, and an ongoing commitment to maintaining your security posture. The most important thing you can do right now is engage a qualified CMMC consultant and submit your SPRS self-assessment score. The process is substantial but very achievable for a firm your size.
+</pre></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-item" id="eval-cmmc-1">
+            <button class="eval-toggle" onclick="toggleEval('cmmc-1')">
+              <span class="eval-label">Test 2: Gap Assessment</span>
+              <span class="eval-chevron">▼</span>
+            </button>
+            <div class="eval-content" style="display:none">
+              <div class="eval-prompt">
+                <strong>Prompt:</strong> Perform a CMMC Level 2 gap assessment...
+              </div>
+              <div class="eval-outputs">
+                <div class="output-panel">
+                  <div class="output-header with-header">With Skill</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Identifies MFA gap with practice ID IA.L2-3.5.3</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Flags non-FedRAMP M365/SharePoint as CUI violation (DFARS 7012)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">References SPRS score impact or deductions</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Identifies audit logging / SIEM gap (AU.L2-3.3.1)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Uses structured gap table format with practice IDs</span></div></div></div>
+                  <div class="output-text"><pre># CMMC Level 2 Gap Assessment Report
+
+**Assessment Date**: 2026-04-25  
+**CMMC Level**: Level 2 — Advanced (110 Practices, NIST SP 800-171 Rev 2)  
+**Applicable DFARS Clauses**: 252.204-7012, 252.204-7019, 252.204-7020, 252.204-7021  
+
+---
+
+## IT Environment Summary
+
+| Component | Detail |
+|-----------|--------|
+| Identity Management | Active Directory, 80 users |
+| MFA | NOT DEPLOYED |
+| Endpoints | Windows 10/11 managed via Intune |
+| Perimeter Security | Palo Alto Firewall |
+| Productivity Suite | Microsoft 365 E3 (commercial — NOT GCC) |
+| SIEM | NOT DEPLOYED |
+| Vulnerability Scanning | Quarterly, Nessus, **unauthenticated** |
+| CUI Storage | SharePoint Online (commercial M365 E3) |
+
+---
+
+## Critical Pre-Assessment Finding: SharePoint Online (Commercial M365) for CUI
+
+&gt; **BLOCKER**: CUI stored in commercial Microsoft 365 E3 (non-GCC) violates DFARS 252.204-7012, which requires cloud services handling CUI to be FedRAMP Authorized at Moderate or equivalent. Commercial M365 E3 is NOT FedRAMP Moderate authorized for CUI. This must be migrated to **Microsoft 365 Government (GCC or GCC High)** before a C3PAO assessment can proceed. This issue affects every CUI-related practice in scope.
+
+---
+
+## Gap Assessment Table
+
+### IA — Identification and Authentication
+
+| Practice ID | Domain | Practice Statement | Status | Evidence Needed | Gap Notes | SPRS Score Impact |
+|-------------|--------|--------------------|--------|-----------------|-----------|------------------|
+| IA.L2-3.5.3 | IA | Use MFA for local and network access to privileged accounts and for network access to non-privileged accounts. | ❌ NOT MET | MFA enrollment report showing 100% of privileged and non-privileged accounts enrolled; Conditional Access policy exports from Entra ID/Azure AD | No MFA deployed anywhere. This is a **critical practice** — cannot have a POA&amp;M at certification. Must be remediated before C3PAO assessment. Affects all 80 users and all privileged accounts. | **-5 pts** |
+| IA.L2-3.5.4 | IA | Employ replay-resistant authentication mechanisms for network access. | ❌ NOT MET | Kerberos/NTLM configuration export; authentication logs showing replay-resistant protocols in use | With no MFA and no evidence of replay-resistant auth configuration, this is likely not met. Kerberos provides some replay resistance but must be verified and documented. | **-3 pts** |
+| IA.L2-3.5.5 | IA | Employ identifier management to prevent reuse of identifiers for a defined period. | 🟡 PARTIAL | AD account lifecycle policy; script/report showing identifier reuse prevention settings | AD can enforce this but requires a documented policy and verified configuration. No evidence provided. | **-1 pt** |
+| IA.L2-3.5.6 | IA | Disable identifiers after a defined inactivity period. | 🟡 PARTIAL | AD inactive account review reports; Group Policy Object (GPO) exports showing inactivity lockout settings | Likely partially configured in AD but requires formal policy, documented threshold, and evidence of enforcement. | **-1 pt** |
+| IA.L2-3.5.7 | IA | Enforce minimum password complexity and change requirements. | 🟡 PARTIAL | GPO export showing password policy settings; Intune compliance policy screenshots | AD likely enforces some password complexity but must meet NIST SP 800-171 requirements and be fully documented. | **-1 pt** |
+| IA.L2-3.5.10 | IA | Store and transmit only cryptographically-protected passwords (FIPS 140-2/3 validated). | 🟡 PARTIAL | AD/Windows FIPS mode configuration; verification that NTLMv2 or Kerberos with FIPS cipher suites in use | Windows can operate in FIPS mode but this must be explicitly enabled and verified. Non-GCC M365 raises concerns about FIPS-validated storage of credentials. | **-3 pts** |
+| MA.L2-3.7.5 | MA | Require MFA to establish remote maintenance sessions. | ❌ NOT MET | Same as IA.L2-3.5.3 — MFA enrollment/enforcement evidence | No MFA means remote maintenance sessions (RDP, remote admin tools) are not MFA-protected. | **-1 pt** |
+
+---
+
+### AU — Audit and Accountability (No SIEM)
+
+| Practice ID | Domain | Practice Statement | Status | Evidence Needed | Gap Notes | SPRS Score Impact |
+|-------------|--------|--------------------|--------|-----------------|-----------|------------------|
+| AU.L2-3.3.1 | AU | Create and retain system audit logs and records to enable monitoring, analysis, investigation, and reporting. | ❌ NOT MET | Log retention policy; SIEM or centralized log repository configuration; evidence logs from all CUI-touching systems (AD, SharePoint, endpoints, firewall) are captured and retained for 3 years | **Critical practice** — no SIEM means logs are likely siloed on individual systems with no centralized collection, correlation, or assured retention. Windows Event logs on endpoints have limited local retention. | **-3 pts** |
+| AU.L2-3.3.2 | AU | Ensure actions of individual users can be uniquely traced. | 🟡 PARTIAL | Audit log samples showing user-level attribution from AD, M365 Audit Log, Palo Alto traffic logs | Without a SIEM, correlating user actions across systems is manual and unreliable. M365 Unified Audit Log provides some coverage but must be explicitly enabled and retained. | **-2 pts** |
+| AU.L2-3.3.3 | AU | Review and update logged events. | ❌ NOT MET | Documented logged event list; records of periodic review meetings; evidence of updates to log configuration | No formal process likely exists without a SIEM. Requires documented policy + evidence of regular review. | **-1 pt** |
+| AU.L2-3.3.4 | AU | Alert in the event of an audit logging process failure. | ❌ NOT MET | SIEM alerting rules or equivalent monitoring configuration; evidence of test alerts | Requires automated alerting capability. No SIEM means this is not met. | **-1 pt** |
+| AU.L2-3.3.5 | AU | Correlate audit record review, analysis, and reporting processes. | ❌ NOT MET | SIEM correlation rules; documented analysis procedures | Cannot be met without log aggregation/SIEM capability. | **-1 pt** |
+| AU.L2-3.3.6 | AU | Provide audit record reduction and report generation. | ❌ NOT MET | Log management tool configuration; sample reports generated | No SIEM = no log reduction/reporting capability. | **-1 pt** |
+| AU.L2-3.3.7 | AU | Provide system capability to compare and synchronize internal clocks with authoritative sources. | 🟡 PARTIAL | NTP configuration on all in-scope systems; AD time sync settings | AD provides NTP via domain hierarchy; must verify all systems (including non-domain joined or BYOD) sync to an authoritative source. Document the configuration. | **-1 pt** |
+| AU.L2-3.3.8 | AU | Protect audit information and tools from unauthorized access, modification, and deletion. | ❌ NOT MET | Evidence of log protection (SIEM access controls, immutable storage, write-once log settings) | Without a SIEM with access controls, local logs on endpoints/servers are modifiable by admins — not adequately protected. | **-1 pt** |
+| AU.L2-3.3.9 | AU | Limit management of audit logging to a subset of privileged users. | ❌ NOT MET | RBAC configuration for log management; AD/SIEM role assignments | Cannot be effectively enforced or demonstrated without centralized logging with role-based access. | **-1 pt** |
+
+---
+
+### RA — Risk Assessment (Unauthenticated Scanning)
+
+| Practice ID | Domain | Practice Statement | Status | Evidence Needed | Gap Notes | SPRS Score Impact |
+|-------------|--------|--------------------|--------|-----------------|-----------|------------------|
+| RA.L2-3.11.1 | RA | Periodically assess the risk to organizational operations, assets, and individuals. | 🟡 PARTIAL | Formal risk assessment report with date; risk register; evidence of periodic reassessment | Quarterly Nessus scans address vulnerability risk but do not constitute a full organizational risk assessment. A formal risk assessment against all 110 CMMC practices is needed. | **-3 pts** |
+| RA.L2-3.11.2 | RA | Scan for vulnerabilities in organizational systems periodically and when new vulnerabilities are identified. | 🟡 PARTIAL | Nessus scan reports (dated); scan scope documentation showing all in-scope assets covered; **credentialed scan configuration** | Quarterly scans exist — that is positive. However, **unauthenticated scans are a common assessment finding** (per DoD Assessment Methodology). Unauthenticated scans miss locally-installed software vulnerabilities, misconfigurations, and patch gaps that only credentialed scans detect. Assessors will flag this. Monthly credentialed scans are expected. | **-3 pts** |
+| RA.L2-3.11.3 | RA | Remediate vulnerabilities in accordance with risk assessments. | 🟡 PARTIAL | Vulnerability remediation tracking records; evidence of timely patching tied to risk ratings; Intune patch compliance reports | No evidence provided of a formal remediation process. Intune can enforce patching but a documented vulnerability management program with SLAs (e.g., Critical: 15 days, High: 30 days) is required. | **-3 pts** |
+
+---
+
+### SI — System and Information Integrity (No SIEM, Monitoring Gaps)
+
+| Practice ID | Domain | Practice Statement | Status | Evidence Needed | Gap Notes | SPRS Score Impact |
+|-------------|--------|--------------------|--------|-----------------|-----------|------------------|
+| SI.L2-3.14.3 | SI | Monitor system security alerts and advisories and take action in response. | 🟡 PARTIAL | Subscription to US-CERT/CISA advisories; documented process for evaluating and acting on alerts; Intune/Defender alert response records | Microsoft Defender (available via M365 E3 + Intune) provides some advisory monitoring. Must document the process and show evidence of advisory reviews and responses. | **-2 pts** |
+| SI.L2-3.14.6 | SI | Monitor systems to detect attacks and indicators of potential attacks. | ❌ NOT MET | SIEM with IDS/IPS rules; EDR/XDR alert configuration and evidence; network monitoring logs from Palo Alto showing active threat detection | **Critical practice** — no SIEM means no centralized attack detection. Palo Alto firewall provides perimeter monitoring, and Microsoft Defender for Endpoint (available but unclear if deployed) can provide EDR. Without a SIEM or documented detection capability covering all CUI-touching systems, this practice is NOT MET. | **-5 pts** |
+| SI.L2-3.14.7 | SI | Identify unauthorized use of systems. | ❌ NOT MET | User behavior analytics (UBA) or equivalent; DLP alerts for SharePoint; anomalous access reports from M365 Audit Log | No evidence of capability to detect unauthorized system use. M365 E3 has some Defender for Cloud Apps functionality but comprehensive coverage is unlikely without additional tooling. | **-3 pts** |
+
+---
+
+### SC — System and Communications Protection (CUI in Commercial Cloud)
+
+| Practice ID | Domain | Practice Statement | Status | Evidence Needed | Gap Notes | SPRS Score Impact |
+|-------------|--------|--------------------|--------|-----------------|-----------|------------------|
+| SC.L2-3.13.8 | SC | Implement cryptographic mechanisms to protect confidentiality of CUI during transmission (FIPS 140-2/3). | 🟡 PARTIAL | TLS configuration for all CUI transmission paths; FIPS mode configuration on Windows endpoints; M365/SharePoint transport encryption documentation | **Critical practice**. Commercial M365 E3 uses TLS 1.2+ for transport but FIPS validation status of commercial (non-GCC) SharePoint is not equivalent to GCC/GCC High. Windows endpoints must have FIPS mode enabled. Must document and verify all CUI transmission paths. | **-5 pts** |
+| SC.L2-3.13.11 | SC | Employ FIPS-validated cryptography when used to protect CUI. | ❌ NOT MET | FIPS mode enabled on all Windows 10/11 endpoints (Group Policy or Intune policy export); documentation that CUI storage/transmission uses only FIPS-validated modules | **Critical practice**. No evidence of FIPS mode deployment. Commercial M365 (non-GCC) does not provide the FedRAMP Moderate authorization needed to satisfy FIPS requirements for CUI. This is a foundational gap. | **-5 pts** |
+| SC.L2-3.13.16 | SC | Protect CUI at rest. | ❌ NOT MET | BitLocker encryption status reports from Intune for all endpoints; SharePoint data-at-rest encryption documentation (FedRAMP Moderate equivalent) | Intune can enforce BitLocker on endpoints — must verify deployment. Commercial SharePoint encrypts at rest but not under a FedRAMP Moderate ATO, making this non-compliant for CUI. | **-3 pts** |
+| SC.L2-3.13.6 | SC | Deny network communications by default; allow by exception. | 🟡 PARTIAL | Palo Alto firewall policy export showing default-deny ruleset; documentation of exception process | Palo Alto supports this but requires verified configuration. Must export and document the deny-by-default rule set. | **-1 pt** |
+| SC.L2-3.13.7 | SC | Prevent split tunneling for remote access. | 🟡 PARTIAL | VPN configuration showing split tunneling disabled; routing tables for remote users | No mention of VPN configuration. Must verify remote worker traffic routes through managed access points — split tunneling must be disabled for CUI systems. | **-1 pt** |
+
+---
+
+### AC — Access Control (CUI Flow, Least Privilege)
+
+| Practice ID | Domain | Practice Statement | Status | Evidence Needed | Gap Notes | SPRS Score Impact |
+|-------------|--------|--------------------|--------|-----------------|-----------|------------------|
+| AC.L2-3.1.3 | AC | Control the flow of CUI in accordance with approved authorizations. | ❌ NOT MET | SharePoint permissions audit; data classification labels applied to CUI content; DLP policies configured; documented CUI access control policy | **Critical practice**. CUI stored in commercial SharePoint Online with no documented access controls or DLP policies. Must implement and document CUI flow controls, including who can access, download, share, and forward CUI content. | **-5 pts** |
+| AC.L2-3.1.5 | AC | Employ least privilege, including for privileged accounts. | 🟡 PARTIAL | AD privileged account inventory; role-based access control documentation; evidence of quarterly access reviews; Intune admin role assignments | With 80 users in AD and no described PAM/privilege management, this is likely partially implemented at best. Must document role assignments and show regular access reviews. | **-3 pts** |
+| AC.L2-3.1.12 | AC | Monitor and control remote access sessions. | 🟡 PARTIAL | VPN/remote access logs; Conditional Access policy exports; evidence of session monitoring | No mention of VPN or remote access solution beyond M365. Must document how remote access to CUI systems is monitored and controlled. | **-1 pt** |
+| AC.L2-3.1.13 | AC | Employ cryptographic mechanisms to protect confidentiality of remote access sessions. | 🟡 PARTIAL | VPN configuration showing encryption standards; TLS configuration for remote access portals | Tied to SC.L2-3.13.8 and FIPS concerns. Must verify remote access uses FIPS-validated encryption. | **-1 pt** |
+
+---
+
+### CA — Security Assessment
+
+| Practice ID | Domain | Practice Statement | Status | Evidence Needed | Gap Notes | SPRS Score Impact |
+|-------------|--------|--------------------|--------|-----------------|-----------|------------------|
+| CA.L2-3.12.1 | CA | Periodically assess the security controls in organizational systems. | ❌ NOT MET | Annual security control assessment report; evidence of assessor qualifications; schedule for ongoing assessments | This gap assessment likely represents the first formal assessment. Must institute an annual security assessment process. | **-3 pts** |
+| CA.L2-3.12.2 | CA | Develop and implement plans of action to correct deficiencies. | ❌ NOT MET | Formal POA&amp;M document covering all gaps identified; milestone dates; responsible owners; remediation budgets | No POA&amp;M exists based on the environment description. Must be created immediately following this gap assessment. | **-3 pts** |
+| CA.L2-3.12.3 | CA | Monitor security controls on an ongoing basis. | ❌ NOT MET | Continuous monitoring program documentation; automated compliance dashboards (Intune compliance, Defender for Endpoint, M365 Secure Score evidence) | Without a SIEM and with limited visibility, ongoing monitoring is not in place. Intune and M365 Secure Score can partially address this with proper configuration. | **-3 pts** |
+| CA.L2-3.12.4 | CA | Develop, document, and periodically update system security plans. | ❌ NOT MET | Complete SSP covering all 110 practices; signed by senior official; dated within last 12 months | No SSP mentioned. This is a foundational requirement for any CMMC assessment. | **-3 pts** |
+
+---
+
+### IR — Incident Response
+
+| Practice ID | Domain | Practice Statement | Status | Evidence Needed | Gap Notes | SPRS Score Impact |
+|-------------|--------|--------------------|--------|-----------------|-----------|------------------|
+| IR.L2-3.6.1 | IR | Establish an operational incident-handling capability. | ❌ NOT MET | Written Incident Response Plan (IRP); evidence of DIBNET portal account registration; documented 72-hour reporting procedure for DFARS 7012 | **Critical practice**. No incident response capability described. Must include DIBNET reporting procedures per DFARS 252.204-7012. | **-1 pt** |
+| IR.L2-3.6.2 | IR | Track, document, and report incidents to designated officials and authorities. | ❌ NOT MET | Incident tracking system/ticketing records; DIBNET reporting templates; evidence of test reporting | No incident tracking capability in place. | **-1 pt** |
+| IR.L2-3.6.3 | IR | Test the organizational incident response capability. | ❌ NOT MET | Tabletop exercise records with dates; lessons-learned documentation; after-action reports | No evidence of IR testing. Must conduct and document at least annual tabletop exercises. | **-1 pt** |
+
+---
+
+### AT — Awareness and Training
+
+| Practice ID | Domain | Practice Statement | Status | Evidence Needed | Gap Notes | SPRS Score Impact |
+|-------------|--------|--------------------|--------|-----------------|-----------|------------------|
+| AT.L2-3.2.1 | AT | Ensure personnel are aware of CUI security risks and related policies. | ❌ NOT MET | Training completion records for all 80 users; training content covering CUI handling, CMMC requirements; dates within last 12 months | No training program described. With CUI in SharePoint and 80 users, all must complete documented security awareness training. | **-1 pt** |
+| AT.L2-3.2.2 | AT | Ensure personnel are trained to carry out assigned security responsibilities. | ❌ NOT MET | Role-based training records for system admins, IT staff, and security personnel; training content covering their specific responsibilities | IT administrators managing CUI systems must receive role-specific training. | **-1 pt** |
+| AT.L2-3.2.3 | AT | Provide security awareness training on recognizing and reporting insider threats. | ❌ NOT MET | Insider threat training content; completion records for all personnel with CUI access | Must include insider threat indicators in training curriculum. | **-1 pt** |
+
+---
+
+### CM — Configuration Management
+
+| Practice ID | Domain | Practice Statement | Status | Evidence Needed | Gap Notes | SPRS Score Impact |
+|-------------|--------|--------------------|--------|-----------------|-----------|------------------|
+| CM.L2-3.4.1 | CM | Establish and maintain baseline configurations and inventories. | 🟡 PARTIAL | Intune device inventory export; documented baseline configuration for Windows 10/11; hardware/software inventory | Intune manages endpoints and can produce inventory. Requires documented baseline configurations per OS version and documented approval. | **-3 pts** |
+| CM.L2-3.4.2 | CM | Establish and enforce security configuration settings. | 🟡 PARTIAL | Intune configuration profile exports; CIS Benchmark or DISA STIG application evidence; Compliance Policy reports | Intune supports enforcing security baselines (Microsoft Security Baseline or CIS). Must verify deployment and document the baseline standard used. | **-1 pt** |
+| CM.L2-3.4.6 | CM | Employ principle of least functionality. | 🟡 PARTIAL | Intune application inventory; evidence of disabling unnecessary features/services; Windows feature audit | Intune can restrict applications but must document and enforce least functionality policy. | **-1 pt** |
+| CM.L2-3.4.7 | CM | Restrict/disable nonessential programs, functions, ports, protocols, and services. | 🟡 PARTIAL | Palo Alto firewall policy showing blocked ports/protocols; Windows Firewall/Intune policies restricting services; AppLocker or Intune app control policy | Palo Alto provides network-level restriction but endpoint-level service/port restriction must also be documented. | **-1 pt** |
+| CM.L2-3.4.8 | CM | Apply deny-by-exception or allow-by-exception software policy. | ❌ NOT MET | AppLocker policy exports; Intune application control policy; Windows Defender Application Control (WDAC) configuration | No application whitelisting/blacklisting mentioned. This is a significant gap for CUI-handling systems. | **-1 pt** |
+
+---
+
+## SPRS Score Impact Summary
+
+| Category | NOT MET Practices (Count) | Estimated Point Deduction |
+|----------|--------------------------|--------------------------|
+| Identification &amp; Authentication (IA) | 2 fully NOT MET + 4 partial | -14 pts |
+| Audit &amp; Accountability (AU) | 6 NOT MET + 2 partial | -11 pts |
+| Risk Assessment (RA) | 0 NOT MET + 3 partial | -9 pts |
+| System &amp; Information Integrity (SI) | 3 NOT MET + 1 partial | -10 pts |
+| System &amp; Comms Protection (SC) | 3 NOT MET + 3 partial | -15 pts |
+| Access Control (AC) | 1 NOT MET + 3 partial | -10 pts |
+| Security Assessment (CA) | 4 NOT MET | -12 pts |
+| Incident Response (IR) | 3 NOT MET | -3 pts |
+| Awareness &amp; Training (AT) | 3 NOT MET | -3 pts |
+| Configuration Management (CM) | 1 NOT MET + 4 partial | -8 pts |
+
+&gt; **Note**: Partial implementations receive FULL deductions per SPRS methodology (no partial credit). Estimated deductions above reflect a conservative calculation based on the DoD Assessment Methodology point weights. The exact score depends on assessor findings for all 110 practices.
+
+### Estimated SPRS Score Range
+
+| Scenario | Estimated Score |
+|----------|----------------|
+| Starting score (all 110 MET) | **+110** |
+| Conservative estimate (partial = NOT MET) | **~+15 to +30** |
+| Realistic assessment estimate given described gaps | **~-20 to +10** |
+
+The estimated score is well below what contracting officers expect to see. Any score below **+70** is likely to trigger scrutiny from the DoD Contracting Officer (CO).
+
+---
+
+## Critical Gaps Requiring Immediate Remediation (Cannot POA&amp;M)
+
+The following practices are **critical** and must be fully MET before any C3PAO certification can be issued. These cannot appear in a POA&amp;M at the time of certification:
+
+| # | Practice ID | Gap | Priority Action |
+|---|-------------|-----|----------------|
+| 1 | **IA.L2-3.5.3** | No MFA deployed for any users | Deploy Microsoft Entra MFA + Conditional Access policies; enforce for all 80 users and privileged accounts immediately |
+| 2 | **SC.L2-3.13.8** | CUI transmission encryption unverified; commercial M365 not FedRAMP Moderate | Migrate CUI from commercial SharePoint to M365 GCC/GCC High; enforce TLS 1.2+ with FIPS cipher suites |
+| 3 | **SC.L2-3.13.11** | FIPS-validated cryptography not deployed | Enable FIPS mode on all Windows 10/11 endpoints via Intune/Group Policy; migrate to GCC environment |
+| 4 | **AC.L2-3.1.3** | CUI flow controls not implemented in SharePoint | Implement Microsoft Purview sensitivity labels + DLP policies; audit and restrict SharePoint permissions |
+| 5 | **SI.L2-3.14.6** | No SIEM or centralized attack detection | Deploy Microsoft Sentinel (integrates with M365 GCC) or equivalent; configure Defender for Endpoint with centralized alerting |
+| 6 | **AU.L2-3.3.1** | No centralized audit logging; no SIEM | Deploy SIEM with 3-year log retention; enable M365 Unified Audit Log; collect Palo Alto and AD logs |
+| 7 | **IR.L2-3.6.1** | No incident response plan or capability | Draft and approve an IRP; register with DIBNET; document 72-hour reporting procedure per DFARS 7012 |
+
+---
+
+## Top Remediation Priorities (Ranked by SPRS Impact + Risk)
+
+| Priority | Action Item | Practices Addressed | Estimated Effort |
+|----------|-------------|---------------------|-----------------|
+| 1 | **Migrate CUI from commercial M365 to M365 GCC/GCC High** | SC.L2-3.13.8, SC.L2-3.13.11, SC.L2-3.13.16, AC.L2-3.1.3 | 4–8 weeks; licensing change + migration |
+| 2 | **Deploy MFA via Microsoft Entra + Conditional Access** | IA.L2-3.5.3, MA.L2-3.7.5 | 1–2 weeks (M365 E3 includes Entra ID P1 with add-on) |
+| 3 | **Deploy Microsoft Sentinel or equivalent SIEM** | AU.L2-3.3.1–3.3.9, SI.L2-3.14.6, SI.L2-3.14.7 | 4–8 weeks; requires GCC migration first |
+| 4 | **Enable FIPS mode on all Windows endpoints via Intune** | SC.L2-3.13.11, IA.L2-3.5.10 | 1–2 weeks |
+| 5 | **Switch to credentialed, monthly Nessus scans** | RA.L2-3.11.2 | 1 week configuration change |
+| 6 | **Draft SSP and POA&amp;M** | CA.L2-3.12.4, CA.L2-3.12.2 | 4–6 weeks |
+| 7 | **Develop and deliver security awareness training** | AT.L2-3.2.1, AT.L2-3.2.2, AT.L2-3.2.3 | 2–4 weeks |
+| 8 | **Draft and test Incident Response Plan** | IR.L2-3.6.1, IR.L2-3.6.2, IR.L2-3.6.3 | 2–4 weeks |
+| 9 | **Implement application control (WDAC/AppLocker)** | CM.L2-3.4.8 | 4–8 weeks |
+| 10 | **Document baseline configurations and enforce via Intune** | CM.L2-3.4.1, CM.L2-3.4.2 | 2–4 weeks |
+
+---
+
+## Recommended Remediation Timeline
+
+| Phase | Timeframe | Focus |
+|-------|-----------|-------|
+| **Phase 1 — Critical Blockers** | Months 1–2 | MFA deployment; M365 GCC migration initiation; FIPS mode; IR Plan draft |
+| **Phase 2 — Foundation Building** | Months 2–4 | SIEM deployment; credentialed scanning; SSP/POA&amp;M drafting; training |
+| **Phase 3 — Documentation &amp; Hardening** | Months 3–6 | Baseline configurations; least privilege audit; application control; access reviews |
+| **Phase 4 — Assessment Readiness** | Months 5–8 | Mock assessment; POA&amp;M remediation; C3PAO engagement |
+
+---
+
+## Additional Regulatory Notes
+
+1. **DFARS 252.204-7012 — Immediate Obligation**: The 72-hour DIBNET incident reporting requirement is in effect NOW, regardless of CMMC certification status. Register at dibnet.dod.mil immediately.
+
+2. **False Claims Act Risk**: If your organization has submitted an SPRS score to date without performing a formal assessment, ensure the score accurately reflects the current state. Inflated SPRS scores expose the organization to False Claims Act liability under 31 U.S.C. § 3729.
+
+3. **Subcontractor Flow-Down**: If you engage subcontractors who handle your CUI, DFARS 252.204-7021(c) requires you to flow CMMC requirements to them. Audit your subcontractor base.
+
+4. **C3PAO Timeline**: Given the scope of gaps identified, a realistic timeline to C3PAO readiness is **8–12 months** from the start of remediation, assuming adequate resources and executive commitment.
+
+---
+
+*Assessment based on NIST SP 800-171 Rev 2, CMMC 2.0 (32 CFR Part 170), and DoD Assessment Methodology v2.2. All 110 Level 2 practices were evaluated; this report highlights practices with identified gaps based on the environment description provided. A complete assessment requires review of all 110 practices with documentary, technical, and interview evidence.*
+</pre></div>
+                </div>
+                <div class="output-panel">
+                  <div class="output-header without-header">Without Skill (Baseline)</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Identifies MFA gap with practice ID IA.L2-3.5.3</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Flags non-FedRAMP M365/SharePoint as CUI violation (DFARS 7012)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">References SPRS score impact or deductions</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Identifies audit logging / SIEM gap (AU.L2-3.3.1)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Uses structured gap table format with practice IDs</span></div></div></div>
+                  <div class="output-text"><pre># CMMC Level 2 Gap Assessment
+
+**Assessment Date:** 2026-04-25
+**Assessed Environment:** Active Directory (80 users), Windows 10/11 via Intune, Palo Alto Firewall, Microsoft 365 E3 (commercial), SharePoint Online for CUI, Nessus quarterly unauthenticated scanning, no MFA, no SIEM
+
+---
+
+## Background: CMMC Level 2 and SPRS Scoring
+
+CMMC Level 2 maps directly to NIST SP 800-171 Rev 2, which contains 110 security requirements across 14 domains. The Supplier Performance Risk System (SPRS) score starts at 110 points. Each failed practice has a defined point value (1, 3, or 5 points). A perfect score is 110; organizations must document all deficiencies in a Plan of Action and Milestones (POA&amp;M) and report their self-assessed score to SPRS.
+
+Point values per practice:
+- 5-point practices: highest-risk controls (typically access control, identification &amp; authentication, incident response, configuration management)
+- 3-point practices: moderate-risk controls
+- 1-point practices: lower-risk controls
+
+The average defense contractor self-assessment score is approximately 50-70 out of 110.
+
+---
+
+## Critical Gap Analysis by Domain
+
+### 1. Access Control (AC) — DOMAIN SCORE IMPACT: HIGH
+
+**Gap AC.1.001 / AC.1.002 — No MFA Deployed**
+- NIST 800-171 Practice: 3.5.3 — Use multifactor authentication for local and network access to privileged accounts and for network access to non-privileged accounts
+- Status: NON-COMPLIANT
+- Risk: With 80 AD users and no MFA, all accounts — including privileged admin accounts — are protected only by passwords. This is one of the highest-risk gaps in the environment.
+- SPRS Impact: -5 points (3.5.3 is a 5-point practice)
+- Remediation: Deploy Azure AD MFA (available with M365 E3 / Entra ID P1 included). Enable Conditional Access policies requiring MFA for all users, enforce for privileged accounts as a priority. For on-premises AD, consider integrating with Azure AD via Entra ID hybrid join.
+
+**Gap AC — Privileged Account Separation**
+- NIST 800-171 Practice: 3.1.6 — Use non-privileged accounts or roles when accessing non-security functions
+- Status: LIKELY NON-COMPLIANT (no evidence of enforced least privilege)
+- SPRS Impact: -3 points
+- Remediation: Audit AD groups; enforce separate admin accounts for privileged tasks; apply role-based access control via Intune and Group Policy.
+
+**Gap AC — External Access Controls (CUI on SharePoint)**
+- NIST 800-171 Practice: 3.1.3 — Control the flow of CUI in accordance with approved authorizations
+- Status: NON-COMPLIANT — Microsoft 365 E3 (commercial, non-GCC) is not FedRAMP-authorized at the required impact level for CUI storage. SharePoint Online in commercial M365 does not meet the FedRAMP Moderate or High authorization required under DFARS 252.204-7012 and CMMC.
+- SPRS Impact: -5 points (systemic impact across multiple CUI-related controls)
+- Remediation: Migrate CUI workloads to Microsoft 365 GCC or GCC High. This is a critical compliance blocker — storing CUI on commercial M365 may render the entire CMMC assessment invalid.
+
+---
+
+### 2. Identification and Authentication (IA) — DOMAIN SCORE IMPACT: HIGH
+
+**Gap IA — No MFA (see AC above)**
+- NIST 800-171 Practice: 3.5.3
+- SPRS Impact: -5 points (same practice as above, counted once)
+
+**Gap IA — Password Policy Enforcement**
+- NIST 800-171 Practice: 3.5.7 — Enforce a minimum password complexity and change when compromised
+- Status: POTENTIALLY NON-COMPLIANT — AD password policies must be verified; default AD policies may not meet NIST guidelines (e.g., checking against compromised password lists)
+- SPRS Impact: -3 points if not configured correctly
+- Remediation: Implement Azure AD Password Protection (available in Entra ID P1, included with M365 E3) to enforce banned-password lists and complexity requirements.
+
+**Gap IA — Authenticator Management**
+- NIST 800-171 Practice: 3.5.10 — Store and transmit only cryptographically-protected passwords
+- Status: REQUIRES VERIFICATION — Confirm AD is using Kerberos/NTLM hardening; confirm no legacy protocols (NTLM v1, LM hash) are enabled
+- SPRS Impact: -3 points if legacy protocols are active
+- Remediation: Disable LM hash storage, enforce NTLMv2 minimum, prefer Kerberos; enable smart lockout in Entra ID.
+
+---
+
+### 3. Audit and Accountability (AU) — DOMAIN SCORE IMPACT: HIGH
+
+**Gap AU — No SIEM / Centralized Log Management**
+- NIST 800-171 Practices: 3.3.1, 3.3.2 — Create, protect, and retain system audit logs; ensure actions of individual users can be traced
+- Status: NON-COMPLIANT — Without a SIEM or centralized logging solution, audit logs from AD, endpoints, firewall, and SharePoint are siloed or unavailable for review, correlation, or forensic investigation.
+- SPRS Impact: -5 points (3.3.1) + -3 points (3.3.2) = -8 points combined
+- Remediation: Deploy Microsoft Sentinel (integrates natively with M365 E3, AD, Intune, and Palo Alto via connectors). Cost-effective entry point given existing M365 investment. Alternatively, deploy a SIEM such as Splunk, Elastic SIEM, or IBM QRadar. Minimum viable: centralize Windows Event Logs and Azure AD sign-in logs.
+
+**Gap AU — Log Review Process**
+- NIST 800-171 Practice: 3.3.2 — Review and update logged events
+- Status: NON-COMPLIANT — No SIEM means no regular log review cadence or alerting
+- SPRS Impact: Included in above (-3 points)
+- Remediation: Establish formal log review procedures and alerts for critical events (failed logins, privilege escalation, CUI access).
+
+---
+
+### 4. Risk Assessment (RA) — DOMAIN SCORE IMPACT: MEDIUM-HIGH
+
+**Gap RA — Unauthenticated Vulnerability Scanning**
+- NIST 800-171 Practice: 3.11.2 — Scan for vulnerabilities in organizational systems and applications periodically and when new vulnerabilities affecting those systems are identified
+- Status: PARTIALLY NON-COMPLIANT — Quarterly unauthenticated Nessus scans do not meet the intent of 3.11.2. Unauthenticated scans miss 60-70% of vulnerabilities (missing local privilege escalation, misconfigured services, unpatched software visible only with credentials). CMMC assessors expect authenticated scanning.
+- SPRS Impact: -5 points (3.11.2 is a 5-point practice; partial credit may apply in self-assessment but assessors are likely to flag this)
+- Remediation: Convert Nessus scans to authenticated mode using a dedicated service account with read-only local admin rights. Increase scan frequency to monthly at minimum. Consider continuous scanning for critical assets.
+
+**Gap RA — Scan Frequency**
+- Status: Quarterly is insufficient for a dynamic environment. NIST guidance and CMMC assessors expect more frequent scanning (monthly minimum, continuous preferred for high-value systems).
+- SPRS Impact: Included in 3.11.2 above
+- Remediation: Move to monthly authenticated scans; implement Intune compliance policies to enforce patch status.
+
+---
+
+### 5. Configuration Management (CM) — DOMAIN SCORE IMPACT: MEDIUM
+
+**Gap CM — Baseline Configuration Documentation**
+- NIST 800-171 Practice: 3.4.1 — Establish and maintain baseline configurations and inventories of organizational systems
+- Status: REQUIRES VERIFICATION — Intune provides device management but a formal documented baseline configuration standard must exist
+- SPRS Impact: -3 points if undocumented
+- Remediation: Document baseline configuration standards (CIS Benchmarks for Windows 10/11 recommended). Enforce via Intune Configuration Profiles and Compliance Policies.
+
+**Gap CM — Security Configuration Enforcement**
+- NIST 800-171 Practice: 3.4.2 — Establish and enforce security configuration settings
+- Status: POTENTIALLY NON-COMPLIANT — Intune is deployed but configuration of security settings (BitLocker, Windows Defender, firewall settings, AppLocker/WDAC) must be verified against documented baselines
+- SPRS Impact: -3 points if enforcement gaps exist
+- Remediation: Deploy CIS Level 1 or DISA STIG baselines via Intune; enforce BitLocker encryption; enable Windows Defender ATP (available with M365 E3 via Defender for Endpoint P1).
+
+---
+
+### 6. System and Communications Protection (SC) — DOMAIN SCORE IMPACT: MEDIUM
+
+**Gap SC — CUI Encryption at Rest and In Transit**
+- NIST 800-171 Practice: 3.13.10, 3.13.8 — Implement cryptographic mechanisms to prevent unauthorized disclosure of CUI
+- Status: PARTIALLY NON-COMPLIANT — Commercial M365 SharePoint Online encrypts data at rest, but without GCC/GCC High authorization, the encryption key management and data residency do not meet DoD requirements. Additionally, BitLocker enforcement on endpoints must be verified.
+- SPRS Impact: -3 to -5 points depending on assessor interpretation
+- Remediation: Migrate to M365 GCC/GCC High (primary remediation). Enforce BitLocker via Intune for all Windows endpoints.
+
+**Gap SC — Network Segmentation**
+- NIST 800-171 Practice: 3.13.3 — Separate user functionality from system management functionality
+- Status: REQUIRES VERIFICATION — Palo Alto firewall presence is positive, but network segmentation of CUI systems, management networks, and user segments must be verified and documented.
+- SPRS Impact: -3 points if not implemented
+- Remediation: Review Palo Alto zone configurations; document network segmentation architecture; ensure CUI systems are in a dedicated zone with restricted access.
+
+---
+
+### 7. Incident Response (IR) — DOMAIN SCORE IMPACT: MEDIUM
+
+**Gap IR — Incident Response Capability**
+- NIST 800-171 Practice: 3.6.1, 3.6.2 — Establish an operational incident-handling capability; track, document, and report incidents
+- Status: LIKELY NON-COMPLIANT — No SIEM means no automated alerting or incident detection capability. Incident response plan likely exists on paper but may lack operational tooling.
+- SPRS Impact: -3 points (3.6.1) + -3 points (3.6.2) = -6 points if IR capability is paper-only
+- Remediation: Implement Microsoft Sentinel or equivalent for detection; develop and test IR playbooks; establish a DFARS 252.204-7012-compliant cyber incident reporting process (report to DoD within 72 hours).
+
+---
+
+### 8. Media Protection (MP) — DOMAIN SCORE IMPACT: MEDIUM
+
+**Gap MP — CUI on Commercial Cloud**
+- NIST 800-171 Practice: 3.8.1, 3.8.2 — Protect system media containing CUI; limit access to CUI on digital media
+- Status: NON-COMPLIANT — Commercial M365 (non-GCC) does not provide the required government cloud boundary for CUI. This compounds the SharePoint Online gap.
+- SPRS Impact: -3 points (partially overlaps with AC and SC gaps)
+
+---
+
+## Summary: SPRS Score Impact Estimate
+
+| Domain | Practice | Gap Description | Point Value | Status |
+|--------|----------|-----------------|-------------|--------|
+| IA/AC | 3.5.3 | No MFA deployed | -5 | Non-Compliant |
+| AU | 3.3.1 | No centralized logging/SIEM | -5 | Non-Compliant |
+| AU | 3.3.2 | No log review process | -3 | Non-Compliant |
+| RA | 3.11.2 | Unauthenticated/quarterly scanning only | -5 | Partial |
+| AC | 3.1.3 | CUI on commercial M365 (not GCC) | -5 | Non-Compliant |
+| IR | 3.6.1 | Insufficient IR operational capability | -3 | Likely Non-Compliant |
+| IR | 3.6.2 | Incident tracking/reporting gaps | -3 | Likely Non-Compliant |
+| AC | 3.1.6 | Insufficient least privilege enforcement | -3 | Likely Non-Compliant |
+| CM | 3.4.1 | No documented baseline configurations | -3 | Likely Non-Compliant |
+| CM | 3.4.2 | Unverified security config enforcement | -3 | Partial |
+| IA | 3.5.7 | Password policy compliance uncertain | -3 | Requires Verification |
+| SC | 3.13.8 | CUI encryption / GCC boundary issue | -3 | Non-Compliant |
+| SC | 3.13.3 | Network segmentation unverified | -3 | Requires Verification |
+
+**Estimated SPRS Score Deductions from Identified Gaps: -47 points**
+
+**Estimated SPRS Score: 110 - 47 = ~63 out of 110**
+
+Note: This estimate covers only the explicitly identified gaps. A full assessment would likely identify additional deficiencies, particularly in:
+- System and Information Integrity (SI) — patch management cadence, malware protection
+- Personnel Security (PS) — screening, termination procedures
+- Physical Protection (PE) — physical access controls to systems storing CUI
+- Awareness and Training (AT) — security awareness training documentation
+
+A realistic SPRS score for this environment is likely in the range of **40-65**, depending on undocumented controls and additional gaps discovered in a full assessment.
+
+---
+
+## Priority Remediation Roadmap
+
+### Immediate (0-30 days) — Critical Risk Reduction
+1. **Enable MFA for all users** via Entra ID Conditional Access (M365 E3 includes Entra ID P1 which provides MFA and Conditional Access at no additional cost). Start with privileged accounts.
+2. **Initiate M365 GCC migration planning** — storing CUI on commercial M365 is a fundamental compliance blocker. Begin procurement/licensing discussions immediately.
+3. **Enable authenticated Nessus scanning** — convert scans to credentialed mode and remediate critical/high findings within 30 days.
+
+### Short-term (30-90 days) — SIEM and Visibility
+4. **Deploy Microsoft Sentinel** or equivalent SIEM. Connect data sources: Azure AD, M365 Defender, Windows Security Events, Palo Alto (via Syslog/CEF connector). Enable out-of-box analytics rules.
+5. **Document and enforce endpoint baselines** via Intune — CIS Level 1 for Windows 10/11, BitLocker enforcement, Defender configuration.
+6. **Develop and test Incident Response Plan** with specific playbooks for CUI incidents and DFARS 72-hour reporting.
+
+### Medium-term (90-180 days) — Architecture and Process
+7. **Complete M365 GCC migration** for all CUI workloads.
+8. **Implement privileged access management** — separate admin accounts, Privileged Identity Management (PIM) in Entra ID P2 if budget allows.
+9. **Conduct formal NIST 800-171 self-assessment** against all 110 practices, update SPRS score in supplier portal.
+10. **Increase vulnerability scan frequency** to monthly; implement Intune compliance policies for patch management.
+
+### Long-term (180+ days) — CMMC Level 2 Assessment Readiness
+11. **Engage a C3PAO** (Certified Third-Party Assessment Organization) for pre-assessment review.
+12. **Complete System Security Plan (SSP)** documenting all 110 practices.
+13. **Address all POA&amp;M items** or accept risk formally.
+14. **Submit for CMMC Level 2 Third-Party Assessment** (required for contracts with sensitive CUI per DFARS 252.204-7021).
+
+---
+
+## Key Compliance Blocker: M365 Commercial vs. GCC
+
+This deserves special emphasis. DFARS 252.204-7012 requires cloud service providers handling covered defense information (CDI/CUI) to meet FedRAMP Moderate authorization at minimum. Microsoft 365 commercial (E3) is NOT authorized for CUI — only M365 GCC and GCC High meet this requirement. M365 GCC High is required for some controlled unclassified information categories (ITAR, Export Controlled).
+
+Continuing to store CUI on commercial SharePoint Online exposes the organization to:
+- Contract termination for DFARS non-compliance
+- False Claims Act liability
+- Automatic CMMC assessment failure
+- SPRS score invalidation
+
+This single gap affects multiple NIST 800-171 practices simultaneously (3.1.3, 3.13.8, 3.8.1, 3.8.2, and potentially 3.12.1 through systemic risk).
+
+---
+
+*Assessment prepared based on NIST SP 800-171 Rev 2, CMMC Model v2.0, and DFARS 252.204-7012/7021 requirements. Point values reference the DoD CMMC/SPRS scoring methodology. This is a self-assessment gap analysis and does not constitute a formal C3PAO assessment.*
+</pre></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-item" id="eval-cmmc-2">
+            <button class="eval-toggle" onclick="toggleEval('cmmc-2')">
+              <span class="eval-label">Test 3: Ssp Drafting</span>
+              <span class="eval-chevron">▼</span>
+            </button>
+            <div class="eval-content" style="display:none">
+              <div class="eval-prompt">
+                <strong>Prompt:</strong> Draft a System Security Plan section for CMMC practice IA.L2-3.5.3...
+              </div>
+              <div class="eval-outputs">
+                <div class="output-panel">
+                  <div class="output-header with-header">With Skill</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Includes practice statement for IA.L2-3.5.3</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Covers Azure AD / Conditional Access implementation</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Lists responsible roles (ISSO, admin, etc.)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Specifies evidence artifacts for audit</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Mentions FIPS validation or cryptographic requirement</span></div></div></div>
+                  <div class="output-text"><pre># System Security Plan (SSP) — Practice Section
+
+---
+
+## Practice: IA.L2-3.5.3 — Multifactor Authentication
+
+| Field | Value |
+|-------|-------|
+| **Practice ID** | IA.L2-3.5.3 |
+| **Domain** | IA — Identification and Authentication |
+| **CMMC Level** | Level 2 (Advanced) |
+| **NIST SP 800-171 Rev 2 Reference** | 3.5.3 |
+| **Implementation Status** | MET |
+
+---
+
+### 1. Requirement Statement
+
+&gt; Use multifactor authentication (MFA) for local and network access to privileged accounts and for network access to non-privileged accounts.
+
+This practice requires that all user accounts — privileged and non-privileged alike — authenticate using at least two distinct factors before being granted access to organizational systems or CUI. Local access to privileged accounts and all network access (remote or otherwise) are within scope.
+
+---
+
+### 2. Implementation Description
+
+The organization has fully implemented multifactor authentication across all in-scope systems using **Azure Active Directory (Azure AD)** as the centralized identity provider and **Microsoft Authenticator** as the primary MFA method. MFA enforcement is achieved through **Azure AD Conditional Access policies** that apply organization-wide.
+
+#### 2.1 MFA Scope
+
+| Access Type | Account Type | MFA Required | Enforcement Mechanism |
+|-------------|-------------|--------------|----------------------|
+| Network access (cloud and on-premises) | Privileged (Global Admins, IT Admins, Security Admins) | Yes | Azure AD Conditional Access — &quot;Require MFA for All Admins&quot; policy |
+| Network access (cloud and on-premises) | Non-privileged (standard users, end users) | Yes | Azure AD Conditional Access — &quot;Require MFA for All Users&quot; policy |
+| Local access to privileged accounts | Privileged | Yes | Azure AD joined device + Windows Hello for Business (PIN/biometric as second factor) |
+| Remote access (VPN, RDP, remote management) | All users | Yes | Azure AD Conditional Access — MFA required as grant control for remote session initiation |
+
+#### 2.2 Authentication Methods
+
+Microsoft Authenticator is the primary MFA method enforced for all users. Supported second-factor methods in order of organizational preference are:
+
+1. **Microsoft Authenticator push notification** (primary) — time-based one-time passcode (TOTP) or number-matching push approval
+2. **Windows Hello for Business** — FIPS-compatible biometric or PIN tied to a hardware TPM chip, used for local device authentication
+3. **FIDO2 security keys** — hardware security keys (e.g., YubiKey) permitted for privileged administrator accounts
+4. **SMS/voice OTP** — explicitly **disabled** via Authentication Methods policy; not permitted as a valid second factor due to known SIM-swapping vulnerabilities and NIST SP 800-63B guidance
+
+#### 2.3 Conditional Access Policy Configuration
+
+MFA enforcement is managed through the following Azure AD Conditional Access policies:
+
+| Policy Name | Users in Scope | Cloud Apps in Scope | Grant Control |
+|-------------|---------------|---------------------|---------------|
+| CA-001: Require MFA — All Users | All users (including guests with CUI access) | All cloud apps | Require MFA |
+| CA-002: Require MFA — Privileged Roles | Global Admins, Privileged Role Admins, Security Admins, Exchange Admins | All cloud apps | Require MFA + Compliant Device |
+| CA-003: Require MFA — Remote Access | All users | Microsoft 365, Azure Management, on-premises apps via App Proxy | Require MFA |
+| CA-004: Block Legacy Authentication | All users | All cloud apps | Block (legacy auth protocols do not support MFA) |
+
+All Conditional Access policies are set to **&quot;Report-only&quot;** mode during initial deployment and reviewed before enforcing. Production policies are in **&quot;On&quot;** (enforce) mode.
+
+Legacy authentication protocols (IMAP, POP3, SMTP AUTH, Basic Auth) are blocked via CA-004 to prevent MFA bypass.
+
+#### 2.4 Privileged Account-Specific Controls
+
+Privileged accounts (those with Azure AD directory roles or elevated permissions to CUI systems) are subject to additional controls beyond standard user MFA:
+
+- **Privileged Identity Management (PIM)**: All privileged roles are configured as eligible (not permanent). Administrators must activate roles on demand with MFA confirmation and business justification.
+- **Compliant device requirement**: Conditional Access policy CA-002 requires privileged users to authenticate from an Intune-enrolled, compliant device in addition to completing MFA.
+- **Break-glass accounts**: Two emergency access accounts are maintained per Microsoft guidance. These accounts are excluded from Conditional Access policies, secured with hardware FIDO2 keys, monitored with Azure AD audit alerts, and documented in the Break-Glass Account Procedure.
+
+#### 2.5 On-Premises and Hybrid Systems
+
+For on-premises systems that are Azure AD-joined or hybrid-joined:
+
+- **Azure AD Connect** synchronizes on-premises Active Directory accounts to Azure AD, enabling Conditional Access and MFA for hybrid authentication flows.
+- **Azure AD Application Proxy** is used to publish on-premises legacy applications. MFA is enforced at the Application Proxy pre-authentication layer before any session is established with the on-premises system.
+- **Windows Hello for Business (Hybrid Key Trust)** provides MFA-equivalent authentication for local Windows device logon, backed by the device&#x27;s TPM and tied to the user&#x27;s Azure AD identity.
+
+---
+
+### 3. Responsible Roles
+
+| Role | Responsibility |
+|------|---------------|
+| **Information System Security Officer (ISSO)** | Owns the MFA policy, reviews Conditional Access configurations quarterly, approves exceptions, and reports MFA compliance metrics to senior leadership. |
+| **Identity and Access Management (IAM) Administrator** | Configures and maintains Azure AD Conditional Access policies, Authentication Methods policies, and PIM settings. Reviews MFA registration reports and remediates gaps. |
+| **IT Systems Administrator** | Manages Azure AD Connect, on-premises hybrid join configurations, and device compliance policies in Microsoft Intune. |
+| **Help Desk / IT Support** | Processes MFA reset requests following the MFA Self-Service Reset and Help Desk Verification Procedure. Escalates suspected account compromise to the ISSO. |
+| **End Users / All Personnel** | Required to register at least two MFA methods within 14 days of account provisioning. Must not share authentication credentials or approve unexpected MFA prompts. |
+| **Security Operations Center (SOC)** | Monitors Azure AD Sign-in Logs and Identity Protection alerts for MFA bypass attempts, impossible travel detections, and sign-in risk events. |
+
+---
+
+### 4. Evidence Artifacts
+
+The following artifacts serve as evidence of IA.L2-3.5.3 implementation and should be collected and maintained in the organization&#x27;s evidence repository:
+
+| Artifact | Description | Location / Owner | Review Frequency |
+|----------|-------------|-----------------|-----------------|
+| **MFA Policy** | Written organizational policy requiring MFA for all system access, including scope, approved methods, and exception handling. | Policy Management System / ISSO | Annual |
+| **Conditional Access Policy Exports** | JSON or screenshot exports of all Conditional Access policies from the Azure AD portal, showing policy scope, conditions, and grant controls. | Azure AD Admin Center / IAM Admin | Quarterly |
+| **Authentication Methods Policy Screenshot** | Screenshot from Azure AD &gt; Security &gt; Authentication Methods showing Microsoft Authenticator enabled and SMS/voice disabled. | Azure AD Admin Center / IAM Admin | Quarterly |
+| **MFA Registration Report** | Azure AD report showing percentage of users registered for MFA; any accounts not yet registered. | Azure AD &gt; Reports &gt; Authentication Methods / IAM Admin | Monthly |
+| **Sign-in Logs (MFA Events)** | Filtered Azure AD sign-in logs demonstrating MFA challenges and completions for all user account types. | Azure Monitor / Log Analytics / SOC | On-demand / 90-day retention minimum |
+| **PIM Configuration Screenshots** | Evidence that privileged roles are configured as eligible (not permanent) and require MFA activation. | Azure AD PIM / IAM Admin | Quarterly |
+| **Conditional Access Named Locations / Exclusions** | Documentation of any Conditional Access exclusions (e.g., break-glass accounts), with justification and compensating controls. | ISSO / IAM Admin | Semi-annual |
+| **Break-Glass Account Procedure** | Documented procedure for emergency access accounts excluded from MFA Conditional Access policy, including monitoring and periodic access review. | Policy Management System / ISSO | Annual |
+| **Intune Device Compliance Policy** | Evidence that compliant-device requirements are enforced for privileged role access. | Microsoft Intune / IT Admin | Quarterly |
+| **MFA User Awareness Training Records** | Training completion records showing users have been trained on MFA enrollment, recognizing MFA fatigue attacks, and reporting suspicious prompts. | LMS / AT.L2-3.2.1 evidence package | Annual |
+
+---
+
+### 5. System Interconnections Relevant to MFA
+
+The following system interconnections are in scope for IA.L2-3.5.3 and rely on or interact with the Azure AD MFA enforcement infrastructure:
+
+| Connected System | Connection Type | MFA Enforcement Method | Notes |
+|-----------------|----------------|----------------------|-------|
+| **Microsoft 365 (Exchange Online, SharePoint, Teams)** | Cloud SaaS — Azure AD OAuth/OIDC | Conditional Access CA-001 and CA-003 | Primary platform for CUI processing and storage; all access gated by MFA. |
+| **Azure Government / Azure Commercial** | Cloud IaaS/PaaS — Azure AD | Conditional Access CA-002 (admin) and CA-001 (users) | Azure subscriptions used for CUI workloads must be in scope. If CUI is stored in Azure, confirm FedRAMP Moderate authorization status. |
+| **On-Premises Active Directory Domain** | Hybrid — Azure AD Connect (password hash sync or pass-through auth) | MFA enforced via Azure AD Conditional Access at pre-authentication | Domain controllers are in scope for the CUI boundary; hybrid join ensures MFA is enforced before on-premises resource access. |
+| **Corporate VPN** | Network access — RADIUS / Azure AD NPS Extension | NPS Extension triggers Azure AD MFA challenge for RADIUS authentication | VPN is the primary remote access path for on-premises CUI systems. NPS Extension must be deployed and verified. |
+| **On-Premises Applications (via Azure AD App Proxy)** | Hybrid — Azure AD Application Proxy | Pre-authentication MFA enforced by App Proxy before session forwarding | Legacy web applications that cannot natively integrate with MFA are published through App Proxy to enforce MFA. |
+| **Microsoft Intune (MDM/MAM)** | Cloud SaaS — Azure AD | Device enrollment requires Azure AD authentication with MFA | Device compliance status is used as a Conditional Access signal for privileged account access (CA-002). |
+| **Azure Active Directory Identity Protection** | Internal — Azure AD | Risk-based Conditional Access triggers step-up MFA or blocks sign-in based on real-time risk score | Integration enhances MFA by dynamically requiring MFA when risky sign-in conditions are detected. |
+| **Microsoft Sentinel / Azure Monitor** | Log aggregation — Azure AD Diagnostic Settings | N/A (monitoring, not authentication) | Sign-in logs with MFA event details are forwarded to Sentinel/Log Analytics for SOC monitoring and audit log retention (AU.L2-3.3.1). |
+
+---
+
+### 6. Related Practices and Dependencies
+
+| Practice ID | Relationship |
+|-------------|-------------|
+| **IA.L1-3.5.1** | Foundational — all users and devices must be identified before MFA can be applied. |
+| **IA.L1-3.5.2** | Foundational — identity verification is the first factor; MFA adds the second. |
+| **IA.L2-3.5.4** | Replay-resistant authentication — Microsoft Authenticator number-matching and FIDO2 keys satisfy this requirement alongside MFA. |
+| **AC.L2-3.1.12** | Remote access monitoring — MFA is enforced at the point of remote session initiation; Conditional Access logs provide session monitoring evidence. |
+| **AC.L2-3.1.5** | Least privilege — PIM for privileged role activation complements MFA by limiting standing privileged access. |
+| **MA.L2-3.7.5** | Remote maintenance sessions also require MFA; covered by the same Conditional Access policies. |
+| **AU.L2-3.3.1** | Azure AD Sign-in Logs provide the audit trail for MFA events and must be retained per the organization&#x27;s log retention policy. |
+| **AT.L2-3.2.1** | Users must be trained to recognize and report MFA fatigue attacks (unsolicited push notifications). |
+
+---
+
+### 7. Exceptions and Special Circumstances
+
+| Exception | Justification | Compensating Controls | Approval Authority | Review Date |
+|-----------|--------------|----------------------|-------------------|-------------|
+| Break-glass emergency accounts (2 accounts) | Required for emergency access if Azure AD becomes unavailable; excluded from CA policies per Microsoft guidance. | Hardware FIDO2 keys stored in physical safe; accounts monitored with Azure Sentinel alerts on any sign-in activity; quarterly access review. | ISSO + CIO | Semi-annual |
+| Service accounts / non-interactive identities | Service accounts do not support interactive MFA flows. | Managed Identities (no credentials) or certificate-based authentication used wherever possible. Service accounts are restricted to specific IP ranges and resource scopes. Password-based service accounts are reviewed quarterly and use randomly generated 64-character passwords. | IAM Admin + ISSO | Quarterly |
+
+---
+
+### 8. Assessment Notes
+
+This practice is identified as a **high-priority** control and one of the **most commonly failed practices** in CMMC Level 2 assessments. Assessors (C3PAO) will specifically verify:
+
+1. That MFA is enforced for **all** users, not only administrators.
+2. That **legacy authentication is blocked** — any Conditional Access exclusion that permits Basic Auth or legacy protocols represents a gap.
+3. That MFA is required for **local privileged access**, not only network/remote access — Windows Hello for Business or equivalent satisfies this requirement.
+4. That **service account exceptions are documented** with compensating controls.
+5. That **MFA registration is complete** (100% or with a documented remediation plan for non-registered users).
+
+SPRS impact if NOT MET: IA.L2-3.5.3 carries a **5-point deduction** from the SPRS score, the maximum weight for a single practice, reflecting its criticality.
+
+---
+
+*SSP Section prepared: 2026-04-25*
+*Prepared by: Information System Security Officer (ISSO)*
+*Review cycle: Annual or upon significant system change*
+*Document classification: CUI — For Official Use Only*
+</pre></div>
+                </div>
+                <div class="output-panel">
+                  <div class="output-header without-header">Without Skill (Baseline)</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Includes practice statement for IA.L2-3.5.3</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Covers Azure AD / Conditional Access implementation</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Lists responsible roles (ISSO, admin, etc.)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Specifies evidence artifacts for audit</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Mentions FIPS validation or cryptographic requirement</span></div></div></div>
+                  <div class="output-text"><pre># System Security Plan (SSP) Section
+## CMMC Practice IA.L2-3.5.3 — Multifactor Authentication (MFA)
+
+---
+
+### 1. Practice Reference
+
+| Field | Value |
+|---|---|
+| Practice ID | IA.L2-3.5.3 |
+| Domain | Identification and Authentication (IA) |
+| CMMC Level | Level 2 |
+| Source Requirement | NIST SP 800-171 Rev 2, 3.5.3 |
+| Requirement Statement | Use multifactor authentication for local and network access to privileged accounts and for network access to non-privileged accounts. |
+
+---
+
+### 2. Implementation Description
+
+#### 2.1 Overview
+
+The organization employs Azure Active Directory (Azure AD) as its centralized identity and access management (IAM) platform. Multifactor authentication is enforced for all user accounts — both privileged and non-privileged — accessing organizational systems, applications, and data. Microsoft Authenticator serves as the primary MFA application, delivering push notifications, one-time passcodes (OTP), and passwordless phone sign-in capabilities. MFA enforcement is achieved through Azure AD Conditional Access policies, which evaluate authentication context at the time of each sign-in and require a second factor before granting access.
+
+#### 2.2 Scope of MFA Enforcement
+
+MFA is required for all of the following access scenarios:
+
+- **Local and network access to privileged accounts**: All accounts with administrative, elevated, or privileged roles (e.g., Global Administrator, Security Administrator, Privileged Role Administrator, system owners, IT administrators) must authenticate with MFA for every sign-in session, regardless of device, location, or network.
+- **Network access to non-privileged accounts**: All standard user accounts accessing organizational resources over any network connection — including remote access, VPN, cloud services, and internal applications — are required to complete MFA at authentication.
+- **Access to Controlled Unclassified Information (CUI) systems**: Any system, application, or data repository that stores, processes, or transmits CUI is covered under MFA Conditional Access policies.
+- **Access to Microsoft 365 and Azure resources**: All SaaS and IaaS services integrated with Azure AD are governed by the same Conditional Access framework.
+
+#### 2.3 Technical Implementation
+
+**Azure AD Conditional Access Policies**
+
+The following Conditional Access policies are configured and active:
+
+1. **Policy: Require MFA — All Users, All Applications**
+   - Users: All users (includes privileged and non-privileged)
+   - Cloud Apps: All cloud apps
+   - Conditions: Any location, any device platform
+   - Grant Control: Require multifactor authentication
+   - Status: Enabled (Report-only mode is NOT used for CUI-scope systems)
+
+2. **Policy: Require MFA — Privileged Roles**
+   - Users: Directory roles — Global Administrator, Privileged Role Administrator, Security Administrator, Exchange Administrator, SharePoint Administrator, and other privileged roles as defined in the Privileged Account Register
+   - Cloud Apps: All cloud apps
+   - Grant Control: Require multifactor authentication + Require compliant device (where applicable)
+   - Status: Enabled
+
+3. **Policy: Block Legacy Authentication**
+   - Conditions: Client apps using legacy authentication protocols (Basic Auth, SMTP Auth, POP, IMAP)
+   - Grant Control: Block
+   - Rationale: Legacy authentication protocols cannot enforce MFA and represent a bypass vector; blocking is required to ensure MFA coverage is comprehensive.
+
+**Microsoft Authenticator Configuration**
+
+- Microsoft Authenticator is deployed as the organization&#x27;s approved second factor.
+- Approved authentication methods include:
+  - Microsoft Authenticator push notification (primary method)
+  - Time-based one-time passcode (TOTP) via Microsoft Authenticator
+  - Passwordless phone sign-in (for eligible devices)
+- SMS/voice OTP may be permitted only as a fallback for account recovery, subject to approval by the Identity and Access Management (IAM) team, and is not accepted as a primary MFA method for CUI access.
+- Hardware FIDO2 security keys (e.g., YubiKey) are approved for privileged administrators and users requiring phishing-resistant MFA.
+
+**Authentication Method Policies**
+
+Authentication method policies in Azure AD are configured to:
+
+- Enable Microsoft Authenticator for all users.
+- Disable or restrict weaker methods (SMS, voice call) for standard authentication flows.
+- Enforce number matching and additional context display in Authenticator push notifications to mitigate MFA fatigue attacks.
+
+**Azure AD Identity Protection**
+
+Azure AD Identity Protection is enabled to:
+
+- Detect risky sign-ins and require step-up MFA or block access based on risk level.
+- Generate alerts for anomalous authentication activity.
+- Feed risk signals into Conditional Access for dynamic policy enforcement.
+
+#### 2.4 Account Provisioning and MFA Registration
+
+- All new users are required to register for MFA during the onboarding process, prior to being granted access to any organizational systems.
+- MFA registration is enforced via a dedicated Conditional Access policy that redirects unregistered users to the MFA registration portal.
+- The IAM team reviews MFA registration completeness on a monthly basis through Azure AD reporting.
+- Users who lose access to their registered MFA device must follow the Identity Verification and Account Recovery Procedure (referenced in Section 6 — Related Documents) before MFA can be re-registered.
+
+---
+
+### 3. Responsible Roles
+
+| Role | Responsibility |
+|---|---|
+| **System Owner** | Overall accountability for ensuring MFA is implemented and maintained across all systems within scope. Approves exceptions and reviews MFA compliance reports quarterly. |
+| **Information System Security Officer (ISSO)** | Monitors MFA policy configurations, reviews audit logs for authentication failures, coordinates remediation of MFA gaps, and maintains SSP accuracy. |
+| **Identity and Access Management (IAM) Team** | Owns Conditional Access policy configuration, manages authentication method policies in Azure AD, administers MFA registration workflows, processes account recovery requests, and conducts monthly MFA registration compliance reviews. |
+| **IT Help Desk** | Provides first-line support for MFA issues (device lost/replaced, lockouts). Escalates account recovery to the IAM team following the Identity Verification Procedure. |
+| **Security Operations Center (SOC)** | Monitors Azure AD Identity Protection alerts and sign-in risk events. Investigates and responds to MFA-related security incidents. |
+| **All Users** | Required to register for MFA prior to system access, maintain their registered MFA device(s), and report lost or compromised devices immediately to the Help Desk. |
+| **Microsoft (External Cloud Provider)** | Operates and maintains the Azure AD platform and Microsoft Authenticator service. Governed by the Microsoft Online Services Agreement and Data Processing Addendum. |
+
+---
+
+### 4. Evidence Artifacts
+
+The following artifacts serve as evidence of implementation and are available for assessment:
+
+| Artifact | Description | Location / Owner |
+|---|---|---|
+| Azure AD Conditional Access Policy Exports | JSON/screenshot exports of all active Conditional Access policies, demonstrating MFA enforcement scope, user and app targeting, and grant controls. | Azure AD Portal / IAM Team |
+| Azure AD Sign-In Logs | Logs showing MFA challenge events, success/failure records, and authentication method used per sign-in. Retained for a minimum of 90 days (extended via Log Analytics Workspace or SIEM). | Azure AD / SOC |
+| MFA Registration Status Report | Azure AD report showing percentage of users registered for MFA, broken down by authentication method. Generated monthly. | Azure AD / IAM Team |
+| Authentication Methods Policy Configuration | Screenshots or exports of the Authentication Methods policy settings in Azure AD, showing enabled/disabled methods and targeting. | Azure AD / IAM Team |
+| Legacy Authentication Block Evidence | Sign-in logs or Workbook reports confirming that legacy authentication sign-ins are being blocked. | Azure AD / IAM Team |
+| Identity Protection Risk Detections Report | Report of risky sign-ins and users detected by Azure AD Identity Protection, with remediation actions taken. | Azure AD / SOC |
+| Privileged Account Register | List of accounts assigned privileged roles in Azure AD, used to verify MFA enforcement scope for privileged access. | IAM Team |
+| MFA Exception Log | Log of any approved temporary MFA exceptions, including justification, approver, duration, and compensating controls. | ISSO |
+| User MFA Onboarding Procedure | Documented procedure for MFA registration during onboarding, including identity verification steps. | IAM Team / HR |
+| Account Recovery Procedure | Documented procedure for MFA re-registration following device loss or compromise, including identity verification requirements. | IAM Team |
+| Incident Response Records | Any tickets or records related to MFA bypass attempts, failures, or incidents. | SOC / Help Desk |
+
+---
+
+### 5. System Interconnections Relevant to MFA
+
+The following system interconnections are relevant to the MFA implementation and must be considered when assessing coverage:
+
+| Connected System / Service | Connection Type | MFA Applicability | Notes |
+|---|---|---|---|
+| **Microsoft 365 (Exchange Online, SharePoint, Teams)** | Azure AD federated SSO | Covered by Conditional Access MFA policies | All M365 workloads are registered as cloud apps in Azure AD and subject to MFA enforcement. Legacy protocols (Basic Auth) are blocked. |
+| **Azure Portal and Azure Resource Manager** | Azure AD authentication | Covered; privileged MFA policy applied | Administrative access to Azure subscriptions requires MFA. Privileged Identity Management (PIM) used for just-in-time privileged role activation, which also requires MFA. |
+| **On-Premises Active Directory (AD DS)** | Azure AD Connect hybrid identity | Partially covered — see notes | Hybrid joined users authenticate via Azure AD for cloud resources (MFA enforced). Pass-through authentication or federation must be configured so that on-premises interactive sign-ins also route through Azure AD MFA where technically feasible. On-premises RDP and local console access are addressed separately through Windows Hello for Business or smart card requirements. |
+| **VPN Gateway (Azure VPN / Third-Party VPN)** | SAML/RADIUS integration with Azure AD | Covered if integrated with Azure AD | VPN authentication must be integrated with Azure AD (via RADIUS/NPS extension or SAML) to inherit Conditional Access MFA enforcement. If using a legacy RADIUS-only VPN, Azure AD MFA NPS Extension must be deployed. |
+| **Third-Party SaaS Applications (CUI-scope)** | Azure AD federated SSO (SAML/OIDC) | Covered by Conditional Access | All CUI-scope SaaS applications must be registered in Azure AD as Enterprise Applications and scoped within the &quot;All cloud apps&quot; Conditional Access policy. Applications not integrated with Azure AD are out-of-scope and must be tracked as a gap. |
+| **Developer and CI/CD Platforms (e.g., GitHub, Azure DevOps)** | Azure AD SSO | Covered if SSO is enforced | Organizations must enforce Azure AD SSO for developer tooling and disable native username/password authentication to ensure MFA coverage. Service accounts and managed identities used in pipelines must be reviewed separately. |
+| **Service Accounts and Non-Interactive Identities** | Azure AD Workload Identities / Managed Identities | Not subject to IA.L2-3.5.3 per NIST 800-171 guidance | Service accounts that perform automated, non-interactive functions are not subject to MFA under 3.5.3. These accounts must be tightly scoped, use managed identities where possible, and be governed under the Least Privilege and Service Account Management policies. Human accounts must not be used for automated processes. |
+| **Microsoft Authenticator App (Mobile)** | End-user mobile device (iOS/Android) | MFA delivery channel | Device must be enrolled in Intune (or registered in Azure AD) for Microsoft Authenticator push notifications. Device compliance policy may be required as an additional Conditional Access grant control for privileged access. |
+
+---
+
+### 6. Related Documents and Policies
+
+- Identity and Access Management Policy
+- Privileged Access Management Policy and Procedures
+- Account Management Policy
+- Identity Verification and Account Recovery Procedure
+- Incident Response Plan (MFA Incident Scenarios)
+- Azure AD Tenant Configuration Baseline
+- NIST SP 800-171 Rev 2, Control 3.5.3
+- NIST SP 800-63B, Authenticator Assurance Levels (AAL)
+- CMMC Assessment Guide, Level 2, Domain IA
+
+---
+
+### 7. Control Effectiveness Summary
+
+| Assessment Dimension | Status | Notes |
+|---|---|---|
+| MFA enforced for privileged network access | Implemented | Conditional Access policy in place; confirmed via sign-in logs. |
+| MFA enforced for non-privileged network access | Implemented | All-users, all-apps policy active. |
+| MFA enforced for local privileged access | Partially Implemented | On-premises local console access addressed via Windows Hello for Business; hybrid scenarios require verification. |
+| Legacy authentication blocked | Implemented | Block policy active; confirmed via sign-in logs. |
+| MFA registration compliance monitored | Implemented | Monthly review by IAM team. |
+| Phishing-resistant MFA available for high-value accounts | Implemented | FIDO2 keys approved; number matching enabled in Authenticator. |
+
+---
+
+*Document prepared by: Information System Security Officer (ISSO)*
+*Review cycle: Annual or upon significant system change*
+*Last reviewed: 2026-04-25*
+</pre></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-item" id="eval-cmmc-3">
+            <button class="eval-toggle" onclick="toggleEval('cmmc-3')">
+              <span class="eval-label">Test 4: Poam</span>
+              <span class="eval-chevron">▼</span>
+            </button>
+            <div class="eval-content" style="display:none">
+              <div class="eval-prompt">
+                <strong>Prompt:</strong> Our C3PAO assessment found 8 practices NOT MET...
+              </div>
+              <div class="eval-outputs">
+                <div class="output-panel">
+                  <div class="output-header with-header">With Skill</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Covers all 8 specified practices in the POA&amp;M</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Provides remediation steps and milestones with dates</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Identifies SC.L2-3.13.8 or AU.L2-3.3.1 as highest priority</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Includes 180-day remediation window reference</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Assigns resource/owner responsibility</span></div></div></div>
+                  <div class="output-text"><pre># Plan of Action &amp; Milestones (POA&amp;M)
+## CMMC Level 2 — C3PAO Assessment Findings
+
+**Organization**: [Organization Name]  
+**Assessment Date**: April 25, 2026  
+**POA&amp;M Prepared**: April 25, 2026  
+**Remediation Deadline**: October 22, 2026 (180 days from assessment date)  
+**Total Practices NOT MET**: 8  
+**CMMC Level**: Level 2 (Advanced)  
+
+---
+
+## Critical Notice
+
+Two of the eight findings — **AU.L2-3.3.1** (Audit Logging) and **SC.L2-3.13.8** (Encryption in Transit) — are classified as **critical practices** under CMMC 2.0. Per 32 CFR Part 170 and the C3PAO assessment rules, critical practices must be remediated before conditional certification can be finalized. These must be treated as the highest-priority items and cannot remain in POA&amp;M status at the time of certification issuance.
+
+---
+
+## Priority Ordering
+
+| Priority | Practice ID | Domain | SPRS Point Deduction | Critical Practice | Rationale |
+|----------|-------------|--------|---------------------|-------------------|-----------|
+| 1 | SC.L2-3.13.8 | System &amp; Comms Protection | 5 pts | YES | Encryption in transit — critical practice; conditional certification blocked until resolved |
+| 2 | AU.L2-3.3.1 | Audit &amp; Accountability | 3 pts | YES | Audit logging — critical practice; foundational for all forensic and detection capabilities |
+| 3 | AU.L2-3.3.2 | Audit &amp; Accountability | 3 pts | No | Individual user traceability — closely dependent on AU.L2-3.3.1 infrastructure |
+| 4 | AC.L2-3.1.5 | Access Control | 3 pts | No | Least privilege — high SPRS impact; excessive admin rights create broad attack surface |
+| 5 | CM.L2-3.4.1 | Configuration Management | 3 pts | No | Baseline configurations — foundational for CM.L2-3.4.2; must be completed first |
+| 6 | CM.L2-3.4.2 | Configuration Management | 3 pts | No | Security config settings — depends on CM.L2-3.4.1 baseline completion |
+| 7 | RA.L2-3.11.2 | Risk Assessment | 3 pts | No | Vulnerability scanning — enables ongoing risk visibility; feeds CM remediation |
+| 8 | CA.L2-3.12.4 | Security Assessment | 3 pts | No | SSP currency — documentation requirement; lowest operational urgency |
+
+**Estimated Total SPRS Score Deduction from These 8 Findings**: 26 points
+
+---
+
+## Full POA&amp;M Table
+
+### POA&amp;M Item 1 — SC.L2-3.13.8 (PRIORITY 1 — CRITICAL)
+
+| Field | Details |
+|-------|---------|
+| **Practice ID** | SC.L2-3.13.8 |
+| **Domain** | System and Communications Protection (SC) |
+| **Requirement** | Implement cryptographic mechanisms to prevent unauthorized disclosure of CUI during transmission (FIPS 140-2/3 validated). |
+| **Weakness Description** | CUI is transmitted over network connections without consistent use of FIPS 140-2/3 validated cryptographic mechanisms. Legacy protocols (TLS 1.0/1.1) remain enabled on internal servers, and some application-to-application communications transmit data in plaintext or use non-FIPS cipher suites. This exposes CUI to interception during transit. |
+| **Root Cause** | No formal cryptographic policy enforced at the network/application layer; legacy application dependencies have not been reviewed for encryption compliance; FIPS mode not enabled on Windows servers. |
+| **Remediation Steps** | 1. Inventory all data flows involving CUI (map source/destination, protocol, encryption status). 2. Disable TLS 1.0 and TLS 1.1 on all servers and network devices. 3. Enable TLS 1.2 minimum with FIPS-validated cipher suites (AES-256-GCM, SHA-256+). 4. Enable FIPS 140-2/3 mode on all Windows servers in scope. 5. Replace or reconfigure applications using plaintext protocols (HTTP, FTP, Telnet) with encrypted equivalents (HTTPS, SFTP, SSH). 6. Validate using TLS scanning tools (e.g., Qualys SSL Labs, testssl.sh) on all in-scope endpoints. 7. Document cryptographic settings in SSP and Configuration Baseline. |
+| **Milestone 1** | Week 2 (May 9, 2026): Complete CUI data flow inventory; identify all in-scope endpoints requiring encryption. |
+| **Milestone 2** | Week 4 (May 23, 2026): Disable TLS 1.0/1.1 on all externally-facing servers; FIPS mode enabled on Windows servers. |
+| **Milestone 3** | Week 8 (June 20, 2026): Disable TLS 1.0/1.1 on internal servers; remediate plaintext protocols on internal data flows. |
+| **Milestone 4** | Week 10 (July 4, 2026): Run authenticated TLS scans confirming FIPS-validated cipher suites only; document results. |
+| **Scheduled Completion** | July 4, 2026 (70 days) |
+| **Resources Required** | IT Security Engineer (80 hrs); System Administrators (40 hrs); TLS scanning tools (Qualys or equivalent). |
+| **Status** | Open |
+| **Evidence of Closure** | TLS configuration scan reports showing only FIPS-validated cipher suites; FIPS mode registry settings export; updated cryptographic policy; updated SSP Section SC.L2-3.13.8. |
+
+---
+
+### POA&amp;M Item 2 — AU.L2-3.3.1 (PRIORITY 2 — CRITICAL)
+
+| Field | Details |
+|-------|---------|
+| **Practice ID** | AU.L2-3.3.1 |
+| **Domain** | Audit and Accountability (AU) |
+| **Requirement** | Create and retain system audit logs and records to enable monitoring, analysis, investigation, and reporting of unlawful or unauthorized activity. |
+| **Weakness Description** | Audit logging is incomplete across the CUI environment. Not all CUI-touching systems forward logs to a centralized SIEM. Log retention policy has not been formally documented or technically enforced. Several servers retain logs locally with no offsite backup, creating risk of log tampering and loss. Log retention periods do not meet minimum 3-year requirement. |
+| **Root Cause** | No centralized logging architecture deployed; SIEM implementation not prioritized; log retention policy existed informally but was never technically enforced or documented in the SSP. |
+| **Remediation Steps** | 1. Deploy or configure a SIEM/log aggregation platform (e.g., Splunk, Microsoft Sentinel, Elastic SIEM). 2. Identify all CUI-touching assets and configure each to forward logs to the SIEM. 3. Define and document a formal log retention policy (minimum 3 years for CUI systems). 4. Configure log storage with write-once or immutable log settings to prevent tampering. 5. Define audit events to capture: logons/logoffs, privilege use, object access, policy changes, account management, system events. 6. Test log pipeline from all in-scope endpoints to confirm completeness. 7. Update SSP Section AU.L2-3.3.1 with implementation details. |
+| **Milestone 1** | Week 3 (May 16, 2026): SIEM platform selected and procurement initiated; CUI asset list finalized. |
+| **Milestone 2** | Week 6 (June 6, 2026): SIEM deployed; log forwarding configured for Priority 1 assets (domain controllers, CUI file servers, VPN gateways). |
+| **Milestone 3** | Week 10 (July 4, 2026): All in-scope assets forwarding logs to SIEM; retention policy technically enforced. |
+| **Milestone 4** | Week 12 (July 18, 2026): Audit event catalog reviewed and confirmed; log completeness verified; documentation updated. |
+| **Scheduled Completion** | July 18, 2026 (84 days) |
+| **Resources Required** | IT Security Engineer (120 hrs); System Administrators (60 hrs); SIEM licensing/subscription (~$15,000–$30,000/year depending on data volume); log storage capacity. |
+| **Status** | Open |
+| **Evidence of Closure** | SIEM dashboard screenshots showing all in-scope assets reporting; log retention configuration export; formal audit logging policy (approved); SSP Section AU.L2-3.3.1 updated. |
+
+---
+
+### POA&amp;M Item 3 — AU.L2-3.3.2 (PRIORITY 3)
+
+| Field | Details |
+|-------|---------|
+| **Practice ID** | AU.L2-3.3.2 |
+| **Domain** | Audit and Accountability (AU) |
+| **Requirement** | Ensure that the actions of individual users can be uniquely traced to those users. |
+| **Weakness Description** | Shared accounts and generic service accounts are used on several systems that process CUI. Actions performed under shared credentials cannot be attributed to individual users, making forensic tracing and accountability impossible for those sessions. Additionally, some privileged administrative tasks are performed under shared &quot;admin&quot; accounts with no individual identity binding. |
+| **Root Cause** | Legacy systems and operational convenience led to shared account use. No formal policy prohibiting shared accounts was implemented. Service accounts not integrated with identity management for accountability. |
+| **Remediation Steps** | 1. Audit all accounts on in-scope systems; identify all shared or generic accounts. 2. Eliminate shared administrative accounts; provision individual named accounts for all administrators. 3. For service accounts, document the owning individual and restrict service account login rights to prevent interactive use. 4. Implement Privileged Access Management (PAM) or privileged session recording for administrative actions. 5. Configure audit logs (built on AU.L2-3.3.1 infrastructure) to capture user identity with each logged event. 6. Update account management policy to prohibit shared account use. |
+| **Milestone 1** | Week 4 (May 23, 2026): Account audit complete; list of shared/generic accounts identified. |
+| **Milestone 2** | Week 8 (June 20, 2026): Individual accounts provisioned for all administrators; shared admin accounts disabled. |
+| **Milestone 3** | Week 12 (July 18, 2026): Service account documentation complete; PAM or session recording implemented for privileged access. |
+| **Scheduled Completion** | July 18, 2026 (84 days) |
+| **Resources Required** | IT Security Engineer (40 hrs); System Administrators (60 hrs); Identity/PAM tooling (if not already in place). |
+| **Status** | Open |
+| **Evidence of Closure** | Account audit report showing no active shared accounts; Active Directory/IAM configuration showing named accounts; PAM session recording evidence; updated account management policy. |
+
+---
+
+### POA&amp;M Item 4 — AC.L2-3.1.5 (PRIORITY 4)
+
+| Field | Details |
+|-------|---------|
+| **Practice ID** | AC.L2-3.1.5 |
+| **Domain** | Access Control (AC) |
+| **Requirement** | Employ the principle of least privilege, including for specific security functions and privileged accounts. |
+| **Weakness Description** | Numerous user accounts hold administrative or elevated privileges beyond what is required for their job functions. Several standard users have local administrator rights on workstations. Domain admin membership is broader than operationally necessary. Security functions (firewall management, log access, backup operations) are not separated from standard IT admin roles. No formal privilege review or recertification process exists. |
+| **Root Cause** | Privileges were historically granted based on convenience rather than documented need-to-know. No Privileged Access Management (PAM) solution or formal least-privilege policy enforced technically. No periodic access review process established. |
+| **Remediation Steps** | 1. Conduct a full privilege audit across all in-scope systems (Active Directory, servers, applications, network devices). 2. Define privilege tiers: standard user, power user, local admin, domain admin, security function roles. 3. Remove local administrator rights from standard user accounts on CUI workstations. 4. Reduce Domain Admins group to the minimum required personnel; implement tiered admin model. 5. Create role-based access groups for specific security functions; remove cross-role privilege accumulation. 6. Implement a PAM solution for management of privileged accounts (e.g., CyberArk, BeyondTrust, or Microsoft PIM). 7. Establish a quarterly privilege recertification process. 8. Document least-privilege policy and update SSP. |
+| **Milestone 1** | Week 4 (May 23, 2026): Privilege audit complete; excess privilege inventory documented. |
+| **Milestone 2** | Week 8 (June 20, 2026): Local admin rights removed from standard users; Domain Admins group reduced. |
+| **Milestone 3** | Week 12 (July 18, 2026): Role-based access groups implemented; PAM solution deployed or procured. |
+| **Milestone 4** | Week 16 (August 15, 2026): Quarterly recertification process documented and first review completed. |
+| **Scheduled Completion** | August 15, 2026 (112 days) |
+| **Resources Required** | IT Security Engineer (60 hrs); System Administrators (80 hrs); PAM solution licensing ($10,000–$50,000 depending on scale). |
+| **Status** | Open |
+| **Evidence of Closure** | Privilege audit report; Active Directory group membership exports showing reduced admin membership; PAM implementation screenshots; quarterly review procedures; updated access control policy and SSP. |
+
+---
+
+### POA&amp;M Item 5 — CM.L2-3.4.1 (PRIORITY 5)
+
+| Field | Details |
+|-------|---------|
+| **Practice ID** | CM.L2-3.4.1 |
+| **Domain** | Configuration Management (CM) |
+| **Requirement** | Establish and maintain baseline configurations and inventories of organizational systems (hardware, software, firmware, and documentation). |
+| **Weakness Description** | No formal baseline configuration documentation exists for in-scope systems. The hardware and software inventory is incomplete and not maintained in a system of record. Firmware versions are not tracked. No formal process exists to update baseline documentation when system changes occur. |
+| **Root Cause** | Configuration management was treated as an informal IT function. No CMDB or configuration management tooling deployed. Change management process existed informally without linkage to formal baseline documentation. |
+| **Remediation Steps** | 1. Deploy or designate a Configuration Management Database (CMDB) or asset inventory tool (e.g., ServiceNow, Lansweeper, or spreadsheet-based for smaller environments). 2. Conduct a full hardware and software inventory of all in-scope CUI systems. 3. Create formal baseline configuration documents for each major OS/application category (Windows Server, Windows 10/11 workstations, network devices, firewalls). Use CIS Benchmarks or DISA STIGs as baseline templates. 4. Document firmware versions for all in-scope network and security devices. 5. Establish a process to update baselines after approved changes. 6. Integrate with the change management process (CM.L2-3.4.3) and link to SSP. |
+| **Milestone 1** | Week 4 (May 23, 2026): Asset inventory tool selected; hardware/software inventory scan initiated. |
+| **Milestone 2** | Week 8 (June 20, 2026): Full hardware, software, and firmware inventory documented and entered into CMDB. |
+| **Milestone 3** | Week 12 (July 18, 2026): Baseline configuration documents drafted for all major system types (using CIS/STIG templates). |
+| **Milestone 4** | Week 14 (August 1, 2026): Baseline documents approved by management; baseline maintenance process formalized. |
+| **Scheduled Completion** | August 1, 2026 (98 days) |
+| **Resources Required** | IT Administrator (80 hrs); IT Security Engineer (40 hrs); CMDB/asset management tool (free to ~$5,000 depending on tooling). |
+| **Status** | Open |
+| **Evidence of Closure** | Complete hardware/software/firmware inventory export; approved baseline configuration documents per system type; CMDB records; configuration management policy update; updated SSP. |
+
+---
+
+### POA&amp;M Item 6 — CM.L2-3.4.2 (PRIORITY 6)
+
+| Field | Details |
+|-------|---------|
+| **Practice ID** | CM.L2-3.4.2 |
+| **Domain** | Configuration Management (CM) |
+| **Requirement** | Establish and enforce security configuration settings for IT products employed in organizational systems. |
+| **Weakness Description** | Security configuration settings are not formally established, documented, or technically enforced across in-scope systems. Default or vendor configurations remain on several servers and network devices. Security hardening has been applied inconsistently without documented standards. No automated compliance checking is performed against security configuration benchmarks. |
+| **Root Cause** | Dependent on CM.L2-3.4.1 baseline gap; without documented baselines, enforcing security settings was not systematically possible. No Group Policy Objects (GPOs) formally mapped to security configuration requirements. No configuration compliance scanning tool deployed. |
+| **Remediation Steps** | 1. Complete CM.L2-3.4.1 baseline documentation (prerequisite). 2. Map security configuration settings to CIS Benchmark Level 1/2 or DISA STIG for each system type. 3. Implement security settings via Group Policy (Windows) or equivalent configuration management tool (Ansible, SCCM, Intune). 4. Deploy configuration compliance scanning (e.g., Tenable.sc/Nessus, CIS-CAT, or SCAP-compliant tools). 5. Remediate critical configuration deviations identified in compliance scan. 6. Establish a process for managing configuration exceptions with documented approval. 7. Update SSP with security configuration standards references. |
+| **Milestone 1** | Week 8 (June 20, 2026): CM.L2-3.4.1 baselines complete (prerequisite); security configuration standards mapped to CIS/STIG. |
+| **Milestone 2** | Week 12 (July 18, 2026): GPOs and configuration policies deployed for Windows systems. |
+| **Milestone 3** | Week 14 (August 1, 2026): Configuration compliance scanning tool deployed; initial scan completed. |
+| **Milestone 4** | Week 18 (August 29, 2026): Critical and high deviations remediated; exception process documented. |
+| **Scheduled Completion** | August 29, 2026 (126 days) |
+| **Resources Required** | IT Security Engineer (80 hrs); System Administrators (60 hrs); Configuration compliance scanning tool (Nessus Professional ~$3,000/yr or CIS-CAT Pro ~$1,000/yr). |
+| **Status** | Open |
+| **Evidence of Closure** | Configuration compliance scan reports showing acceptable deviation rates; GPO configuration exports; approved security configuration standards documentation; exception approval records; updated SSP. |
+
+---
+
+### POA&amp;M Item 7 — RA.L2-3.11.2 (PRIORITY 7)
+
+| Field | Details |
+|-------|---------|
+| **Practice ID** | RA.L2-3.11.2 |
+| **Domain** | Risk Assessment (RA) |
+| **Requirement** | Scan for vulnerabilities in organizational systems periodically and when new vulnerabilities affecting those systems are identified. |
+| **Weakness Description** | Vulnerability scanning is not performed on a defined periodic schedule. When scans are performed, they are unauthenticated, which results in incomplete vulnerability discovery. Not all in-scope CUI assets are covered by existing scans. No formal process exists for triggering scans in response to critical vulnerability disclosures (e.g., CISA KEV alerts). |
+| **Root Cause** | Vulnerability scanning was conducted ad hoc without a formal program. Authenticated scan credentials not configured. Asset inventory gaps (see CM.L2-3.4.1) prevented complete scan coverage. No assigned ownership for vulnerability management program. |
+| **Remediation Steps** | 1. Select and deploy a vulnerability scanning platform (e.g., Tenable Nessus, Qualys, Rapid7 InsightVM). 2. Configure authenticated scan credentials for all in-scope systems (Windows, Linux, network devices). 3. Define scan scope using the completed asset inventory (CM.L2-3.4.1 output). 4. Establish scan schedule: monthly for all in-scope assets; ad-hoc scans within 72 hours of critical vulnerability disclosure. 5. Subscribe to CISA Known Exploited Vulnerabilities (KEV) catalog notifications. 6. Define vulnerability remediation SLAs tied to severity (Critical: 15 days, High: 30 days, Medium: 90 days). 7. Document vulnerability management policy and assign ownership to a named individual. 8. Update SSP Section RA.L2-3.11.2. |
+| **Milestone 1** | Week 4 (May 23, 2026): Vulnerability scanning tool procured; scan credentials configured for initial target group. |
+| **Milestone 2** | Week 8 (June 20, 2026): First authenticated scan completed covering all in-scope assets; initial vulnerability findings documented. |
+| **Milestone 3** | Week 12 (July 18, 2026): Vulnerability management policy approved; remediation SLAs defined; CISA KEV subscription active. |
+| **Milestone 4** | Week 16 (August 15, 2026): Second monthly scan completed; critical/high findings from initial scan remediated per SLA. |
+| **Scheduled Completion** | August 15, 2026 (112 days) |
+| **Resources Required** | IT Security Engineer (60 hrs); System Administrators (20 hrs); Vulnerability scanner licensing (Nessus Professional ~$3,000/yr or Tenable.io ~$5,000+/yr based on asset count). |
+| **Status** | Open |
+| **Evidence of Closure** | Authenticated vulnerability scan reports (two cycles minimum); scan coverage report showing all in-scope assets; vulnerability management policy; remediation tracking evidence; CISA KEV subscription confirmation; updated SSP. |
+
+---
+
+### POA&amp;M Item 8 — CA.L2-3.12.4 (PRIORITY 8)
+
+| Field | Details |
+|-------|---------|
+| **Practice ID** | CA.L2-3.12.4 |
+| **Domain** | Security Assessment (CA) |
+| **Requirement** | Develop, document, and periodically update system security plans (SSPs). |
+| **Weakness Description** | The existing System Security Plan is outdated, incomplete, and was not reviewed or updated within the past year. Several recently added systems are not reflected in the SSP. Practice implementation statements are either missing or describe intended (rather than actual) implementations. The SSP has not been formally approved by management and does not reflect the current system boundary. |
+| **Root Cause** | No formal SSP review and update cycle established. SSP was initially created for a previous contract and not maintained as systems evolved. No assigned SSP owner responsible for ongoing maintenance. |
+| **Remediation Steps** | 1. Assign a named SSP owner (typically the ISSO or IT Security Manager). 2. Conduct a full review of the existing SSP against the current system boundary and all 110 Level 2 practices. 3. Update all practice implementation statements to reflect actual (not planned) implementation status. 4. Add newly scoped systems; remove decommissioned systems from scope. 5. Ensure all 8 POA&amp;M findings are cross-referenced in the SSP with links to POA&amp;M items. 6. Obtain formal management approval (signature) on the updated SSP. 7. Establish an annual SSP review cycle and document in the security program procedures. 8. Store SSP under version control with documented change history. |
+| **Milestone 1** | Week 2 (May 9, 2026): SSP owner designated; SSP gap review initiated. |
+| **Milestone 2** | Week 6 (June 6, 2026): SSP draft updated for all currently-implemented practices; system boundary section current. |
+| **Milestone 3** | Week 10 (July 4, 2026): All POA&amp;M cross-references added to SSP; draft submitted for management review. |
+| **Milestone 4** | Week 12 (July 18, 2026): Management-approved SSP finalized; annual review procedure documented. |
+| **Scheduled Completion** | July 18, 2026 (84 days) |
+| **Resources Required** | IT Security Manager/ISSO (120 hrs); IT Administrator support (20 hrs). Minimal tooling cost (Word/SharePoint for document management). |
+| **Status** | Open |
+| **Evidence of Closure** | Management-signed SSP document with current date and version; SSP change log showing recent updates; annual review procedure; all 110 practice entries populated with accurate implementation statements. |
+
+---
+
+## Consolidated Timeline Summary
+
+| Practice ID | Priority | Critical | Start | Completion Target | Days to Complete |
+|-------------|----------|----------|-------|-------------------|-----------------|
+| SC.L2-3.13.8 | 1 | YES | Apr 28, 2026 | July 4, 2026 | 70 days |
+| AU.L2-3.3.1 | 2 | YES | Apr 28, 2026 | July 18, 2026 | 84 days |
+| AU.L2-3.3.2 | 3 | No | May 5, 2026 | July 18, 2026 | 84 days |
+| AC.L2-3.1.5 | 4 | No | May 5, 2026 | August 15, 2026 | 112 days |
+| CM.L2-3.4.1 | 5 | No | May 5, 2026 | August 1, 2026 | 98 days |
+| CM.L2-3.4.2 | 6 | No | May 12, 2026 | August 29, 2026 | 126 days |
+| RA.L2-3.11.2 | 7 | No | May 5, 2026 | August 15, 2026 | 112 days |
+| CA.L2-3.12.4 | 8 | No | Apr 28, 2026 | July 18, 2026 | 84 days |
+
+All 8 practices targeted for completion by **August 29, 2026** — well within the 180-day remediation window of **October 22, 2026**.
+
+---
+
+## Resource Summary
+
+| Resource Category | Estimated Cost/Effort |
+|-------------------|-----------------------|
+| IT Security Engineer time | ~480 hours total |
+| System Administrator time | ~340 hours total |
+| IT Security Manager/ISSO time | ~120 hours total |
+| SIEM platform | $15,000–$30,000/year |
+| Vulnerability scanning tool | $3,000–$5,000/year |
+| PAM solution (AC.L2-3.1.5) | $10,000–$50,000 depending on scale |
+| Configuration compliance tool | $1,000–$3,000/year |
+| CMDB/asset management tool | $0–$5,000 depending on tooling choice |
+| **Total estimated budget** | **$29,000–$93,000** |
+
+---
+
+## POA&amp;M Management Procedures
+
+1. **Monthly Reviews**: POA&amp;M owner (ISSO/IT Security Manager) reviews all open items monthly; updates milestone completion status and notes any blockers.
+2. **Escalation Path**: Overdue milestones escalate to the CISO/IT Director within 5 business days.
+3. **SSP Linkage**: Each POA&amp;M item is cross-referenced to the corresponding SSP section.
+4. **Evidence Collection**: Evidence artifacts are collected at each milestone and stored in the compliance repository with version and date tracking.
+5. **C3PAO Notification**: Any material change in remediation timeline for critical practices (SC.L2-3.13.8, AU.L2-3.3.1) must be communicated to the C3PAO within 10 business days.
+6. **Closure Process**: POA&amp;M items are closed only after evidence has been reviewed and approved by the ISSO and a second reviewer.
+7. **SPRS Update**: SPRS score must be updated in the SPRS portal (sprs.csd.disa.mil) as each practice is remediated and closed.
+
+---
+
+*This POA&amp;M was prepared in accordance with CMMC 2.0 (32 CFR Part 170), NIST SP 800-171 Rev 2, and DoD Assessment Methodology v2.2. All remediation timelines are within the 180-day conditional certification window.*
+</pre></div>
+                </div>
+                <div class="output-panel">
+                  <div class="output-header without-header">Without Skill (Baseline)</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Covers all 8 specified practices in the POA&amp;M</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Provides remediation steps and milestones with dates</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Identifies SC.L2-3.13.8 or AU.L2-3.3.1 as highest priority</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Includes 180-day remediation window reference</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Assigns resource/owner responsibility</span></div></div></div>
+                  <div class="output-text"><pre># Plan of Action and Milestones (POA&amp;M)
+## CMMC Level 2 Assessment Findings
+**Organization:** [Organization Name]
+**Assessment Date:** 2026-04-25
+**POA&amp;M Creation Date:** 2026-04-25
+**Remediation Deadline:** 2026-10-22 (180 days)
+**Assessor:** C3PAO Assessment Team
+
+---
+
+## Executive Summary
+
+This POA&amp;M documents 8 practices identified as NOT MET during the C3PAO CMMC Level 2 assessment. Findings span five domains: Audit and Accountability (AU), Configuration Management (CM), Risk Assessment (RA), Security Assessment (CA), Access Control (AC), and System and Communications Protection (SC). Remediation must be completed within 180 days to achieve CMMC Level 2 certification.
+
+**Priority Classification:**
+- **Critical (P1):** AC.L2-3.1.5, RA.L2-3.11.2, CA.L2-3.12.4
+- **High (P2):** AU.L2-3.3.1, AU.L2-3.3.2, SC.L2-3.13.8
+- **Medium (P3):** CM.L2-3.4.1, CM.L2-3.4.2
+
+---
+
+## Priority Rationale
+
+### Critical (P1) Findings
+
+**AC.L2-3.1.5** (Least Privilege) and **RA.L2-3.11.2** (Vulnerability Scanning) are prioritized as Critical because they represent foundational security controls. Lack of least privilege directly enables lateral movement and privilege escalation in breach scenarios. Absent vulnerability scanning means unknown exposure cannot be measured or managed.
+
+**CA.L2-3.12.4** (System of Records / Plan of Action) is Critical because CMMC requires an active, maintained POA&amp;M as an artifact for certification — its absence signals systemic governance failure and can block the path to certification itself.
+
+### High (P2) Findings
+
+**AU.L2-3.3.1** and **AU.L2-3.3.2** (audit logging and review) are High because without audit records, incident detection and forensic capability are severely degraded. **SC.L2-3.13.8** (cryptographic key management) is High due to the risk of data exposure if keys are not properly managed.
+
+### Medium (P3) Findings
+
+**CM.L2-3.4.1** and **CM.L2-3.4.2** (baseline configurations and security settings) are Medium because while important, they typically involve policy and tooling work that can proceed in parallel with higher-priority items without blocking other remediation tasks.
+
+---
+
+## POA&amp;M Findings Detail
+
+### Finding 1 — AU.L2-3.3.1: Audit Log Creation
+| Field | Details |
+|---|---|
+| **Practice ID** | AU.L2-3.3.1 |
+| **Practice Description** | Create and retain system audit logs and records to the extent needed to enable monitoring, analysis, investigation, and reporting of unlawful or unauthorized system activity. |
+| **Finding** | Audit logging is not consistently enabled across all systems in scope. Log retention periods are undefined or not enforced. |
+| **Priority** | High (P2) |
+| **Risk** | Inability to detect or investigate unauthorized access or malicious activity. |
+| **Remediation Actions** | 1. Inventory all in-scope systems and identify logging gaps. 2. Enable audit logging on all endpoints, servers, and network devices. 3. Define and enforce a log retention policy (minimum 90 days online, 1 year archived). 4. Deploy centralized SIEM or log aggregation solution. 5. Document logging architecture in SSP. |
+| **Responsible Party** | IT Security Manager |
+| **Resources Required** | SIEM licensing, storage infrastructure, staff time (~160 hours) |
+| **Milestone 1** | Day 30 — Complete system inventory and logging gap analysis |
+| **Milestone 2** | Day 60 — Enable logging on all in-scope systems |
+| **Milestone 3** | Day 90 — SIEM deployed and log retention policy enforced |
+| **Milestone 4** | Day 120 — SSP updated; evidence package prepared |
+| **Estimated Completion** | Day 120 (2026-08-23) |
+| **Status** | Open |
+
+---
+
+### Finding 2 — AU.L2-3.3.2: Audit Log Review
+| Field | Details |
+|---|---|
+| **Practice ID** | AU.L2-3.3.2 |
+| **Practice Description** | Review and update logged events. Ensure audit logs are reviewed for anomalies or inappropriate activity. |
+| **Finding** | No documented process exists for periodic review of audit logs. Logs are collected but not reviewed. No alerting or anomaly detection is in place. |
+| **Priority** | High (P2) |
+| **Risk** | Malicious or unauthorized activity goes undetected. |
+| **Remediation Actions** | 1. Develop an Audit Log Review Policy and Procedure. 2. Configure automated alerting for critical events in SIEM. 3. Assign responsibility for daily/weekly log review. 4. Document review cadence and evidence retention. 5. Train staff on log review procedures. |
+| **Responsible Party** | IT Security Manager / SOC Lead |
+| **Resources Required** | SIEM configuration effort, staff time (~80 hours), possible MDR/SOC vendor |
+| **Milestone 1** | Day 30 — Draft Audit Log Review Policy |
+| **Milestone 2** | Day 75 — SIEM alerting rules configured |
+| **Milestone 3** | Day 100 — First documented log review cycle completed |
+| **Milestone 4** | Day 130 — Policy approved; evidence of ongoing review collected |
+| **Estimated Completion** | Day 130 (2026-09-02) |
+| **Status** | Open |
+| **Dependency** | Dependent on AU.L2-3.3.1 SIEM deployment |
+
+---
+
+### Finding 3 — CM.L2-3.4.1: Baseline Configurations
+| Field | Details |
+|---|---|
+| **Practice ID** | CM.L2-3.4.1 |
+| **Practice Description** | Establish and maintain baseline configurations and inventories of organizational systems (including hardware, software, firmware, and documentation) throughout the respective system development life cycles. |
+| **Finding** | No formal baseline configurations are documented for servers, endpoints, or network devices. No configuration management database (CMDB) or inventory exists. |
+| **Priority** | Medium (P3) |
+| **Risk** | Unauthorized or insecure configurations may exist undetected. Deviations cannot be identified without a defined baseline. |
+| **Remediation Actions** | 1. Conduct full hardware and software inventory of in-scope systems. 2. Select and implement a CMDB or asset management tool. 3. Develop security baseline configurations (e.g., CIS Benchmarks) for each system type. 4. Document baselines in SSP and Configuration Management Plan. 5. Implement a change control process to maintain baseline integrity. |
+| **Responsible Party** | IT Operations Manager |
+| **Resources Required** | CMDB tool (e.g., ServiceNow, Lansweeper), staff time (~200 hours) |
+| **Milestone 1** | Day 30 — Complete asset inventory |
+| **Milestone 2** | Day 60 — Select CMDB tool; begin deployment |
+| **Milestone 3** | Day 90 — Draft baseline configurations for all system types |
+| **Milestone 4** | Day 150 — Baselines approved, documented, and applied to all systems |
+| **Estimated Completion** | Day 150 (2026-09-22) |
+| **Status** | Open |
+
+---
+
+### Finding 4 — CM.L2-3.4.2: Security Configuration Enforcement
+| Field | Details |
+|---|---|
+| **Practice ID** | CM.L2-3.4.2 |
+| **Practice Description** | Establish and enforce security configuration settings for information technology products employed in organizational systems. |
+| **Finding** | Security configuration settings (e.g., CIS hardening benchmarks) are not enforced. No automated mechanism ensures configurations remain compliant. |
+| **Priority** | Medium (P3) |
+| **Risk** | Systems may operate with insecure default or misconfigured settings, increasing attack surface. |
+| **Remediation Actions** | 1. Map baseline configurations (from CM.L2-3.4.1) to CIS Benchmark or DISA STIG standards. 2. Implement a configuration management/compliance scanning tool (e.g., Tenable.sc, Qualys, or Chef InSpec). 3. Remediate deviations from approved baselines. 4. Document exception process for any approved deviations. 5. Schedule periodic compliance scans. |
+| **Responsible Party** | IT Operations Manager / Security Engineer |
+| **Resources Required** | Configuration compliance tool, staff time (~120 hours) |
+| **Milestone 1** | Day 60 — Identify target security configuration standards |
+| **Milestone 2** | Day 90 — Deploy compliance scanning tool |
+| **Milestone 3** | Day 130 — First full compliance scan completed; deviations documented |
+| **Milestone 4** | Day 160 — Deviations remediated; ongoing scan schedule established |
+| **Estimated Completion** | Day 160 (2026-10-02) |
+| **Status** | Open |
+| **Dependency** | Dependent on CM.L2-3.4.1 baseline completion |
+
+---
+
+### Finding 5 — RA.L2-3.11.2: Vulnerability Scanning
+| Field | Details |
+|---|---|
+| **Practice ID** | RA.L2-3.11.2 |
+| **Practice Description** | Scan for vulnerabilities in organizational systems and applications periodically and when new vulnerabilities affecting those systems are identified; remediate vulnerabilities in accordance with assessments of risk. |
+| **Finding** | No vulnerability scanning program exists. Systems have not been scanned for known vulnerabilities. No remediation tracking process is in place. |
+| **Priority** | Critical (P1) |
+| **Risk** | Known, exploitable vulnerabilities may exist across in-scope systems. This is a fundamental gap that directly threatens CUI confidentiality and system integrity. |
+| **Remediation Actions** | 1. Acquire and deploy a vulnerability scanning solution (e.g., Tenable Nessus, Qualys, or Rapid7). 2. Conduct initial authenticated scan of all in-scope systems. 3. Prioritize and remediate Critical/High vulnerabilities (CVSS 7.0+) within 30 days of identification. 4. Establish monthly scanning cadence for all systems; weekly for internet-facing. 5. Create vulnerability remediation tracking process and integrate with POA&amp;M. 6. Document vulnerability management policy. |
+| **Responsible Party** | Security Engineer / ISSO |
+| **Resources Required** | Vulnerability scanner licensing (~$5,000-$30,000/year depending on scope), staff time (~100 hours initial) |
+| **Milestone 1** | Day 15 — Procure vulnerability scanning tool |
+| **Milestone 2** | Day 30 — Complete initial scan of all in-scope systems |
+| **Milestone 3** | Day 60 — Remediate all Critical (CVSS 9.0+) findings from initial scan |
+| **Milestone 4** | Day 90 — Remediate all High (CVSS 7.0-8.9) findings; monthly scan cadence established |
+| **Milestone 5** | Day 120 — Vulnerability management policy documented and approved |
+| **Estimated Completion** | Day 120 (2026-08-23) |
+| **Status** | Open |
+
+---
+
+### Finding 6 — CA.L2-3.12.4: Plan of Action
+| Field | Details |
+|---|---|
+| **Practice ID** | CA.L2-3.12.4 |
+| **Practice Description** | Develop, document, and periodically update plans of action designed to correct deficiencies and reduce or eliminate vulnerabilities in organizational systems. |
+| **Finding** | No formal POA&amp;M process exists. Security deficiencies have not been tracked or managed. This current document is the first POA&amp;M developed. |
+| **Priority** | Critical (P1) |
+| **Risk** | Without a POA&amp;M, the organization cannot demonstrate it is managing security deficiencies, which is a direct prerequisite for CMMC certification. This finding also indicates systemic governance gaps. |
+| **Remediation Actions** | 1. Formally adopt this POA&amp;M as the organization&#x27;s deficiency tracking mechanism. 2. Assign a POA&amp;M owner (ISSO or Security Manager). 3. Establish a POA&amp;M review cadence (monthly recommended). 4. Develop POA&amp;M management procedure documenting creation, update, and closure processes. 5. Integrate POA&amp;M management with risk management framework. 6. Update SSP to reference POA&amp;M process. |
+| **Responsible Party** | ISSO / Security Manager |
+| **Resources Required** | Staff time (~40 hours), possible GRC tool investment |
+| **Milestone 1** | Day 7 — This POA&amp;M formally adopted and signed by leadership |
+| **Milestone 2** | Day 30 — POA&amp;M management procedure drafted |
+| **Milestone 3** | Day 45 — First monthly POA&amp;M review meeting held |
+| **Milestone 4** | Day 60 — Procedure approved; SSP updated to reference POA&amp;M |
+| **Estimated Completion** | Day 60 (2026-06-24) |
+| **Status** | Open |
+
+---
+
+### Finding 7 — AC.L2-3.1.5: Least Privilege
+| Field | Details |
+|---|---|
+| **Practice ID** | AC.L2-3.1.5 |
+| **Practice Description** | Employ the principle of least privilege, including for specific security functions and privileged accounts. |
+| **Finding** | Privileged accounts are broadly assigned. Users have excessive permissions beyond what is required for their roles. No formal role-based access control (RBAC) model is documented or enforced. Administrative accounts are used for routine tasks. |
+| **Priority** | Critical (P1) |
+| **Risk** | Excessive privileges significantly increase the blast radius of account compromise. Insider threat risk is elevated. This is a top-ranked exploitable condition in breach scenarios. |
+| **Remediation Actions** | 1. Conduct a full access rights review for all user and service accounts. 2. Document a role-based access control (RBAC) matrix defining permissions by job function. 3. Revoke unnecessary privileges; separate administrative from standard user accounts. 4. Implement Privileged Access Management (PAM) controls (dedicated admin accounts, just-in-time access). 5. Prohibit use of privileged accounts for day-to-day activity. 6. Implement quarterly access reviews. 7. Document least privilege policy. |
+| **Responsible Party** | IT Security Manager / Identity and Access Management Lead |
+| **Resources Required** | PAM tooling (e.g., CyberArk, BeyondTrust, or open-source), staff time (~160 hours) |
+| **Milestone 1** | Day 21 — Complete access rights audit; identify over-privileged accounts |
+| **Milestone 2** | Day 45 — RBAC matrix documented and approved |
+| **Milestone 3** | Day 60 — Excessive privileges revoked; dedicated admin accounts created |
+| **Milestone 4** | Day 90 — PAM controls implemented for all privileged accounts |
+| **Milestone 5** | Day 120 — First quarterly access review completed; policy documented |
+| **Estimated Completion** | Day 120 (2026-08-23) |
+| **Status** | Open |
+
+---
+
+### Finding 8 — SC.L2-3.13.8: Cryptographic Protection in Transit
+| Field | Details |
+|---|---|
+| **Practice ID** | SC.L2-3.13.8 |
+| **Practice Description** | Implement cryptographic mechanisms to prevent unauthorized disclosure of CUI during transmission unless otherwise protected by alternative physical safeguards. |
+| **Finding** | Not all transmission paths carrying CUI use approved cryptographic protections. Some systems transmit CUI over unencrypted or weakly encrypted channels. TLS configurations may use deprecated protocols (TLS 1.0/1.1, weak cipher suites). |
+| **Priority** | High (P2) |
+| **Risk** | CUI transmitted over unprotected channels is vulnerable to interception. This directly violates the confidentiality requirement for CUI and could result in contract termination. |
+| **Remediation Actions** | 1. Map all data flows involving CUI transmission (internal and external). 2. Identify all transmission paths lacking adequate encryption. 3. Disable TLS 1.0 and TLS 1.1; enforce TLS 1.2 minimum (TLS 1.3 preferred). 4. Review and harden cipher suite configurations on all systems. 5. Replace or configure any systems transmitting CUI without encryption. 6. Document approved cryptographic standards in SSP. 7. Scan for unencrypted transmission using network monitoring tools. |
+| **Responsible Party** | Security Engineer / Network Administrator |
+| **Resources Required** | TLS certificate management, staff time (~80 hours), possible network monitoring tools |
+| **Milestone 1** | Day 21 — Complete CUI data flow mapping |
+| **Milestone 2** | Day 45 — Identify all unprotected or weakly protected transmission paths |
+| **Milestone 3** | Day 75 — Disable deprecated TLS versions; enforce minimum TLS 1.2 |
+| **Milestone 4** | Day 100 — All CUI transmission paths verified as using approved encryption |
+| **Milestone 5** | Day 120 — Cryptographic standards documented in SSP; scan evidence collected |
+| **Estimated Completion** | Day 120 (2026-08-23) |
+| **Status** | Open |
+
+---
+
+## Consolidated Milestone Schedule
+
+| Day | Date | Milestone(s) |
+|---|---|---|
+| Day 7 | 2026-05-02 | CA.L2-3.12.4 — POA&amp;M formally adopted by leadership |
+| Day 15 | 2026-05-10 | RA.L2-3.11.2 — Vulnerability scanner procured |
+| Day 21 | 2026-05-16 | AC.L2-3.1.5 — Access rights audit complete; SC.L2-3.13.8 — CUI data flow mapping complete |
+| Day 30 | 2026-05-25 | AU.L2-3.3.1 — Logging gap analysis complete; CA.L2-3.12.4 — POA&amp;M procedure drafted; CM.L2-3.4.1 — Asset inventory complete; RA.L2-3.11.2 — Initial vulnerability scan complete |
+| Day 45 | 2026-06-09 | AC.L2-3.1.5 — RBAC matrix approved; CA.L2-3.12.4 — First POA&amp;M review held; SC.L2-3.13.8 — Unprotected paths identified |
+| Day 60 | 2026-06-24 | AC.L2-3.1.5 — Excessive privileges revoked; AU.L2-3.3.1 — Logging enabled on all systems; AU.L2-3.3.2 — Audit log review policy drafted; CA.L2-3.12.4 — Procedure approved, SSP updated; CM.L2-3.4.1 — CMDB deployed; CM.L2-3.4.2 — Security configuration standards identified; RA.L2-3.11.2 — Critical vulnerabilities (CVSS 9+) remediated |
+| Day 75 | 2026-07-09 | AU.L2-3.3.2 — SIEM alerting configured; SC.L2-3.13.8 — TLS 1.0/1.1 disabled |
+| Day 90 | 2026-07-24 | AC.L2-3.1.5 — PAM controls implemented; AU.L2-3.3.1 — SIEM deployed, retention enforced; CM.L2-3.4.1 — Baseline configurations drafted; CM.L2-3.4.2 — Compliance scanner deployed; RA.L2-3.11.2 — High vulnerabilities remediated; monthly scan cadence active |
+| Day 100 | 2026-08-03 | AU.L2-3.3.2 — First documented review cycle complete; SC.L2-3.13.8 — All CUI paths verified encrypted |
+| Day 120 | 2026-08-23 | AC.L2-3.1.5 — First quarterly access review; AU.L2-3.3.1 — SSP updated; RA.L2-3.11.2 — Vulnerability management policy approved; SC.L2-3.13.8 — SSP updated, evidence collected |
+| Day 130 | 2026-09-02 | AU.L2-3.3.2 — Policy approved, ongoing review evidence; CM.L2-3.4.2 — First compliance scan; deviations documented |
+| Day 150 | 2026-09-22 | CM.L2-3.4.1 — Baselines applied to all systems |
+| Day 160 | 2026-10-02 | CM.L2-3.4.2 — Deviations remediated; ongoing scan schedule |
+| Day 175 | 2026-10-17 | Final evidence review and POA&amp;M closure verification |
+| Day 180 | 2026-10-22 | **REMEDIATION DEADLINE — All findings closed or with accepted risk** |
+
+---
+
+## Resource Summary
+
+| Finding | Responsible Party | Estimated Effort | Tooling Cost |
+|---|---|---|---|
+| AU.L2-3.3.1 | IT Security Manager | ~160 hours | SIEM ($10K-$50K/yr) |
+| AU.L2-3.3.2 | IT Security Manager / SOC Lead | ~80 hours | Included in SIEM |
+| CM.L2-3.4.1 | IT Operations Manager | ~200 hours | CMDB tool ($5K-$20K/yr) |
+| CM.L2-3.4.2 | IT Operations / Security Engineer | ~120 hours | Config scanner ($5K-$15K/yr) |
+| RA.L2-3.11.2 | Security Engineer / ISSO | ~100 hours | Vuln scanner ($5K-$30K/yr) |
+| CA.L2-3.12.4 | ISSO / Security Manager | ~40 hours | GRC tool (optional) |
+| AC.L2-3.1.5 | IT Security / IAM Lead | ~160 hours | PAM tool ($10K-$50K/yr) |
+| SC.L2-3.13.8 | Security Engineer / Network Admin | ~80 hours | Cert management (minimal) |
+| **Total** | | **~940 hours** | **~$35K-$165K/yr** |
+
+---
+
+## POA&amp;M Management and Review
+
+- **POA&amp;M Owner:** [ISSO Name / Title]
+- **Review Cadence:** Monthly (first Monday of each month)
+- **Escalation Path:** ISSO -&gt; CISO -&gt; Senior Leadership
+- **Next Review Date:** 2026-05-04
+- **Evidence Repository:** [Location — e.g., SharePoint, GRC tool]
+
+### Status Definitions
+| Status | Definition |
+|---|---|
+| Open | Remediation not yet begun or in early planning |
+| In Progress | Remediation activities underway |
+| Delayed | Behind milestone schedule; requires escalation |
+| Completed | Remediation actions finished; evidence collected |
+| Accepted Risk | Risk formally accepted by authorizing official |
+
+---
+
+## Approval and Sign-Off
+
+| Role | Name | Signature | Date |
+|---|---|---|---|
+| ISSO | | | |
+| CISO / Security Director | | | |
+| Authorizing Official | | | |
+
+---
+
+*This POA&amp;M was created on 2026-04-25 in response to C3PAO CMMC Level 2 assessment findings. All milestones are subject to revision based on resource availability and emerging risk factors. Updates must be reviewed and approved by the ISSO.*
+</pre></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-item" id="eval-cmmc-4">
+            <button class="eval-toggle" onclick="toggleEval('cmmc-4')">
+              <span class="eval-label">Test 5: Subcontractor Flowdown</span>
+              <span class="eval-chevron">▼</span>
+            </button>
+            <div class="eval-content" style="display:none">
+              <div class="eval-prompt">
+                <strong>Prompt:</strong> We are a prime contractor and discovered that two of our subcontractors...
+              </div>
+              <div class="eval-outputs">
+                <div class="output-panel">
+                  <div class="output-header with-header">With Skill</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains DFARS 252.204-7021 flow-down obligation</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Identifies Google Drive as DFARS 7012 / FedRAMP violation</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Covers 72-hour DIBNET incident reporting requirement</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Addresses SPRS score of 42 and its implications</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Recommends immediate concrete steps for the prime contractor</span></div></div></div>
+                  <div class="output-text"><pre># Prime Contractor Obligations Under DFARS 252.204-7021: Subcontractor Flow-Down Analysis
+
+## Scenario Summary
+
+You are a prime contractor on a DoD contract containing DFARS 252.204-7021. Two subcontractors handle CUI:
+
+- **Subcontractor A**: Stores CUI on a personal Google Drive account
+- **Subcontractor B**: Holds a CMMC Level 2 self-assessment with an SPRS score of 42
+
+---
+
+## Part 1: DFARS 252.204-7021 Flow-Down Obligations
+
+DFARS 252.204-7021(c) places direct legal obligations on prime contractors. As the prime, you must:
+
+1. **Include CMMC requirements in all subcontracts** where the subcontractor processes, stores, or transmits CUI — regardless of tier. This means the CMMC requirement flows through your entire supply chain.
+
+2. **Specify the required CMMC level** in each subcontract. Both subcontractors described above handle CUI, placing them squarely in scope for CMMC Level 2 (110 practices per NIST SP 800-171 Rev 2).
+
+3. **Verify subcontractor certification before award** (for Level 2/3). For a C3PAO-assessed Level 2, you must confirm the certification appears in both SPRS and the Cyber AB registry. For a self-assessed Level 2, the subcontractor&#x27;s SPRS score and senior official affirmation must be current.
+
+4. **Flow-down applies to all tiers**. Sub-subcontractors are not exempt; your subcontractors must impose equivalent requirements on their own lower-tier subcontractors.
+
+**Legal exposure**: As the prime, DoD holds you accountable for your supply chain. If a subcontractor mishandles CUI, the prime contractor may face contract termination, DFARS violations, and potential False Claims Act liability if certifications were falsely affirmed.
+
+---
+
+## Part 2: Subcontractor A — Personal Google Drive CUI Violation
+
+### The Violation
+
+Storing CUI on a personal Google Drive account is a **direct violation of DFARS 252.204-7012**, which requires that any external cloud service used to process, store, or transmit CUI must be:
+
+- **FedRAMP Authorized at the Moderate impact level** or higher, or
+- Must meet security requirements equivalent to FedRAMP Moderate as described in the DoD Cloud Computing Security Requirements Guide (SRG)
+
+**Google Drive (personal/consumer accounts)** is **not FedRAMP Authorized**. Even Google Workspace for Government (FedRAMP Moderate) is a separate, specifically authorized offering — a personal consumer Google Drive account has no such authorization and provides no CUI safeguards.
+
+### Key CMMC Practices Violated
+
+The use of personal Google Drive for CUI likely violates multiple NIST SP 800-171 practices, including:
+
+| Practice ID | Domain | Description | Why It Applies |
+|-------------|--------|-------------|----------------|
+| SC.L2-3.13.15 | System &amp; Comms | Control and monitor communications at external boundaries | CUI leaving to uncontrolled external system |
+| AC.L2-3.1.3 | Access Control | Control CUI flow in accordance with approved authorizations | No access controls on personal account |
+| MP.L2-3.8.1 | Media Protection | Protect system media containing CUI | Cloud storage = system media |
+| CM.L2-3.4.6 | Config Management | Employ principle of least functionality | Unauthorized cloud tool in use |
+| SC.L2-3.13.11 | System &amp; Comms | Employ FIPS-validated cryptography | No assurance of FIPS encryption |
+| SI.L2-3.14.6 | System &amp; Info Integrity | Monitor organizational systems for malware | No monitoring of personal account |
+
+### Severity
+
+This is a **critical finding**. The DoD&#x27;s CMMC pitfall guidance explicitly states: &quot;Using non-FedRAMP cloud for CUI violates DFARS 7012 enclave requirements.&quot; This is not a gray area — it is an active, ongoing violation that may constitute a reportable cyber incident depending on whether unauthorized parties could access the CUI.
+
+---
+
+## Part 3: Subcontractor B — SPRS Score of 42
+
+### Interpreting the Score
+
+The SPRS scoring scale runs from **+110** (all 110 practices fully met) to **-203** (all practices unmet). A score of **42** represents a substantial shortfall from the maximum of 110, indicating that this subcontractor has failed to implement a significant number of NIST SP 800-171 practices.
+
+**Point gap**: 110 - 42 = **68 points of deficiencies**. Given that practices carry weights of 1–5 points each, this could represent anywhere from roughly 14 to 68+ unimplemented practices, depending on which practices are missing.
+
+### Regulatory Status
+
+Under DFARS 252.204-7021 and 7020:
+- Submitting an SPRS score is required, and Subcontractor B has done so.
+- However, a score of 42 **does not mean the subcontractor is compliant** — it means they have self-assessed and documented significant gaps.
+- DoD Contracting Officers (COs) actively review SPRS scores; a score this low will attract scrutiny.
+- If the contract requires a **C3PAO-assessed Level 2 certification** (not just a self-assessment), a score of 42 almost certainly means the subcontractor **cannot obtain certification** until critical gaps are remediated — particularly the critical practices (AC.L2-3.1.3, IA.L2-3.5.3, SC.L2-3.13.8, SC.L2-3.13.11, SI.L2-3.14.6) which cannot have POA&amp;M items at time of certification.
+
+### POA&amp;M Requirement
+
+A subcontractor with a score this low should have a **Plan of Action &amp; Milestones (POA&amp;M)** documenting all gaps. The prime contractor should:
+- Obtain and review the subcontractor&#x27;s current POA&amp;M
+- Verify milestones are realistic and on track
+- Understand which specific practices are unmet (especially the 7 critical practices that block certification)
+
+---
+
+## Part 4: Immediate Steps — Priority Action Plan
+
+### Step 1: Quarantine CUI on Google Drive (Subcontractor A) — Within 24 Hours
+
+- **Immediately notify Subcontractor A** in writing to cease all use of personal Google Drive for CUI.
+- Direct Subcontractor A to **identify, enumerate, and inventory all CUI stored on the personal Google Drive account**.
+- Instruct Subcontractor A to **migrate CUI to a FedRAMP Moderate-authorized environment** immediately (e.g., Microsoft 365 GCC High, Google Workspace for Government — FedRAMP Moderate authorized, or an equivalent DoD-approved enclave).
+- **Delete or purge** all CUI from the personal Google Drive once migration is confirmed.
+- Issue a formal **cure notice** or **show cause notice** to Subcontractor A per your subcontract terms.
+
+### Step 2: Assess Whether a Cyber Incident Must Be Reported — Within 24–48 Hours
+
+Determine whether the Google Drive exposure constitutes a **reportable cyber incident** under DFARS 252.204-7012:
+- Was the personal Google Drive account accessible to unauthorized individuals (e.g., personal account shared with family, set to public, or the account was compromised)?
+- Was the CUI potentially exfiltrated or accessed by unauthorized parties?
+
+If a reportable incident occurred, **you (the prime) must report to DIBNET within 72 hours** of discovery at dibnet.dod.mil. Do not delay while awaiting information from the subcontractor — report what is known and update as more information becomes available.
+
+You must also **notify your Contracting Officer (CO)** of the situation, even if the incident threshold is unclear.
+
+### Step 3: Obtain Subcontractor A&#x27;s Remediation Plan — Within 48–72 Hours
+
+- Require Subcontractor A to submit a written **remediation plan** with specific milestones showing how they will establish a FedRAMP Moderate-compliant CUI handling environment.
+- Set a hard deadline for full remediation (recommend 30 days maximum given the severity).
+- If Subcontractor A cannot demonstrate a credible path to compliance, consider **suspending their access to CUI** and evaluating replacement options.
+
+### Step 4: Review Subcontractor B&#x27;s POA&amp;M and SPRS Score — Within 1 Week
+
+- Request Subcontractor B&#x27;s **complete SSP and current POA&amp;M** in writing.
+- Verify that the SPRS score of 42 in SPRS matches their self-assessment documentation.
+- **Map which of the 7 critical practices** (AC.L2-3.1.3, IA.L2-3.5.3, SC.L2-3.13.8, SC.L2-3.13.11, SI.L2-3.14.6, AU.L2-3.3.1, IR.L2-3.6.1) are unmet — if any critical practices are unimplemented, the subcontractor cannot achieve Level 2 C3PAO certification until they are fully remediated.
+- Establish **quarterly review checkpoints** to track remediation progress.
+
+### Step 5: Evaluate Contract Performance Risk — Within 1–2 Weeks
+
+- Determine if your DoD contract requires **Level 2 C3PAO certification** (not just self-assessment) for subcontractors. If so, Subcontractor B with a score of 42 likely cannot currently perform contract work involving CUI lawfully.
+- Consult your contracts/legal team about whether either subcontractor&#x27;s current status constitutes a **material breach** of your subcontract.
+- Consider whether to **suspend CUI access** for Subcontractor B pending a clear remediation timeline toward certification-readiness.
+
+### Step 6: Update Your Supply Chain Security Program Documentation — Within 30 Days
+
+- Document the findings and corrective actions taken for both subcontractors in your **supply chain risk management records**.
+- Update your **prime contractor CUI flow mapping** to reflect actual CUI handling at each subcontractor.
+- Ensure your subcontracts (and your subcontractors&#x27; subcontracts) include the required DFARS 252.204-7021 flow-down clause language.
+- Conduct a review of all other subcontractors handling CUI to identify any similar issues.
+
+---
+
+## Summary Table: Violations and Required Actions
+
+| Issue | Regulation Violated | Severity | Immediate Action |
+|-------|---------------------|----------|------------------|
+| Google Drive CUI storage (Sub A) | DFARS 252.204-7012 (non-FedRAMP cloud) | Critical — Active Violation | Cease use immediately; migrate CUI; assess incident reporting obligation |
+| Google Drive CUI storage (Sub A) | NIST SP 800-171 (multiple practices) | Critical | Require FedRAMP-compliant environment within 30 days |
+| SPRS score of 42 (Sub B) | DFARS 252.204-7021 (CMMC requirement) | High — Significant compliance gap | Obtain POA&amp;M; assess critical practices; impose milestone tracking |
+| Prime flow-down gap (both) | DFARS 252.204-7021(c) | High | Issue cure notices; update subcontracts; document corrective actions |
+
+---
+
+## Regulatory Reference Summary
+
+| Document | Relevance to This Scenario |
+|----------|---------------------------|
+| DFARS 252.204-7012 | Prohibits non-FedRAMP cloud for CUI; requires 72-hr DIBNET incident reporting |
+| DFARS 252.204-7020 | Requires SPRS score submission; DoD COs review scores |
+| DFARS 252.204-7021 | Requires CMMC certification; mandates prime-to-sub flow-down for CUI handling |
+| 32 CFR Part 170 | CMMC 2.0 final rule (effective December 16, 2024) |
+| NIST SP 800-171 Rev 2 | 110 CUI protection requirements — basis for SPRS scoring |
+| DoD Assessment Methodology v2.2 | Governs SPRS score calculation (110 starting score, deductions per unmet practice) |
+</pre></div>
+                </div>
+                <div class="output-panel">
+                  <div class="output-header without-header">Without Skill (Baseline)</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains DFARS 252.204-7021 flow-down obligation</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Identifies Google Drive as DFARS 7012 / FedRAMP violation</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Covers 72-hour DIBNET incident reporting requirement</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Addresses SPRS score of 42 and its implications</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Recommends immediate concrete steps for the prime contractor</span></div></div></div>
+                  <div class="output-text"><pre># DFARS 252.204-7021 Obligations for Subcontractors Handling CUI
+
+**Date:** 2026-04-25
+**Context:** Prime contractor with two subcontractors handling CUI under a DoD contract
+
+---
+
+## Overview of DFARS 252.204-7021 Flowdown Requirements
+
+DFARS 252.204-7021 (&quot;Cybersecurity Maturity Model Certification Requirements&quot;) mandates that prime contractors flow down CMMC requirements to subcontractors at all tiers that will process, store, or transmit Covered Unclassified Information (CUI) or that provide security protection for such systems. The required CMMC level flowed down must be the same level specified in the prime contract, or as appropriate to the information handled by the subcontractor.
+
+Key obligations under DFARS 252.204-7021(c) for prime contractors:
+
+1. **Flow down the CMMC requirement** to all subcontractors (at any tier) that will handle CUI or provide security protection for CUI systems.
+2. **Verify that subcontractors have a current and valid CMMC certificate or conditional certificate** at the required level before awarding a subcontract or task/delivery order, and ensure they maintain that certification throughout performance.
+3. **Not award a subcontract** or task/delivery order to a subcontractor required to have a CMMC certification unless the subcontractor has a current CMMC certificate (or conditional CMMC certificate, as applicable).
+4. **Report to the Contracting Officer** if a subcontractor&#x27;s CMMC certification lapses or is revoked during contract performance.
+
+---
+
+## Subcontractor 1: Storing CUI on a Personal Google Drive
+
+### Problem Assessment
+
+This is a **critical and immediate violation** on multiple levels:
+
+- **CMMC/NIST SP 800-171 violation:** NIST SP 800-171 (the technical standard underlying CMMC Level 2) requires that CUI be stored only in authorized systems with appropriate access controls, encryption, and audit logging. A personal Google Drive is not a Federal Risk and Authorization Management Program (FedRAMP)-authorized environment configured for CUI, and is almost certainly not operated under a System Security Plan (SSP).
+- **Applicable controls violated include at minimum:**
+  - 3.1.1 – Limit system access to authorized users
+  - 3.1.3 – Control the flow of CUI
+  - 3.13.8 – Implement cryptographic mechanisms to prevent unauthorized disclosure of CUI during transmission
+  - 3.13.16 – Protect the confidentiality of CUI at rest
+  - 3.1.22 – Control CUI posted or processed on publicly accessible systems
+- **DFARS 252.204-7012 spillage risk:** If CUI has been exposed to an unauthorized system, there may be a reportable cyber incident obligation under DFARS 252.204-7012 within 72 hours.
+- **Contract risk:** The subcontractor almost certainly does not have a valid CMMC Level 2 certification covering this practice.
+
+### Your Obligations as Prime Contractor
+
+Under DFARS 252.204-7021:
+
+1. You must not continue to allow this subcontractor to handle CUI under current conditions.
+2. You are obligated to ensure the subcontractor has a valid CMMC certification covering their actual environment and practices — which they do not have if CUI is stored on a personal Google Drive.
+3. You may be liable to the Contracting Officer if you knowingly allow a non-compliant subcontractor to continue handling CUI.
+
+### Immediate Steps
+
+1. **Issue a stop-work directive** to the subcontractor for any further processing, storage, or transmission of CUI until the situation is remediated.
+2. **Conduct a data spillage assessment:** Determine what CUI was stored, for how long, and who may have had access to the personal Google Drive account.
+3. **Report to your Contracting Officer** as required under DFARS 252.204-7012 if the exposure constitutes a reportable cyber incident (unauthorized access or potential access to CUI on a non-authorized system).
+4. **Notify the subcontractor in writing** of the violation, citing contractual requirements (DFARS 252.204-7021 and 252.204-7012 flowdown clauses).
+5. **Require the subcontractor to provide a Corrective Action Plan (CAP)** with a timeline to migrate CUI to an authorized system (e.g., a FedRAMP Moderate or equivalent environment with proper configuration).
+6. **Review your subcontract:** Determine whether this violation constitutes grounds for cure notice, termination for default, or other remedies.
+7. **Document everything** — your notifications, the subcontractor&#x27;s responses, and steps taken — to demonstrate your own due diligence to the Contracting Officer.
+
+---
+
+## Subcontractor 2: CMMC Level 2 Self-Assessment Score of 42 in SPRS
+
+### Problem Assessment
+
+This situation is serious but somewhat different in character:
+
+- **SPRS score of 42 is far below the required threshold:** For CMMC Level 2, a contractor must meet all 110 NIST SP 800-171 practices. The SPRS score is calculated starting at 110 and deducting points for each unimplemented practice. A score of 42 means the subcontractor has significant unimplemented controls — roughly equivalent to approximately 68 points of deductions, indicating a very large number of missing or non-compliant security practices.
+- **Self-assessment vs. third-party assessment:** A self-assessment score of 42 is particularly concerning because it is self-reported and not validated by a C3PAO (CMMC Third-Party Assessment Organization). The actual compliance posture could be worse.
+- **CMMC Level 2 certification requirement:** Under DFARS 252.204-7021, for contracts requiring CMMC Level 2, subcontractors that handle CUI must have either:
+  - A CMMC Level 2 certification from a C3PAO (for &quot;critical&quot; programs), or
+  - A valid CMMC Level 2 self-assessment submitted to SPRS with an affirmation (for non-critical programs).
+  - In either case, the score must reflect full implementation (score of 110, or all practices implemented with any gaps covered by a Plan of Action and Milestones (POA&amp;M) within permitted thresholds).
+- **A score of 42 does not meet the minimum threshold** for a valid self-assessment under CMMC Level 2 requirements, even under the most permissive interpretation.
+
+### Key Distinction: POA&amp;M Eligibility
+
+DoD has established that certain practices may be on a POA&amp;M (Plan of Action and Milestones) rather than fully implemented at time of contract award, but:
+
+- POA&amp;M practices are limited to specific lower-weighted controls.
+- High-weighted practices (those deducting 5 points each) must be fully implemented.
+- A score of 42 strongly suggests that many high-weighted practices are not implemented, which would preclude a compliant self-assessment.
+
+### Your Obligations as Prime Contractor
+
+Under DFARS 252.204-7021:
+
+1. You must not award or continue a subcontract to a subcontractor that does not have a current and valid CMMC Level 2 self-assessment or certification on file in SPRS that meets requirements.
+2. A self-assessment score of 42 does not constitute a valid, passing CMMC Level 2 assessment — you cannot treat this subcontractor as compliant.
+3. You are obligated to notify your Contracting Officer if the subcontractor&#x27;s compliance status is inadequate.
+
+### Immediate Steps
+
+1. **Verify the SPRS record:** Log into SPRS and confirm the subcontractor&#x27;s current score, assessment date, and whether an affirmation has been submitted. Confirm whether a POA&amp;M is on file and what its closure date is.
+2. **Assess the gap:** Request the subcontractor&#x27;s current System Security Plan (SSP) and POA&amp;M to understand which of the 110 NIST SP 800-171 controls are not implemented and what the remediation timeline is.
+3. **Notify your Contracting Officer** of the subcontractor&#x27;s non-compliant SPRS score and your assessment of their status. Transparency is critical to protect your position as prime.
+4. **Issue a written notice to the subcontractor** requiring them to submit a remediation plan with specific milestones to reach a compliant score, and an affirmation of commitment to CMMC requirements.
+5. **Consider restrictions on CUI access** pending remediation — limit the subcontractor&#x27;s access to the minimum CUI necessary while they remediate.
+6. **Set a contractual deadline** for the subcontractor to achieve a compliant SPRS score (or C3PAO certification, as applicable), with consequences for non-compliance including potential termination.
+7. **Do not award any new task orders or work** to this subcontractor that involves CUI handling until they achieve a compliant score.
+8. **Monitor remediation progress** — require monthly or quarterly SPRS updates and review of POA&amp;M closure milestones.
+
+---
+
+## Summary Table
+
+| Issue | Subcontractor 1 (Google Drive) | Subcontractor 2 (SPRS Score 42) |
+|---|---|---|
+| Severity | Critical — active CUI exposure | High — systemic control gaps |
+| Immediate action | Stop-work, incident assessment | Restrict CUI access, demand CAP |
+| CO notification required | Yes (potential 7012 incident) | Yes (7021 non-compliance) |
+| Continue subcontract? | No, until remediated | No new CUI work until compliant |
+| Root obligation | DFARS 252.204-7021(c) flowdown | DFARS 252.204-7021(c) flowdown |
+
+---
+
+## Prime Contractor&#x27;s Broader Obligations and Risk
+
+- **False Claims Act exposure:** If you knowingly allow non-compliant subcontractors to handle CUI and affirm compliance to the government, you may face False Claims Act liability. Prompt self-reporting and corrective action are critical mitigants.
+- **Document your diligence:** Maintain written records of all steps taken — notifications, responses, CAPs, and communications with the Contracting Officer.
+- **Review your entire subcontractor base:** These two cases suggest a need for a systematic review of all subcontractors that may handle CUI to verify CMMC compliance status in SPRS.
+- **Update subcontract language:** Ensure all current and future subcontracts include enforceable CMMC flowdown clauses, SPRS score thresholds, rights to audit, and remediation/termination provisions.
+
+---
+
+*This response reflects general knowledge of DFARS 252.204-7021, CMMC program requirements, NIST SP 800-171, and associated DoD guidance as of April 2026. Program-specific requirements may vary; always consult your Contracting Officer and legal counsel for contract-specific obligations.*
 </pre></div>
                 </div>
               </div>

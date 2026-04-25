@@ -1,11 +1,11 @@
 # Claude Skills for Governance, Risk & Compliance (GRC)
-Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, and India's Digital Personal Data Protection Act (DPDPA) — powered by Claude Skills.
+Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), and CMMC 2.0 Cybersecurity Maturity Model Certification — powered by Claude Skills.
 
-Benchmarked across 60 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **94%** vs a baseline of **83%** across 300 total assertions.
+Benchmarked across 65 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **94%** vs a baseline of **85%** across 325 total assertions.
 
 [![Release: v0.5.0](https://img.shields.io/badge/Release-v0.5.0-brightgreen.svg)](../../releases/tag/v0.5.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skills: 12](https://img.shields.io/badge/Skills-12-green.svg)](#the-skills)
+[![Skills: 13](https://img.shields.io/badge/Skills-13-green.svg)](#the-skills)
 [![Built with Claude](https://img.shields.io/badge/Built%20with-Claude-orange.svg)](https://claude.ai)
 [![GitHub Stars](https://img.shields.io/github/stars/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance?style=flat&label=Stars&color=gold)](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance)
 
@@ -28,6 +28,7 @@ Benchmarked across 60 test cases (5 per framework) using the eval framework — 
   - [ISO 27701 Privacy Information Management](#-iso-27701-privacy-information-management)
   - [DORA Digital Operational Resilience](#-dora-digital-operational-resilience)
   - [DPDPA India Digital Personal Data Protection](#-dpdpa-india-digital-personal-data-protection)
+  - [CMMC 2.0 Cybersecurity Maturity Model Certification](#-cmmc-20-cybersecurity-maturity-model-certification)
 - [Potential Use Cases](#potential-use-cases)
 - [How to Install a Skill](#how-to-install-a-skill)
 - [Install via Claude Code Marketplace](#install-via-claude-code-marketplace)
@@ -308,6 +309,26 @@ The DPDPA skill turns Claude into an expert advisor on India's **Digital Persona
 
 ---
 
+### 13. 🛡️ CMMC 2.0 Cybersecurity Maturity Model Certification
+
+**File:** `CMMC - Claude Skill/cmmc.skill`
+
+The CMMC 2.0 skill turns Claude into an expert CMMC compliance advisor for US defense contractors navigating the Cybersecurity Maturity Model Certification program. It covers all three CMMC levels — Level 1 (17 FAR 52.204-21 practices), Level 2 (110 NIST SP 800-171 Rev 2 practices), and Level 3 (110+ NIST SP 800-172 requirements) — under the final 32 CFR Part 170 rule (effective December 16, 2024).
+
+**What it does:**
+- Determines the correct **CMMC level** for a given contract based on FCI vs. CUI handling, DFARS clauses present (7012, 7019, 7020, 7021), and program criticality
+- Conducts structured **gap assessments** across all 17 CMMC domains — AC, AT, AU, CM, IA, IR, MA, MP, PE, PS, RA, CA, SC, SI — against the full 110-practice set for Level 2
+- Drafts complete **System Security Plans (SSP)** covering system boundary definition, CUI data flow diagrams, and control implementation narratives for all 110 practices
+- Calculates and explains the **SPRS score** (starting at 110; deductions per unmet practice; range −203 to +110) and prioritises highest-impact gaps (MFA, FIPS cryptography, CUI flow control, audit logging)
+- Manages the **POA&M lifecycle** — identifies which practices can remain in a POA&M at certification, drafts remediation milestones, and tracks the 180-day closure deadline
+- **Scopes CUI** — identifies which systems, people, and processes are in-scope, recommends enclave strategies to reduce scope, and flags FedRAMP Moderate requirements for cloud services handling CUI
+- Prepares for **C3PAO assessments** — explains the four-phase assessment process (documentation review, assessment activities, findings, certification decision), lists required evidence per practice type, and identifies the 7 critical practices that block conditional certification
+- Explains **DFARS clause obligations**: 72-hour DIBNET incident reporting (DFARS 252.204-7012), SPRS self-assessment submission, and flow-down requirements to subcontractors under DFARS 252.204-7021
+
+**Trigger phrases:** `CMMC`, `CMMC 2.0`, `CMMC Level 2`, `CUI`, `Controlled Unclassified Information`, `NIST 800-171`, `DFARS 7021`, `DFARS 252.204-7021`, `C3PAO`, `SPRS score`, `defense contractor`, `DIB`, `DoD contractor`, `FCI`, `SSP CMMC`, `POA&M CMMC`, `gap analysis CMMC`, `DIBCAC`, `CUI scoping`, `32 CFR Part 170`
+
+---
+
 ## Potential Use Cases
 
 | Scenario | Relevant Skill(s) |
@@ -387,6 +408,14 @@ The DPDPA skill turns Claude into an expert advisor on India's **Digital Persona
 | Updating Data Processing Agreements with vendors to satisfy Rule 16 | DPDPA |
 | Assessing whether a company relying on legitimate interests for analytics must obtain consent under DPDPA | DPDPA |
 | Building a Data Principal rights fulfilment procedure covering access, correction, erasure, and nomination | DPDPA |
+| Determining your CMMC level based on contract DFARS clauses and CUI handling | CMMC 2.0 |
+| Running a CMMC Level 2 gap assessment across all 110 NIST SP 800-171 practices | CMMC 2.0 |
+| Drafting a System Security Plan (SSP) covering all 110 practices with implementation narratives | CMMC 2.0 |
+| Calculating your SPRS score and prioritising the highest-impact gap remediations | CMMC 2.0 |
+| Preparing for a C3PAO assessment — evidence packages, critical practices, POA&M rules | CMMC 2.0 |
+| Scoping CUI within your organisation and designing an enclave to reduce CMMC scope | CMMC 2.0 |
+| Managing DFARS 252.204-7012 incident reporting obligations (72-hour DIBNET reporting) | CMMC 2.0 |
+| Flowing down CMMC requirements to subcontractors handling CUI | CMMC 2.0 |
 
 ---
 
@@ -408,6 +437,7 @@ The DPDPA skill turns Claude into an expert advisor on India's **Digital Persona
    | 🔒 ISO 27701 Privacy Information Management | [iso27701.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISO%2027701%20-%20Claude%20Skill/iso27701.skill) |
    | 🏦 DORA Digital Operational Resilience | [dora.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/DORA%20-%20Claude%20Skill/dora.skill) |
    | 🇮🇳 DPDPA India Digital Personal Data Protection | [dpdpa.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/DPDPA%20-%20Claude%20Skill/dpdpa.skill) |
+   | 🛡️ CMMC 2.0 Cybersecurity Maturity Model Certification | [cmmc.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CMMC%20-%20Claude%20Skill/cmmc.skill) |
 
 2. Open Claude and navigate to **Customize → Skills**.
 3. Click **Upload Skill** and select the `.skill` file.
@@ -427,7 +457,7 @@ Add the marketplace and install the skills you need directly from the terminal:
 
 ```shell
 /plugin marketplace add Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
-/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills
+/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills cmmc@grc-skills
 ```
 
 Teams can pre-wire the marketplace in `.claude/settings.json` so every developer gets the skills automatically when they open the project — no manual install required.
@@ -438,13 +468,13 @@ Teams can pre-wire the marketplace in `.claude/settings.json` so every developer
 
 ## Skill Evaluation
 
-These skills were benchmarked using the [Claude Skill Creator](https://claude.ai) eval framework. **60 realistic test cases** were run across all 12 skills — 5 per framework — covering gap analysis, policy drafting, control deep-dives, edge cases, and compliance advice scenarios. Each test case was evaluated against 5 objectively verifiable assertions by independent grader agents comparing skill-assisted vs. baseline Claude responses.
+These skills were benchmarked using the [Claude Skill Creator](https://claude.ai) eval framework. **65 realistic test cases** were run across all 13 skills — 5 per framework — covering gap analysis, policy drafting, control deep-dives, edge cases, and compliance advice scenarios. Each test case was evaluated against 5 objectively verifiable assertions by independent grader agents comparing skill-assisted vs. baseline Claude responses.
 
 | Configuration | Pass Rate | Assertions Passed |
 |---------------|-----------|-------------------|
-| **With GRC Skills installed** | **94%** | **282 / 300** |
-| Without skills (baseline Claude) | 83% | 250 / 300 |
-| **Delta** | **+11 points** | **+32 assertions** |
+| **With GRC Skills installed** | **94%** | **307 / 325** |
+| Without skills (baseline Claude) | 85% | 275 / 325 |
+| **Delta** | **+9 points** | **+32 assertions** |
 
 ### Per-Skill Results
 
@@ -462,8 +492,9 @@ These skills were benchmarked using the [Claude Skill Creator](https://claude.ai
 | ISO 27701 | 5 | **100%** | 80% | +20% | Extension to ISO 27001; GDPR mapping; Processor controls; PIA methodology; Certification as GDPR evidence |
 | DORA | 5 | **88%** | 72% | +16% | Five pillars; ICT incident reporting timelines; TLPT requirements; Third-party contracts; DORA vs EBA |
 | DPDPA | 5 | **96%** | 80% | +16% | Applicability to foreign entities; Consent vs GDPR; Children's data (18-year threshold); Cross-border transfers; SDF obligations |
+| CMMC 2.0 | 5 | **100%** | 100% | +0% | Level determination; SPRS scoring; CUI scoping; SSP structure; C3PAO assessment readiness |
 
-Skills add the most measurable value on highly framework-specific tasks: clause-level precision for ISO 27001, CC criteria mapping for SOC 2, exact FedRAMP POA&M timeframes and document names, GDPR article citations, HIPAA regulatory section references, CSF 2.0 subcategory IDs, PCI DSS v4.0.1 requirement numbers, TSA Security Directive citations, ISO 42001 AIMS clause references, DORA Article citations and exact incident reporting timelines (4h/72h/1 month), and DPDPA-specific terminology (Data Fiduciary, 8 legitimate uses, blacklist transfers).
+Skills add the most measurable value on highly framework-specific tasks: clause-level precision for ISO 27001, CC criteria mapping for SOC 2, exact FedRAMP POA&M timeframes and document names, GDPR article citations, HIPAA regulatory section references, CSF 2.0 subcategory IDs, PCI DSS v4.0.1 requirement numbers, TSA Security Directive citations, ISO 42001 AIMS clause references, DORA Article citations and exact incident reporting timelines (4h/72h/1 month), DPDPA-specific terminology (Data Fiduciary, 8 legitimate uses, blacklist transfers), and CMMC practice IDs, SPRS scoring methodology, and DFARS clause obligations.
 
 📊 **[View the full eval results →](grc-skills-eval-results.html)**
 

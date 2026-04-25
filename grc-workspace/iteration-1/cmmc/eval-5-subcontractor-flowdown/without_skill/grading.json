@@ -1,0 +1,32 @@
+{
+  "total": 5,
+  "passed": 5,
+  "pass_rate": 1.0,
+  "expectations": [
+    {
+      "text": "Explains DFARS 252.204-7021 flow-down obligation",
+      "passed": true,
+      "evidence": "Keywords checked: ['7021', 'flow-down', 'flowdown', 'subcontract']... (found, 3/2 needed)"
+    },
+    {
+      "text": "Identifies Google Drive as DFARS 7012 / FedRAMP violation",
+      "passed": true,
+      "evidence": "Keywords checked: ['Google Drive', 'FedRAMP', '7012', 'cloud']... (found, 3/2 needed)"
+    },
+    {
+      "text": "Covers 72-hour DIBNET incident reporting requirement",
+      "passed": true,
+      "evidence": "Keywords checked: ['72', 'hour', 'DIBNET', 'incident report']... (found, 2/2 needed)"
+    },
+    {
+      "text": "Addresses SPRS score of 42 and its implications",
+      "passed": true,
+      "evidence": "Keywords checked: ['SPRS', '42', 'score', 'gap']... (found, 4/2 needed)"
+    },
+    {
+      "text": "Recommends immediate concrete steps for the prime contractor",
+      "passed": true,
+      "evidence": "Keywords checked: ['immediate', 'step', 'action', 'notify', 'stop', 'require']... (found, 6/2 needed)"
+    }
+  ]
+}

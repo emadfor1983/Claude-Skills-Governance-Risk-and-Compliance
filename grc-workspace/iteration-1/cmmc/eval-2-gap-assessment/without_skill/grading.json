@@ -1,0 +1,32 @@
+{
+  "total": 5,
+  "passed": 5,
+  "pass_rate": 1.0,
+  "expectations": [
+    {
+      "text": "Identifies MFA gap with practice ID IA.L2-3.5.3",
+      "passed": true,
+      "evidence": "Keywords checked: ['IA.L2-3.5.3', 'MFA', 'multifactor']... (found, 2/2 needed)"
+    },
+    {
+      "text": "Flags non-FedRAMP M365/SharePoint as CUI violation (DFARS 7012)",
+      "passed": true,
+      "evidence": "Keywords checked: ['FedRAMP', 'GCC', 'DFARS', 'SharePoint']... (found, 4/2 needed)"
+    },
+    {
+      "text": "References SPRS score impact or deductions",
+      "passed": true,
+      "evidence": "Keywords checked: ['SPRS', 'score', 'deduct', 'point']... (found, 4/2 needed)"
+    },
+    {
+      "text": "Identifies audit logging / SIEM gap (AU.L2-3.3.1)",
+      "passed": true,
+      "evidence": "Keywords checked: ['AU.L2-3.3.1', 'SIEM', 'audit log', 'AU domain']... (found, 2/1 needed)"
+    },
+    {
+      "text": "Uses structured gap table format with practice IDs",
+      "passed": true,
+      "evidence": "Keywords checked: ['AC.L2', 'SC.L2', 'NOT MET', 'gap', 'practice']... (found, 2/2 needed)"
+    }
+  ]
+}

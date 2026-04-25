@@ -1,0 +1,32 @@
+{
+  "total": 5,
+  "passed": 5,
+  "pass_rate": 1.0,
+  "expectations": [
+    {
+      "text": "Covers all 8 specified practices in the POA&M",
+      "passed": true,
+      "evidence": "Keywords checked: ['AU.L2-3.3.1', 'SC.L2-3.13.8', 'CM.L2-3.4.1', 'RA.L2-3.11.2']... (found, 4/3 needed)"
+    },
+    {
+      "text": "Provides remediation steps and milestones with dates",
+      "passed": true,
+      "evidence": "Keywords checked: ['milestone', 'remediat', 'deadline', 'days', '2026']... (found, 5/2 needed)"
+    },
+    {
+      "text": "Identifies SC.L2-3.13.8 or AU.L2-3.3.1 as highest priority",
+      "passed": true,
+      "evidence": "Keywords checked: ['SC.L2-3.13.8', 'AU.L2-3.3.1', 'priority', 'critical']... (found, 4/2 needed)"
+    },
+    {
+      "text": "Includes 180-day remediation window reference",
+      "passed": true,
+      "evidence": "Keywords checked: ['180', 'day', 'window', 'deadline']... (found, 3/2 needed)"
+    },
+    {
+      "text": "Assigns resource/owner responsibility",
+      "passed": true,
+      "evidence": "Keywords checked: ['owner', 'resource', 'responsible', 'assign', 'team']... (found, 5/2 needed)"
+    }
+  ]
+}

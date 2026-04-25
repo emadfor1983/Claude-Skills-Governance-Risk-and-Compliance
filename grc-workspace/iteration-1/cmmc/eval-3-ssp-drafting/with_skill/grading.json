@@ -1,0 +1,32 @@
+{
+  "total": 5,
+  "passed": 5,
+  "pass_rate": 1.0,
+  "expectations": [
+    {
+      "text": "Includes practice statement for IA.L2-3.5.3",
+      "passed": true,
+      "evidence": "Keywords checked: ['IA.L2-3.5.3', '3.5.3', 'multifactor', 'MFA']... (found, 4/2 needed)"
+    },
+    {
+      "text": "Covers Azure AD / Conditional Access implementation",
+      "passed": true,
+      "evidence": "Keywords checked: ['Azure', 'Conditional Access', 'AAD', 'Entra']... (found, 3/1 needed)"
+    },
+    {
+      "text": "Lists responsible roles (ISSO, admin, etc.)",
+      "passed": true,
+      "evidence": "Keywords checked: ['ISSO', 'admin', 'role', 'responsible']... (found, 4/2 needed)"
+    },
+    {
+      "text": "Specifies evidence artifacts for audit",
+      "passed": true,
+      "evidence": "Keywords checked: ['evidence', 'artifact', 'audit', 'screenshot', 'report']... (found, 5/2 needed)"
+    },
+    {
+      "text": "Mentions FIPS validation or cryptographic requirement",
+      "passed": true,
+      "evidence": "Keywords checked: ['FIPS', 'authenticator', 'cryptograph', 'validated']... (found, 2/1 needed)"
+    }
+  ]
+}
