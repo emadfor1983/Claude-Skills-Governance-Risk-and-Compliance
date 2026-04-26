@@ -386,6 +386,25 @@ layout: null
     .eval-link-btn:hover { background: var(--primary-dark); text-decoration: none; }
 
     /* ── RELEASE NOTES ── */
+    /* ── What's New tab ── */
+    .whats-new-month-header { margin-bottom: 1.2rem; }
+    .whats-new-month-header h3 { display: flex; align-items: center; gap: 0.6rem; margin: 0 0 0.25rem; font-size: 1.25rem; }
+    .whats-new-current-badge { background: #10b981; color: #fff; font-size: 0.68rem; font-weight: 700; padding: 0.15em 0.6em; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; vertical-align: middle; }
+    .whats-new-published { font-size: 0.82rem; color: var(--text-muted); margin: 0 0 1.5rem; }
+    .whats-new-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.1rem; margin-bottom: 2rem; }
+    .wnf-card { border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-card); box-shadow: var(--shadow); overflow: hidden; }
+    .wnf-card-header { display: flex; align-items: center; gap: 0.6rem; padding: 0.75rem 1rem; background: var(--primary-light); border-bottom: 1px solid var(--border); }
+    .wnf-icon { font-size: 1.15rem; }
+    .wnf-card-header h4 { margin: 0; font-size: 0.95rem; font-weight: 700; color: var(--primary); }
+    .wnf-card-body { padding: 0.85rem 1rem 1rem; }
+    .wnf-card-body p { font-size: 0.88rem; line-height: 1.6; color: var(--text); margin: 0; }
+    .whats-new-archive { margin-top: 2rem; border: 1px solid var(--border); border-radius: var(--radius); padding: 0; }
+    .whats-new-archive summary { cursor: pointer; padding: 0.85rem 1.1rem; font-weight: 600; font-size: 0.95rem; color: var(--text-muted); list-style: none; display: flex; align-items: center; gap: 0.5rem; }
+    .whats-new-archive summary::-webkit-details-marker { display: none; }
+    .whats-new-archive[open] summary { border-bottom: 1px solid var(--border); }
+    .whats-new-archive-empty { padding: 1rem 1.25rem; font-size: 0.875rem; color: var(--text-muted); font-style: italic; margin: 0; }
+    @media (max-width: 640px) { .whats-new-grid { grid-template-columns: 1fr; } }
+
     .release { margin: 1.6rem 0; border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); }
     .release-header { display: flex; align-items: center; gap: 1rem; padding: 0.9rem 1.2rem; background: var(--primary); color: #fff; flex-wrap: wrap; }
     .release-header .tag { font-size: 1rem; font-weight: 800; letter-spacing: 0.02em; }
@@ -513,6 +532,7 @@ layout: null
     <button class="tab-btn" data-tab="installation" role="tab">📦 Installation</button>
     <button class="tab-btn" data-tab="evaluation" role="tab">📊 Evaluation</button>
     <button class="tab-btn" data-tab="feedback" role="tab">💬 Customer Feedback</button>
+    <button class="tab-btn" data-tab="whats-new" role="tab">🔔 What's New</button>
     <button class="tab-btn" data-tab="resources" role="tab">📚 Resources</button>
     <button class="tab-btn" data-tab="releases" role="tab">📋 Release Notes</button>
   </nav>
@@ -1130,7 +1150,183 @@ layout: null
 
   </section>
 
-  <!-- ═══ TAB 5: Resources ═══ -->
+  <!-- ═══ TAB 5: What's New with GRC Frameworks? ═══ -->
+  <section class="tab-panel" id="tab-whats-new" role="tabpanel">
+
+    <h2>What's New with GRC Frameworks?</h2>
+    <p>This section tracks official regulatory and standards activity across the 15 frameworks covered in this repository. Updated monthly to help GRC practitioners stay ahead of changes — new versions, enforcement actions, guidance releases, and compliance deadline shifts. Each entry below covers April 2026 only; prior months are archived in collapsible sections below.</p>
+
+    <!-- ── April 2026 (current) ── -->
+    <div class="whats-new-month" id="whats-new-2026-04">
+      <div class="whats-new-month-header">
+        <h3>🗓️ April 2026 <span class="whats-new-current-badge">Current</span></h3>
+        <p class="whats-new-published">Published: April 26, 2026</p>
+      </div>
+
+      <div class="whats-new-grid">
+
+        <div class="wnf-card">
+          <div class="wnf-card-header">
+            <span class="wnf-icon">🔐</span>
+            <h4>ISO 27001</h4>
+          </div>
+          <div class="wnf-card-body">
+            <p>The October 2025 transition deadline has passed — all ISO 27001 certifications must now be to the <strong>ISO/IEC 27001:2022</strong> edition. Certificates still referencing the 2013 standard are no longer valid. The earlier <strong>Amendment 1:2024</strong> (climate action changes) remains in effect, requiring organisations to consider climate-related factors when scoping their ISMS. No new version is expected before 2027.</p>
+          </div>
+        </div>
+
+        <div class="wnf-card">
+          <div class="wnf-card-header">
+            <span class="wnf-icon">✅</span>
+            <h4>SOC 2</h4>
+          </div>
+          <div class="wnf-card-body">
+            <p>The AICPA's 2017 Trust Services Criteria remain unchanged. In early 2026, the AICPA issued revised points of focus clarifying how controls address evolving technologies — with greater emphasis on MFA, network segmentation, least-privilege access, and API security. Auditors are now treating these as standard evidence expectations in Type II engagements, even where not previously enforced.</p>
+          </div>
+        </div>
+
+        <div class="wnf-card">
+          <div class="wnf-card-header">
+            <span class="wnf-icon">🏥</span>
+            <h4>HIPAA</h4>
+          </div>
+          <div class="wnf-card-body">
+            <p>Two significant changes took effect or are imminent. First, as of <strong>February 16, 2026</strong>, covered entities must include substance use disorder (SUD) record information in their Notice of Privacy Practices — a new Part 2 rule requirement. Second, the long-awaited <strong>HIPAA Security Rule overhaul</strong> is expected to be finalised by May 2026, eliminating the "addressable" vs "required" safeguard distinction and making MFA, encryption-at-rest, and network segmentation universally mandatory.</p>
+          </div>
+        </div>
+
+        <div class="wnf-card">
+          <div class="wnf-card-header">
+            <span class="wnf-icon">🇪🇺</span>
+            <h4>GDPR</h4>
+          </div>
+          <div class="wnf-card-body">
+            <p>The EDPB launched its <strong>Coordinated Enforcement Framework (CEF) 2026</strong>, targeting transparency and information obligations — national authorities across the EU are running aligned audits on how clearly organisations explain data processing. Two major enforcement actions remain active: Ireland's DPC fined <strong>LinkedIn €310 million</strong> and <strong>X Corp €550 million</strong> for unlawful data processing for ad targeting. Cumulative GDPR fines have now exceeded <strong>€7.1 billion</strong> across 2,245+ documented cases.</p>
+          </div>
+        </div>
+
+        <div class="wnf-card">
+          <div class="wnf-card-header">
+            <span class="wnf-icon">🏛️</span>
+            <h4>FedRAMP</h4>
+          </div>
+          <div class="wnf-card-body">
+            <p>April 8, 2026: <strong>RFC-0031 Updated Incident Communications Procedures</strong> was published, refining how CSPs evaluate and escalate incidents affecting federal customer data. Separately, <strong>FedRAMP Ready status is being retired on July 28, 2026</strong>, replaced by a Rev5 Class A (Pilot) designation. The <strong>Consolidated Rules 2026 (CR26)</strong> enforcement window begins January 2027, requiring migration away from the connect.gov portal, which will be retired at that time.</p>
+          </div>
+        </div>
+
+        <div class="wnf-card">
+          <div class="wnf-card-header">
+            <span class="wnf-icon">🔒</span>
+            <h4>NIST CSF</h4>
+          </div>
+          <div class="wnf-card-body">
+            <p>NIST released two new CSF 2.0 Quick-Start Guides in April 2026. The final <strong>SP 1308</strong> (Cybersecurity, ERM, and Workforce Management QSG) is now available, helping organisations integrate cybersecurity risk with enterprise risk management and HR planning. Additionally, the <strong>Initial Public Draft of SP 1347</strong> (Informative References QSG) is out for a 45-day public comment period closing May 6, 2026.</p>
+          </div>
+        </div>
+
+        <div class="wnf-card">
+          <div class="wnf-card-header">
+            <span class="wnf-icon">💳</span>
+            <h4>PCI DSS</h4>
+          </div>
+          <div class="wnf-card-body">
+            <p>PCI DSS v4.0.1 is now the sole active version following the retirement of v4.0 in December 2024 and v3.2.1 in March 2024. All 64 future-dated requirements from v4.x became mandatory on <strong>March 31, 2025</strong>. In 2026, organisations are completing their first full-cycle assessments under v4.0.1, which include stricter requirements for e-commerce script security (Req. 6.4.3), targeted risk analyses (Req. 12.3.2), and expanded cryptographic controls. No v4.1 announcement has been made.</p>
+          </div>
+        </div>
+
+        <div class="wnf-card">
+          <div class="wnf-card-header">
+            <span class="wnf-icon">🔏</span>
+            <h4>ISO 27701</h4>
+          </div>
+          <div class="wnf-card-body">
+            <p>ISO/IEC 27701 was substantially updated in <strong>October 2025</strong>, becoming a fully standalone standard — organisations no longer require ISO 27001 certification as a prerequisite. April 2026 marks a key milestone: accreditation bodies (including UKAS) are now <strong>ready to assess against ISO 27701:2025</strong>, with formal certification body assessments commencing from May 2026. The full transition deadline for existing 2019 certifications is October 2028.</p>
+          </div>
+        </div>
+
+        <div class="wnf-card">
+          <div class="wnf-card-header">
+            <span class="wnf-icon">🤖</span>
+            <h4>ISO 42001</h4>
+          </div>
+          <div class="wnf-card-body">
+            <p>No revision to ISO/IEC 42001:2023 is expected in 2026 — the standard remains at its initial release. Adoption is accelerating: the Cloud Security Alliance published updated FAQs in February 2026 addressing how ISO 42001 integrates with ISO 27001 and ISO 27701 for organisations building unified governance frameworks. AI system impact assessments (a core prerequisite to risk assessment under the standard) are receiving increased scrutiny from early certification auditors.</p>
+          </div>
+        </div>
+
+        <div class="wnf-card">
+          <div class="wnf-card-header">
+            <span class="wnf-icon">🏦</span>
+            <h4>DORA</h4>
+          </div>
+          <div class="wnf-card-body">
+            <p>DORA has been fully in force since January 17, 2025. In 2026, the European Supervisory Authorities (ESAs) are advancing the designation of <strong>Critical Third-Party ICT Providers (CTPPs)</strong> — the first formal CTPP oversight engagements are underway this year. Financial entities are now operating full ICT incident reporting cycles (4h initial / 72h intermediate / 1 month final report) and submitting ICT third-party registers to national competent authorities. No amendments to the regulation are pending.</p>
+          </div>
+        </div>
+
+        <div class="wnf-card">
+          <div class="wnf-card-header">
+            <span class="wnf-icon">🇮🇳</span>
+            <h4>DPDPA (India)</h4>
+          </div>
+          <div class="wnf-card-body">
+            <p>India's DPDP Rules 2025 were finalised on November 13, 2025. Implementation is phased: <strong>Phase II obligations (consent manager provisions)</strong> take effect in November 2026, while substantive compliance obligations for all Data Fiduciaries become enforceable in <strong>May 2027</strong>. In 2026, the government is expected to designate the first cohort of <strong>Significant Data Fiduciaries (SDFs)</strong>, which will trigger stricter obligations including DPIA requirements and data localisation duties.</p>
+          </div>
+        </div>
+
+        <div class="wnf-card">
+          <div class="wnf-card-header">
+            <span class="wnf-icon">🚂</span>
+            <h4>TSA Cybersecurity</h4>
+          </div>
+          <div class="wnf-card-body">
+            <p>TSA renewed its pipeline security directives in early 2026. <strong>SD Pipeline-2021-01G</strong> (issued January 9, 2026) is the latest revision of the incident reporting and cybersecurity coordinator requirements for pipeline operators. The freight rail directive <strong>SD 1580-21-01E</strong> (effective January 16, 2026 through January 15, 2027) continues to require freight railroad operators to maintain Cyber Risk Management Programs. TSA is also advancing a proposed rulemaking to formalise these directives as permanent regulation.</p>
+          </div>
+        </div>
+
+        <div class="wnf-card">
+          <div class="wnf-card-header">
+            <span class="wnf-icon">🛡️</span>
+            <h4>CMMC 2.0</h4>
+          </div>
+          <div class="wnf-card-body">
+            <p>CMMC is in active <strong>Phase 1 enforcement</strong> (since November 10, 2025): DoD contracts now require CMMC Level 1 or Level 2 self-assessments as a condition of award. <strong>Phase 2 begins November 10, 2026</strong>, at which point official C3PAO third-party assessments for Level 2 contractors become mandatory. By October 31, 2026, CMMC compliance will be required for all new DoD contract awards. Contractors should be submitting their SPRS scores and completing any outstanding POA&Ms now.</p>
+          </div>
+        </div>
+
+        <div class="wnf-card">
+          <div class="wnf-card-header">
+            <span class="wnf-icon">🤖</span>
+            <h4>NIST AI RMF</h4>
+          </div>
+          <div class="wnf-card-body">
+            <p>NIST published a new <strong>AI RMF Profile for Trustworthy AI in Critical Infrastructure</strong> on April 7, 2026 (concept note stage), covering Energy, Water, Healthcare, and Financial Services. In February 2026, NIST released the preliminary draft of the <strong>Cybersecurity Framework Profile for AI (NIST IR 8596)</strong>, which extends CSF 2.0 to AI-specific cybersecurity risks. The February-launched <strong>AI Agent Standards Initiative</strong> introduces a three-pillar programme (security, interoperability, identity) for autonomous AI systems. AI RMF 1.1 addenda are expected later in 2026.</p>
+          </div>
+        </div>
+
+        <div class="wnf-card">
+          <div class="wnf-card-header">
+            <span class="wnf-icon">🏦</span>
+            <h4>SWIFT CSP</h4>
+          </div>
+          <div class="wnf-card-body">
+            <p><strong>CSCF v2026</strong> is now the active framework for the current attestation cycle. The most impactful change: <strong>Control 2.4 moves from advisory to mandatory</strong>, requiring all institutions to formally identify and prioritise data flows between the SWIFT secure zone and back-office systems. v2026 also introduces minimum key size and cipher requirements (TLS 1.2+, SSH2 mandatory), formalises AI-related risk considerations, and adds cloud shared-responsibility model visuals to Appendix G. The annual KYC-SA attestation deadline remains <strong>July 31, 2026</strong>.</p>
+          </div>
+        </div>
+
+      </div><!-- /whats-new-grid -->
+    </div><!-- /April 2026 -->
+
+    <!-- ── Older months (collapsed) ── -->
+    <details class="whats-new-archive">
+      <summary>📁 Older Updates</summary>
+      <p class="whats-new-archive-empty">No prior monthly updates yet. This section will collect previous months as new editions are published.</p>
+    </details>
+
+  </section>
+
+  <!-- ═══ TAB 6: Resources ═══ -->
   <section class="tab-panel" id="tab-resources" role="tabpanel">
 
     <h2>Support</h2>
