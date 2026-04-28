@@ -1,0 +1,33 @@
+{
+  "eval_id": 86,
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Confirms the company IS subject to CCPA/CPRA because it meets the $25M annual gross revenue threshold — even though it falls short of the 100,000 consumer/household threshold",
+      "passed": true,
+      "evidence": "Without-skill response correctly identifies $30M > $25M as the qualifying threshold and notes the 80,000 consumer figure falls below the 100,000 threshold."
+    },
+    {
+      "text": "Explains that meeting ANY ONE of the three thresholds (revenue, data volume, monetization) triggers CCPA/CPRA applicability",
+      "passed": true,
+      "evidence": "Response correctly states that any single threshold is sufficient to trigger CCPA/CPRA applicability."
+    },
+    {
+      "text": "Lists core compliance obligations including privacy notice at collection, comprehensive privacy policy, and the consumer rights program (right to know, delete, correct, opt-out, non-discrimination)",
+      "passed": true,
+      "evidence": "Response covers consumer rights (Know, Delete, Correct, Opt-Out, Limit SPI, Non-Discrimination), privacy notices, vendor contracts, data minimization, and retention obligations."
+    },
+    {
+      "text": "Explains the 'Do Not Sell or Share My Personal Information' opt-out link requirement and GPC signal obligation",
+      "passed": false,
+      "evidence": "Without-skill response covers 'Do Not Sell or Share My Personal Information' as a requirement but does not specifically mention the obligation to honor the Global Privacy Control (GPC) browser signal as a valid opt-out — a CPPA-confirmed requirement that the skill explicitly addresses."
+    },
+    {
+      "text": "Mentions response deadlines: 45 days for access/delete/correct requests, with a possible 45-day extension",
+      "passed": true,
+      "evidence": "Response states 45-day response window and includes 24-month recordkeeping requirement."
+    }
+  ],
+  "score": "4/5",
+  "pass_rate": 0.8
+}

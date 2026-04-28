@@ -1,0 +1,33 @@
+{
+  "eval_id": 89,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "States that GDPR compliance provides a strong foundation (privacy notices, rights processes, processor agreements, data minimization) but does NOT automatically satisfy CCPA/CPRA",
+      "passed": true,
+      "evidence": "Response explicitly states GDPR compliance provides a strong foundation covering privacy notices, DSARs, deletion, correction, portability, DPAs, data minimization, retention, and security — but does NOT automatically achieve CCPA/CPRA compliance."
+    },
+    {
+      "text": "Identifies CCPA/CPRA-specific additions needed: 'Do Not Sell or Share My Personal Information' link + GPC signal compliance, and 'Limit the Use of My Sensitive Personal Information' link (CPRA)",
+      "passed": true,
+      "evidence": "Response identifies eight specific additions including 'Do Not Sell or Share' link, mandatory GPC signal processing, and 'Limit SPI Use' link with 15-business-day response window."
+    },
+    {
+      "text": "Explains the opt-out vs. opt-in model difference: CCPA/CPRA is primarily opt-out (consumers must request opt-out) whereas GDPR requires opt-in consent for most sensitive processing",
+      "passed": true,
+      "evidence": "Response includes a major divergence section covering opt-out vs. opt-in model as the most significant structural difference between the two laws."
+    },
+    {
+      "text": "Notes that CCPA/CPRA has no lawful basis requirement for general PI processing — businesses can collect PI without one of GDPR's six legal bases",
+      "passed": true,
+      "evidence": "Response identifies the absence of a lawful basis framework under CCPA/CPRA as a major area of divergence — no equivalent to GDPR's six legal bases is required for PI collection."
+    },
+    {
+      "text": "Highlights the CCPA/CPRA private right of action for data breaches ($100–$750 per consumer per incident) which has no GDPR equivalent, and the need to verify vendor contracts meet CCPA service provider requirements",
+      "passed": true,
+      "evidence": "Response covers the breach-only private right of action ($100–$750/consumer), notes this differs from GDPR enforcement, and identifies vendor contract reclassification (service provider/contractor/third party) as a CCPA-specific addition."
+    }
+  ],
+  "score": "5/5",
+  "pass_rate": 1.0
+}

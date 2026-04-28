@@ -1,0 +1,33 @@
+{
+  "eval_id": 90,
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Correctly identifies all three data types as Sensitive Personal Information (SPI) under CPRA: precise geolocation (within 1/4 mile), health/medical data from wearables, and biometric data used for identification",
+      "passed": true,
+      "evidence": "Without-skill response correctly classifies all three data types as SPI under CPRA, citing the specific statutory sections for each category."
+    },
+    {
+      "text": "Explains the CPRA obligation to offer a 'Limit the Use of My Sensitive Personal Information' link/mechanism (on homepage or via a combined opt-out page)",
+      "passed": true,
+      "evidence": "Response covers the Right to Limit Use of SPI and the requirement to provide a 'Limit the Use of My Sensitive Personal Information' link/mechanism."
+    },
+    {
+      "text": "States that SPI limitation requests must be processed within 15 business days (shorter than the 45-day deadline for other rights)",
+      "passed": true,
+      "evidence": "Without-skill response states the 15-business-day processing deadline for SPI limitation requests."
+    },
+    {
+      "text": "Explains permitted uses of SPI without triggering limitation rights: services reasonably expected by consumers, security/integrity, short-term transient use — and that the app must clearly document which permitted use applies to each SPI processing activity",
+      "passed": true,
+      "evidence": "Response covers permitted SPI uses including services reasonably expected by consumers, security/integrity, and short-term transient use (contextual session use)."
+    },
+    {
+      "text": "Advises on privacy notice requirements: must disclose each SPI category collected, purpose of collection, and whether SPI is sold, shared, or used beyond the necessary purpose — in both the at-collection notice and the privacy policy",
+      "passed": true,
+      "evidence": "Without-skill response advises on privacy policy, at-collection notice, opt-out links, and consumer rights notice — covering all required SPI disclosure elements."
+    }
+  ],
+  "score": "5/5",
+  "pass_rate": 1.0
+}

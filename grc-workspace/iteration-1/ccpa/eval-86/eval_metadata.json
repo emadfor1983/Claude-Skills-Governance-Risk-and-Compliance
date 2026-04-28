@@ -1,0 +1,12 @@
+{
+  "eval_id": 86,
+  "eval_name": "ecommerce-ccpa-applicability",
+  "prompt": "We are a US-based e-commerce company with $30M annual revenue. We collect personal information from about 80,000 California customers per year. Are we subject to CCPA/CPRA? If so, what are our core obligations?",
+  "assertions": [
+    "Confirms the company IS subject to CCPA/CPRA because it meets the $25M annual gross revenue threshold — even though it falls short of the 100,000 consumer/household threshold",
+    "Explains that meeting ANY ONE of the three thresholds (revenue, data volume, monetization) triggers CCPA/CPRA applicability",
+    "Lists core compliance obligations including privacy notice at collection, comprehensive privacy policy, and the consumer rights program (right to know, delete, correct, opt-out, non-discrimination)",
+    "Explains the 'Do Not Sell or Share My Personal Information' opt-out link requirement and GPC signal obligation",
+    "Mentions response deadlines: 45 days for access/delete/correct requests, with a possible 45-day extension"
+  ]
+}

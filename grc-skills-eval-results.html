@@ -272,11 +272,11 @@
     <div class="stat-label">Improvement</div>
   </div>
   <div class="stat-card">
-    <div class="stat-value">425</div>
+    <div class="stat-value">450</div>
     <div class="stat-label">Total Assertions</div>
   </div>
   <div class="stat-card">
-    <div class="stat-value positive">+65</div>
+    <div class="stat-value positive">+66</div>
     <div class="stat-label">Extra Assertions Passed</div>
   </div>
 </div>
@@ -416,6 +416,13 @@
           <td class="stat-cell delta-positive">+16%</td>
           <td class="stat-cell">24/25</td>
         </tr>
+        <tr>
+          <td><a href="#skill-ccpa" onclick="openSkill('ccpa'); return false;" class="skill-link">CCPA/CPRA</a></td>
+          <td class="stat-cell">100%</td>
+          <td class="stat-cell">96%</td>
+          <td class="stat-cell delta-neutral">+4%</td>
+          <td class="stat-cell">25/25</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -426,7 +433,7 @@
     <ul>
       <li><strong>15 skills</strong> × <strong>5 prompts</strong> = 75 test cases</li>
       <li>Each case run twice (with skill + baseline) = 150 total runs</li>
-      <li>5 assertions per test = <strong>425 total assertion checks</strong></li>
+      <li>5 assertions per test = <strong>450 total assertion checks</strong></li>
       <li>ISO 27701 results reflect the updated skill (iteration 2 after user feedback improvements)</li>
     </ul>
   </div>
@@ -30593,6 +30600,1789 @@ DORA&#x27;s Chapter V on ICT third-party risk management is more prescriptive th
 | What is the greatest operational risk? | Dual incident reporting failures — ensure your SOPs clearly specify reporting lanes, timelines, and formats for both regulators |
 
 The regulatory design intent is clear: DORA was created precisely to give financial entities a coherent, sector-specific resilience framework, avoiding the duplication and fragmentation that would result from applying generic cybersecurity directives on top of detailed sectoral rules. Your compliance programme design should reflect that intent.
+</pre></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="skill-accordion" id="skill-ccpa">
+        <button class="skill-toggle" onclick="toggleSkill('ccpa')">
+          <div class="skill-toggle-left">
+            <span class="skill-toggle-name">CCPA/CPRA</span>
+            <span class="skill-toggle-stats">100% with skill · 96% baseline · <span class="delta-neutral">+4%</span></span>
+          </div>
+          <span class="skill-chevron">▼</span>
+        </button>
+        <div class="skill-content" style="display:none">
+          
+          <div class="eval-item" id="eval-ccpa-0">
+            <button class="eval-toggle" onclick="toggleEval('ccpa-0')">
+              <span class="eval-label">eval-86</span>
+              <span class="eval-chevron">▼</span>
+            </button>
+            <div class="eval-content" style="display:none">
+              <div class="eval-prompt">
+                <strong>Prompt:</strong> We are a US-based e-commerce company with $30M annual revenue. We collect personal information from about 80,000 California customers per year. Are we subject to CCPA/CPRA? If so, what are our core obligations?
+              </div>
+              <div class="eval-outputs">
+                <div class="output-panel">
+                  <div class="output-header with-header">With Skill</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Confirms the company IS subject to CCPA/CPRA because it meets the $25M annual gross revenue threshold — even though it falls short of the 100,000 consumer/household threshold</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains that meeting ANY ONE of the three thresholds (revenue, data volume, monetization) triggers CCPA/CPRA applicability</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Lists core compliance obligations including privacy notice at collection, comprehensive privacy policy, and the consumer rights program (right to know, delete, correct, opt-out, non-discrimination)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains the &#x27;Do Not Sell or Share My Personal Information&#x27; opt-out link requirement and GPC signal obligation</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Mentions response deadlines: 45 days for access/delete/correct requests, with a possible 45-day extension</span></div></div></div>
+                  <div class="output-text"><pre># CCPA/CPRA Applicability and Core Obligations Analysis
+
+## Are You Subject to CCPA/CPRA?
+
+**Yes — your business is subject to CCPA/CPRA.**
+
+Under California law (Cal. Civ. Code §1798.100 et seq.), a for-profit business that does business in California must comply with CCPA/CPRA if it meets **at least one** of three thresholds. Your company meets the first threshold:
+
+| Threshold | Requirement | Your Status |
+|---|---|---|
+| Revenue | Annual gross revenues exceeding **$25 million** | **MET** — $30M annual revenue exceeds the $25M threshold |
+| Data Volume | Annually buys, sells, receives, or shares PI of **100,000+ consumers or households** | Not met — 80,000 California customers is below 100,000 |
+| Revenue from PI | Derives **50%+ of annual revenues** from selling/sharing PI | Presumed not met for a standard e-commerce business |
+
+Your $30 million annual revenue alone triggers full CCPA/CPRA compliance obligations. Even though your 80,000 California customers per year falls below the 100,000-consumer data volume threshold, the revenue threshold is satisfied independently.
+
+---
+
+## Core Obligations
+
+### 1. Privacy Notice at Collection
+You must inform consumers **at or before** collecting their personal information (PI) about:
+- The categories of PI being collected
+- The purposes for which PI will be used
+- Whether PI is sold or shared with third parties
+- Retention periods for each category of PI (CPRA requirement)
+- A link to your full privacy policy
+
+For an e-commerce site, this means clear disclosures at account creation, checkout, and any point where additional data is collected (e.g., email signups, reviews).
+
+### 2. Comprehensive Privacy Policy
+Your privacy policy must include:
+- All categories of PI collected in the last 12 months
+- The business or commercial purposes for each category
+- Categories of third parties to whom PI is disclosed
+- A description of all consumer rights and how to exercise them
+- Contact information for submitting consumer requests
+- A **&quot;Do Not Sell or Share My Personal Information&quot;** link (if you sell/share PI)
+- A **&quot;Limit the Use of My Sensitive Personal Information&quot;** link (if applicable)
+
+### 3. Consumer Rights Fulfillment
+You must establish processes to honor the following rights with a **45-day response deadline** (extendable by another 45 days with notice):
+
+| Right | Description |
+|---|---|
+| **Right to Know** | Consumers can request the specific PI you&#x27;ve collected about them, its sources, purposes, and who it&#x27;s been shared with |
+| **Right to Delete** | Consumers can request deletion of their PI (subject to limited exceptions, e.g., completing a transaction, legal obligations) |
+| **Right to Correct** | Consumers can request correction of inaccurate PI (CPRA addition) |
+| **Right to Data Portability** | PI must be delivered in a portable, usable format upon request |
+| **Right to Non-Discrimination** | You cannot deny service, charge higher prices, or penalize consumers for exercising their privacy rights |
+
+Additionally:
+- **Right to Opt-Out of Sale/Sharing**: Must be honored **immediately** upon request
+- **Right to Limit SPI Use**: Must be honored within **15 business days** (if you collect sensitive personal information)
+- **Minors**: If any customers are under 16, you need opt-in consent before selling/sharing their PI
+
+### 4. Opt-Out Mechanisms
+- Place a **&quot;Do Not Sell or Share My Personal Information&quot;** link on your homepage if you sell or share PI (e.g., through advertising pixels, affiliate data sharing, data brokers)
+- Honor **Global Privacy Control (GPC)** signals — under CPPA guidance and California court decisions, GPC must be treated as a valid opt-out from sale and sharing
+- Implement a **&quot;Limit the Use of My Sensitive Personal Information&quot;** link if you process SPI (e.g., precise geolocation, health data, account credentials) beyond necessary purposes
+
+### 5. Data Minimization and Purpose Limitation (CPRA)
+- Collect only PI that is **adequate, relevant, and limited** to what is necessary for the disclosed purpose
+- Do not use PI for purposes not disclosed to consumers at collection
+- This is particularly relevant for e-commerce analytics, behavioral advertising, and personalization use cases
+
+### 6. Retention Limits (CPRA)
+- Disclose retention periods or the criteria used to determine them for each category of PI
+- Do not retain PI longer than reasonably necessary for the disclosed purpose
+- This applies to customer purchase history, account data, browsing data, and marketing lists
+
+### 7. Service Provider Contracts
+Any vendor that processes customer PI on your behalf (payment processors, fulfillment services, email platforms, analytics tools, CDPs) must have written contracts that include:
+- Limitations on how the vendor may use your customers&#x27; PI
+- Prohibition on selling or sharing PI without your authorization
+- Obligations to comply with consumer deletion/correction requests
+- Your right to audit the vendor&#x27;s compliance
+- Data deletion obligations upon contract termination
+
+Vendors meeting these requirements qualify as **Service Providers** — their receipt of PI is not a &quot;sale&quot; under CCPA/CPRA.
+
+### 8. Sensitive Personal Information (SPI) — If Applicable
+As an e-commerce company, you may collect SPI such as:
+- Precise geolocation (for delivery tracking or targeted offers)
+- Account log-in credentials (username + password combinations)
+- Health/medical data (if selling health-related products with health-related personalization)
+
+If you collect SPI, consumers have the right to **limit its use and disclosure** to only what is necessary to provide the requested service.
+
+### 9. Cybersecurity Audits and Risk Assessments (CPRA — Pending Rulemaking)
+Businesses processing PI that presents significant risk must conduct **annual cybersecurity audits** and submit **risk assessments** to the California Privacy Protection Agency (CPPA). The exact scope for e-commerce businesses at your scale is subject to final CPPA rulemaking, but you should monitor this requirement.
+
+---
+
+## Penalty Exposure
+
+Non-compliance carries significant financial risk:
+- **Unintentional violations**: Up to **$2,500 per violation**
+- **Intentional violations**: Up to **$7,500 per violation**
+- **Violations involving minors&#x27; PI**: Always treated as intentional — up to **$7,500 per violation**
+- **Data breach private right of action**: Statutory damages of **$100–$750 per consumer per incident** (class action eligible) if a breach results from failure to implement reasonable security measures
+
+With 80,000 California customers, even a modest percentage of consumers affected by a systemic violation or data breach creates substantial aggregate liability.
+
+---
+
+## Immediate Next Steps
+
+1. **Conduct a data inventory**: Map what PI you collect, from whom, for what purposes, how long you retain it, and who you share it with
+2. **Audit your privacy policy**: Update it to include all CPRA-required disclosures (retention periods, right to correct, updated opt-out language)
+3. **Implement a consumer request intake process**: Set up a webform or toll-free number to receive and track consumer rights requests within required timelines
+4. **Review advertising and data sharing**: Determine whether any PI flows to ad networks, analytics platforms, or data brokers constitute a &quot;sale&quot; or &quot;sharing&quot; — if so, implement opt-out mechanisms and GPC signal handling
+5. **Audit vendor contracts**: Ensure all service providers have CCPA/CPRA-compliant data processing agreements in place
+6. **Train staff**: Ensure customer-facing and data-handling teams understand how to identify and escalate consumer rights requests
+
+---
+
+*This analysis is based on CCPA (Cal. Civ. Code §1798.100 et seq.) and CPRA (Proposition 24, effective January 1, 2023). Consult qualified legal counsel for advice specific to your business operations and data practices.*
+</pre></div>
+                </div>
+                <div class="output-panel">
+                  <div class="output-header without-header">Without Skill (Baseline)</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐ 4/5 assertions passed (80%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Confirms the company IS subject to CCPA/CPRA because it meets the $25M annual gross revenue threshold — even though it falls short of the 100,000 consumer/household threshold</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains that meeting ANY ONE of the three thresholds (revenue, data volume, monetization) triggers CCPA/CPRA applicability</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Lists core compliance obligations including privacy notice at collection, comprehensive privacy policy, and the consumer rights program (right to know, delete, correct, opt-out, non-discrimination)</span></div><div class="assertion"><span class="assertion-icon">❌</span><span class="assertion-text">Explains the &#x27;Do Not Sell or Share My Personal Information&#x27; opt-out link requirement and GPC signal obligation</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Mentions response deadlines: 45 days for access/delete/correct requests, with a possible 45-day extension</span></div></div></div>
+                  <div class="output-text"><pre># CCPA/CPRA Applicability and Core Obligations
+
+## Are You Subject to CCPA/CPRA?
+
+**Yes, your company is subject to CCPA as amended by CPRA.**
+
+The California Consumer Privacy Act (CCPA), as amended and expanded by the California Privacy Rights Act (CPRA, effective January 1, 2023), applies to for-profit businesses that do business in California and meet **any one** of the following thresholds:
+
+| Threshold | Your Company | Met? |
+|---|---|---|
+| Annual gross revenues exceeding $25 million | $30M annual revenue | **YES** |
+| Buys, sells, or shares personal information of 100,000+ consumers or households annually | ~80,000 California customers | No (below threshold) |
+| Derives 50%+ of annual revenue from selling or sharing consumers&#x27; personal information | Not specified | Unknown |
+
+**Your company meets the first threshold** — annual gross revenues of $30 million exceed the $25 million threshold. This alone is sufficient to trigger CCPA/CPRA applicability, regardless of the number of consumers whose data you process.
+
+---
+
+## Core Obligations Under CCPA/CPRA
+
+### 1. Privacy Notice / Privacy Policy Requirements
+
+You must provide consumers with a **comprehensive privacy notice** at or before the point of collection that discloses:
+
+- Categories of personal information collected
+- Purposes for which each category is collected and used
+- Categories of third parties with whom personal information is shared
+- Consumer rights and how to exercise them
+- Retention periods (or criteria used to determine retention)
+- Whether personal information is sold or shared (and a link to opt out if so)
+
+Your privacy policy must be updated **at least every 12 months**.
+
+### 2. Consumer Rights You Must Honor
+
+CCPA/CPRA grants California consumers the following rights, which you are obligated to fulfill:
+
+- **Right to Know**: Consumers can request disclosure of what personal information you have collected about them, the sources, purposes, and any third parties it has been shared with (covering the past 12 months, or up to 24 months under CPRA).
+- **Right to Delete**: Consumers can request deletion of their personal information, subject to limited exceptions (e.g., completing a transaction, security purposes, legal obligations).
+- **Right to Correct**: Under CPRA, consumers can request correction of inaccurate personal information you hold about them.
+- **Right to Opt-Out of Sale or Sharing**: If you sell or share personal information, consumers have the right to opt out. You must display a &quot;Do Not Sell or Share My Personal Information&quot; link prominently.
+- **Right to Limit Use of Sensitive Personal Information**: Consumers can direct you to limit the use of sensitive personal information (e.g., precise geolocation, financial account data, health data, biometrics) to only what is necessary for providing services.
+- **Right to Non-Discrimination**: You cannot penalize consumers for exercising their CCPA/CPRA rights (e.g., no denying goods, charging different prices, or providing a lower quality of service).
+
+### 3. Request Handling Requirements
+
+- Establish and maintain **at least two designated methods** for submitting consumer requests (e.g., a toll-free phone number and a web form).
+- Respond to verified consumer requests **within 45 days** (extendable by another 45 days with notice).
+- Verify the identity of the requestor before fulfilling requests.
+- Provide requested information **free of charge**, up to twice per 12-month period.
+- Maintain records of consumer requests and responses for **24 months**.
+
+### 4. Contracts with Service Providers, Contractors, and Third Parties
+
+- Enter into **written contracts** with all service providers and contractors who process personal information on your behalf. These contracts must include CPRA-mandated terms restricting use of personal information, prohibiting sales or sharing, and requiring compliance and cooperation with consumer rights.
+- Conduct reasonable **due diligence** on service providers and take action if you discover they are misusing personal information.
+
+### 5. Data Minimization and Purpose Limitation
+
+Under CPRA:
+- Collect only the personal information **reasonably necessary** for the disclosed purposes.
+- Do not use personal information for purposes that are **incompatible** with the disclosed purpose of collection.
+
+### 6. Data Retention Limitations
+
+- Retain personal information **no longer than reasonably necessary** for the disclosed purpose.
+- Disclose your retention periods (or the criteria used to determine them) in your privacy policy.
+
+### 7. Security Requirements
+
+- Implement and maintain **reasonable security measures** appropriate to the nature of the personal information you collect (this obligation predates CCPA and is codified in California Civil Code § 1798.81.5).
+- CPRA&#x27;s private right of action (and statutory damages of $100–$750 per consumer per incident) applies specifically to **data breaches** resulting from failure to implement reasonable security.
+
+### 8. Sensitive Personal Information
+
+CPRA introduces special rules for **Sensitive Personal Information (SPI)**, which includes:
+- Social Security numbers, driver&#x27;s license numbers, financial account credentials
+- Precise geolocation
+- Race, ethnicity, religion
+- Health, medical, and genetic data
+- Biometric data used for identification
+- Sexual orientation or sex life
+- Communications content (unless you are the intended recipient)
+
+If you collect SPI, you must disclose this and honor consumers&#x27; right to limit its use.
+
+---
+
+## Enforcement
+
+- Enforcement is handled by the **California Privacy Protection Agency (CPPA)** and the **California Attorney General**.
+- Civil penalties up to **$2,500 per unintentional violation** and **$7,500 per intentional violation** (or involving a minor&#x27;s data).
+- Private right of action for **data breaches** only, with statutory damages of $100–$750 per consumer per incident.
+
+---
+
+## Recommended Immediate Next Steps
+
+1. **Audit your data practices**: Map what personal information you collect, why, where it is stored, and with whom it is shared.
+2. **Update your privacy policy** to meet CCPA/CPRA disclosure requirements.
+3. **Implement consumer request workflows**: Set up intake, verification, response, and record-keeping processes.
+4. **Review vendor contracts**: Ensure all service providers have CPRA-compliant data processing agreements.
+5. **Assess sensitive personal information**: Identify whether you collect any SPI and add appropriate controls and disclosures.
+6. **Implement a &quot;Do Not Sell or Share&quot; mechanism** if you sell or share personal information.
+7. **Train staff** on consumer rights obligations and your internal response procedures.
+
+---
+
+*Note: This analysis is based on CCPA (Cal. Civ. Code § 1798.100 et seq.) as amended by CPRA (effective January 1, 2023). Laws change; consult qualified legal counsel to confirm your obligations and tailor compliance measures to your specific business operations.*
+</pre></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-item" id="eval-ccpa-1">
+            <button class="eval-toggle" onclick="toggleEval('ccpa-1')">
+              <span class="eval-label">eval-87</span>
+              <span class="eval-chevron">▼</span>
+            </button>
+            <div class="eval-content" style="display:none">
+              <div class="eval-prompt">
+                <strong>Prompt:</strong> A California resident has submitted a request to know exactly what personal information we hold about them, and also wants it all deleted. Walk me through how to handle both requests, including identity verification and any exceptions we can invoke.
+              </div>
+              <div class="eval-outputs">
+                <div class="output-panel">
+                  <div class="output-header with-header">With Skill</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains that the business must verify the consumer&#x27;s identity before disclosing or deleting PI — matching at least two data points already held by the business for standard requests</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">States the response deadline is 45 calendar days from receipt of the request, extendable by another 45 days with notice to the consumer</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Lists at least three valid exceptions to the right to delete (e.g., completing a transaction, detecting security incidents, complying with a legal obligation, internal-use-only PI)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">States that upon deletion the business must also direct its service providers and contractors to delete the consumer&#x27;s PI</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains that both requests must be honored free of charge (up to twice per 12-month period) and the business must confirm the deletion or explain the exception invoked</span></div></div></div>
+                  <div class="output-text"><pre># Handling a Combined CCPA Right to Know + Right to Delete Request
+
+A California resident has submitted two simultaneous requests: (1) a Right to Know (access) request and (2) a Right to Delete request. Here is a complete, step-by-step guide for handling both, including identity verification and all applicable exceptions.
+
+---
+
+## Step 1: Intake and Logging
+
+**Immediately upon receipt:**
+- Log both requests with a precise timestamp. The 45-calendar-day response clock starts from the date of receipt, not the date verification is completed.
+- Assign a tracking ID to each request.
+- Confirm receipt to the consumer in writing (email or postal mail), acknowledging both requests.
+- Verify you have at least two intake channels available to the consumer per §1798.130 (e.g., toll-free phone and a web form or email).
+
+---
+
+## Step 2: Identity Verification
+
+You must verify the consumer&#x27;s identity before disclosing or deleting any personal information. The standard scales with the sensitivity of the data involved.
+
+### Standard Right to Know (non-sensitive PI)
+Match **at least 2 data points** the business already holds on file, for example:
+- Full name + email address on record
+- Full name + mailing address
+- Account number + date of birth
+
+### If the request involves Sensitive Personal Information (SPI)
+(SSNs, financial credentials, precise geolocation, biometric data, health data, racial/ethnic origin, sexual orientation, etc.)
+
+Match **at least 3 data points** plus require a **signed declaration under penalty of perjury** from the consumer confirming they are the individual whose PI is being requested.
+
+### If the request is submitted via an Authorized Agent
+- Require written, signed authorization from the consumer permitting the agent to act on their behalf.
+- Verify the agent&#x27;s identity independently.
+- For delete requests submitted by an agent without power of attorney, you may also verify directly with the consumer.
+
+### Failure to Verify
+If the consumer cannot be verified after reasonable attempts, deny the request and notify the consumer explaining why and that they may re-submit with sufficient verification.
+
+---
+
+## Step 3: Handling the Right to Know Request (§1798.110 / §1798.115)
+
+### What Must Be Disclosed
+Once identity is verified, compile and deliver the following:
+
+1. **Specific pieces of PI** collected about this consumer (names, email addresses, IP addresses, purchase history, browsing history, device identifiers, geolocation, etc.).
+2. **Categories of PI** collected.
+3. **Categories of sources** from which the PI was collected (e.g., directly from consumer, third-party data brokers, cookies/tracking pixels).
+4. **Business or commercial purposes** for which PI was collected, sold, or shared.
+5. **Categories of third parties** to whom PI was disclosed.
+6. **Categories of PI sold or shared** and the categories of third parties who received it.
+
+### Scope of the Disclosure
+- Under CPRA (effective January 1, 2023), there is no longer a strict 12-month look-back limit for PI collected after January 1, 2022. You must disclose all PI collected and retained.
+- For PI collected before January 1, 2022, the 12-month look-back applies.
+
+### Where to Search
+Search all systems that may hold PI: CRM, marketing automation, analytics platforms, ad tech stacks, support ticketing systems, billing systems, email platforms, data warehouses, and any third-party service providers processing PI on your behalf.
+
+### Exceptions — When You Can Withhold Specific PI
+You may decline to disclose specific pieces of PI if:
+
+| Exception | Description |
+|---|---|
+| Third-party trade secrets | Disclosing would reveal trade secrets belonging to a third party |
+| Legal conflict | Disclosure would conflict with federal or state law (e.g., ongoing law enforcement investigation) |
+| One-time transaction | PI was collected for a single transaction and was not retained |
+| Internal operations only | PI is solely used for internal purposes consistent with the context of collection |
+| Transaction completion | PI is solely used to complete the transaction for which it was collected |
+
+Document the specific exception invoked in writing and inform the consumer that some PI was withheld and why (at a category level, without revealing the withheld content).
+
+### Format and Delivery
+Deliver the response in a **portable, readily usable format** (e.g., a structured PDF or CSV). Do not require the consumer to create an account to receive the response if they did not have one when submitting the request.
+
+**Deadline:** 45 calendar days from receipt. If you need more time, notify the consumer within the original 45-day window and take up to an additional 45 days (90 days total).
+
+---
+
+## Step 4: Handling the Right to Delete Request (§1798.105)
+
+### Scope of Deletion
+The deletion obligation covers:
+- All PI held in your own systems and records.
+- PI held by your **service providers** and **contractors** — you must direct them in writing to delete the PI as well.
+
+### Exceptions — When You Can Retain PI
+
+You may decline to delete (or retain specific categories of PI) if retention is necessary to:
+
+| # | Exception | Example |
+|---|---|---|
+| 1 | **Complete a transaction or perform a contract** | Active subscription or pending order |
+| 2 | **Detect security incidents; protect against fraud/illegal activity** | Fraud detection logs, active investigation |
+| 3 | **Fix errors impairing intended functionality** | Bug fix requiring the data |
+| 4 | **Free speech / another consumer&#x27;s right to free speech** | Rare; applies to journalism-like contexts |
+| 5 | **Legal obligation** (§1798.145(a)) | Tax records (IRS 7-year retention), financial records, litigation holds |
+| 6 | **Internal purposes compatible with collection context** (CPRA, narrow) | Aggregate analytics that cannot be re-linked to the individual |
+| 7 | **Research, journalism, or statistical public interest** | Academic research datasets |
+
+**Practical note:** Legal holds are the most commonly invoked exception. If litigation is pending or reasonably anticipated, retain a litigation hold memo and preserve the relevant PI. Explain to the consumer at a high level why data cannot be deleted.
+
+### Deletion Workflow
+
+1. **Verify identity** (same as above — do not skip even for deletion).
+2. **Identify all PI records** across all systems.
+3. **Evaluate exceptions** for each category of PI — apply exceptions narrowly. Document the reasoning in writing.
+4. **Execute deletion** for all PI not covered by an exception:
+   - Delete from primary databases.
+   - Delete from backups (or flag for deletion at the next backup cycle, with a note that the data is to be treated as deleted in the interim).
+   - Delete from internal analytics or data warehouse systems.
+5. **Notify service providers and contractors** in writing to delete the consumer&#x27;s PI from their systems. Confirm they have done so.
+6. **Respond to the consumer** within 45 days confirming:
+   - What was deleted, and
+   - What (if anything) was retained and under which exception.
+
+**Deadline:** 45 calendar days (extendable by 45 more days with notice).
+
+---
+
+## Step 5: Non-Discrimination
+
+Remind relevant internal teams: you **cannot** penalize this consumer for exercising their CCPA rights. Do not:
+- Deny them goods or services.
+- Charge a higher price.
+- Provide a lower quality of service.
+- Downgrade their account tier.
+- Flag them internally in a way that results in worse treatment.
+
+---
+
+## Step 6: Record-Keeping
+
+Retain the following for **at least 24 months** (required for businesses processing PI of 10 million or more consumers/households; recommended for all covered businesses):
+- A copy of the request (both the Right to Know and Right to Delete requests).
+- The verification steps taken and the outcome.
+- The response provided to the consumer.
+- Any exceptions invoked and the documented reasoning.
+- Written instructions sent to service providers and contractors.
+- Confirmation of deletion received from service providers.
+
+Note: Retaining the deletion request itself — and records of how you processed it — does not contradict the deletion obligation. The requirement is to delete the consumer&#x27;s substantive PI, not the compliance records.
+
+---
+
+## Summary Timeline
+
+| Action | Deadline |
+|---|---|
+| Acknowledge receipt | Immediately (no statutory deadline, but best practice within 10 days) |
+| Complete identity verification | As soon as possible; clock runs from request receipt, not verification |
+| Respond to both requests (or notify of extension) | 45 calendar days from receipt |
+| Maximum response deadline with extension | 90 calendar days from receipt |
+| Notify consumer if extension needed | Within the original 45-day window |
+| Service providers/contractors must delete | Instruct within your response period; confirm deletion promptly |
+
+---
+
+## Key Risks to Watch
+
+- **Incomplete system search:** Missing PI in ad tech, analytics, or legacy systems is a common compliance gap. Conduct a thorough data inventory before responding.
+- **Failure to notify service providers:** The deletion obligation explicitly extends to service providers and contractors. Document all instructions sent.
+- **Over-invoking exceptions:** Exceptions must be applied narrowly. Blanket invocation of &quot;legal obligation&quot; or &quot;fraud detection&quot; without specific, documented justification will not withstand CPPA scrutiny.
+- **Treating both requests as one:** Right to Know and Right to Delete are separate rights with separate response obligations. Document and respond to each independently.
+- **Penalty exposure:** Unintentional violations are up to $2,500 per violation; intentional violations up to $7,500 per violation (Cal. Civ. Code §1798.155).
+</pre></div>
+                </div>
+                <div class="output-panel">
+                  <div class="output-header without-header">Without Skill (Baseline)</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains that the business must verify the consumer&#x27;s identity before disclosing or deleting PI — matching at least two data points already held by the business for standard requests</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">States the response deadline is 45 calendar days from receipt of the request, extendable by another 45 days with notice to the consumer</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Lists at least three valid exceptions to the right to delete (e.g., completing a transaction, detecting security incidents, complying with a legal obligation, internal-use-only PI)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">States that upon deletion the business must also direct its service providers and contractors to delete the consumer&#x27;s PI</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains that both requests must be honored free of charge (up to twice per 12-month period) and the business must confirm the deletion or explain the exception invoked</span></div></div></div>
+                  <div class="output-text"><pre># CCPA: Handling a Combined Right to Know + Right to Delete Request
+
+A California resident has submitted two concurrent requests: (1) a Right to Know (access) request and (2) a Right to Delete request. Below is a step-by-step walkthrough of how to handle both, covering intake, identity verification, response obligations, exceptions, and documentation.
+
+---
+
+## 1. Confirm the Request is a &quot;Verifiable Consumer Request&quot;
+
+Under the California Consumer Privacy Act (CCPA) as amended by the California Privacy Rights Act (CPRA), both rights may only be honored once the consumer&#x27;s identity is verified to a reasonable degree. The request must:
+
+- Be submitted through a designated method (web form, toll-free phone number, or other disclosed channel in your Privacy Policy).
+- Contain enough information to enable verification.
+- Be accompanied by a declaration, if required, attesting that the information provided is true under penalty of perjury (required for specific-pieces requests and deletion requests by regulation).
+
+---
+
+## 2. Initial Acknowledgment (Within 10 Business Days)
+
+Upon receipt, you must acknowledge the request within **10 business days** and inform the consumer:
+
+- That you received the request.
+- How you will verify their identity.
+- The expected timeline for responding (up to 45 calendar days, extendable once by another 45 days with notice).
+
+---
+
+## 3. Identity Verification
+
+### Why it matters
+Verification protects the consumer (and you) against fraudulent requests. The standard is &quot;reasonable&quot; verification, calibrated to the sensitivity of the information involved and the type of request.
+
+### Matching information to records
+Collect 2–3 data points the consumer provides and match them against information already in your systems. Common data points:
+
+- Email address used to create an account.
+- First and last name.
+- Phone number or postal address on record.
+- Date of account creation or last transaction date.
+
+### Tiered verification standards
+
+| Request Type | Verification Standard |
+|---|---|
+| Right to Know – Categories only | Match at least 2 data points with moderate confidence |
+| Right to Know – Specific pieces of PI | Match at least 3 data points with high confidence; require a signed declaration under penalty of perjury |
+| Right to Delete | Match at least 2–3 data points depending on sensitivity; signed declaration recommended |
+
+### Non-account holders (unregistered consumers)
+If the consumer does not have an account, you may use a three-step process:
+1. Provide a timestamp verification link sent to the email address provided.
+2. Request 2 additional data points to match against transaction or interaction records.
+3. If you cannot verify, you may deny the request but must inform the consumer they can exercise rights through an authorized agent or alternative channel.
+
+### Authorized agents
+If an agent submits on the consumer&#x27;s behalf:
+- Require proof of signed written permission from the consumer.
+- Verify the consumer&#x27;s identity directly as well (unless the consumer has provided a notarized power of attorney).
+
+---
+
+## 4. Responding to the Right to Know (Access) Request
+
+### Scope of disclosure
+Upon verified request, disclose:
+
+1. **Categories** of personal information (PI) collected about the consumer.
+2. **Categories of sources** from which the PI was collected.
+3. **Business or commercial purpose** for collecting, selling, or sharing the PI.
+4. **Categories of third parties** to whom PI was disclosed.
+5. **Specific pieces of PI** collected (if requested; this triggers the higher verification standard above).
+
+### Format and delivery
+- Deliver in a readily usable format (e.g., structured JSON, CSV, or a secure online portal download).
+- Do not require the consumer to create a new account to receive the response.
+- Provide the information free of charge (first two requests within a 12-month period must be free).
+
+### Timeline
+- Respond within **45 calendar days** of receiving the verifiable consumer request.
+- Extend by an additional 45 days (one extension only) if reasonably necessary; notify the consumer before the initial deadline.
+
+---
+
+## 5. Responding to the Right to Delete Request
+
+### General obligation
+Upon a verified deletion request, you must delete the consumer&#x27;s PI from your records and direct your **service providers, contractors, and third parties** to do the same (subject to their own exceptions).
+
+### Deletion process steps
+1. Confirm the verified identity before proceeding.
+2. Identify all systems, databases, backups, and data stores holding the consumer&#x27;s PI.
+3. Delete or deidentify the PI in each system.
+4. Issue deletion instructions to all service providers and relevant third parties that received the PI from you.
+5. Confirm to the consumer in writing that deletion has occurred (or identify any exceptions invoked).
+
+---
+
+## 6. Exceptions You May Invoke
+
+Both the access and deletion requests are subject to statutory and regulatory exceptions. Review each piece of PI carefully before blanket deletion.
+
+### Exceptions to the Right to Delete (Cal. Civ. Code § 1798.105(d))
+
+The business may decline to delete PI (in whole or in part) if retaining it is necessary to:
+
+1. **Complete a transaction** – Fulfill a contract or provide a good/service the consumer requested, or reasonably anticipated in the context of an ongoing business relationship.
+2. **Security and fraud detection** – Detect security incidents, protect against malicious, deceptive, fraudulent, or illegal activity, or prosecute those responsible.
+3. **Debugging** – Identify and repair errors that impair existing intended functionality.
+4. **Free speech / legal rights** – Exercise free speech, ensure another consumer&#x27;s right to exercise their own free speech rights, or exercise another right provided by law.
+5. **Research purposes** – Engage in public or peer-reviewed scientific, historical, or statistical research in the public interest that adheres to all other applicable ethics and privacy laws, where deletion would seriously impair the research.
+6. **Legal obligation** – Comply with a legal obligation (e.g., tax records, AML/BSA records, healthcare records, employment records required by law).
+7. **Internal uses reasonably aligned with consumer expectations** – Use the information internally in a lawful manner that is compatible with the context in which the consumer provided it.
+
+### Exceptions to the Right to Know
+
+- **Trade secrets**: You may withhold specific pieces of PI if disclosure would reveal a trade secret; inform the consumer that some information was withheld and the general reason.
+- **Third-party PI**: If a specific-pieces response would reveal PI of another individual, redact that information.
+- **Publicly available information**: You are not required to comply with requests for information that is lawfully made available from federal, state, or local government records.
+
+### Partial fulfillment
+If an exception applies to only part of the PI, delete (or disclose) the remainder and document exactly what was withheld and why. Inform the consumer that their request was partially fulfilled and identify the category of exception (without revealing information that itself triggers the exception).
+
+---
+
+## 7. Sale/Sharing Opt-Out — Supplemental Obligation
+
+Since the consumer has submitted a deletion request, also check whether any of their PI is being **sold or shared** for cross-context behavioral advertising. If so:
+
+- Honor any implicit opt-out of sale/sharing embedded in the deletion request.
+- Instruct third-party data brokers or advertising partners to cease use of the consumer&#x27;s PI.
+
+---
+
+## 8. Non-Discrimination Requirement
+
+You may not deny goods or services, charge a different price, or provide a different quality of service because the consumer exercised their CCPA rights (Cal. Civ. Code § 1798.125). Document that no adverse action was taken.
+
+---
+
+## 9. Record-Keeping and Documentation
+
+Regulations require businesses that receive 100,000+ consumer requests per year to maintain records for **24 months**. Even if below that threshold, retain internally:
+
+- Date request was received.
+- Type of request (Know + Delete).
+- Date of acknowledgment.
+- Verification method used and outcome.
+- Date of response.
+- Any exceptions invoked and the specific PI excluded.
+- Confirmation of service provider deletion instructions sent.
+
+---
+
+## 10. Summary Timeline
+
+| Milestone | Deadline |
+|---|---|
+| Acknowledge request | Within 10 business days of receipt |
+| Verify identity | As soon as practicable (before responding) |
+| Respond to both requests | Within 45 calendar days of the verifiable request |
+| Extension notice (if needed) | Before the initial 45-day deadline |
+| Maximum response window | 90 calendar days from verifiable request |
+
+---
+
+## Quick-Reference Checklist
+
+- [ ] Acknowledge request within 10 business days.
+- [ ] Collect identity verification data points (2–3; signed declaration for specific pieces / deletion).
+- [ ] Match data points against internal records; document the outcome.
+- [ ] For Right to Know: compile categories + specific pieces; review trade-secret and third-party exceptions; prepare structured disclosure.
+- [ ] For Right to Delete: identify all data stores; apply exception analysis for each category of PI; execute deletion; send deletion instructions to service providers and third parties.
+- [ ] Notify the consumer of any partial fulfillments and exceptions invoked.
+- [ ] Verify no discriminatory action taken.
+- [ ] Retain documentation for at least 24 months.
+- [ ] Update internal metrics/logs for regulatory reporting.
+</pre></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-item" id="eval-ccpa-2">
+            <button class="eval-toggle" onclick="toggleEval('ccpa-2')">
+              <span class="eval-label">eval-88</span>
+              <span class="eval-chevron">▼</span>
+            </button>
+            <div class="eval-content" style="display:none">
+              <div class="eval-prompt">
+                <strong>Prompt:</strong> We use an ad tech platform that receives our website visitors&#x27; cookie IDs and browsing data to serve targeted ads. Does this constitute a &#x27;sale&#x27; or &#x27;sharing&#x27; under CCPA/CPRA? What do we need to do?
+              </div>
+              <div class="eval-outputs">
+                <div class="output-panel">
+                  <div class="output-header with-header">With Skill</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Correctly identifies that passing visitor cookie IDs and browsing data to an ad tech platform for cross-context behavioral advertising constitutes &#x27;sharing&#x27; under CPRA even if no money changes hands</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains that the same arrangement could also be a &#x27;sale&#x27; under CCPA if the ad tech platform provides any valuable consideration (e.g., access to inventory, data enrichment)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">States the business must add a &#x27;Do Not Sell or Share My Personal Information&#x27; link and must honor Global Privacy Control (GPC) signals as valid opt-outs</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains that the ad tech platform must be classified as a &#x27;third party&#x27; (not a service provider) unless a contractual arrangement prohibits the platform from using the data for any other purpose — and service provider contracts must be reviewed</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Advises on the practical steps: update privacy policy, implement consent management platform (CMP), configure ad tech to stop receiving PI for opted-out consumers</span></div></div></div>
+                  <div class="output-text"><pre># CCPA/CPRA Analysis: Ad Tech Platform — Sale and Sharing of Personal Information
+
+## Short Answer
+
+Yes. Disclosing your website visitors&#x27; cookie IDs and browsing data to an ad tech platform almost certainly constitutes both a **&quot;sale&quot;** and **&quot;sharing&quot;** under CCPA/CPRA. Both triggers carry distinct compliance obligations, and you need to act on both.
+
+---
+
+## 1. Why This Is a &quot;Sale&quot; Under CCPA/CPRA
+
+**Definition (Cal. Civ. Code §1798.140(ad)):** A &quot;sale&quot; is the disclosure of personal information to a third party for **monetary or other valuable consideration**.
+
+Cookie IDs are personal information — they identify or can be linked to a specific consumer or household. Browsing data (pages visited, time on page, interactions) is also personal information, and can qualify as sensitive personal information (SPI) if it reveals health, financial, or other SPI-adjacent categories.
+
+The ad tech platform is a **third party** (not a service provider) because:
+- It receives the data and uses it for its **own purposes** (building audience segments, profiling, selling ad inventory);
+- It is not processing the data solely on your behalf under a contract prohibiting further use.
+
+The &quot;valuable consideration&quot; you receive is the ability to serve targeted ads, which has clear commercial value — even if no cash directly changes hands. CCPA&#x27;s definition of &quot;sale&quot; is deliberately broad and captures non-monetary exchanges.
+
+**Conclusion:** This arrangement meets the definition of a sale.
+
+---
+
+## 2. Why This Is Also &quot;Sharing&quot; Under CPRA
+
+**Definition (Cal. Civ. Code §1798.140(ah)):** &quot;Sharing&quot; is the disclosure of personal information to a third party for **cross-context behavioral advertising**, even if no consideration is exchanged.
+
+Cross-context behavioral advertising is advertising based on personal information obtained from a consumer&#x27;s activity across different businesses, websites, or apps. This is exactly what ad tech platforms do: they combine your visitors&#x27; browsing data with data from other sources to build profiles and serve targeted ads.
+
+**Conclusion:** Even if you argued there was no &quot;sale,&quot; the disclosure would still constitute &quot;sharing&quot; — a CPRA-specific concept added precisely to close this loophole.
+
+---
+
+## 3. What You Must Do
+
+### A. Verify CCPA/CPRA Applicability to Your Business
+
+You are subject to CCPA/CPRA if you are a for-profit business doing business in California and meet at least one of:
+- Annual gross revenues exceeding $25 million;
+- Annually buy, sell, receive, or share PI of 100,000+ consumers or households;
+- Derive 50%+ of annual revenues from selling or sharing consumers&#x27; PI.
+
+Website visitor data at scale will likely trigger the second threshold. Confirm which thresholds apply.
+
+### B. Update Your Privacy Policy
+
+Your privacy policy must disclose:
+- That you sell and share personal information (cookie IDs, browsing/behavioral data);
+- The categories of PI sold or shared (identifiers, internet/network activity);
+- The categories of third parties to whom PI is sold or shared (ad networks, demand-side platforms, data brokers);
+- A prominent **&quot;Do Not Sell or Share My Personal Information&quot;** link.
+
+### C. Provide a &quot;Do Not Sell or Share My Personal Information&quot; Link
+
+- Place this link prominently on your homepage (and ideally in your site footer and privacy policy).
+- The link must lead to a mechanism that stops data from being passed to the ad tech platform for consumers who opt out.
+- Honor opt-out requests **immediately** upon receipt.
+
+### D. Honor Global Privacy Control (GPC) Signals
+
+GPC is a browser-level opt-out signal. Per CPPA guidance and enforcement actions:
+- You **must** detect and honor GPC signals as a valid opt-out of sale and sharing.
+- This requires technical implementation: when a GPC signal is detected, do not fire the ad tech platform&#x27;s tags/pixels for that user.
+- This applies even if the user has not clicked your &quot;Do Not Sell or Share&quot; link.
+
+### E. Implement a Consent Management Platform (CMP) or Tag Manager Logic
+
+Your technical implementation should:
+1. Detect GPC signals server-side or via your tag manager before any data is sent to the ad tech platform.
+2. Block or suppress ad tech tags for opted-out users.
+3. Maintain a record of opt-out signals and honor them for future sessions (do not re-engage after opt-out without re-consent).
+
+### F. Update Your At-Collection Privacy Notice
+
+At or before collecting cookie/browsing data, inform visitors:
+- What categories of PI are collected (identifiers, browsing/internet activity);
+- That this information may be sold or shared with third parties for targeted advertising;
+- How to exercise their opt-out right.
+
+This can be done via a cookie banner or layered notice, but it must be clear and not buried.
+
+### G. Review or Re-Classify the Ad Tech Vendor Relationship
+
+Evaluate whether the ad tech platform could be restructured as a **service provider** rather than a third party:
+- This requires a written contract that: (a) limits the platform&#x27;s use of data strictly to providing the ad service to you; (b) prohibits the platform from selling or sharing data further; (c) prohibits retaining, using, or disclosing data for its own commercial purposes.
+- Many ad tech platforms will not agree to these terms, or their business model depends on further use — in which case they cannot be classified as a service provider and the sale/sharing characterization stands.
+- If you can restructure the relationship with appropriate contractual controls, the disclosure would no longer constitute a sale or sharing.
+
+### H. Assess Sensitive Personal Information (SPI) Implications
+
+If browsing data reveals health conditions, financial status, political views, or other SPI categories, additional obligations apply:
+- Provide a **&quot;Limit the Use of My Sensitive Personal Information&quot;** link;
+- Limit use and disclosure of SPI to what is necessary for the disclosed purpose.
+
+### I. Minors
+
+If any of your website visitors are under 16:
+- You **cannot** sell or share their PI without opt-in consent (under 13: parent/guardian consent; 13–15: consumer&#x27;s own consent).
+- Violations involving minors&#x27; PI are automatically treated as intentional, carrying fines of up to **$7,500 per violation**.
+
+---
+
+## 4. Penalty Exposure
+
+| Violation Type | Penalty |
+|---|---|
+| Unintentional violation | Up to $2,500 per violation |
+| Intentional violation | Up to $7,500 per violation |
+| Violation involving minor&#x27;s PI | Up to $7,500 per violation (always intentional) |
+
+&quot;Per violation&quot; can mean per consumer record or per transaction. Given the volume typical of ad tech operations, aggregate exposure can be substantial.
+
+---
+
+## 5. Priority Action List
+
+| Priority | Action |
+|---|---|
+| Immediate | Implement GPC signal detection and suppression |
+| Immediate | Add &quot;Do Not Sell or Share My Personal Information&quot; link to homepage |
+| Short-term | Update privacy policy with sale/sharing disclosures |
+| Short-term | Update at-collection cookie/browsing notice |
+| Short-term | Assess ad tech vendor contracts — service provider feasibility |
+| Short-term | Build opt-out request intake and fulfillment workflow |
+| Medium-term | Audit for minor visitors; implement age-gating or consent flows if needed |
+| Medium-term | Assess SPI exposure in browsing data categories |
+
+---
+
+## Summary
+
+Your ad tech arrangement almost certainly constitutes both a **sale** (valuable consideration) and **sharing** (cross-context behavioral advertising) under CCPA/CPRA. The key obligations are: (1) disclose it in your privacy policy and at-collection notice, (2) provide a &quot;Do Not Sell or Share&quot; opt-out mechanism, (3) honor GPC signals technically, and (4) explore whether the vendor relationship can be restructured to qualify as a service provider. If restructuring is not feasible, ensure your opt-out infrastructure is in place before continued data flows to the platform.
+</pre></div>
+                </div>
+                <div class="output-panel">
+                  <div class="output-header without-header">Without Skill (Baseline)</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Correctly identifies that passing visitor cookie IDs and browsing data to an ad tech platform for cross-context behavioral advertising constitutes &#x27;sharing&#x27; under CPRA even if no money changes hands</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains that the same arrangement could also be a &#x27;sale&#x27; under CCPA if the ad tech platform provides any valuable consideration (e.g., access to inventory, data enrichment)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">States the business must add a &#x27;Do Not Sell or Share My Personal Information&#x27; link and must honor Global Privacy Control (GPC) signals as valid opt-outs</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains that the ad tech platform must be classified as a &#x27;third party&#x27; (not a service provider) unless a contractual arrangement prohibits the platform from using the data for any other purpose — and service provider contracts must be reviewed</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Advises on the practical steps: update privacy policy, implement consent management platform (CMP), configure ad tech to stop receiving PI for opted-out consumers</span></div></div></div>
+                  <div class="output-text"><pre># CCPA/CPRA Analysis: Ad Tech Platform, Cookie IDs, and Browsing Data
+
+## Short Answer
+
+Yes — sharing website visitors&#x27; cookie IDs and browsing data with an ad tech platform for targeted advertising almost certainly constitutes both a **&quot;sale&quot;** and **&quot;sharing&quot;** of personal information under CCPA/CPRA. Both categories trigger opt-out rights and specific compliance obligations.
+
+---
+
+## 1. Does This Qualify as a &quot;Sale&quot; Under CCPA/CPRA?
+
+### Statutory Definition of &quot;Sale&quot;
+
+Under Cal. Civ. Code § 1798.140(ad)(1), a **&quot;sale&quot;** means:
+
+&gt; Selling, renting, releasing, disclosing, disseminating, making available, transferring, or otherwise communicating orally, in writing, or by electronic or other means, a consumer&#x27;s personal information by the business to a third party **for monetary or other valuable consideration**.
+
+### Cookie IDs Are Personal Information
+
+Cookie IDs (persistent identifiers linked to a browser or device) are explicitly listed as **personal information** under CCPA/CPRA (§ 1798.140(v)(1)) because they can be used to identify or profile an individual over time, even without a name attached.
+
+Browsing data (pages visited, products viewed, time on site, etc.) also qualifies as personal information — it constitutes **internet or other electronic network activity information** under § 1798.140(v)(1)(F).
+
+### The &quot;Valuable Consideration&quot; Threshold
+
+You likely do not pay the ad tech platform — they pay you (or provide ad services in exchange for data access). This reciprocal exchange — data for advertising services, ad revenue, or reduced platform costs — satisfies the **&quot;other valuable consideration&quot;** element. California regulators and the CPPA have confirmed that non-monetary consideration (such as free or subsidized ad services) is sufficient.
+
+**Conclusion: This is likely a &quot;sale.&quot;**
+
+---
+
+## 2. Does This Qualify as &quot;Sharing&quot; Under CPRA?
+
+CPRA (effective January 1, 2023) added a distinct category — **&quot;sharing&quot;** — specifically to capture cross-context behavioral advertising:
+
+&gt; Cal. Civ. Code § 1798.140(ah): **&quot;Sharing&quot;** means communicating orally, in writing, or by electronic or other means, a consumer&#x27;s personal information by the business to a third party **for cross-context behavioral advertising**, whether or not for monetary or other valuable consideration...
+
+### Key Points About &quot;Sharing&quot;
+
+- **No monetary exchange required.** Unlike &quot;sale,&quot; sharing applies even when there is zero compensation — closing the &quot;free services&quot; loophole.
+- **Cross-context behavioral advertising** means targeting ads based on personal information obtained from activity across businesses, websites, apps, or services other than the one the consumer is intentionally interacting with. Ad tech networks that build profiles across sites clearly fall within this definition.
+- Sending cookie IDs and browsing behavior to an ad tech platform to enable targeted advertising across the web is the textbook example of cross-context behavioral advertising.
+
+**Conclusion: This is definitively &quot;sharing.&quot;**
+
+---
+
+## 3. Who Is Covered? Applicability Threshold
+
+CCPA/CPRA applies to for-profit businesses that:
+
+1. Have annual gross revenues exceeding $25 million (as of January 1 of the preceding calendar year), OR
+2. Buy, sell, receive, or share the personal information of 100,000 or more consumers or households annually, OR
+3. Derive 50% or more of annual revenues from selling or sharing consumers&#x27; personal information.
+
+If your business meets any of these thresholds and serves California consumers, full compliance obligations apply. Even if you are below the revenue threshold, meeting the 100,000 consumer/household threshold — easily triggered by a website with moderate traffic — brings you into scope.
+
+---
+
+## 4. Required Compliance Actions
+
+### A. Update Your Privacy Notice (Required)
+
+Your privacy policy must clearly disclose, at or before the point of data collection:
+
+- That you sell or share personal information (including cookie IDs and browsing data).
+- The **categories** of personal information sold or shared.
+- The **categories of third parties** to whom data is disclosed (e.g., &quot;advertising networks,&quot; &quot;data analytics partners&quot;).
+- A description of consumers&#x27; rights to opt out of sale/sharing.
+- How consumers can exercise those rights.
+
+**Citation:** Cal. Civ. Code §§ 1798.100(b), 1798.110, 1798.115, 1798.130.
+
+### B. Provide an Opt-Out Mechanism (Required)
+
+You must give California consumers a clear and conspicuous way to opt out of the sale/sharing of their personal information:
+
+- **&quot;Do Not Sell or Share My Personal Information&quot; link** — must be prominently placed on your homepage (or every page where data collection occurs). This is the standard required link text under § 1798.135(a)(1).
+- **Global Privacy Control (GPC) compliance** — you must honor GPC signals sent by consumers&#x27; browsers as a valid opt-out. The CPPA has issued enforcement guidance making GPC compliance mandatory, not optional.
+- Optionally, you may provide a **preference center** allowing granular control, but this does not replace the GPC obligation.
+
+### C. Honor Opt-Out Requests (Required)
+
+Upon receiving a valid opt-out (including GPC):
+
+- **Stop selling/sharing within 15 business days** of the request.
+- **Notify all third parties** (including the ad tech platform) that the consumer has opted out and they must stop using that consumer&#x27;s data — Cal. Civ. Code § 1798.120(d).
+- Do not re-engage the consumer for sale/sharing without their explicit **opt-in consent**, and not before 12 months have passed (§ 1798.135(d)).
+
+### D. Review Your Ad Tech Contract (Required)
+
+Execute or update a written contract with the ad tech platform. The contract must:
+
+- Specify the **limited and specified purpose** for which the ad tech platform may use the data.
+- Prohibit the ad tech platform from selling or sharing the personal information unless the consumer has received notice and opportunity to opt out.
+- Prohibit the ad tech platform from retaining, using, or disclosing the data outside of the contract&#x27;s scope.
+- Require the ad tech platform to notify you if it can no longer comply.
+
+**Citation:** Cal. Civ. Code § 1798.100(d); CPPA Regulations § 7050.
+
+If no compliant contract exists, the ad tech platform cannot qualify as a &quot;service provider&quot; or &quot;contractor&quot; — meaning every disclosure is automatically a sale/sharing, and the platform bears its own obligations as a third party.
+
+### E. Update Your Cookie Banner / Consent Management Platform (Recommended, Practically Required)
+
+- Implement or reconfigure your **Consent Management Platform (CMP)** to:
+  - Disclose ad tech data sharing to users **before** cookies are set.
+  - Capture and propagate opt-out signals.
+  - Honor GPC signals at the technical layer (prevent the ad tech pixel/tag from firing for opted-out users).
+- Consider category-level consent for &quot;targeting/advertising&quot; cookies separate from &quot;functional&quot; cookies.
+
+### F. Consumer Rights Infrastructure (Required)
+
+Ensure your rights request process supports:
+
+- **Right to Know** — what data was sold/shared, to whom, and for what purpose.
+- **Right to Delete** — delete personal information and instruct the ad tech platform to delete its copy.
+- **Right to Correct** — correct inaccurate personal information.
+- **Right to Opt Out** — as described above.
+- **Right of No Retaliation** — consumers who opt out must receive the same quality of service.
+
+Response timelines: 45 calendar days for most requests, extendable by 45 days with notice (§ 1798.145(b)).
+
+### G. Data Minimization and Purpose Limitation (CPRA Addition)
+
+CPRA requires that personal information be:
+
+- Collected for **disclosed purposes** only.
+- Limited to what is **reasonably necessary** for those purposes.
+- Not **retained longer than necessary**.
+
+Review whether the scope of data shared with the ad tech platform (e.g., granular browsing paths, session recordings, inferred attributes) is proportionate to the stated advertising purpose.
+
+---
+
+## 5. Sensitive Personal Information Consideration
+
+If the browsing data reveals information about health conditions, precise geolocation, financial status, or other **sensitive personal information** (SPI) categories under § 1798.140(ae), additional obligations apply:
+
+- Consumers have the right to **limit the use and disclosure** of SPI.
+- A separate **&quot;Limit the Use of My Sensitive Personal Information&quot; link** may be required.
+- SPI shared with ad tech platforms for targeted advertising purposes is particularly high-risk.
+
+---
+
+## 6. Enforcement Risk
+
+The **California Privacy Protection Agency (CPPA)** has made ad tech data flows a priority enforcement area. The CPPA&#x27;s 2023–2024 enforcement sweep explicitly targeted businesses that:
+
+- Failed to honor GPC signals.
+- Did not provide a compliant opt-out link.
+- Continued sharing data with ad tech partners without proper contracts.
+
+Penalties: Up to **$2,500 per unintentional violation** and **$7,500 per intentional violation**, with each consumer&#x27;s record potentially constituting a separate violation (§ 1798.155).
+
+---
+
+## 7. Summary Checklist
+
+| Action | Priority | Owner |
+|---|---|---|
+| Add &quot;Do Not Sell or Share My Personal Information&quot; link to website | Critical | Web/Legal |
+| Honor Global Privacy Control (GPC) browser signals | Critical | Engineering |
+| Update privacy policy with sale/sharing disclosures | Critical | Legal |
+| Execute CPRA-compliant contract with ad tech platform | Critical | Legal/Procurement |
+| Configure CMP to block ad tech tags for opted-out users | Critical | Engineering |
+| Establish consumer rights request workflow | High | Legal/Ops |
+| Audit data minimization — scope of data shared | High | Privacy/Engineering |
+| Check for sensitive personal information in browsing data | High | Privacy |
+| Train marketing/ad ops team on opt-out propagation | Medium | HR/Legal |
+
+---
+
+## References
+
+- Cal. Civ. Code § 1798.100 et seq. (CCPA as amended by CPRA)
+- Cal. Civ. Code §§ 1798.120, 1798.135, 1798.140(ad), 1798.140(ah)
+- CPPA Final Regulations (effective March 29, 2023), Cal. Code Regs. tit. 11, §§ 7000–7304
+- CPPA Enforcement Advisory No. 2023-03 (Global Privacy Control)
+- FTC Enforcement Guidance on Digital Advertising and Data Brokers (complementary federal context)
+</pre></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-item" id="eval-ccpa-3">
+            <button class="eval-toggle" onclick="toggleEval('ccpa-3')">
+              <span class="eval-label">eval-89</span>
+              <span class="eval-chevron">▼</span>
+            </button>
+            <div class="eval-content" style="display:none">
+              <div class="eval-prompt">
+                <strong>Prompt:</strong> We already have a GDPR compliance programme. What additional steps do we need to take to comply with CCPA/CPRA? Where do the two laws differ most significantly?
+              </div>
+              <div class="eval-outputs">
+                <div class="output-panel">
+                  <div class="output-header with-header">With Skill</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">States that GDPR compliance provides a strong foundation (privacy notices, rights processes, processor agreements, data minimization) but does NOT automatically satisfy CCPA/CPRA</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Identifies CCPA/CPRA-specific additions needed: &#x27;Do Not Sell or Share My Personal Information&#x27; link + GPC signal compliance, and &#x27;Limit the Use of My Sensitive Personal Information&#x27; link (CPRA)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains the opt-out vs. opt-in model difference: CCPA/CPRA is primarily opt-out (consumers must request opt-out) whereas GDPR requires opt-in consent for most sensitive processing</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Notes that CCPA/CPRA has no lawful basis requirement for general PI processing — businesses can collect PI without one of GDPR&#x27;s six legal bases</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Highlights the CCPA/CPRA private right of action for data breaches ($100–$750 per consumer per incident) which has no GDPR equivalent, and the need to verify vendor contracts meet CCPA service provider requirements</span></div></div></div>
+                  <div class="output-text"><pre># GDPR to CCPA/CPRA Gap Analysis: Additional Steps Required
+
+## Overview
+
+Good news: a mature GDPR programme gives you a substantial head start on CCPA/CPRA compliance. The GDPR is generally the more demanding of the two frameworks, and most of its core obligations map directly onto California law. However, CCPA/CPRA contains several concepts and mechanisms with no GDPR equivalent that you will need to implement from scratch.
+
+---
+
+## What Your GDPR Programme Already Covers
+
+The following CCPA/CPRA obligations are satisfied (or substantially satisfied) by your existing GDPR controls:
+
+| CCPA/CPRA Obligation | Covered by GDPR Programme |
+|---|---|
+| Privacy notice at collection | Art. 13/14 notices |
+| Comprehensive privacy policy | Privacy notice |
+| Right to access/know | DSAR process |
+| Right to delete | Right to erasure process |
+| Right to correct | Right to rectification |
+| Right to data portability | Art. 20 portability |
+| Data minimisation and purpose limitation | Art. 5 principles |
+| Retention schedules | Art. 5(1)(e) storage limitation |
+| Processor/service provider agreements | Art. 28 DPAs |
+| Security measures | Art. 32 technical/organisational measures |
+
+---
+
+## Additional Steps Needed for CCPA/CPRA
+
+### 1. &quot;Do Not Sell or Share My Personal Information&quot; Link and Opt-Out Workflow
+
+**No GDPR equivalent.** CCPA/CPRA defines &quot;sale&quot; broadly (monetary or other valuable consideration) and adds &quot;sharing&quot; (disclosure for cross-context behavioural advertising, even without payment). You must:
+
+- Add a conspicuous &quot;Do Not Sell or Share My Personal Information&quot; link to your homepage and privacy policy
+- Build a consumer-facing opt-out form or mechanism
+- Update your consent/preference management platform to process opt-outs within 15 business days
+- Propagate opt-outs to all downstream service providers and contractors
+- Implement a 12-month moratorium on re-asking opted-out consumers to reconsider
+
+**Key implication for ad tech:** If you use third-party ad exchanges, DMPs, or retargeting partners who receive cookie IDs or device identifiers, those disclosures will likely constitute a &quot;sale&quot; or &quot;sharing&quot; under CCPA/CPRA and must be stopped for opted-out California consumers.
+
+### 2. Global Privacy Control (GPC) Signal Honoring
+
+**No GDPR equivalent.** The CPPA has confirmed that businesses must recognise the GPC browser signal as a valid opt-out of sale/sharing — it must be processed automatically, not just as a preference signal. This requires:
+
+- Technical implementation to detect GPC headers in browser requests
+- Automatic suppression of data sharing/selling for consumers sending GPC signals
+- This must work even if the consumer has not submitted a manual opt-out request
+
+### 3. &quot;Limit the Use of My Sensitive Personal Information&quot; Link and Workflow
+
+**Partial GDPR overlap, but different mechanism.** GDPR requires explicit consent (opt-in) for special category data. CCPA/CPRA uses an opt-out model for most SPI categories — meaning you can use SPI by default but must stop on request.
+
+CPRA&#x27;s SPI categories include some items not in GDPR special categories:
+- Precise geolocation (within 1/4 mile)
+- Account credentials (login + security code)
+- Contents of consumer communications (mail, email, texts)
+- Social Security numbers and government IDs
+
+You must:
+- Add a &quot;Limit the Use of My Sensitive Personal Information&quot; link (can be combined with the Do Not Sell link)
+- Process SPI limitation requests within **15 business days** (faster than the 45-day standard deadline)
+- Restrict SPI use to only the permitted purposes (service delivery, safety/security, transient use, quality verification)
+- Propagate limitations to service providers and contractors
+
+### 4. Vendor Contract Review and Reclassification
+
+**GDPR Art. 28 DPAs are necessary but not sufficient.** CCPA/CPRA introduces a three-tier vendor taxonomy — Service Providers, Contractors (CPRA addition), and Third Parties — each with different rules:
+
+- **Service Providers:** Process PI on your behalf; contract must prohibit further use or sale; not a &quot;sale&quot;
+- **Contractors:** Receive PI under contract; must certify compliance; must not sell or share
+- **Third Parties:** Any other recipient — disclosure is likely a &quot;sale&quot; unless an exception applies
+
+Action required:
+- Audit all current processor/vendor relationships and reclassify under CCPA/CPRA taxonomy
+- Update contracts with service providers and contractors to include CCPA/CPRA-specific clauses: purpose limitation, prohibition on resale, obligation to honour consumer deletion requests, audit rights, certification of compliance
+- Note: your GDPR DPAs will not automatically satisfy these requirements — specific CCPA/CPRA language is needed
+
+### 5. Minors&#x27; Opt-In Consent for Sale/Sharing
+
+**Different age thresholds from GDPR.** CCPA/CPRA requires affirmative opt-in before selling or sharing PI of consumers aged 13–15, and parental consent for under-13s. This operates independently of your GDPR age-of-consent controls (which vary by Member State from 13–16 for consent-based processing).
+
+Action required:
+- Implement age-screening for consumer-facing products
+- Build opt-in workflows for 13–15 year-olds and parental consent mechanisms for under-13s
+- Ensure ad tech and data sharing is suppressed for minors absent opt-in
+
+### 6. Financial Incentive and Loyalty Programme Disclosures
+
+If you operate loyalty programmes, premium tiers, or offer any benefit in exchange for consumers&#x27; PI:
+
+- You must disclose the financial incentive in your privacy policy
+- Provide a &quot;reasonably related&quot; justification (the incentive must be proportionate to the value of the PI)
+- Obtain affirmative opt-in consent from consumers with a clear description of material terms
+- Allow consumers to withdraw at any time without penalty
+
+This has no direct GDPR equivalent.
+
+### 7. Annual Business Threshold Verification
+
+CCPA/CPRA applicability is re-evaluated each year based on:
+- Annual gross revenues exceeding $25 million, OR
+- Buying, selling, receiving, or sharing PI of 100,000+ consumers or households, OR
+- 50%+ of annual revenues from selling or sharing PI
+
+You should build an annual process to confirm threshold status and update your compliance posture if thresholds change.
+
+### 8. CPPA Rulemaking — Automated Decision-Making and Cybersecurity Audits
+
+**Pending but plan now.** The California Privacy Protection Agency (CPPA) is developing regulations on:
+
+- **Automated decision-making (ADM):** Expected to require opt-out rights and access to decision logic for significant automated decisions. Map this to your existing Art. 22 GDPR controls — you will likely need US-specific opt-out mechanisms rather than relying on the GDPR&#x27;s exemption framework
+- **Annual cybersecurity audits:** Businesses processing PI that presents &quot;significant risk&quot; will need to conduct and potentially submit annual cybersecurity audits to the CPPA
+- **Data broker registration:** If you sell PI without a direct relationship with the consumer, California data broker registration may be required
+
+---
+
+## Where the Two Laws Differ Most Significantly
+
+### 1. Lawful Basis vs. No Lawful Basis
+
+**This is the most fundamental structural difference.** GDPR prohibits processing unless you have a lawful basis (consent, contract, legitimate interests, etc.). CCPA/CPRA imposes no such requirement — businesses may collect and use PI without any legal justification, provided they give notice. This means:
+
+- Your GDPR legitimate interests assessments (LIAs) and consent records have no direct CCPA/CPRA equivalent
+- CCPA/CPRA compliance does not require you to identify or document a basis for processing
+- However, you still cannot use PI for undisclosed purposes (purpose limitation applies)
+
+### 2. Opt-In (GDPR) vs. Opt-Out (CCPA/CPRA) Model
+
+GDPR is fundamentally opt-in — consent must be freely given, specific, informed, and unambiguous before processing. CCPA/CPRA is fundamentally opt-out — consumers can use their PI unless and until they say stop. The only opt-in requirements under CCPA/CPRA are for minors&#x27; data and financial incentive programmes.
+
+This creates an asymmetry: for California consumers, you may be doing more processing by default than for EU/EEA consumers, but you face a different enforcement risk (action after the fact rather than lack of prior consent).
+
+### 3. &quot;Sale&quot; and &quot;Sharing&quot; — Concepts with No GDPR Equivalent
+
+GDPR treats disclosure to a third party as a separate processing activity governed by lawful basis and purpose limitation. CCPA/CPRA creates the specific concept of &quot;sale&quot; (for any valuable consideration, not just money) and &quot;sharing&quot; (for cross-context behavioural advertising) with dedicated opt-out rights. Many data flows that are routine under GDPR may constitute a &quot;sale&quot; or &quot;sharing&quot; under CCPA/CPRA.
+
+### 4. Sensitive Personal Information — Broader and Different Categories
+
+CPRA&#x27;s SPI category is wider than GDPR&#x27;s special categories in specific ways:
+- Precise geolocation is SPI under CPRA but not a special category under GDPR (though it may require legitimate interests assessment)
+- Account credentials and communication contents are SPI under CPRA with no GDPR special category equivalent
+- The treatment mechanism is also different: GDPR requires explicit consent; CPRA provides an opt-out right (businesses can use SPI unless the consumer limits it)
+
+### 5. Response Timelines
+
+| Action | CCPA/CPRA | GDPR |
+|---|---|---|
+| Standard rights requests | 45 days + 45-day extension | 1 month + 2-month extension |
+| SPI limitation requests | 15 business days | N/A |
+| Opt-out of sale/sharing | Immediate (update within 15 business days) | N/A |
+
+CCPA/CPRA timelines for standard requests are somewhat shorter than GDPR (45 days vs. ~30 calendar days, but with a longer extension available). The SPI limitation 15-business-day deadline has no GDPR analogue.
+
+### 6. Private Right of Action — Scope
+
+GDPR allows data subjects to bring claims for any infringement of their rights, and compensation for material or non-material damage. CCPA/CPRA&#x27;s private right of action is narrowly scoped to **data breaches only** — consumers cannot sue for general CCPA/CPRA non-compliance. However, class actions for data breaches with statutory damages of $100–$750 per consumer per incident create very significant financial exposure.
+
+### 7. Enforcement Architecture
+
+| Aspect | CCPA/CPRA | GDPR |
+|---|---|---|
+| Enforcement body | California Privacy Protection Agency (CPPA) | 27+ national DPAs |
+| Penalty calculation | Per violation (not global turnover) | % of global annual turnover |
+| Maximum penalty | $7,500 per intentional violation | €20M or 4% global turnover |
+| Cure period | 30 days (for AG actions) | No formal cure period |
+
+GDPR&#x27;s turnover-based penalties create larger maximum exposure for large organisations. CCPA/CPRA&#x27;s per-violation model can add up quickly in a mass data incident (especially involving minors, where $7,500 per record applies automatically).
+
+### 8. International Data Transfers
+
+GDPR imposes strict transfer restriction rules for data leaving the EEA (SCCs, BCRs, adequacy decisions). CCPA/CPRA has **no equivalent** — there are no restrictions on cross-border data transfers under California law. Your GDPR transfer mechanisms are relevant only for EU/EEA data.
+
+---
+
+## Prioritised Remediation Roadmap
+
+| Priority | Action | Rationale |
+|---|---|---|
+| **Immediate** | Add &quot;Do Not Sell or Share&quot; link and opt-out workflow | Core CCPA right; enforcement focus |
+| **Immediate** | Implement GPC signal detection and processing | CPPA enforcement confirmed; court decisions support |
+| **Short-term** | Audit and update vendor contracts for CCPA/CPRA requirements | Liability risk from non-compliant service providers |
+| **Short-term** | Add SPI limitation link and 15-day response workflow | CPRA right; penalty exposure |
+| **Short-term** | Review ad tech stack for &quot;sale/sharing&quot; data flows | Likely highest-risk area for most organisations |
+| **Medium-term** | Implement minors&#x27; opt-in controls if applicable | $7,500/violation for minors; always intentional |
+| **Medium-term** | Add financial incentive disclosures if applicable | Required for loyalty/incentive programmes |
+| **Ongoing** | Monitor CPPA rulemaking on ADM and cybersecurity audits | Significant new obligations pending |
+| **Annual** | Verify business thresholds | Applicability can change year to year |
+
+---
+
+*This analysis is based on CCPA (Cal. Civ. Code §1798.100 et seq.) and CPRA (effective January 1, 2023). CPPA rulemaking is ongoing and requirements in areas such as automated decision-making and cybersecurity audits may be finalised after this date. Consult qualified US privacy counsel before implementing compliance measures.*
+</pre></div>
+                </div>
+                <div class="output-panel">
+                  <div class="output-header without-header">Without Skill (Baseline)</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">States that GDPR compliance provides a strong foundation (privacy notices, rights processes, processor agreements, data minimization) but does NOT automatically satisfy CCPA/CPRA</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Identifies CCPA/CPRA-specific additions needed: &#x27;Do Not Sell or Share My Personal Information&#x27; link + GPC signal compliance, and &#x27;Limit the Use of My Sensitive Personal Information&#x27; link (CPRA)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains the opt-out vs. opt-in model difference: CCPA/CPRA is primarily opt-out (consumers must request opt-out) whereas GDPR requires opt-in consent for most sensitive processing</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Notes that CCPA/CPRA has no lawful basis requirement for general PI processing — businesses can collect PI without one of GDPR&#x27;s six legal bases</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Highlights the CCPA/CPRA private right of action for data breaches ($100–$750 per consumer per incident) which has no GDPR equivalent, and the need to verify vendor contracts meet CCPA service provider requirements</span></div></div></div>
+                  <div class="output-text"><pre># GDPR to CCPA/CPRA: Additional Compliance Steps and Key Differences
+
+## Executive Summary
+
+If you already have a mature GDPR compliance programme, you have a strong foundation for CCPA/CPRA compliance. Many core privacy principles overlap — transparency, data subject rights, security safeguards, and vendor management. However, the two laws differ significantly in scope, mechanics, opt-out architecture, and enforcement model. This document outlines the gaps you need to close and where the laws diverge most sharply.
+
+---
+
+## 1. Scope and Applicability — Understand Whether CCPA/CPRA Applies
+
+Before closing gaps, confirm you are in scope. CCPA/CPRA (California Consumer Privacy Act, as amended by the California Privacy Rights Act) applies to for-profit businesses that collect personal information of California residents and meet **at least one** of:
+
+- Annual gross revenues exceeding **$25 million**
+- Annually buying, selling, receiving, or sharing the personal information of **100,000 or more** consumers or households
+- Deriving **50% or more** of annual revenues from selling or sharing consumers&#x27; personal information
+
+GDPR applies to any organisation processing EU/EEA residents&#x27; personal data regardless of revenue. If your business is small, GDPR may apply while CCPA/CPRA may not — and vice versa for large US-only operations.
+
+---
+
+## 2. Key Additional Steps Required Beyond Your GDPR Programme
+
+### 2.1 Data Mapping and Inventory — CCPA-Specific Categories
+
+**What GDPR already gives you:** A data inventory (Article 30 Record of Processing Activities) covering categories of data, purposes, retention periods, and recipients.
+
+**What you still need for CCPA/CPRA:**
+
+- Map data to CCPA&#x27;s defined categories of &quot;personal information,&quot; which are broader in some respects (e.g., commercial information, inferences drawn from consumer data, olfactory/visual/thermal data).
+- Identify **&quot;sensitive personal information&quot; (SPI)** under CPRA — this is a distinct sub-category with additional rights (right to limit use and disclosure) not present in the original CCPA. SPI includes: Social Security numbers, financial account credentials, precise geolocation, racial/ethnic origin, religious beliefs, union membership, contents of communications, genetic/biometric data, and health information.
+- Identify all instances of **&quot;selling&quot; or &quot;sharing&quot;** personal information as defined under CCPA — these terms are broader than common understanding and include data exchanged for cross-context behavioural advertising even without monetary consideration.
+
+### 2.2 Implement &quot;Do Not Sell or Share My Personal Information&quot;
+
+**GDPR equivalent:** GDPR requires a legal basis for processing; if based on legitimate interests, individuals can object. There is no exact analogue.
+
+**CCPA/CPRA requirement:** Businesses that sell or share personal information must:
+
+- Post a clear and conspicuous **&quot;Do Not Sell or Share My Personal Information&quot;** link on the homepage and in the privacy notice.
+- Establish a mechanism to receive and honour opt-out requests within **15 business days**.
+- Respect opt-out signals from recognised **Global Privacy Control (GPC)** browser settings — this is mandatory, not optional.
+- Cease selling/sharing the opted-out consumer&#x27;s data and notify downstream third parties.
+
+**Action:** Implement GPC signal detection in your web infrastructure. Deploy the opt-out link. Build a backend workflow to flag opted-out consumers and suppress their data from being shared or sold.
+
+### 2.3 Right to Limit Use of Sensitive Personal Information
+
+**GDPR equivalent:** Sensitive data requires explicit consent or another specific lawful basis under Article 9. This is a processing restriction at collection, not a post-collection opt-out right.
+
+**CPRA addition:** Consumers have the right to direct a business to **limit the use and disclosure of SPI** to purposes necessary to perform the service. Businesses that use SPI beyond necessary purposes must offer a &quot;Limit the Use of My Sensitive Personal Information&quot; opt-out link (or a combined link).
+
+**Action:** Audit all uses of SPI. If you use SPI for secondary purposes (advertising, profiling), implement the limitation right mechanism.
+
+### 2.4 Data Retention — Explicit Disclosure Requirements
+
+**GDPR:** Requires disclosure of retention periods or criteria in the privacy notice (Articles 13/14).
+
+**CPRA:** Requires businesses to disclose **at or before collection** the retention period for each category of personal information, or if that is not possible, the criteria used. The CPRA also adds an explicit prohibition on retaining personal information longer than reasonably necessary for the disclosed purpose.
+
+**Action:** Update your privacy notice to include category-level retention disclosures aligned with CCPA categories, not just GDPR-style criteria statements.
+
+### 2.5 Contracts with Service Providers, Contractors, and Third Parties
+
+**GDPR equivalent:** Data Processing Agreements (DPAs) with processors under Article 28.
+
+**CCPA/CPRA framework:** The terminology and obligations differ:
+
+| CCPA/CPRA Term | Closest GDPR Analogue | Key Difference |
+|---|---|---|
+| Service Provider | Processor | Contract must specify permitted purposes; service provider cannot sell/share data or use it for its own purposes |
+| Contractor | Processor | Similar restrictions; must certify compliance; applies to data &quot;shared&quot; not just processed for payment |
+| Third Party | Controller receiving data | Business must enter a contract restricting use; third party is liable for downstream violations |
+
+**Action:** Review all existing vendor DPAs. They may not contain CCPA-required clauses (e.g., prohibition on selling data received from you, contractual certification of compliance, audit rights framed in CCPA terms). Create a CCPA addendum template. Note that GDPR DPAs and CCPA service provider agreements can sometimes be combined into a single privacy addendum.
+
+### 2.6 Consumer Rights — Gaps vs. GDPR
+
+GDPR rights provide a good baseline, but there are procedural and substantive differences:
+
+| Right | GDPR | CCPA/CPRA | Gap to Close |
+|---|---|---|---|
+| Right to Know / Access | Art. 15 — access to data and information | Right to know categories and specific pieces of personal information collected in the past 12 months | CCPA response must include specific pieces (not just categories); 45-day response window (same) |
+| Right to Delete | Art. 17 — right to erasure | Right to delete with fewer exceptions | CCPA exceptions are different from GDPR; must also instruct service providers and contractors to delete |
+| Right to Correct | Art. 16 — rectification | CPRA added right to correct (not in original CCPA) | Already have this capability from GDPR; check your workflow routes corrections to service providers too |
+| Right to Portability | Art. 20 — structured, machine-readable format | Right to obtain data in portable format | Similar; CCPA requires delivery within 45 days, twice per 12-month period free of charge |
+| Right to Opt-Out of Sale/Sharing | No direct equivalent | Core CCPA right | New — see section 2.2 above |
+| Right to Limit SPI Use | No direct equivalent | CPRA right | New — see section 2.3 above |
+| Right to Non-Discrimination | No explicit equivalent | Explicit prohibition on discriminating against consumers who exercise rights | Ensure loyalty programmes, pricing, and service tiers do not penalise opt-outs |
+| Automated Decision-Making | Art. 22 — right not to be subject to solely automated decisions | CPRA gives CPPA rulemaking authority; regulations are evolving | Monitor CPPA rulemaking; implement opt-out of automated decision-making affecting consumers significantly |
+
+**Action:** Update your DSR (Data Subject Request) platform to handle CCPA-specific request types (e.g., &quot;Do Not Sell,&quot; &quot;Limit SPI&quot;). Train your response team on CCPA exceptions (which differ from GDPR exceptions). Ensure deletion requests cascade to service providers.
+
+### 2.7 Privacy Notice Updates
+
+**GDPR:** Article 13/14 notices are required at point of collection.
+
+**CCPA/CPRA:** Requires a privacy notice &quot;at or before&quot; collection for each category, including:
+
+- Categories of personal information collected and the purposes for each
+- Categories of third parties to whom information is disclosed
+- Retention periods per category
+- Whether personal information is sold or shared (and categories of recipients)
+- The consumer rights available and how to exercise them
+- The right to submit requests via a designated toll-free number (for businesses with a physical presence or required by regulation)
+- Whether SPI is collected and used beyond necessary purposes
+
+**Action:** Create a California-specific privacy notice (or a layered notice with California addendum). Ensure it is accessible from every page where personal information is collected.
+
+### 2.8 Establish a Toll-Free Number or Designated Request Method
+
+**GDPR:** No specific requirement for a toll-free telephone number.
+
+**CCPA/CPRA:** Businesses must provide at least two designated methods for submitting requests to know and delete, including a toll-free telephone number (unless the business operates solely online, in which case an email address suffices).
+
+**Action:** Set up a CCPA request intake channel (toll-free number or email for online-only businesses). Log all requests for compliance records.
+
+### 2.9 No Consent-as-Legal-Basis Architecture (Generally)
+
+**GDPR:** Consent is one of six lawful bases; it is often the primary basis for marketing.
+
+**CCPA/CPRA:** CCPA is largely an **opt-out** regime for adults (not opt-in). Consent (opt-in) is only required in specific situations:
+
+- **Sale/sharing of data of consumers under 16** (opt-in required; under 13 requires parent/guardian opt-in)
+- **Re-use of personal information** for a purpose materially different from the disclosed purpose
+
+**Action:** If you serve consumers under 16 in California, implement age-detection and parental consent workflows separate from any GDPR age-gating mechanisms.
+
+### 2.10 California Privacy Protection Agency (CPPA) Registration and Rulemaking
+
+**GDPR:** Supervisory authority is your lead DPA (determined by establishment).
+
+**CCPA/CPRA:** The **California Privacy Protection Agency (CPPA)** is the primary regulatory body with rulemaking authority. Regulations are actively evolving (cybersecurity audits, risk assessments, automated decision-making rules were still being finalised as of early 2026).
+
+**Action:** Monitor CPPA rulemaking at cppa.ca.gov. Subscribe to regulatory updates. Be prepared to comply with cybersecurity audit requirements and privacy risk assessments once finalised — these will require operational processes similar to GDPR&#x27;s Data Protection Impact Assessments (DPIAs) but with California-specific frameworks.
+
+---
+
+## 3. Where GDPR and CCPA/CPRA Differ Most Significantly
+
+### 3.1 Opt-Out vs. Opt-In Philosophy
+
+This is the most fundamental structural difference.
+
+- **GDPR:** Processing personal data generally requires a **lawful basis established before or at the point of processing**. For consent-based processing, this means opt-in before data is used. For other bases (contract, legitimate interests), the data subject can object after the fact.
+- **CCPA/CPRA:** For most processing, businesses can collect and use data freely; consumers have the right to **opt out after the fact** (except for the specific scenarios noted above). This reflects a different cultural and legal philosophy about data use.
+
+**Implication:** Your GDPR consent management infrastructure (CMPs, consent banners) may create compliance friction in the CCPA context if misapplied. CCPA does not require consent banners or cookie consent; it requires opt-out mechanisms.
+
+### 3.2 Household vs. Individual as the Unit of Protection
+
+- **GDPR:** Protects **natural persons** (individuals).
+- **CCPA/CPRA:** Protects **consumers** and **households** — household-level data can trigger CCPA obligations even if no individual is identified.
+
+### 3.3 &quot;Sale&quot; and &quot;Sharing&quot; Are Defined Very Broadly
+
+- **GDPR:** Transfers of data to third parties are governed by controller-to-controller or controller-to-processor frameworks; the concept of &quot;sale&quot; is not legally significant.
+- **CCPA/CPRA:** &quot;Selling&quot; includes any disclosure for **valuable consideration**, which courts and the CPPA have interpreted broadly. &quot;Sharing&quot; specifically covers disclosure for **cross-context behavioural advertising** even without monetary exchange — this captures most adtech arrangements (Google Analytics, Meta Pixel, programmatic advertising) that GDPR handles through consent but CCPA handles through opt-out.
+
+**Implication:** If you use any third-party tracking for advertising purposes, you are almost certainly &quot;selling or sharing&quot; under CCPA/CPRA, triggering opt-out obligations regardless of your GDPR consent model.
+
+### 3.4 No Equivalent to GDPR&#x27;s Lawful Basis Framework
+
+- **GDPR:** Six lawful bases (consent, contract, legal obligation, vital interests, public task, legitimate interests). Processing without a basis is unlawful.
+- **CCPA/CPRA:** No equivalent lawful basis requirement. The law focuses on **transparency and opt-out rights**, not on pre-authorising processing. Businesses disclose what they do and give consumers the right to opt out of sale/sharing and limit SPI use.
+
+### 3.5 Private Right of Action is Narrow (But Significant)
+
+- **GDPR:** Individuals can complain to supervisory authorities; Member State law may provide private rights of action varying by jurisdiction.
+- **CCPA/CPRA:** Private right of action is **limited to data breaches** involving certain categories of unencrypted/unredacted personal information. However, statutory damages of **$100–$750 per consumer per incident** (or actual damages if greater) can aggregate to enormous class action exposure. Regulatory enforcement (up to **$2,500 per unintentional violation** and **$7,500 per intentional violation or violations involving minors**) is handled by the CPPA and California Attorney General.
+
+### 3.6 DPIA / Risk Assessment Approach
+
+- **GDPR:** Article 35 DPIAs are triggered by high-risk processing (large-scale processing of special categories, systematic monitoring, automated decisions with significant effects).
+- **CPRA:** Privacy risk assessments (and cybersecurity audits) will be required by CPPA regulation for businesses whose processing presents significant risk. The triggers and scope are not yet identical to GDPR Art. 35. Automated decision-making assessments are required separately.
+
+### 3.7 No Data Protection Officer (DPO) Requirement
+
+- **GDPR:** Mandatory DPO appointment in certain circumstances (Articles 37–39).
+- **CCPA/CPRA:** No mandatory DPO. However, designating a privacy lead or privacy officer is a best practice and may be required by industry frameworks.
+
+### 3.8 Scope of Special/Sensitive Data
+
+- **GDPR Special Categories (Art. 9):** Race/ethnicity, political opinions, religious/philosophical beliefs, trade union membership, genetic data, biometric data for unique identification, health data, sex life/orientation.
+- **CPRA Sensitive Personal Information:** Overlaps substantially but adds: **Social Security/government ID numbers**, **financial account credentials** (account numbers + access codes), **precise geolocation**, **contents of messages** (email, text, mail). Notably, health data is SPI under CPRA but does not require the same lawful basis structure as GDPR Art. 9 — instead it triggers the right to limit use.
+
+---
+
+## 4. Prioritised Action Plan for GDPR-Ready Organisations
+
+| Priority | Action Item | Effort |
+|---|---|---|
+| 1 | Determine if CCPA/CPRA applies (revenue/volume thresholds) | Low |
+| 2 | Audit data flows for &quot;selling&quot; or &quot;sharing&quot; (adtech, data brokers) | Medium |
+| 3 | Implement GPC signal detection and Do Not Sell/Share opt-out | High |
+| 4 | Update privacy notice with CCPA-required disclosures | Medium |
+| 5 | Update vendor contracts with CCPA service provider clauses | Medium |
+| 6 | Implement right to limit SPI use if SPI used beyond necessary purposes | Medium |
+| 7 | Extend DSR platform to handle CCPA request types and timelines | Medium |
+| 8 | Set up designated request intake (toll-free number or email) | Low |
+| 9 | Implement children&#x27;s data opt-in if serving under-16s | High |
+| 10 | Monitor CPPA rulemaking for cybersecurity audit and ADM requirements | Ongoing |
+
+---
+
+## 5. Summary: What GDPR Gives You for Free
+
+Your GDPR programme already provides:
+- Data inventory and mapping (extend to CCPA categories)
+- Privacy notice drafting capability (update for CCPA requirements)
+- DSR intake and response workflows (extend to CCPA right types)
+- Vendor management (update contracts with CCPA clauses)
+- Data retention policies (ensure category-level disclosure)
+- Security safeguards (supports CCPA breach liability defence)
+- DPIAs (foundation for CPPA risk assessment requirements)
+- Training programmes (extend to CCPA-specific scenarios)
+
+The primary **net-new** work is: the opt-out infrastructure (GPC, Do Not Sell link), the SPI limitation right, the California-specific privacy notice, CCPA-compliant vendor contracts, and ongoing monitoring of CPPA regulatory developments.
+</pre></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="eval-item" id="eval-ccpa-4">
+            <button class="eval-toggle" onclick="toggleEval('ccpa-4')">
+              <span class="eval-label">eval-90</span>
+              <span class="eval-chevron">▼</span>
+            </button>
+            <div class="eval-content" style="display:none">
+              <div class="eval-prompt">
+                <strong>Prompt:</strong> Our mobile app collects precise geolocation, health metrics from wearable integration, and biometric facial recognition for authentication. How does CPRA classify this data, what special obligations apply, and what do we need to disclose?
+              </div>
+              <div class="eval-outputs">
+                <div class="output-panel">
+                  <div class="output-header with-header">With Skill</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Correctly identifies all three data types as Sensitive Personal Information (SPI) under CPRA: precise geolocation (within 1/4 mile), health/medical data from wearables, and biometric data used for identification</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains the CPRA obligation to offer a &#x27;Limit the Use of My Sensitive Personal Information&#x27; link/mechanism (on homepage or via a combined opt-out page)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">States that SPI limitation requests must be processed within 15 business days (shorter than the 45-day deadline for other rights)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains permitted uses of SPI without triggering limitation rights: services reasonably expected by consumers, security/integrity, short-term transient use — and that the app must clearly document which permitted use applies to each SPI processing activity</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Advises on privacy notice requirements: must disclose each SPI category collected, purpose of collection, and whether SPI is sold, shared, or used beyond the necessary purpose — in both the at-collection notice and the privacy policy</span></div></div></div>
+                  <div class="output-text"><pre># CPRA Classification and Obligations for Mobile App Data Collection
+
+## Overview
+
+Your mobile app collects three distinct categories of data: precise geolocation, health metrics from wearable integration, and biometric facial recognition for authentication. Under the California Privacy Rights Act (CPRA), all three categories qualify as **Sensitive Personal Information (SPI)** — the highest-protection tier of personal information under California law.
+
+---
+
+## 1. Data Classification Under CPRA
+
+### All Three Categories Are Sensitive Personal Information (SPI)
+
+The CPRA (Cal. Civ. Code §1798.140(ae)) defines SPI as a subset of personal information that warrants heightened protection. Each data type in your app maps directly to a statutory SPI category:
+
+| Data Type | SPI Category | Statutory Basis |
+|---|---|---|
+| Precise Geolocation | &quot;Precise geolocation&quot; — defined as location within a radius of 1,850 feet | §1798.140(ae)(1)(H) |
+| Health Metrics (wearable) | &quot;Personal information collected and analyzed concerning a consumer&#x27;s health&quot; | §1798.140(ae)(1)(B) |
+| Biometric Facial Recognition | &quot;Biometric information&quot; — including physiological characteristics used for identification | §1798.140(ae)(1)(B) |
+
+These are not borderline classifications. All three are explicitly enumerated SPI categories, meaning they carry the full weight of CPRA&#x27;s SPI protections regardless of how the data is processed or used.
+
+All three categories also constitute standard **Personal Information (PI)** under §1798.140(v), which means baseline CCPA/CPRA obligations apply in addition to the SPI-specific obligations.
+
+---
+
+## 2. Special Obligations for SPI
+
+### A. Right to Limit SPI Use (§1798.121) — CPRA Addition
+
+Consumers have the right to direct your business to limit the use and disclosure of their SPI to only what is necessary to perform the services they requested (or as permitted by regulation).
+
+**Permitted purposes without limitation** (i.e., SPI can be used without triggering the opt-out right) include:
+- Performing the services or providing goods reasonably expected by the consumer
+- Helping to ensure security and integrity of the business&#x27;s systems
+- Short-term transient use not used for profiling
+- Activities that qualify under certain legal exemptions
+
+**Trigger for the limitation right**: If your app uses SPI for purposes beyond what is strictly necessary to deliver the core service — for example, using geolocation data for targeted advertising, sharing health metrics with third-party analytics partners, or retaining biometric data beyond the authentication session — consumers can invoke this right.
+
+**Response deadline**: You must honor limitation requests within **15 business days**.
+
+### B. &quot;Limit the Use of My Sensitive Personal Information&quot; Link
+
+If SPI is used for purposes beyond the narrowly permitted set, you must provide a clear and conspicuous link — titled exactly &quot;Limit the Use of My Sensitive Personal Information&quot; — on your homepage and in your app. This is a separate and additional link from the &quot;Do Not Sell or Share My Personal Information&quot; link.
+
+Both links can be combined into a single &quot;Your Privacy Choices&quot; link under CPPA regulations, provided it is equally prominent.
+
+### C. Data Minimization and Purpose Limitation (CPRA §1798.100(c))
+
+SPI collection must be **adequate, relevant, and limited to what is necessary** for the disclosed purpose. Applied to your app:
+
+- **Precise geolocation**: Collect only when necessary for app functionality (e.g., navigation or location-based features). Avoid continuous background collection if the service does not require it.
+- **Health metrics**: Collect only the metrics necessary for the features offered. Avoid aggregating or retaining data beyond what the wearable integration feature requires.
+- **Biometric data**: For authentication purposes, best practice is to process biometrics locally on-device and store only a derived cryptographic template (not the raw facial scan), and only for as long as the authentication session requires.
+
+### D. Retention Limits (CPRA Addition)
+
+You must disclose — and adhere to — specific retention periods or the criteria used to determine retention for each SPI category. You cannot retain SPI longer than reasonably necessary for the disclosed purpose.
+
+**Recommended retention posture**:
+- Biometric data: Retained only for the duration of the authentication session; derived templates purged upon account deletion or user request.
+- Health metrics: Retain for the period necessary to deliver the wearable integration feature; disclose specific retention window.
+- Precise geolocation: If collected in real-time for navigation, do not persist beyond the active session unless the user explicitly opts in to history storage.
+
+### E. Cybersecurity Audits and Risk Assessments (CPRA §1798.185)
+
+Businesses that process SPI that presents **significant risk to consumer privacy or security** are required to conduct annual cybersecurity audits and submit risk assessments to the CPPA. Biometric data and health data are the categories most likely to trigger this requirement. You should:
+
+1. Conduct a Privacy Risk Assessment covering all three SPI categories.
+2. Evaluate whether processing presents &quot;significant risk&quot; (biometrics almost certainly does).
+3. Prepare to submit assessments to the CPPA once final rulemaking is completed.
+
+---
+
+## 3. Required Disclosures
+
+### A. Privacy Notice at Collection
+
+At or before collecting SPI, you must notify consumers of:
+
+- The **specific categories of SPI** collected (list all three: precise geolocation, health data, biometric/facial recognition data)
+- The **purposes** for which each category is collected and used
+- Whether SPI is **sold or shared** with third parties (and to which categories of third parties)
+- The **retention period** for each SPI category, or the criteria used to determine it
+- A link to your full privacy policy
+- The consumer&#x27;s **right to limit** use of SPI (if applicable)
+
+This notice must appear in the app at the point of data collection — ideally at first launch (for geolocation and account creation), at wearable integration setup (for health metrics), and before biometric enrollment (for facial recognition).
+
+### B. Full Privacy Policy
+
+Your privacy policy must include the following SPI-specific disclosures:
+
+1. **Categories of SPI collected**: Precise geolocation, health/medical information, biometric information (facial recognition)
+2. **Purposes of collection** for each SPI category
+3. **Whether SPI is sold or shared**: Explicitly state yes or no for each category, and if yes, to what categories of third parties
+4. **Consumer rights** with respect to SPI, including the right to limit use under §1798.121
+5. **How to exercise the Right to Limit SPI**: Instructions, contact method, and the 15-business-day response timeline
+6. **Retention periods** for each SPI category
+7. **&quot;Limit the Use of My Sensitive Personal Information&quot; link** or equivalent &quot;Your Privacy Choices&quot; combined link
+
+### C. At-Collection Notices for Each Data Type (Recommended Approach)
+
+**Precise Geolocation** (at first location permission request):
+&gt; &quot;We collect your precise location to [purpose]. This is sensitive personal information under California law. You may limit our use of your location data. [Link to SPI limitation]. We retain location data for [period/criteria]. See our Privacy Policy.&quot;
+
+**Health Metrics** (at wearable integration setup):
+&gt; &quot;By connecting your wearable device, you allow us to collect health metrics including [list]. This is sensitive personal information. We use it to [purpose] and retain it for [period]. You have the right to limit how we use this data. [Link].&quot;
+
+**Biometric Facial Recognition** (before enrollment):
+&gt; &quot;We collect your facial recognition data to authenticate your identity. This is biometric sensitive personal information under California law. We [store/do not store] raw facial scans. Derived templates are retained for [period or until account deletion]. You may [opt out of biometric authentication / use an alternative]. [Link to SPI limitation and privacy policy].&quot;
+
+---
+
+## 4. Standard CCPA/CPRA Obligations That Also Apply
+
+In addition to SPI-specific requirements, all standard CPRA obligations apply to this data:
+
+| Obligation | What Is Required |
+|---|---|
+| Right to Know | Respond within 45 days to requests for categories of SPI collected, sources, purposes, and third parties |
+| Right to Delete | Delete SPI upon verified consumer request (with applicable exceptions) within 45 days |
+| Right to Correct | Correct inaccurate SPI within 45 days |
+| Right to Opt-Out of Sale/Sharing | Honor opt-out immediately if SPI is sold or shared |
+| &quot;Do Not Sell or Share&quot; link | Required on homepage if PI is sold or shared |
+| Global Privacy Control (GPC) | Must honor GPC signals as a valid opt-out of sale/sharing |
+| Non-Discrimination | Cannot deny app features or charge more because a consumer exercises privacy rights |
+| Service Provider Contracts | Any vendor receiving SPI (wearable platform API provider, cloud storage, analytics) must have a compliant service provider or contractor agreement |
+
+---
+
+## 5. Practical Compliance Action Plan
+
+**Immediate (before or at launch)**:
+- [ ] Update privacy policy to enumerate all three SPI categories with purposes, third-party disclosure, and retention periods
+- [ ] Add at-collection notices at the point each SPI type is collected in the app
+- [ ] Implement &quot;Limit the Use of My Sensitive Personal Information&quot; link/mechanism
+- [ ] Verify all wearable integration and analytics vendors are under compliant service provider agreements
+
+**Near-term (within 30-60 days)**:
+- [ ] Audit data flows for each SPI category to ensure data minimization compliance
+- [ ] Establish and document retention schedules for geolocation, health, and biometric data
+- [ ] Build or configure a consumer request intake system capable of handling Right to Limit SPI (15-business-day response) alongside standard rights requests
+- [ ] Implement GPC signal detection and opt-out in the app
+
+**Ongoing**:
+- [ ] Conduct annual cybersecurity audit given SPI processing (especially biometrics)
+- [ ] Prepare Privacy Risk Assessments for CPPA submission when final rules are issued
+- [ ] Review SPI processing purposes annually to confirm they remain within disclosed and permitted uses
+
+---
+
+## 6. Penalty Exposure Summary
+
+Failure to comply with SPI obligations carries significant exposure under CPRA:
+
+- **Unintentional violations**: Up to $2,500 per violation
+- **Intentional violations**: Up to $7,500 per violation
+- **Biometric data breaches**: Private right of action for $100–$750 per consumer per incident (class action eligible)
+
+Given that biometric facial recognition data is involved, any security incident involving unauthorized access to facial recognition data could trigger both CPPA enforcement and class action litigation. This makes the cybersecurity audit and risk assessment obligations particularly important for your app.
+
+---
+
+*This analysis is based on the California Privacy Rights Act (CPRA) as amended, Cal. Civ. Code §1798.100 et seq., effective January 1, 2023, and CPPA guidance and rulemaking as of April 2026. Consult qualified California privacy counsel for advice specific to your business circumstances.*
+</pre></div>
+                </div>
+                <div class="output-panel">
+                  <div class="output-header without-header">Without Skill (Baseline)</div>
+                  <div class="output-grading"><div class="grade-summary" style="color:#22c55e;font-weight:600;margin-bottom:8px">⭐⭐⭐⭐⭐ 5/5 assertions passed (100%)</div><div class="assertions"><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Correctly identifies all three data types as Sensitive Personal Information (SPI) under CPRA: precise geolocation (within 1/4 mile), health/medical data from wearables, and biometric data used for identification</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains the CPRA obligation to offer a &#x27;Limit the Use of My Sensitive Personal Information&#x27; link/mechanism (on homepage or via a combined opt-out page)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">States that SPI limitation requests must be processed within 15 business days (shorter than the 45-day deadline for other rights)</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Explains permitted uses of SPI without triggering limitation rights: services reasonably expected by consumers, security/integrity, short-term transient use — and that the app must clearly document which permitted use applies to each SPI processing activity</span></div><div class="assertion"><span class="assertion-icon">✅</span><span class="assertion-text">Advises on privacy notice requirements: must disclose each SPI category collected, purpose of collection, and whether SPI is sold, shared, or used beyond the necessary purpose — in both the at-collection notice and the privacy policy</span></div></div></div>
+                  <div class="output-text"><pre># CPRA Classification and Compliance Obligations for Mobile App Data Collection
+
+## Overview
+
+Your mobile application collects three categories of data that trigger heightened obligations under the California Privacy Rights Act (CPRA), which amended and significantly expanded the California Consumer Privacy Act (CCPA). All three data types — precise geolocation, health metrics from wearable integration, and biometric facial recognition — qualify as **Sensitive Personal Information (SPI)** under CPRA, and biometric data also qualifies as a distinct **special category** subject to the most restrictive protections.
+
+---
+
+## 1. Data Classification Under CPRA
+
+### 1.1 Precise Geolocation Data
+
+**Classification: Sensitive Personal Information (SPI)**
+
+Under Cal. Civ. Code § 1798.140(ah)(1)(G), &quot;precise geolocation&quot; is explicitly defined as information that reveals the physical location of a consumer within a radius of 1,850 feet (approximately 1/3 mile) or less. This includes GPS coordinates, cell tower triangulation data, and Wi-Fi positioning data.
+
+- Mobile apps that collect GPS or fine-grained location signals fall squarely within this definition.
+- Even periodic or on-demand location collection qualifies — there is no minimum frequency threshold.
+- Location data derived from wearable devices is also covered.
+
+### 1.2 Health Metrics from Wearable Integration
+
+**Classification: Sensitive Personal Information (SPI) — potentially also &quot;Personal Information&quot; under CPRA&#x27;s general framework**
+
+Under Cal. Civ. Code § 1798.140(ah)(1)(C), &quot;personal information collected and analyzed concerning a consumer&#x27;s health&quot; is classified as SPI. Health metrics from wearables — including heart rate, blood oxygen levels (SpO2), sleep patterns, step counts, stress indicators, menstrual cycle data, ECG readings, and similar physiological measurements — all fall within this definition.
+
+Key points:
+- The CPRA does not require data to be medically diagnostic to qualify as health SPI; fitness and wellness metrics are included.
+- If the wearable integration involves a third-party SDK or API, data sharing with that third party may constitute a &quot;sale&quot; or &quot;sharing&quot; of SPI requiring disclosure and opt-out rights.
+- Health data that also qualifies as Protected Health Information (PHI) under HIPAA must comply with both HIPAA and CPRA simultaneously where applicable.
+
+### 1.3 Biometric Facial Recognition for Authentication
+
+**Classification: Sensitive Personal Information (SPI) AND Biometric Information — the highest-risk category under CPRA**
+
+Under Cal. Civ. Code § 1798.140(ah)(1)(B), SPI includes &quot;a consumer&#x27;s racial or ethnic origin, religious or philosophical beliefs, or union membership&quot; — but more directly, § 1798.140(c) defines **&quot;biometric information&quot;** as an individual&#x27;s physiological, biological, or behavioral characteristics that can be used to establish identity, including &quot;imagery of the iris, retina, fingerprint, face, hand, palm, vein patterns, and voice recordings,&quot; as well as &quot;keystroke patterns or rhythms, gait patterns or rhythms, and sleep, health, or exercise data that contain identifying information.&quot;
+
+Facial recognition data used for authentication involves:
+- Capture and processing of facial geometry
+- Creation of a facial template or biometric identifier
+- Ongoing comparison of facial scans against stored templates
+
+This is SPI under § 1798.140(ah)(1)(E) (&quot;biometric information processed for the purpose of uniquely identifying a consumer&quot;) AND constitutes biometric data under the general CPRA personal information definition. The **combination** of collecting, processing, and storing facial recognition data for authentication is among the most regulated activities under CPRA.
+
+---
+
+## 2. Special Obligations Triggered by SPI Collection
+
+### 2.1 Right to Limit Use and Disclosure of SPI
+
+This is the most significant new right introduced by CPRA that did not exist under CCPA.
+
+**Obligation:** Businesses must provide consumers with the right to direct the business to **limit the use and disclosure of their SPI** to only what is necessary to perform the services requested, or as otherwise permitted by CPRA regulations (Cal. Civ. Code § 1798.121).
+
+**Implementation requirements:**
+- You must provide a clear and conspicuous link titled **&quot;Limit the Use of My Sensitive Personal Information&quot;** on your homepage (or app equivalent, such as your app&#x27;s settings page or privacy center).
+- Alternatively, if you do not use SPI for purposes beyond providing the requested service, you may include a statement to that effect in your privacy policy to avoid the obligation to post the opt-out link — but only if use is genuinely limited.
+- The link can be combined with the &quot;Do Not Sell or Share My Personal Information&quot; link into a single combined opt-out page.
+
+### 2.2 Right to Opt-Out of Sale or Sharing
+
+**Obligation:** If any of the three data types are sold to or shared with third parties for cross-context behavioral advertising, consumers must be given the right to opt out (Cal. Civ. Code § 1798.120).
+
+- This applies to sharing of precise geolocation with advertising networks, analytics platforms, or data brokers.
+- Sharing health metrics with third-party wellness platforms or analytics services may qualify.
+- Facial recognition templates shared with authentication vendors or identity providers must be disclosed.
+
+### 2.3 Data Minimization
+
+Under CPRA regulations (Cal. Code Regs. tit. 11, § 7002), businesses must adhere to **data minimization principles** for SPI:
+
+- Collection must be **reasonably necessary and proportionate** to the stated purpose.
+- You may not collect more SPI than needed for the disclosed purpose.
+- You may not retain SPI longer than reasonably necessary.
+- **Practical implication:** If facial recognition is used only for authentication, you cannot also use the biometric template for marketing personalization or user behavioral analysis without separate disclosure and legal basis.
+
+### 2.4 Purpose Limitation
+
+SPI collected for one purpose (e.g., authentication via facial recognition) cannot be repurposed for other uses (e.g., emotion detection, demographic inference) without obtaining additional consumer consent or providing a new notice.
+
+### 2.5 Storage Limitation and Retention Schedules
+
+CPRA regulations (Cal. Code Regs. tit. 11, § 7051) require businesses to establish and disclose:
+- Retention periods for each category of personal information and SPI collected.
+- The criteria used to determine retention periods.
+- This applies specifically to biometric data, geolocation history, and health records.
+
+### 2.6 Security Requirements
+
+Given the sensitivity of all three data types, CPRA mandates implementation of **reasonable security measures** (Cal. Civ. Code § 1798.150). The California Attorney General and California Privacy Protection Agency (CPPA) have signaled that SPI requires enhanced security controls. Recommended measures include:
+- End-to-end encryption for biometric templates and health data in transit and at rest.
+- Strict access controls and role-based permissions for SPI.
+- Biometric templates should be stored as irreversible cryptographic hashes rather than raw facial images where technically feasible.
+- Geolocation data should be anonymized or aggregated when precise coordinates are no longer necessary.
+
+### 2.7 Automated Decision-Making and Profiling (Pending Regulations)
+
+The CPPA is finalizing **automated decision-making technology (ADMT)** regulations (expected 2025–2026) that will apply to systems that use profiling, including facial recognition for authentication. Once finalized, these may require:
+- Pre-use notices to consumers before automated decisions are made.
+- Opt-out rights for certain automated decision-making.
+- Access rights to understand the logic of automated decisions.
+
+You should monitor CPPA rulemaking and prepare to comply when these regulations take effect.
+
+### 2.8 Risk Assessments (Mandatory for High-Risk Processing)
+
+Under CPRA § 1798.185(a)(15) and CPPA regulations, businesses that process personal information presenting **significant risk** to consumers&#x27; privacy must conduct and submit a **Privacy Risk Assessment** to the CPPA. This is likely mandatory for your app given:
+- Use of biometric facial recognition (explicitly high-risk).
+- Collection of precise geolocation.
+- Processing of health metrics.
+
+The CPPA is still finalizing the risk assessment submission requirements, but internal assessments should begin immediately.
+
+---
+
+## 3. Required Disclosures
+
+### 3.1 Privacy Policy Disclosures
+
+Your privacy policy must include all of the following, updated to reflect SPI (Cal. Civ. Code § 1798.100(b), § 1798.130):
+
+**Categories of SPI collected:**
+- Precise geolocation (GPS-derived location to within 1,850 feet)
+- Health and wellness data (heart rate, sleep, fitness metrics from wearable integration)
+- Biometric information (facial geometry/template used for authentication)
+
+**For each SPI category, disclose:**
+1. The specific SPI categories collected.
+2. The **purposes** for which each SPI category is used (e.g., &quot;biometric data is collected solely to authenticate your identity and is not shared with third parties or used for marketing&quot;).
+3. Whether SPI is **sold or shared** with third parties, and if so, which categories of third parties.
+4. The **retention period** for each SPI category, or if that is not possible, the criteria used to determine how long it is retained.
+5. Whether SPI is used to make **inferences** about consumers.
+
+**Third-party disclosures:** If you share any SPI with third parties (including wearable SDKs, analytics vendors, cloud authentication providers), disclose:
+- The categories of third parties.
+- The purpose of the disclosure.
+- Whether the disclosure constitutes a &quot;sale&quot; or &quot;sharing.&quot;
+
+### 3.2 At-Collection Notice (Notice at Collection)
+
+Under Cal. Civ. Code § 1798.100(b) and Cal. Code Regs. tit. 11, § 7012, you must provide a **Notice at Collection** at or before the time you collect SPI. For a mobile app, this means:
+
+- **Before enabling location services:** Display a notice specifying that precise geolocation is collected, the purpose, and the categories of third parties with whom it may be shared.
+- **Before wearable integration is activated:** Inform users that health metrics will be collected and for what purposes.
+- **Before facial recognition enrollment:** Provide a clear disclosure that biometric data will be captured, how the template will be stored, whether it will be shared, and how long it will be retained. This notice must be presented **before** the facial scan is taken.
+
+The Notice at Collection must include:
+- Categories of SPI collected.
+- Purposes for collection.
+- A link to the full privacy policy.
+- Whether SPI is sold or shared (or a statement that it is not).
+
+### 3.3 &quot;Limit the Use of My Sensitive Personal Information&quot; Link
+
+As noted above, you must provide a mechanism (typically a link in your app&#x27;s privacy/settings section and on your website) through which consumers can direct you to limit use of their SPI. This link:
+- Must be **clear and conspicuous**.
+- Can be combined with &quot;Do Not Sell or Share My Personal Information&quot; into one opt-out interface.
+- Must be honored within **15 business days** of receiving the consumer&#x27;s request.
+
+### 3.4 &quot;Do Not Sell or Share My Personal Information&quot; Link
+
+If any of the three SPI categories are sold or shared with third parties for cross-context behavioral advertising, you must:
+- Post this link prominently.
+- Honor opt-out requests within 15 business days.
+- Maintain records of opt-out requests.
+
+### 3.5 Consumer Rights Notice
+
+Inform users of their full CPRA rights, including:
+- **Right to Know:** What SPI is collected and how it is used.
+- **Right to Delete:** Request deletion of SPI (subject to exceptions).
+- **Right to Correct:** Request correction of inaccurate SPI.
+- **Right to Opt-Out:** Of sale or sharing.
+- **Right to Limit:** Use of SPI beyond essential purposes.
+- **Right to Non-Discrimination:** For exercising privacy rights.
+
+---
+
+## 4. Summary Table
+
+| Data Type | CPRA Classification | SPI Category | Key Obligations |
+|---|---|---|---|
+| Precise Geolocation | SPI | § 1798.140(ah)(1)(G) | Limit-use right, data minimization, retention disclosure, opt-out if shared |
+| Health Metrics (Wearables) | SPI | § 1798.140(ah)(1)(C) | Limit-use right, data minimization, purpose limitation, third-party sharing disclosure |
+| Biometric Facial Recognition | SPI + Biometric Information | § 1798.140(ah)(1)(E) | Highest-risk; pre-collection notice mandatory, limit-use right, security requirements, privacy risk assessment likely required |
+
+---
+
+## 5. Recommended Immediate Actions
+
+1. **Audit data flows** for all three SPI categories — map where data is collected, stored, processed, and shared.
+2. **Update your privacy policy** to include all required SPI disclosures, retention schedules, and third-party sharing details.
+3. **Implement at-collection notices** within the app before any SPI is captured.
+4. **Deploy the opt-out and limit-use mechanisms** — either as separate links or combined, accessible in the app and on your website.
+5. **Conduct a Privacy Risk Assessment** covering biometric data processing, geolocation tracking, and health data collection.
+6. **Review third-party contracts** (wearable SDKs, authentication vendors) to ensure they function as service providers under CPRA rather than third parties to whom you are &quot;selling&quot; or &quot;sharing&quot; data.
+7. **Establish retention and deletion schedules** for biometric templates, location history, and health records.
+8. **Monitor CPPA rulemaking** on automated decision-making technology regulations, which will affect your facial recognition authentication system.
+
+---
+
+*This analysis is based on the California Privacy Rights Act (Cal. Civ. Code §§ 1798.100–1798.199.100) and California Privacy Protection Agency regulations (Cal. Code Regs. tit. 11, §§ 7000–7304) as of April 2026. Consult qualified legal counsel for advice specific to your business operations.*
 </pre></div>
                 </div>
               </div>

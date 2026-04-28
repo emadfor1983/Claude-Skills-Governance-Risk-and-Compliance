@@ -1,0 +1,33 @@
+{
+  "eval_id": 86,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Confirms the company IS subject to CCPA/CPRA because it meets the $25M annual gross revenue threshold — even though it falls short of the 100,000 consumer/household threshold",
+      "passed": true,
+      "evidence": "Response confirms the company is subject to CCPA/CPRA, with a clear threshold analysis table showing $30M revenue exceeds the $25M threshold as the sole qualifying criterion despite 80,000 consumers being below 100,000."
+    },
+    {
+      "text": "Explains that meeting ANY ONE of the three thresholds (revenue, data volume, monetization) triggers CCPA/CPRA applicability",
+      "passed": true,
+      "evidence": "Response explicitly explains that meeting any one of the three disjunctive thresholds is sufficient to trigger CCPA/CPRA compliance obligations."
+    },
+    {
+      "text": "Lists core compliance obligations including privacy notice at collection, comprehensive privacy policy, and the consumer rights program (right to know, delete, correct, opt-out, non-discrimination)",
+      "passed": true,
+      "evidence": "Response covers nine core obligation areas including privacy notices, comprehensive privacy policy, all seven consumer rights (know, delete, correct, opt-out of sale/sharing, limit SPI, portability, non-discrimination) with response deadlines."
+    },
+    {
+      "text": "Explains the 'Do Not Sell or Share My Personal Information' opt-out link requirement and GPC signal obligation",
+      "passed": true,
+      "evidence": "Response explicitly covers the 'Do Not Sell or Share My Personal Information' link and the obligation to honor Global Privacy Control (GPC) signals as valid opt-outs under CPPA guidance."
+    },
+    {
+      "text": "Mentions response deadlines: 45 days for access/delete/correct requests, with a possible 45-day extension",
+      "passed": true,
+      "evidence": "Response states 45-day response deadline with a possible 45-day extension and the 15-business-day deadline for SPI limitation requests."
+    }
+  ],
+  "score": "5/5",
+  "pass_rate": 1.0
+}

@@ -1,0 +1,33 @@
+{
+  "eval_id": 90,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Correctly identifies all three data types as Sensitive Personal Information (SPI) under CPRA: precise geolocation (within 1/4 mile), health/medical data from wearables, and biometric data used for identification",
+      "passed": true,
+      "evidence": "Response correctly classifies all three data types as SPI under CPRA §1798.140(ae): precise geolocation (within 1/4 mile), health metrics from wearables, and biometric facial recognition — the highest protection tier under California law."
+    },
+    {
+      "text": "Explains the CPRA obligation to offer a 'Limit the Use of My Sensitive Personal Information' link/mechanism (on homepage or via a combined opt-out page)",
+      "passed": true,
+      "evidence": "Response explains the Right to Limit SPI Use (§1798.121) and the requirement to provide a 'Limit the Use of My Sensitive Personal Information' link on the app/homepage or via combined opt-out page."
+    },
+    {
+      "text": "States that SPI limitation requests must be processed within 15 business days (shorter than the 45-day deadline for other rights)",
+      "passed": true,
+      "evidence": "Response explicitly states the 15-business-day deadline for SPI limitation requests, contrasting it with the 45-day deadline for other consumer rights."
+    },
+    {
+      "text": "Explains permitted uses of SPI without triggering limitation rights: services reasonably expected by consumers, security/integrity, short-term transient use — and that the app must clearly document which permitted use applies to each SPI processing activity",
+      "passed": true,
+      "evidence": "Response covers permitted SPI uses (services reasonably expected, safety/security/integrity, short-term transient use, service provider context, quality verification) and advises documenting which permitted use applies to each SPI category."
+    },
+    {
+      "text": "Advises on privacy notice requirements: must disclose each SPI category collected, purpose of collection, and whether SPI is sold, shared, or used beyond the necessary purpose — in both the at-collection notice and the privacy policy",
+      "passed": true,
+      "evidence": "Response covers at-collection notice requirements for each SPI data collection point and privacy policy disclosures (categories, purposes, retention, third-party sharing, consumer rights), including language guidance per data type."
+    }
+  ],
+  "score": "5/5",
+  "pass_rate": 1.0
+}

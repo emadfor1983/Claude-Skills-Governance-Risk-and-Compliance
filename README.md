@@ -1,11 +1,11 @@
 # Claude Skills for Governance, Risk & Compliance (GRC)
-Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, SWIFT Customer Security Programme (CSP), Australian Information Security Manual (ISM), and EU NIS2 Directive — powered by Claude Skills.
+Expert-level compliance guidance for ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001 AI Management System, ISO 27701 Privacy Information Management, DORA Digital Operational Resilience, India's Digital Personal Data Protection Act (DPDPA), CMMC 2.0 Cybersecurity Maturity Model Certification, NIST AI Risk Management Framework, SWIFT Customer Security Programme (CSP), Australian Information Security Manual (ISM), EU NIS2 Directive, and CCPA/CPRA California Privacy — powered by Claude Skills.
 
-Benchmarked across 85 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **95%** vs a baseline of **80%** across 425 total assertions.
+Benchmarked across 90 test cases (5 per framework) using the eval framework — each graded against 5 verifiable assertions by independent agents. Skills scored **95%** vs a baseline of **80%** across 450 total assertions.
 
 [![Release: v0.6.0](https://img.shields.io/badge/Release-v0.6.0-brightgreen.svg)](../../releases/tag/v0.6.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Skills: 17](https://img.shields.io/badge/Skills-17-green.svg)](#the-skills)
+[![Skills: 18](https://img.shields.io/badge/Skills-18-green.svg)](#the-skills)
 [![Built with Claude](https://img.shields.io/badge/Built%20with-Claude-orange.svg)](https://claude.ai)
 [![GitHub Stars](https://img.shields.io/github/stars/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance?style=flat&label=Stars&color=gold)](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance)
 
@@ -33,6 +33,7 @@ Benchmarked across 85 test cases (5 per framework) using the eval framework — 
   - [SWIFT Customer Security Programme (CSP)](#-swift-customer-security-programme-csp)
   - [Australian Information Security Manual (ISM)](#-australian-information-security-manual-ism)
   - [EU NIS2 Directive](#-eu-nis2-directive)
+  - [CCPA/CPRA California Privacy](#-ccpacpra-california-privacy)
 - [Potential Use Cases](#potential-use-cases)
 - [How to Install a Skill](#how-to-install-a-skill)
 - [Install via Claude Code Marketplace](#install-via-claude-code-marketplace)
@@ -412,6 +413,25 @@ The NIS2 skill turns Claude into an expert advisor on the **EU NIS2 Directive (D
 
 ---
 
+### 18. 🌴 CCPA/CPRA California Privacy
+
+**File:** `CCPA - Claude Skill/ccpa.skill`
+
+The CCPA/CPRA skill turns Claude into an expert advisor on **California's comprehensive privacy laws** — the California Consumer Privacy Act (CCPA, effective January 1, 2020) and the California Privacy Rights Act (CPRA/Proposition 24, effective January 1, 2023). CPRA significantly expanded CCPA, created the California Privacy Protection Agency (CPPA), introduced Sensitive Personal Information (SPI) as a new category, and added rights to correct PI, limit SPI use, and set retention periods.
+
+**What it does:**
+- Determines **business applicability** — whether an organisation meets the CCPA/CPRA threshold ($25M revenue OR 100K+ consumers/households OR 50%+ revenue from PI sale/sharing) and what obligations follow
+- Guides **consumer rights fulfillment** — step-by-step workflows for right to know (access), delete, correct, opt-out of sale/sharing, limit SPI use, portability, and non-discrimination — including identity verification, exceptions, response deadlines (45 days / 15 business days for SPI), and service provider propagation
+- Classifies **ad tech, cookie tracking, and data sharing** — determines whether arrangements constitute a "sale" or CPRA "sharing" (cross-context behavioral advertising), advises on Global Privacy Control (GPC) signal compliance and consent management
+- Identifies **Sensitive Personal Information (SPI)** — precise geolocation, biometrics, health data, SSNs, credentials, and more — and advises on permitted uses, limitation rights, disclosure requirements, and 15-business-day response SLA
+- Performs **GDPR-to-CCPA/CPRA gap analysis** — identifies CCPA/CPRA-specific additions (Do Not Sell or Share link, GPC, SPI limitation, minors' opt-in, financial incentive disclosures) and highlights key structural differences (opt-out vs. opt-in, no lawful basis requirement, household data, private right of action for breaches)
+- Drafts **privacy notices and policies** — at-collection notices, comprehensive privacy policies with all required CCPA/CPRA disclosures, and "Do Not Sell or Share" and "Limit SPI" opt-out pages
+- Assesses **CPPA enforcement and penalty exposure** — $2,500/unintentional, $7,500/intentional, $100–$750/consumer for breach private actions
+
+**Trigger phrases:** `CCPA`, `CPRA`, `California Consumer Privacy Act`, `California Privacy Rights Act`, `Do Not Sell or Share`, `sensitive personal information California`, `CPPA`, `California privacy compliance`, `right to know California`, `right to delete California`, `California opt-out`, `GPC signal`, `Global Privacy Control`, `ad tech CCPA`, `CCPA gap analysis`, `CCPA vs GDPR`, `California data privacy`, `CCPA service provider`, `CCPA third party`, `CCPA penalty`
+
+---
+
 ## Potential Use Cases
 
 | Scenario | Relevant Skill(s) |
@@ -531,6 +551,14 @@ The NIS2 skill turns Claude into an expert advisor on the **EU NIS2 Directive (D
 | Understanding Art. 20 management body obligations, personal liability, and required cybersecurity training under NIS2 | NIS2 |
 | Assessing supply chain security obligations under NIS2 Art. 21(2)(d) and Art. 26 ENISA coordinated risk assessments | NIS2 |
 | Calculating maximum NIS2 penalty exposure and comparing EE vs IE supervisory regimes (Art. 32 vs Art. 33) | NIS2 |
+| Determining whether a US e-commerce business meets any CCPA/CPRA threshold and understanding its core obligations | CCPA/CPRA |
+| Handling a combined right-to-know and right-to-delete request from a California consumer, including identity verification and exceptions | CCPA/CPRA |
+| Assessing whether sharing cookie IDs with an ad tech platform constitutes a CCPA 'sale' or CPRA 'sharing', and implementing opt-out mechanisms | CCPA/CPRA |
+| Performing a gap analysis between an existing GDPR programme and CCPA/CPRA — identifying California-specific additions | CCPA/CPRA + GDPR |
+| Classifying precise geolocation, health, and biometric data as CPRA Sensitive Personal Information and understanding the 15-business-day SPI limitation workflow | CCPA/CPRA |
+| Drafting an at-collection privacy notice and a comprehensive privacy policy meeting all CCPA/CPRA disclosure requirements | CCPA/CPRA |
+| Implementing Global Privacy Control (GPC) signal recognition as a valid opt-out from sale/sharing | CCPA/CPRA |
+| Assessing CPPA enforcement risk and calculating penalty exposure for unintentional vs. intentional CCPA/CPRA violations | CCPA/CPRA |
 
 ---
 
@@ -557,6 +585,7 @@ The NIS2 skill turns Claude into an expert advisor on the **EU NIS2 Directive (D
    | 🏦 SWIFT Customer Security Programme (CSP) | [swift-csp.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/SWIFT%20CSP%20-%20Claude%20Skill/swift-csp.skill) |
    | 🇦🇺 Australian Information Security Manual (ISM) | [ism.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISM%20-%20Claude%20Skill/ism.skill) |
    | 🇪🇺 EU NIS2 Directive | [nis2.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIS2%20-%20Claude%20Skill/nis2.skill) |
+   | 🌴 CCPA/CPRA California Privacy | [ccpa.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CCPA%20-%20Claude%20Skill/ccpa.skill) |
 
 2. Open Claude and navigate to **Customize → Skills**.
 3. Click **Upload Skill** and select the `.skill` file.
@@ -576,7 +605,7 @@ Add the marketplace and install the skills you need directly from the terminal:
 
 ```shell
 /plugin marketplace add Sushegaad/Claude-Skills-Governance-Risk-and-Compliance
-/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills cmmc@grc-skills nist-ai-rmf@grc-skills swift-csp@grc-skills ism@grc-skills nis2@grc-skills
+/plugin install iso27001@grc-skills soc2@grc-skills fedramp@grc-skills gdpr-compliance@grc-skills hipaa-compliance@grc-skills nist-csf@grc-skills pci-compliance@grc-skills tsa-compliance@grc-skills iso42001@grc-skills iso27701@grc-skills dora@grc-skills dpdpa@grc-skills cmmc@grc-skills nist-ai-rmf@grc-skills swift-csp@grc-skills ism@grc-skills nis2@grc-skills ccpa@grc-skills
 ```
 
 Teams can pre-wire the marketplace in `.claude/settings.json` so every developer gets the skills automatically when they open the project — no manual install required.
@@ -587,13 +616,13 @@ Teams can pre-wire the marketplace in `.claude/settings.json` so every developer
 
 ## Skill Evaluation
 
-These skills were benchmarked using the [Claude Skill Creator](https://claude.ai) eval framework. **85 realistic test cases** were run across all 17 skills — 5 per framework — covering gap analysis, policy drafting, control deep-dives, edge cases, and compliance advice scenarios. Each test case was evaluated against 5 objectively verifiable assertions by independent grader agents comparing skill-assisted vs. baseline Claude responses.
+These skills were benchmarked using the [Claude Skill Creator](https://claude.ai) eval framework. **90 realistic test cases** were run across all 18 skills — 5 per framework — covering gap analysis, policy drafting, control deep-dives, edge cases, and compliance advice scenarios. Each test case was evaluated against 5 objectively verifiable assertions by independent grader agents comparing skill-assisted vs. baseline Claude responses.
 
 | Configuration | Pass Rate | Assertions Passed |
 |---------------|-----------|-------------------|
-| **With GRC Skills installed** | **95%** | **403 / 425** |
-| Without skills (baseline Claude) | 80% | 338 / 425 |
-| **Delta** | **+15 points** | **+65 assertions** |
+| **With GRC Skills installed** | **95%** | **428 / 450** |
+| Without skills (baseline Claude) | 80% | 362 / 450 |
+| **Delta** | **+15 points** | **+66 assertions** |
 
 ### Per-Skill Results
 
@@ -616,8 +645,9 @@ These skills were benchmarked using the [Claude Skill Creator](https://claude.ai
 | SWIFT CSP | 5 | **100%** | 48% | +52% | Architecture scoping (A1/A2/A3/A4/B); MFA hardware token requirement; CSCF v2025 gap assessment; KYC-SA attestation process; Incident response obligations |
 | ISM | 5 | **96%** | 52% | +44% | OS control scoping and authorisation; IRAP assessment preparation; Chapter 13 system hardening; Essential Eight to ISM mapping; Supply chain cloud provider obligations |
 | NIS2 | 5 | **96%** | 80% | +16% | Energy company EE/IE classification; SaaS provider Art. 21 obligations; Ransomware Art. 23 reporting workflow; ISO 27001 vs NIS2 gap analysis; DORA lex specialis interaction |
+| CCPA/CPRA | 5 | **100%** | 96% | +4% | E-commerce threshold analysis; Combined right-to-know and delete workflow; Ad tech sale vs sharing classification; GDPR-to-CCPA gap analysis; SPI classification for mobile app |
 
-Skills add the most measurable value on highly framework-specific tasks: clause-level precision for ISO 27001, CC criteria mapping for SOC 2, exact FedRAMP POA&M timeframes and document names, GDPR article citations, HIPAA regulatory section references, CSF 2.0 subcategory IDs, PCI DSS v4.0.1 requirement numbers, TSA Security Directive citations, ISO 42001 AIMS clause references, DORA Article citations and exact incident reporting timelines (4h/72h/1 month), DPDPA-specific terminology, CMMC practice IDs and SPRS scoring, NIST AI RMF category notation (GV-1 through MG-4.x) and trustworthiness metrics, SWIFT CSP architecture classification and CSCF v2025 control-specific guidance, ISM applicability marking precision (NC/OS/PROTECTED stacking rules, IRAP artefacts, chapter-level control citations), and NIS2 entity classification (Annex I/II), Art. 21 measure detail, and Art. 23 incident reporting timeline specificity (24h/72h/1-month).
+Skills add the most measurable value on highly framework-specific tasks: clause-level precision for ISO 27001, CC criteria mapping for SOC 2, exact FedRAMP POA&M timeframes and document names, GDPR article citations, HIPAA regulatory section references, CSF 2.0 subcategory IDs, PCI DSS v4.0.1 requirement numbers, TSA Security Directive citations, ISO 42001 AIMS clause references, DORA Article citations and exact incident reporting timelines (4h/72h/1 month), DPDPA-specific terminology, CMMC practice IDs and SPRS scoring, NIST AI RMF category notation (GV-1 through MG-4.x) and trustworthiness metrics, SWIFT CSP architecture classification and CSCF v2025 control-specific guidance, ISM applicability marking precision (NC/OS/PROTECTED stacking rules, IRAP artefacts, chapter-level control citations), NIS2 entity classification (Annex I/II), Art. 21 measure detail, and Art. 23 incident reporting timeline specificity (24h/72h/1-month), and CCPA/CPRA-specific GPC signal obligation, SPI 15-business-day response SLA, and CPRA "sharing" vs. "sale" classification precision.
 
 📊 **[View the full eval results →](grc-skills-eval-results.html)**
 

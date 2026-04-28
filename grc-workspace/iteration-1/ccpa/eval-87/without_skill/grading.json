@@ -1,0 +1,33 @@
+{
+  "eval_id": 87,
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Explains that the business must verify the consumer's identity before disclosing or deleting PI — matching at least two data points already held by the business for standard requests",
+      "passed": true,
+      "evidence": "Without-skill response explains tiered identity verification: 2 data points for categories-only requests, 3 data points plus a signed declaration for specific-pieces and deletion requests, and authorized agent handling."
+    },
+    {
+      "text": "States the response deadline is 45 calendar days from receipt of the request, extendable by another 45 days with notice to the consumer",
+      "passed": true,
+      "evidence": "Response states the 45-day response window extendable once by 45 days with notice to the consumer."
+    },
+    {
+      "text": "Lists at least three valid exceptions to the right to delete (e.g., completing a transaction, detecting security incidents, complying with a legal obligation, internal-use-only PI)",
+      "passed": true,
+      "evidence": "Response lists seven statutory deletion exceptions including completing transaction, fraud/security, debugging, free speech, research, legal obligation, and internal compatible use."
+    },
+    {
+      "text": "States that upon deletion the business must also direct its service providers and contractors to delete the consumer's PI",
+      "passed": true,
+      "evidence": "Response explicitly states deletion must be propagated to service providers and third parties with written deletion instructions."
+    },
+    {
+      "text": "Explains that both requests must be honored free of charge (up to twice per 12-month period) and the business must confirm the deletion or explain the exception invoked",
+      "passed": true,
+      "evidence": "Response covers free-of-charge requirement, confirms deletion in writing or explains exception, and mentions 24-month record-keeping."
+    }
+  ],
+  "score": "5/5",
+  "pass_rate": 1.0
+}

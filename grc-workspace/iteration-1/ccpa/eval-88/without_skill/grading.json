@@ -1,0 +1,33 @@
+{
+  "eval_id": 88,
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Correctly identifies that passing visitor cookie IDs and browsing data to an ad tech platform for cross-context behavioral advertising constitutes 'sharing' under CPRA even if no money changes hands",
+      "passed": true,
+      "evidence": "Without-skill response correctly identifies this as 'sharing' under CPRA (textbook example of cross-context behavioral advertising) with no monetary exchange required, citing Cal. Civ. Code § 1798.140(ah)."
+    },
+    {
+      "text": "Explains that the same arrangement could also be a 'sale' under CCPA if the ad tech platform provides any valuable consideration (e.g., access to inventory, data enrichment)",
+      "passed": true,
+      "evidence": "Response identifies it as a 'sale' because advertising services and ad revenue qualify as valuable consideration, citing Cal. Civ. Code § 1798.140(ad)."
+    },
+    {
+      "text": "States the business must add a 'Do Not Sell or Share My Personal Information' link and must honor Global Privacy Control (GPC) signals as valid opt-outs",
+      "passed": true,
+      "evidence": "Without-skill response covers 'Do Not Sell or Share' link and GPC technical implementation (blocking ad tech tags from firing for opted-out users)."
+    },
+    {
+      "text": "Explains that the ad tech platform must be classified as a 'third party' (not a service provider) unless a contractual arrangement prohibits the platform from using the data for any other purpose — and service provider contracts must be reviewed",
+      "passed": true,
+      "evidence": "Response distinguishes third party vs. service provider status and advises executing a CPRA-compliant written contract restricting the ad tech platform's data use."
+    },
+    {
+      "text": "Advises on the practical steps: update privacy policy, implement consent management platform (CMP), configure ad tech to stop receiving PI for opted-out consumers",
+      "passed": true,
+      "evidence": "Response lists eight practical steps including updating privacy policy, 'Do Not Sell or Share' link, GPC technical blocking, CPRA-compliant contract with ad tech, CMP configuration, consumer rights workflows, data minimization, and SPI audit."
+    }
+  ],
+  "score": "5/5",
+  "pass_rate": 1.0
+}

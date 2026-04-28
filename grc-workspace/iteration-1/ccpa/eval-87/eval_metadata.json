@@ -1,0 +1,12 @@
+{
+  "eval_id": 87,
+  "eval_name": "right-to-know-and-delete-workflow",
+  "prompt": "A California resident has submitted a request to know exactly what personal information we hold about them, and also wants it all deleted. Walk me through how to handle both requests, including identity verification and any exceptions we can invoke.",
+  "assertions": [
+    "Explains that the business must verify the consumer's identity before disclosing or deleting PI — matching at least two data points already held by the business for standard requests",
+    "States the response deadline is 45 calendar days from receipt of the request, extendable by another 45 days with notice to the consumer",
+    "Lists at least three valid exceptions to the right to delete (e.g., completing a transaction, detecting security incidents, complying with a legal obligation, internal-use-only PI)",
+    "States that upon deletion the business must also direct its service providers and contractors to delete the consumer's PI",
+    "Explains that both requests must be honored free of charge (up to twice per 12-month period) and the business must confirm the deletion or explain the exception invoked"
+  ]
+}

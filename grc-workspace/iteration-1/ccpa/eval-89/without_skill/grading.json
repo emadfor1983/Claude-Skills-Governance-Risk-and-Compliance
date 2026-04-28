@@ -1,0 +1,33 @@
+{
+  "eval_id": 89,
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "States that GDPR compliance provides a strong foundation (privacy notices, rights processes, processor agreements, data minimization) but does NOT automatically satisfy CCPA/CPRA",
+      "passed": true,
+      "evidence": "Without-skill response confirms GDPR foundation is helpful but insufficient, identifying ten concrete additional steps needed for CCPA/CPRA compliance."
+    },
+    {
+      "text": "Identifies CCPA/CPRA-specific additions needed: 'Do Not Sell or Share My Personal Information' link + GPC signal compliance, and 'Limit the Use of My Sensitive Personal Information' link (CPRA)",
+      "passed": true,
+      "evidence": "Response identifies 'Do Not Sell or Share' opt-out, GPC signal detection, and CPRA right to limit SPI use as specific additions beyond GDPR."
+    },
+    {
+      "text": "Explains the opt-out vs. opt-in model difference: CCPA/CPRA is primarily opt-out (consumers must request opt-out) whereas GDPR requires opt-in consent for most sensitive processing",
+      "passed": true,
+      "evidence": "Response identifies 'fundamental opt-out vs. opt-in philosophy' as a major divergence area."
+    },
+    {
+      "text": "Notes that CCPA/CPRA has no lawful basis requirement for general PI processing — businesses can collect PI without one of GDPR's six legal bases",
+      "passed": true,
+      "evidence": "Response explicitly identifies 'absence of a lawful basis framework' as a key CCPA/CPRA vs. GDPR difference."
+    },
+    {
+      "text": "Highlights the CCPA/CPRA private right of action for data breaches ($100–$750 per consumer per incident) which has no GDPR equivalent, and the need to verify vendor contracts meet CCPA service provider requirements",
+      "passed": true,
+      "evidence": "Response covers the 'narrow private right of action with high class-action exposure' and identifies vendor contract updates for CCPA service provider clauses as a specific gap."
+    }
+  ],
+  "score": "5/5",
+  "pass_rate": 1.0
+}

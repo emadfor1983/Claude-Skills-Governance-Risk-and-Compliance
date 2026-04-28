@@ -1,0 +1,12 @@
+{
+  "eval_id": 88,
+  "eval_name": "adtech-sale-sharing-classification",
+  "prompt": "We use an ad tech platform that receives our website visitors' cookie IDs and browsing data to serve targeted ads. Does this constitute a 'sale' or 'sharing' under CCPA/CPRA? What do we need to do?",
+  "assertions": [
+    "Correctly identifies that passing visitor cookie IDs and browsing data to an ad tech platform for cross-context behavioral advertising constitutes 'sharing' under CPRA even if no money changes hands",
+    "Explains that the same arrangement could also be a 'sale' under CCPA if the ad tech platform provides any valuable consideration (e.g., access to inventory, data enrichment)",
+    "States the business must add a 'Do Not Sell or Share My Personal Information' link and must honor Global Privacy Control (GPC) signals as valid opt-outs",
+    "Explains that the ad tech platform must be classified as a 'third party' (not a service provider) unless a contractual arrangement prohibits the platform from using the data for any other purpose — and service provider contracts must be reviewed",
+    "Advises on the practical steps: update privacy policy, implement consent management platform (CMP), configure ad tech to stop receiving PI for opted-out consumers"
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "eval_id": 87,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Explains that the business must verify the consumer's identity before disclosing or deleting PI — matching at least two data points already held by the business for standard requests",
+      "passed": true,
+      "evidence": "Response details the tiered identity verification system: 2-point match for standard requests, 3 data points plus signed declaration under penalty of perjury for sensitive PI, and additional agent verification steps for authorized agent requests."
+    },
+    {
+      "text": "States the response deadline is 45 calendar days from receipt of the request, extendable by another 45 days with notice to the consumer",
+      "passed": true,
+      "evidence": "Response states 45-day deadline from receipt (noting the clock runs from receipt, not verification completion) extendable once by 45 days with notice within the original window."
+    },
+    {
+      "text": "Lists at least three valid exceptions to the right to delete (e.g., completing a transaction, detecting security incidents, complying with a legal obligation, internal-use-only PI)",
+      "passed": true,
+      "evidence": "Response lists seven enumerated deletion exceptions including: complete transaction, fraud/security detection, fix errors, free speech, legal obligation, compatible internal purposes, and research/public interest."
+    },
+    {
+      "text": "States that upon deletion the business must also direct its service providers and contractors to delete the consumer's PI",
+      "passed": true,
+      "evidence": "Response specifies that deletion must be propagated to service providers and contractors via written direction, with confirmation required from vendors."
+    },
+    {
+      "text": "Explains that both requests must be honored free of charge (up to twice per 12-month period) and the business must confirm the deletion or explain the exception invoked",
+      "passed": true,
+      "evidence": "Response states requests must be fulfilled free of charge and the consumer must receive written confirmation of deletion or explanation of any exception invoked, with 24-month retention of request records."
+    }
+  ],
+  "score": "5/5",
+  "pass_rate": 1.0
+}

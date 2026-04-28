@@ -1,6 +1,6 @@
 {
   "skill_name": "grc-skills",
-  "description": "Evaluations for all 17 GRC skills: ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001, ISO 27701, DORA, DPDPA, CMMC 2.0, NIST AI RMF, SWIFT CSP, ISM, NIS2",
+  "description": "Evaluations for all 18 GRC skills: ISO 27001, SOC 2, FedRAMP, GDPR, HIPAA, NIST CSF, PCI DSS, TSA Cybersecurity, ISO 42001, ISO 27701, DORA, DPDPA, CMMC 2.0, NIST AI RMF, SWIFT CSP, ISM, NIS2, CCPA/CPRA",
   "evals": [
     {
       "id": 1,
@@ -1164,6 +1164,81 @@
         "Identifies any residual NIS2 obligations that may still apply (e.g., Art. 20 governance if not covered by DORA, or Member State-specific transposition nuances)",
         "Recommends a single integrated GRC programme that maps controls across both DORA and NIS2 rather than maintaining two separate compliance programmes",
         "Mentions that the competent authority for NIS2 purposes for financial entities is typically the financial services regulator (e.g., BaFin, DNB) rather than the general NIS2 authority"
+      ],
+      "files": []
+    },
+    {
+      "id": 86,
+      "skill": "ccpa",
+      "skill_path": "plugins/ccpa/skills/ccpa/SKILL.md",
+      "prompt": "We are a US-based e-commerce company with $30M annual revenue. We collect personal information from about 80,000 California customers per year. Are we subject to CCPA/CPRA? If so, what are our core obligations?",
+      "expected_output": "Confirms the company is subject to CCPA/CPRA because it meets the $25M revenue threshold (even though it does not meet the 100K consumer threshold). Outlines core obligations: privacy notice at collection, comprehensive privacy policy, consumer rights program (know, delete, correct, opt-out, non-discrimination), service provider contracts, and opt-out mechanisms.",
+      "assertions": [
+        "Confirms the company IS subject to CCPA/CPRA because it meets the $25M annual gross revenue threshold — even though it falls short of the 100,000 consumer/household threshold",
+        "Explains that meeting ANY ONE of the three thresholds (revenue, data volume, monetization) triggers CCPA/CPRA applicability",
+        "Lists core compliance obligations including privacy notice at collection, comprehensive privacy policy, and the consumer rights program (right to know, delete, correct, opt-out, non-discrimination)",
+        "Explains the 'Do Not Sell or Share My Personal Information' opt-out link requirement and GPC signal obligation",
+        "Mentions response deadlines: 45 days for access/delete/correct requests, with a possible 45-day extension"
+      ],
+      "files": []
+    },
+    {
+      "id": 87,
+      "skill": "ccpa",
+      "skill_path": "plugins/ccpa/skills/ccpa/SKILL.md",
+      "prompt": "A California resident has submitted a request to know exactly what personal information we hold about them, and also wants it all deleted. Walk me through how to handle both requests, including identity verification and any exceptions we can invoke.",
+      "expected_output": "Step-by-step workflow for handling a combined right-to-know and right-to-delete request: intake, identity verification (2-point match), search across all PI systems, apply exceptions (e.g., completing transactions, legal obligations, security), respond within 45 days, direct service providers to delete, confirm to consumer.",
+      "assertions": [
+        "Explains that the business must verify the consumer's identity before disclosing or deleting PI — matching at least two data points already held by the business for standard requests",
+        "States the response deadline is 45 calendar days from receipt of the request, extendable by another 45 days with notice to the consumer",
+        "Lists at least three valid exceptions to the right to delete (e.g., completing a transaction, detecting security incidents, complying with a legal obligation, internal-use-only PI)",
+        "States that upon deletion the business must also direct its service providers and contractors to delete the consumer's PI",
+        "Explains that both requests must be honored free of charge (up to twice per 12-month period) and the business must confirm the deletion or explain the exception invoked"
+      ],
+      "files": []
+    },
+    {
+      "id": 88,
+      "skill": "ccpa",
+      "skill_path": "plugins/ccpa/skills/ccpa/SKILL.md",
+      "prompt": "We use an ad tech platform that receives our website visitors' cookie IDs and browsing data to serve targeted ads. Does this constitute a 'sale' or 'sharing' under CCPA/CPRA? What do we need to do?",
+      "expected_output": "Explains that passing cookie IDs and browsing data to an ad tech platform for targeted advertising constitutes 'sharing' under CPRA (cross-context behavioral advertising) even without monetary consideration, and may also be a 'sale' depending on the arrangement. Requires 'Do Not Sell or Share' link, GPC signal, and contractual controls with the ad tech vendor.",
+      "assertions": [
+        "Correctly identifies that passing visitor cookie IDs and browsing data to an ad tech platform for cross-context behavioral advertising constitutes 'sharing' under CPRA even if no money changes hands",
+        "Explains that the same arrangement could also be a 'sale' under CCPA if the ad tech platform provides any valuable consideration (e.g., access to inventory, data enrichment)",
+        "States the business must add a 'Do Not Sell or Share My Personal Information' link and must honor Global Privacy Control (GPC) signals as valid opt-outs",
+        "Explains that the ad tech platform must be classified as a 'third party' (not a service provider) unless a contractual arrangement prohibits the platform from using the data for any other purpose — and service provider contracts must be reviewed",
+        "Advises on the practical steps: update privacy policy, implement consent management platform (CMP), configure ad tech to stop receiving PI for opted-out consumers"
+      ],
+      "files": []
+    },
+    {
+      "id": 89,
+      "skill": "ccpa",
+      "skill_path": "plugins/ccpa/skills/ccpa/SKILL.md",
+      "prompt": "We already have a GDPR compliance programme. What additional steps do we need to take to comply with CCPA/CPRA? Where do the two laws differ most significantly?",
+      "expected_output": "Explains that GDPR compliance provides a strong foundation but CCPA/CPRA requires specific additional steps: 'Do Not Sell or Share' link, GPC signal, SPI limitation right, minors' opt-in for sale/sharing, financial incentive disclosures. Highlights key differences: opt-out vs opt-in model, thresholds, lawful basis not required, household data coverage, private right of action for breaches.",
+      "assertions": [
+        "States that GDPR compliance provides a strong foundation (privacy notices, rights processes, processor agreements, data minimization) but does NOT automatically satisfy CCPA/CPRA",
+        "Identifies CCPA/CPRA-specific additions needed: 'Do Not Sell or Share My Personal Information' link + GPC signal compliance, and 'Limit the Use of My Sensitive Personal Information' link (CPRA)",
+        "Explains the opt-out vs. opt-in model difference: CCPA/CPRA is primarily opt-out (consumers must request opt-out) whereas GDPR requires opt-in consent for most sensitive processing",
+        "Notes that CCPA/CPRA has no lawful basis requirement for general PI processing — businesses can collect PI without one of GDPR's six legal bases",
+        "Highlights the CCPA/CPRA private right of action for data breaches ($100–$750 per consumer per incident) which has no GDPR equivalent, and the need to verify vendor contracts meet CCPA service provider requirements"
+      ],
+      "files": []
+    },
+    {
+      "id": 90,
+      "skill": "ccpa",
+      "skill_path": "plugins/ccpa/skills/ccpa/SKILL.md",
+      "prompt": "Our mobile app collects precise geolocation, health metrics from wearable integration, and biometric facial recognition for authentication. How does CPRA classify this data, what special obligations apply, and what do we need to disclose?",
+      "expected_output": "Identifies all three data types as Sensitive Personal Information (SPI) under CPRA. Explains obligations: offer 'Limit the Use of My Sensitive Personal Information' link/mechanism, limit SPI use to disclosed necessary purposes, disclose SPI categories and their purposes in privacy policy, and respond to SPI limitation requests within 15 business days.",
+      "assertions": [
+        "Correctly identifies all three data types as Sensitive Personal Information (SPI) under CPRA: precise geolocation (within 1/4 mile), health/medical data from wearables, and biometric data used for identification",
+        "Explains the CPRA obligation to offer a 'Limit the Use of My Sensitive Personal Information' link/mechanism (on homepage or via a combined opt-out page)",
+        "States that SPI limitation requests must be processed within 15 business days (shorter than the 45-day deadline for other rights)",
+        "Explains permitted uses of SPI without triggering limitation rights: services reasonably expected by consumers, security/integrity, short-term transient use — and that the app must clearly document which permitted use applies to each SPI processing activity",
+        "Advises on privacy notice requirements: must disclose each SPI category collected, purpose of collection, and whether SPI is sold, shared, or used beyond the necessary purpose — in both the at-collection notice and the privacy policy"
       ],
       "files": []
     }

@@ -1,0 +1,12 @@
+{
+  "eval_id": 90,
+  "eval_name": "mobile-app-spi-classification",
+  "prompt": "Our mobile app collects precise geolocation, health metrics from wearable integration, and biometric facial recognition for authentication. How does CPRA classify this data, what special obligations apply, and what do we need to disclose?",
+  "assertions": [
+    "Correctly identifies all three data types as Sensitive Personal Information (SPI) under CPRA: precise geolocation (within 1/4 mile), health/medical data from wearables, and biometric data used for identification",
+    "Explains the CPRA obligation to offer a 'Limit the Use of My Sensitive Personal Information' link/mechanism (on homepage or via a combined opt-out page)",
+    "States that SPI limitation requests must be processed within 15 business days (shorter than the 45-day deadline for other rights)",
+    "Explains permitted uses of SPI without triggering limitation rights: services reasonably expected by consumers, security/integrity, short-term transient use — and that the app must clearly document which permitted use applies to each SPI processing activity",
+    "Advises on privacy notice requirements: must disclose each SPI category collected, purpose of collection, and whether SPI is sold, shared, or used beyond the necessary purpose — in both the at-collection notice and the privacy policy"
+  ]
+}

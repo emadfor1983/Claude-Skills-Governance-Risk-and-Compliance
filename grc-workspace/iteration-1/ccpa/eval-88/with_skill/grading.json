@@ -1,0 +1,33 @@
+{
+  "eval_id": 88,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Correctly identifies that passing visitor cookie IDs and browsing data to an ad tech platform for cross-context behavioral advertising constitutes 'sharing' under CPRA even if no money changes hands",
+      "passed": true,
+      "evidence": "Response identifies the arrangement as 'sharing' under CPRA (cross-context behavioral advertising definition) regardless of monetary consideration, explicitly noting this was the CPRA addition to close the no-monetary-consideration loophole."
+    },
+    {
+      "text": "Explains that the same arrangement could also be a 'sale' under CCPA if the ad tech platform provides any valuable consideration (e.g., access to inventory, data enrichment)",
+      "passed": true,
+      "evidence": "Response explains the arrangement is also a 'sale' because the ad tech platform is a third party receiving PI for valuable consideration (targeted ad capability and ad revenue access), even without direct cash exchange."
+    },
+    {
+      "text": "States the business must add a 'Do Not Sell or Share My Personal Information' link and must honor Global Privacy Control (GPC) signals as valid opt-outs",
+      "passed": true,
+      "evidence": "Response explicitly requires a 'Do Not Sell or Share' link and technical GPC signal implementation, noting that opted-out users must be excluded from ad tech data flows."
+    },
+    {
+      "text": "Explains that the ad tech platform must be classified as a 'third party' (not a service provider) unless a contractual arrangement prohibits the platform from using the data for any other purpose — and service provider contracts must be reviewed",
+      "passed": true,
+      "evidence": "Response explains that most ad tech platforms are third parties, not service providers, because they use the data for their own purposes. Reclassification to service provider is theoretically possible with strict contractual controls but most ad tech platforms won't accept those terms."
+    },
+    {
+      "text": "Advises on the practical steps: update privacy policy, implement consent management platform (CMP), configure ad tech to stop receiving PI for opted-out consumers",
+      "passed": true,
+      "evidence": "Response provides five practical action areas: privacy policy/at-collection notice updates, 'Do Not Sell or Share' link, GPC technical implementation, vendor contract review, and configuring the CMP to enforce opt-outs at the tag level."
+    }
+  ],
+  "score": "5/5",
+  "pass_rate": 1.0
+}
