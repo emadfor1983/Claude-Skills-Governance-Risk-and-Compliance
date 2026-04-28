@@ -1,0 +1,12 @@
+{
+  "eval_id": 85,
+  "eval_name": "nis2-dora-interaction-for-banks",
+  "prompt": "We are the CISO of a large European bank. Our regulator has told us NIS2 applies to us alongside DORA. How do the two regulations interact, and which takes precedence? Do we need two separate compliance programmes?",
+  "assertions": [
+    "Correctly states that DORA (Regulation (EU) 2022/2554) is a lex specialis for financial entities and takes precedence over NIS2 under Art. 4 NIS2 (which excludes entities where sector-specific EU law achieves at least an equivalent level of protection)",
+    "Explains that banks subject to DORA are largely exempt from NIS2 Art. 21 and Art. 23 obligations because DORA's ICT risk management and incident reporting requirements are equivalent or stricter",
+    "Identifies any residual NIS2 obligations that may still apply (e.g., Art. 20 governance if not covered by DORA, or Member State-specific transposition nuances)",
+    "Recommends a single integrated GRC programme that maps controls across both DORA and NIS2 rather than maintaining two separate compliance programmes",
+    "Mentions that the competent authority for NIS2 purposes for financial entities is typically the financial services regulator (e.g., BaFin, DNB) rather than the general NIS2 authority"
+  ]
+}

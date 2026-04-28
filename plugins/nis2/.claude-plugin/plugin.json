@@ -1,0 +1,27 @@
+{
+  "name": "nis2",
+  "version": "0.6.0",
+  "description": "EU NIS2 Directive (Directive (EU) 2022/2555) compliance advisor for essential and important entities — entity classification, Art. 21 risk management measures, Art. 23 incident reporting timelines (24h/72h/1 month), Art. 20 governance obligations, supply chain security (Art. 26), gap assessments, policy drafting, ISO 27001 alignment, and penalty exposure analysis.",
+  "author": {
+    "name": "Hemant Naik",
+    "email": "hemant.naik@gmail.com"
+  },
+  "homepage": "https://sushegaad.github.io/Claude-Skills-Governance-Risk-and-Compliance/",
+  "category": "compliance",
+  "keywords": [
+    "nis2",
+    "eu-2022-2555",
+    "network-information-security",
+    "essential-entities",
+    "important-entities",
+    "incident-reporting",
+    "supply-chain-security",
+    "grc"
+  ],
+  "skills": [
+    {
+      "name": "nis2",
+      "path": "skills/nis2"
+    }
+  ]
+}

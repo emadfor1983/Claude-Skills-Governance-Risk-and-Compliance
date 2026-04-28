@@ -1,0 +1,33 @@
+{
+  "eval_id": 85,
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Correctly states that DORA (Regulation (EU) 2022/2554) is a lex specialis for financial entities and takes precedence over NIS2 under Art. 4 NIS2",
+      "passed": true,
+      "evidence": "Without-skill response correctly identifies the lex specialis principle establishing DORA precedence, citing Article 1(2) of NIS2."
+    },
+    {
+      "text": "Explains that banks subject to DORA are largely exempt from NIS2 Art. 21 and Art. 23 obligations because DORA's ICT risk management and incident reporting requirements are equivalent or stricter",
+      "passed": true,
+      "evidence": "Response explains that NIS2 is not fully displaced but DORA governs the primary ICT risk and incident reporting obligations for financial entities."
+    },
+    {
+      "text": "Identifies any residual NIS2 obligations that may still apply (e.g., Art. 20 governance if not covered by DORA, or Member State-specific transposition nuances)",
+      "passed": true,
+      "evidence": "Response identifies residual NIS2 obligations: CSIRT reporting, supply chain, vulnerability disclosure, and mentions national transposition monitoring."
+    },
+    {
+      "text": "Recommends a single integrated GRC programme that maps controls across both DORA and NIS2 rather than maintaining two separate compliance programmes",
+      "passed": true,
+      "evidence": "Response clearly recommends a unified DORA-primary programme with NIS2 residual obligations integrated as additive controls."
+    },
+    {
+      "text": "Mentions that the competent authority for NIS2 purposes for financial entities is typically the financial services regulator (e.g., BaFin, DNB) rather than the general NIS2 authority",
+      "passed": false,
+      "evidence": "Without-skill response provides 'dual reporting lane guidance (DORA to financial supervisor, NIS2 to national CSIRT/NIS authority)' which implies different authorities but does not explicitly state that the NIS2 competent authority for financial entities is typically designated as the financial services regulator rather than a general NIS2 authority."
+    }
+  ],
+  "score": "4/5",
+  "pass_rate": 0.8
+}

@@ -1,0 +1,12 @@
+{
+  "eval_id": 82,
+  "eval_name": "saas-provider-nis2-article21",
+  "prompt": "Our SaaS company provides B2B cloud-based HR software. We have 75 employees and €15M annual revenue. A customer just told us we need to be NIS2 compliant. Are we directly subject to NIS2, and if so what do we need to do to comply with Article 21?",
+  "assertions": [
+    "Identifies that a B2B cloud SaaS provider may fall under NIS2 as a managed service provider (MSP) / ICT service management (B2B) under Annex I, or as a cloud computing service provider under Annex II digital providers",
+    "Confirms size threshold is met (75 employees ≥ 50; €15M ≥ €10M) making the entity in scope",
+    "Explains all 10 Art. 21 measures or provides detailed practical guidance on the most relevant ones for a SaaS company (incident handling, secure SDLC, supply chain, MFA)",
+    "Addresses Art. 23 incident reporting obligations and explains what constitutes a significant incident for a cloud/SaaS provider",
+    "Differentiates between direct NIS2 obligations and being included as a supplier in a customer's NIS2 supply chain risk assessment (Art. 21(2)(d) / Art. 26)"
+  ]
+}

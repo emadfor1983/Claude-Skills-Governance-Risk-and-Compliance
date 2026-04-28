@@ -1,0 +1,33 @@
+{
+  "eval_id": 81,
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Correctly classifies the energy company as an Essential Entity (EE) under NIS2 Annex I (energy sector, electricity sub-sector)",
+      "passed": false,
+      "evidence": "Without-skill response incorrectly classified the DSO as 'Important Entity (most likely)' despite DSOs being explicitly named in NIS2 Annex I (Essential Entities). The response suggested authorities 'could' designate it as EE based on criticality, which misunderstands the Annex I automatic classification."
+    },
+    {
+      "text": "Confirms the entity meets size thresholds (≥50 employees OR ≥€10M turnover) making it automatically in scope",
+      "passed": true,
+      "evidence": "Response correctly identifies 200 employees and €50M turnover as exceeding the NIS2 size thresholds for medium+ entities."
+    },
+    {
+      "text": "Explains Art. 20 governance obligation: management body approval, training, and potential personal liability",
+      "passed": true,
+      "evidence": "Response covers Art. 20 management accountability and personal liability obligations."
+    },
+    {
+      "text": "Lists all 10 Art. 21 cybersecurity risk management measures or explicitly covers the key ones (incident handling, BCP, supply chain, MFA, cryptography)",
+      "passed": true,
+      "evidence": "Response covers the 10 Art. 21 measures including supply chain, MFA, cryptography, incident handling, and BCP/DR."
+    },
+    {
+      "text": "States Art. 23 incident reporting timelines: 24-hour early warning, 72-hour notification, 1-month final report to CSIRT/competent authority",
+      "passed": true,
+      "evidence": "Response correctly states the 24h early warning, 72h full notification, and 1-month final report timeline to CSIRT/competent authority."
+    }
+  ],
+  "score": "4/5",
+  "pass_rate": 0.8
+}

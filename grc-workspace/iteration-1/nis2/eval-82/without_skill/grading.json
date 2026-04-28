@@ -1,0 +1,33 @@
+{
+  "eval_id": 82,
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "Identifies that a B2B cloud SaaS provider may fall under NIS2 as a managed service provider (MSP) / ICT service management (B2B) under Annex I, or as a cloud computing service provider under Annex II digital providers",
+      "passed": true,
+      "evidence": "Without-skill response identifies the company as an Important Entity under NIS2 Annex II as a digital/managed service provider."
+    },
+    {
+      "text": "Confirms size threshold is met (75 employees ≥ 50; €15M ≥ €10M) making the entity in scope",
+      "passed": true,
+      "evidence": "Response confirms both thresholds are exceeded (50+ employees, €10M+ revenue)."
+    },
+    {
+      "text": "Explains all 10 Art. 21 measures or provides detailed practical guidance on the most relevant ones for a SaaS company (incident handling, secure SDLC, supply chain, MFA)",
+      "passed": true,
+      "evidence": "Response breaks down all 10 Art. 21(2) measures with practical implementation steps."
+    },
+    {
+      "text": "Addresses Art. 23 incident reporting obligations and explains what constitutes a significant incident for a cloud/SaaS provider",
+      "passed": true,
+      "evidence": "Response covers Art. 23 incident reporting timelines (24h/72h/1-month) and penalties for Important Entities."
+    },
+    {
+      "text": "Differentiates between direct NIS2 obligations and being included as a supplier in a customer's NIS2 supply chain risk assessment (Art. 21(2)(d) / Art. 26)",
+      "passed": false,
+      "evidence": "Without-skill response covers general supply chain security as an obligation but does not clearly differentiate between the entity's direct NIS2 obligations and its separate role as a supplier in a customer's supply chain risk assessment under Art. 21(2)(d)/Art. 26."
+    }
+  ],
+  "score": "4/5",
+  "pass_rate": 0.8
+}

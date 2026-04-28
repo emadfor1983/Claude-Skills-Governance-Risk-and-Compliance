@@ -1,0 +1,12 @@
+{
+  "eval_id": 83,
+  "eval_name": "ransomware-incident-reporting-timeline",
+  "prompt": "We suffered a ransomware attack at 09:00 Monday morning that encrypted our core operational systems. Walk me through exactly what we need to report, to whom, and by when under NIS2.",
+  "assertions": [
+    "States the 24-hour early warning deadline and explains what must be included: whether the incident is (suspected) malicious, whether it could have cross-border impact",
+    "States the 72-hour incident notification deadline and required content: initial assessment of severity and impact, indicators of compromise where available",
+    "States the 1-month final report deadline and required content: detailed description, type of threat/root cause, applied mitigations, cross-border impact assessment",
+    "Identifies the correct reporting recipients: national CSIRT or competent authority (and notes single point of contact if the entity operates in multiple Member States)",
+    "Explains how to assess whether the ransomware incident qualifies as 'significant' under Art. 23(3) criteria (substantial disruption, financial loss, damage to others)"
+  ]
+}

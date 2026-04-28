@@ -1,0 +1,33 @@
+{
+  "eval_id": 85,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Correctly states that DORA (Regulation (EU) 2022/2554) is a lex specialis for financial entities and takes precedence over NIS2 under Art. 4 NIS2",
+      "passed": true,
+      "evidence": "Response correctly explains the lex specialis relationship with DORA taking precedence over NIS2 for ICT risk management and incident reporting under Art. 4 NIS2."
+    },
+    {
+      "text": "Explains that banks subject to DORA are largely exempt from NIS2 Art. 21 and Art. 23 obligations because DORA's ICT risk management and incident reporting requirements are equivalent or stricter",
+      "passed": true,
+      "evidence": "Response explains that banks subject to DORA are largely exempt from NIS2 Art. 21 and Art. 23 obligations as DORA's requirements are equivalent or stricter."
+    },
+    {
+      "text": "Identifies any residual NIS2 obligations that may still apply (e.g., Art. 20 governance if not covered by DORA, or Member State-specific transposition nuances)",
+      "passed": true,
+      "evidence": "Response identifies residual NIS2 obligations including management body personal liability (Art. 20), CSIRT notification, ENISA-coordinated supply chain assessments, and national transposition variations."
+    },
+    {
+      "text": "Recommends a single integrated GRC programme that maps controls across both DORA and NIS2 rather than maintaining two separate compliance programmes",
+      "passed": true,
+      "evidence": "Response explicitly recommends a single integrated programme with a unified control framework mapped to both DORA RTS and NIS2 Art. 21 measures rather than two separate compliance programmes."
+    },
+    {
+      "text": "Mentions that the competent authority for NIS2 purposes for financial entities is typically the financial services regulator (e.g., BaFin, DNB) rather than the general NIS2 authority",
+      "passed": false,
+      "evidence": "Response identifies that DORA and NIS2 use different notification channels (financial supervisor vs. national CSIRT) but does not explicitly state that the NIS2 competent authority for financial entities is typically the financial services regulator (e.g., BaFin, DNB) rather than the general NIS2/NIS authority."
+    }
+  ],
+  "score": "4/5",
+  "pass_rate": 0.8
+}

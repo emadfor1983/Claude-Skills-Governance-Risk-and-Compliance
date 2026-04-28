@@ -1,0 +1,33 @@
+{
+  "eval_id": 83,
+  "configuration": "without_skill",
+  "expectations": [
+    {
+      "text": "States the 24-hour early warning deadline and explains what must be included: whether the incident is (suspected) malicious, whether it could have cross-border impact",
+      "passed": true,
+      "evidence": "Without-skill response correctly states the 24-hour early warning deadline (Tuesday 09:00) with content requirements including malicious classification and cross-border impact flag."
+    },
+    {
+      "text": "States the 72-hour incident notification deadline and required content: initial assessment of severity and impact, indicators of compromise where available",
+      "passed": true,
+      "evidence": "Response correctly states 72-hour incident notification (Thursday 09:00) with severity/impact assessment and IoCs as required content."
+    },
+    {
+      "text": "States the 1-month final report deadline and required content: detailed description, type of threat/root cause, applied mitigations, cross-border impact assessment",
+      "passed": true,
+      "evidence": "Response correctly states 1-month final report deadline with root cause, remediation plan, and cross-border assessment."
+    },
+    {
+      "text": "Identifies the correct reporting recipients: national CSIRT or competent authority (and notes single point of contact if the entity operates in multiple Member States)",
+      "passed": false,
+      "evidence": "Without-skill response identifies national CSIRT and competent authority but references 'other member state authorities for cross-border impacts' rather than correctly stating the NIS2 single point of contact mechanism for multi-Member-State operators (Art. 23(8))."
+    },
+    {
+      "text": "Explains how to assess whether the ransomware incident qualifies as 'significant' under Art. 23(3) criteria (substantial disruption, financial loss, damage to others)",
+      "passed": true,
+      "evidence": "Without-skill response addresses significance threshold assessment and advises not waiting for full forensic clarity before notifying, covering the key Art. 23(3) criteria."
+    }
+  ],
+  "score": "4/5",
+  "pass_rate": 0.8
+}

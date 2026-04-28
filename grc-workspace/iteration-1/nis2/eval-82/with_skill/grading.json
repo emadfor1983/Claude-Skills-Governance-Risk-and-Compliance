@@ -1,0 +1,33 @@
+{
+  "eval_id": 82,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Identifies that a B2B cloud SaaS provider may fall under NIS2 as a managed service provider (MSP) / ICT service management (B2B) under Annex I, or as a cloud computing service provider under Annex II digital providers",
+      "passed": true,
+      "evidence": "Response identifies the company as likely qualifying as Important Entity under Annex II (Digital Providers) as a B2B SaaS, and notes the less likely but possible Essential Entity classification under Annex I ICT service management."
+    },
+    {
+      "text": "Confirms size threshold is met (75 employees ≥ 50; €15M ≥ €10M) making the entity in scope",
+      "passed": true,
+      "evidence": "Response confirms both thresholds are exceeded: 75 employees ≥ 50, €15M revenue ≥ €10M, making the entity automatically in scope."
+    },
+    {
+      "text": "Explains all 10 Art. 21 measures or provides detailed practical guidance on the most relevant ones for a SaaS company (incident handling, secure SDLC, supply chain, MFA)",
+      "passed": true,
+      "evidence": "Response covers all 10 Art. 21 measures in detail calibrated to a 75-person SaaS company, including incident handling, secure SDLC/vulnerability management, supply chain security, cryptography, access control, and MFA."
+    },
+    {
+      "text": "Addresses Art. 23 incident reporting obligations and explains what constitutes a significant incident for a cloud/SaaS provider",
+      "passed": true,
+      "evidence": "Response addresses Art. 23 incident reporting obligations and explains 24h/72h/1-month notification workflows with pre-drafted notification templates."
+    },
+    {
+      "text": "Differentiates between direct NIS2 obligations and being included as a supplier in a customer's NIS2 supply chain risk assessment (Art. 21(2)(d) / Art. 26)",
+      "passed": true,
+      "evidence": "Response covers both the entity's direct NIS2 obligations and its role as a supplier in customers' NIS2 supply chain risk assessments under Art. 21(2)(d) and Art. 26."
+    }
+  ],
+  "score": "5/5",
+  "pass_rate": 1.0
+}

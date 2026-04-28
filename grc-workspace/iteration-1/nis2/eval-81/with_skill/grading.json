@@ -1,0 +1,33 @@
+{
+  "eval_id": 81,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "Correctly classifies the energy company as an Essential Entity (EE) under NIS2 Annex I (energy sector, electricity sub-sector)",
+      "passed": true,
+      "evidence": "Response explicitly classifies the company as Essential Entity (EE) under Annex I, citing electricity distribution system operators as directly named in Annex I, including a classification table confirming the result."
+    },
+    {
+      "text": "Confirms the entity meets size thresholds (≥50 employees OR ≥€10M turnover) making it automatically in scope",
+      "passed": true,
+      "evidence": "Response confirms 200 employees and €50M turnover both exceed the medium-entity thresholds (≥50 employees OR ≥€10M turnover) by a wide margin, with a clear table."
+    },
+    {
+      "text": "Explains Art. 20 governance obligation: management body approval, training, and potential personal liability",
+      "passed": true,
+      "evidence": "Response covers Art. 20 obligations including management body approval of cybersecurity measures, mandatory cybersecurity training, and personal liability under German transposition law (NIS2UmsuCG)."
+    },
+    {
+      "text": "Lists all 10 Art. 21 cybersecurity risk management measures or explicitly covers the key ones (incident handling, BCP, supply chain, MFA, cryptography)",
+      "passed": true,
+      "evidence": "Response covers all 10 Art. 21 measures with energy/OT-sector-specific emphasis on SCADA environments, supply chain (grid equipment vendors), and emergency communications."
+    },
+    {
+      "text": "States Art. 23 incident reporting timelines: 24-hour early warning, 72-hour notification, 1-month final report to CSIRT/competent authority",
+      "passed": true,
+      "evidence": "Response clearly states all three Art. 23 reporting stages: 24h early warning, 72h incident notification, and 1-month final report to BSI/CERT-Bund."
+    }
+  ],
+  "score": "5/5",
+  "pass_rate": 1.0
+}

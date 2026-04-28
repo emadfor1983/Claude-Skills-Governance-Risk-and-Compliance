@@ -1,0 +1,33 @@
+{
+  "eval_id": 83,
+  "configuration": "with_skill",
+  "expectations": [
+    {
+      "text": "States the 24-hour early warning deadline and explains what must be included: whether the incident is (suspected) malicious, whether it could have cross-border impact",
+      "passed": true,
+      "evidence": "Response clearly states 24-hour early warning deadline with specific content requirements: malicious/suspected malicious flag and cross-border impact assessment."
+    },
+    {
+      "text": "States the 72-hour incident notification deadline and required content: initial assessment of severity and impact, indicators of compromise where available",
+      "passed": true,
+      "evidence": "Response states 72-hour incident notification (Thursday 09:00) with required content including severity assessment, impact analysis, and indicators of compromise."
+    },
+    {
+      "text": "States the 1-month final report deadline and required content: detailed description, type of threat/root cause, applied mitigations, cross-border impact assessment",
+      "passed": true,
+      "evidence": "Response states the 1-month final report requirement with all required content: detailed description, root cause analysis, applied mitigations, and cross-border impact assessment."
+    },
+    {
+      "text": "Identifies the correct reporting recipients: national CSIRT or competent authority (and notes single point of contact if the entity operates in multiple Member States)",
+      "passed": true,
+      "evidence": "Response identifies national CSIRT and competent authority as reporting recipients and notes cross-border coordination mechanisms for entities operating in multiple Member States."
+    },
+    {
+      "text": "Explains how to assess whether the ransomware incident qualifies as 'significant' under Art. 23(3) criteria (substantial disruption, financial loss, damage to others)",
+      "passed": true,
+      "evidence": "Response explains Art. 23(3) significance criteria: substantial disruption, financial loss, damage to other persons, and notes that a ransomware attack encrypting core operational systems meets the threshold without waiting for full damage quantification."
+    }
+  ],
+  "score": "5/5",
+  "pass_rate": 1.0
+}
