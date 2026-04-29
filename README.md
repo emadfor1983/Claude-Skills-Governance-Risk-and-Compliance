@@ -413,7 +413,7 @@ The NIS2 skill turns Claude into an expert advisor on the **EU NIS2 Directive (D
 
 ---
 
-### 18. 🌴 CCPA/CPRA California Privacy
+### 18. 🏴󠁵󠁳󠁣󠁡󠁿 CCPA/CPRA California Privacy
 
 **File:** `CCPA - Claude Skill/ccpa.skill`
 
@@ -585,7 +585,7 @@ The CCPA/CPRA skill turns Claude into an expert advisor on **California's compre
    | 🏦 SWIFT Customer Security Programme (CSP) | [swift-csp.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/SWIFT%20CSP%20-%20Claude%20Skill/swift-csp.skill) |
    | 🇦🇺 Australian Information Security Manual (ISM) | [ism.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/ISM%20-%20Claude%20Skill/ism.skill) |
    | 🇪🇺 EU NIS2 Directive | [nis2.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/NIS2%20-%20Claude%20Skill/nis2.skill) |
-   | 🌴 CCPA/CPRA California Privacy | [ccpa.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CCPA%20-%20Claude%20Skill/ccpa.skill) |
+   | 🏴󠁵󠁳󠁣󠁡󠁿 CCPA/CPRA California Privacy | [ccpa.skill](https://github.com/Sushegaad/Claude-Skills-Governance-Risk-and-Compliance/raw/main/CCPA%20-%20Claude%20Skill/ccpa.skill) |
 
 2. Open Claude and navigate to **Customize → Skills**.
 3. Click **Upload Skill** and select the `.skill` file.
